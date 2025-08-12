@@ -1,0 +1,39 @@
+/* Typography - MadenCSS */
+
+/* Font Weights */
+.fw-thin    { font-weight: 100; }
+.fw-light   { font-weight: 300; }
+.fw-normal  { font-weight: 400; }
+.fw-medium  { font-weight: 500; }
+.fw-semibold{ font-weight: 600; }
+.fw-bold    { font-weight: 700; }
+.fw-black   { font-weight: 900; }
+
+/* Text Alignment */
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-justify{ text-align: justify; }
+
+/* Text Transform */
+.text-uppercase  { text-transform: uppercase; }
+.text-lowercase  { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+/* Font Sizes (responsive with clamp) */
+.fs-sm    { font-size: clamp(0.75rem, 0.9vw, 0.875rem); }   /* 12–14px */
+.fs-base  { font-size: clamp(0.875rem, 1vw, 1rem); }        /* 14–16px */
+.fs-lg    { font-size: clamp(1rem, 1.2vw, 1.25rem); }       /* 16–20px */
+.fs-xl    { font-size: clamp(1.25rem, 1.5vw, 1.5rem); }     /* 20–24px */
+.fs-xxl   { font-size: clamp(1.5rem, 2vw, 2.25rem); }       /* 24–36px */
+.fs-huge  { font-size: clamp(2rem, 3vw, 3rem); }            /* 32–48px */
+
+/* Truncate (text overflow ellipsis) */
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Word Wrap */
+.break-word { word-break: break-word; }

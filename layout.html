@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadenCSS Grid Demo</title>
+  <link rel="stylesheet" href="MadenStyles/main.css" />
+</head>
+<body class="background on-background">
+  <div class="container">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <!-- Grid Layout -->
+    <div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+
+      <!-- Sidebar -->
+      <aside class="res-col-2 surface p-3">
+        <div id="leftMenu"></div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="res-col-9 surface p-3 on-surface">
+        
+        <section>
+          <h2 class="text-primary">📦 .container</h2>
+          <p>
+            Centers the content within the page and limits its maximum width to 
+            <code>1600px</code> for better readability and alignment. The .container class uses margin: auto to center itself horizontally.
+          </p>
+        </section>
+
+        <section class="mt-3">
+          <h2 class="text-primary">📏 .row</h2>
+          <p>
+            Defines a horizontal flex container. Its child elements — typically columns — are arranged side by side using Flexbox.
+            The .row class uses flex-wrap: wrap to ensure that columns will wrap to the next line if they exceed the container width.
+          </p>
+        </section>
+
+        <section class="mt-3">
+          <h2 class="text-primary">🧱 .col Classes</h2>
+          <p>
+            This is a fixed 12-column layout system that does not respond to screen size. It is useful when you want columns to maintain a specific width, even on smaller screens.
+          </p>
+
+          <div class="row p-3 border on-primary mt-2 row-gutter-2">
+            <div class="col-1 success border">.col-1</div>
+            <div class="col-2 success border">.col-2</div>
+            <div class="col-3 success border">.col-3</div>
+            <div class="col-4 success border">.col-4</div>
+            <div class="col-5 success border">.col-5</div>
+            <div class="col-6 success border">.col-6</div>
+            <div class="col-7 success border">.col-7</div>
+            <div class="col-8 success border">.col-8</div>
+            <div class="col-9 success border">.col-9</div>
+            <div class="col-10 success border">.col-10</div>
+            <div class="col-11 success border">.col-11</div>
+            <div class="col-12 success border">.col-12</div>
+          </div>
+        </section>
+
+        <section class="mt-3">
+          <h2 class="text-primary">📱 .res-col-* Responsive Columns</h2>
+          <p>
+            
+            This responsive column system is ideal for mobile-friendly layouts. When the screen width is below <code>600px</code>, 
+            all <code>.res-col-*</code> classes will automatically expand to <strong>100%</strong> of their parent width.
+          </p>
+
+          <div class="row p-3 border mt-2 on-primary row-gutter-2">
+            <div class="res-col-1 success border">.res-col-1</div>
+            <div class="res-col-2 success border">.res-col-2</div>
+            <div class="res-col-3 success border">.res-col-3</div>
+            <div class="res-col-4 success border">.res-col-4</div>
+            <div class="res-col-5 success border">.res-col-5</div>
+            <div class="res-col-6 success border">.res-col-6</div>
+            <div class="res-col-7 success border">.res-col-7</div>
+            <div class="res-col-8 success border">.res-col-8</div>
+            <div class="res-col-9 success border">.res-col-9</div>
+            <div class="res-col-10 success border">.res-col-10</div>
+            <div class="res-col-11 success border">.res-col-11</div>
+            <div class="res-col-12 success border">.res-col-12</div>
+          </div>
+        </section>
+
+        <section class="mt-3">
+          <h2 class="text-primary">📱 .gutters</h2>
+          <p>
+            These utility classes control the spacing between columns inside a <code class="text-success">.row</code> using the CSS <code class="text-success">gap</code> property.  
+            The number in the class name determines the spacing size. This makes it easy to manage consistent spacing in your layout.
+            Row gutters apply spacing in both horizontal and vertical directions between columns.
+          </p>
+          <p>
+            📌 <b>Usage:</b><br />
+            Add one of the .row-gutter-* classes to a .row element.<br/>
+            <br/>
+            The number indicates the size of the horizontal and vertical spacing between columns (in rem units).<br/>
+            .row-gutter-0 { gap: 0; }<br/>
+            .row-gutter-1 { gap: 0.5rem; }   /* 8px */<br/>
+            .row-gutter-2 { gap: 1rem; }     /* 16px */<br/>
+            .row-gutter-3 { gap: 1.5rem; }   /* 24px */<br/>
+            .row-gutter-4 { gap: 2rem; }     /* 32px */<br/>
+          </p>
+          
+          <div class="row p-3 border mt-2 on-primary row-gutter-2">
+            <div class="res-col-3 success border">.row-gutter-2</div>
+            <div class="res-col-3 success border">.row-gutter-2</div>
+            <div class="res-col-3 success border">.row-gutter-2</div>
+          </div>
+        </section>
+        <br/>
+        <textarea rows="6">
+<div class="row row-gutter-2">
+  <div class="res-col-3 success border">.row-gutter-2</div>
+  <div class="res-col-3 success border">.row-gutter-2</div>
+  <div class="res-col-3 success border">.row-gutter-2</div>
+</div>
+        </textarea>
+        </section>
+
+        <section>
+          <h2 class="text-primary mt-3">🔄 .row Alignment Classes</h2>
+          <p>
+            These utility classes help control how the columns inside a <code class="text-success">.row</code> are aligned — both <b>horizontally</b> and <b>vertically</b> — using Flexbox.
+          </p>
+          <p><br/>
+              <b>Row Horizontal alignment</b><br/>
+              .row-items-hor-start   { justify-content: flex-start; }<br/>
+              .row-items-hor-center  { justify-content: center; }<br/>
+              .row-items-hor-end     { justify-content: flex-end; }<br/>
+              .row-items-hor-between { justify-content: space-between; }<br/>
+              .row-items-hor-around  { justify-content: space-around; }<br/>
+              <br/>
+              <b>Row Vertical alignment</b><br/>
+              .row-items-ver-start   { align-items: flex-start; }<br/>
+              .row-items-ver-center  { align-items: center; }<br/>
+              .row-items-ver-end     { align-items: flex-end; }<br/>
+              .row-items-ver-stretch { align-items: stretch; }<br/>
+          </p>
+          <br/>
+          **Below you can see a demonstration of centered column at main axis.
+          <div class="row border p-3 mt-1 row-items-hor-center">
+            <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis</div>    
+          </div>
+
+          <textarea rows="5" class="mt-1">
+<div class="row border p-3 mt-3 row-items-hor-center">
+  <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis</div>    
+</div>
+          </textarea>
+
+          <p class="mt-3">
+            **Below you can see a demonstration of centered column at vertical(cross) axis. 
+            Note that row has a certain amount of height. So you need to choose a horizontal alignment class too. 
+          </p>
+          <div class="row border p-3 mt-1 row-items-ver-center row-items-hor-center" style="height: 200px;">
+            <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis and aligned to center of vertical(cross) axis.</div>    
+          </div>
+
+          <textarea rows="5" class="mt-1">
+<div class="row border p-3 mt-3 row-items-ver-center row-items-hor-center" style="height: 200px;">
+  <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis and aligned to center of vertical(cross) axis.</div>    
+</div>
+          </textarea>
+        </section>
+      </main>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+  </div>
+
+  <!-- JS includes (navbar, sidebar, footer, etc.) -->
+  <script src="includes.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadenCSS Grid Demo</title>
+  <link rel="stylesheet" href="MadenStyles/main.css" />
+</head>
+<body class="background on-background">
+<div class="container">
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- Main grid system -->
+<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+
+    <!-- Left Menu -->
+    <div class="col res-col-2 surface p-3">
+    <div id="leftMenu"></div>
+    </div>
+
+    <!-- Content area -->
+    <div class="col res-col-9 surface p-3 on-surface">
+        <row class="row row-items-hor-center text-primary"><h2>NAVBARS</h2></row>
+        ℹ️ There are 2 types of Navbars for now. 
+        Ofcourse you can write your own navbar with our framework. 
+        Theese two ones are just ready for use and they have responsive behaviour.<br />
+          <br />
+        🔹<span class="text-primary">Standard Menu Navbar</span><br /><br />
+
+<div class="row surface row-items-hor-center row-gutter-1 p-1 border">
+  <!-- Logo -->
+  <div class="res-col-2 col-items-hor-center">
+    <div class="fs-xxl text-primary row">
+      <img src="Logo.png" width="32">
+      <a href="index.html">Madenix</a>
+    </div>
+  </div>
+  <!-- Menu -->
+  <div class="res-col-9 col-items-hor-center fs-xl row-gutter-2">
+    <a class="link-primary" href="#">Blog</a>
+    <a class="link-primary" href="#">Forum</a>
+    <a class="link-primary" href="#">White Paper</a>
+  </div>
+</div>
+
+<textarea rows="16" class="mt-2">
+  <div class="row surface row-items-hor-center row-gutter-1 p-1">
+  <!-- Logo -->
+  <div class="res-col-2 col-items-hor-center">
+    <div class="fs-xxl text-primary row">
+      <img src="Logo.png" width="32">
+      <a href="index.html">Madenix</a>
+    </div>
+  </div>
+  <!-- Menu -->
+  <div class="res-col-9 col-items-hor-center fs-xl row-gutter-2">
+    <a class="link-primary" href="#">Blog</a>
+    <a class="link-primary" href="#">Forum</a>
+    <a class="link-primary" href="#">White Paper</a>
+  </div>
+</div>
+</textarea>
+
+
+          <br /><br /><br />
+        🔹<span class="text-primary">Hamburger Navbar</span><br /><br />
+
+<div class="row surface row-items-hor-center row-gutter-1 p-1 mt-1 border">
+  <!-- Logo -->
+  <div class="res-col-2 col-items-hor-center">
+    <div class="fs-xxl text-primary row">
+      <img src="Logo.png" width="32">
+      <a href="index.html">Madenix</a>
+    </div>
+  </div>
+
+    <!-- Hamburger toggle (mobilde) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+  <label for="nav-toggle" class="nav-toggle-btn fs-xl">☰</label>
+
+  <!-- Menu -->
+  <div class="res-col-9 nav-menu col-items-hor-center fs-xl row-gutter-2">
+    <a class="link-primary" href="#">Blog</a>
+    <a class="link-primary" href="#">Forum</a>
+    <a class="link-primary" href="#">White Paper</a>
+  </div>
+</div>
+
+<textarea rows="22" class="mt-2">
+  <div class="row surface row-items-hor-center row-gutter-1 p-1 mt-1 border">
+  <!-- Logo -->
+  <div class="res-col-2 col-items-hor-center">
+    <div class="fs-xxl text-primary row">
+      <img src="Logo.png" width="32">
+      <a href="index.html">Madenix</a>
+    </div>
+  </div>
+
+    <!-- Hamburger toggle (mobilde) -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+  <label for="nav-toggle" class="nav-toggle-btn fs-xl">☰</label>
+
+  <!-- Menu -->
+  <div class="res-col-9 nav-menu col-items-hor-center fs-xl row-gutter-2">
+    <a class="link-primary" href="#">Blog</a>
+    <a class="link-primary" href="#">Forum</a>
+    <a class="link-primary" href="#">White Paper</a>
+  </div>
+</div>
+</textarea>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
+<script src="includes.js"></script>
+</body>
+</html>

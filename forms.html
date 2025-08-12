@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadenCSS Grid Demo</title>
+  <link rel="stylesheet" href="MadenStyles/main.css" />
+</head>
+<body class="background on-background">
+<div class="container">
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- Main grid system -->
+<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+
+    <!-- Left Menu -->
+    <div class="col res-col-2 surface p-3">
+    <div id="leftMenu"></div>
+    </div>
+
+    <!-- Content area -->
+    <div class="col res-col-9 surface p-3 on-surface">
+      <row class="row row-items-hor-center text-primary"><h2>FORMS</h2></row>
+🧾This guide helps you build accessible, responsive, and aesthetically clean forms using MadenCSS form utilities. 
+It includes form layouts, input styles, focus/validation states, and helper messages.<br/>
+<br/>
+📦 <span class="text-primary">Basic Structure</span><br/>
+Wrap each input inside a <span class="text-success">.form-group</span> for consistent vertical spacing and layout:<br/>
+<br/>
+<textarea rows="6">
+<div class="form-group">
+  <label for="email">Email</label>
+  <input type="email" id="email" placeholder="you@example.com" required>
+</div>
+</textarea>
+<br/>
+<br/>
+<br/>
+🏷️ <span class="text-primary">Labels</span><br/>
+&lt;label&gt; elements are styled to appear above their related input.Use for attribute to link the label to the corresponding id of the input.<br/>
+<br/>
+<textarea>
+<label for="name">Your Name</label>
+</textarea>
+<br/>
+<br/>
+<br/>
+🔠 <span class="text-primary">Inputs, Textareas & Selects</span><br/><br/>
+<input type="text" placeholder="This is a text input"><br/>
+<textarea>
+<input type="text" placeholder="This is a text input">
+</textarea>
+<br/>
+<br/>
+<br/>
+<textarea placeholder="This is a textarea"></textarea>
+<textarea placeholder="This is a textarea">
+  &lt;textarea placeholder="This is a textarea"&gt;&lt;/textarea&gt;
+</textarea>
+<br/>
+<br/>
+<br/>
+  <select>
+    <option>Select an option</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+<textarea placeholder="This is a textarea" rows="7">
+  <select>
+    <option>Select an option</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+</textarea>
+<br/>
+<br/>
+<br/>
+<br/>
+✅ Features:<br/>
+<br/>
+🔹Full-width by default<br/>
+🔹Rounded corners<br/>
+🔹Smooth transitions on focus<br/>
+🔹Theme-aware background and text colors<br/>
+<br/>
+✨ <span class="text-primary">Focus State</span><br/>
+When the input is focused:<br/>
+<br/>
+🔹 Border color changes to --primary<br/>
+<br/>
+🔹 Light box shadow appears for accessibility<br/>
+<br/>
+
+<span class="text-success">
+input:focus {<br/>
+  border-color: var(--primary);<br/>
+  box-shadow: 0 0 0 2px rgba(240, 187, 12, 0.3);<br/>
+}<br/>
+</span>
+<br/>
+<br/>
+❌ <span class="text-primary">Validation & Error Handling</span><br/>
+Inputs with :invalid or error feedback can use .form-error:<br/>
+<br/>
+<input type="email" required>
+<div class="form-error">Please enter a valid email.</div>
+<br/>
+<textarea rows="3">
+<input type="email" required>
+<div class="form-error">Please enter a valid email.</div>
+</textarea>
+<br/><br/>
+Invalid inputs automatically receive a red (--danger) border via:<br/>
+<span class="text-success">input:invalid {<br/>
+  border-color: var(--danger);<br/>
+}</span><br/>
+<br/>
+<br/>
+🛈 <span class="text-primary">Helper Text</span><br/>
+Use .form-help for small guidance below fields:<br/>
+<br/>
+<input type="text" placeholder="Please enter e-mail address">
+<div class="form-help">We'll never share your email.</div>
+<br/>
+<textarea rows="3">
+<input type="text" placeholder="Please enter e-mail address">
+<div class="form-help">We'll never share your email.</div>
+</textarea>
+<br/>
+<br/>
+<br/>
+<br/>
+🧪 <span class="text-primary">Example Form</span><br/>
+<br/>
+
+<div class="row border p-3">
+  <div class="col res-col-12">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="yourname">
+            <div class="form-help">Min 3 characters.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Write your message..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role">
+              <option>Admin</option>
+              <option>User</option>
+              <option>Guest</option>
+            </select>
+          </div>
+
+          <button type="submit" class="primary">Submit</button>
+        </form>
+</div>
+</div>
+<br />
+<textarea rows="30">
+    <div class="col res-col-12">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" type="text" placeholder="yourname">
+            <div class="form-help">Min 3 characters.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            &lt;textarea id="message" placeholder="Write your message..."&gt;&lt;/textarea&gt;
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role">
+              <option>Admin</option>
+              <option>User</option>
+              <option>Guest</option>
+            </select>
+          </div>
+
+          <button type="submit" class="primary">Submit</button>
+        </form>
+</div>
+</textarea>
+<br/>
+<br/>
+💡 Notes<br/>
+All form controls are 100% width by default — use a grid or layout utility to control sizing.
+Works best when combined with spacing.css for margins/padding and typography.css for text scale.
+Use semantic HTML (&lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;) for accessibility and screen reader support.
+
+
+
+
+
+</div>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
+<script src="includes.js"></script>
+</body>
+</html>

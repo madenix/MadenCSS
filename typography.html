@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MadenCSS Grid Demo</title>
+  <link rel="stylesheet" href="MadenStyles/main.css" />
+</head>
+<body class="background on-background">
+<div class="container">
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<!-- Main grid system -->
+<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+
+    <!-- Left Menu -->
+    <div class="col res-col-2 surface p-3">
+    <div id="leftMenu"></div>
+    </div>
+
+    <!-- Content area -->
+    <div class="col res-col-9 surface p-3 on-surface">
+      <row class="row row-items-hor-center text-primary"><h2>TYPOGRAPHY</h2></row>
+      
+✍️ <span class="text-primary">typography.css</span> Usage Guide<br />
+<p>
+This file provides a utility-first set of classes for managing typography consistently across your project. Font weights, sizes, alignment, spacing, truncation — all covered.
+</p>
+<br />
+🧱 Overview of Utility Classes<br />
+🔹 Font Weights<br />
+Use these to quickly apply standard weight values:<br />
+<br />
+<p class="fw-light">Light text (<span class="text-success">fw-light</span>)</p>
+<p class="fw-bold">Bold text (<span class="text-success">fw-bold</span>)</p>
+<p class="fw-black">Extra black (<span class="text-success">fw-black</span>)</p>
+<br />
+<br />
+.fw-thin:	100<br />
+.fw-light:	300<br />
+.fw-normal:	400<br />
+.fw-medium:	500<br />
+.fw-semibold:	600<br />
+.fw-bold:	700<br />
+.fw-black:	900<br />
+<br />
+🔹 Text Alignment<br />
+<p class="text-left success mt-1">Left aligned (<span class="text-primary">text-left</span>)</p>
+<p class="text-center success mt-1">Centered text (<span class="text-primary">text-center</span>)</p>
+<p class="text-right success mt-1">Right aligned (<span class="text-primary">text-right</span>)</p>
+<p class="text-justify success mt-1">Justified block (<span class="text-primary">text-justify</span>)</p>
+<br />
+🔹 Text Transform
+<p class="text-uppercase">uppercase (<span class="text-primary">text-uppercase</span>)</p>
+<p class="text-lowercase">LOWERCASE (<span class="text-primary">text-lowercase</span>)</p>
+<p class="text-capitalize">capitalize each word (<span class="text-primary">text-capitalize</span>)</p>
+<br />
+🔹 Font Sizes (Responsive with clamp())<br />
+Designed to scale across screen sizes.<br />
+<h1 class="fs-xl">(<span class="text-success">fs-xl</span>) Responsive x large Heading</h1>
+<p class="fs-base mt-1">(<span class="text-success">fs-base</span>) Base paragraph text</p>
+<br />
+.fs-sm:	12–14px<br />
+.fs-base:	14–16px<br />
+.fs-lg:	16–20px<br />
+.fs-xl:	20–24px<br />
+.fs-xxl:	24–36px<br />
+.fs-huge:	32–48px<br />
+<br />
+🔹 Truncation (<span class="text-primary">truncate</span>) <br />
+Use when you want to cut off text with ... if it overflows its container:
+<br />
+<div class="row">
+  <p class="truncate col col-2 success">Very long content that won’t fit.</p>
+</div>
+<br />
+🔹 Word Wrapping (<span class="text-primary">break-word</span>)<br />
+Break long words instead of overflowing:<br />
+<p class="break-word col-1 success">supercalifragilisticexpialidocious</p>
+<br />
+✅ Tips<br />
+Use typography utilities in combination with spacing and layout classes for clean, modular components.<br />
+<br />
+All sizes are responsive where possible (clamp()), no need for media queries in most cases.<br />
+<br />
+Extend this file as needed with your custom type scale or font families.<br />
+<br />
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
+<script src="includes.js"></script>
+</body>
+</html>
