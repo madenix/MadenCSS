@@ -2,8 +2,8 @@
 @import url("typography.css");
 
 :root {
-  --background: #191b21;
-  --surface: #1e2329;
+  --background: #0B0E13;
+  --surface: #0B4A57;
   --surface-light: #272a2e;
   --primary: #f0bb0c;       
   --success: #0c9c65;     
