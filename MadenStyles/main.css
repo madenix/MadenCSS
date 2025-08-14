@@ -57,6 +57,11 @@ button { cursor: pointer; }
   margin: 0 auto;
 }
 
+/* General widths */
+.max-width-1600: max-width: 1600px;
+.max-width-1200: max-width: 1200px;
+.max-width-768: max-width: 768px;
+
 /* Row */
 .row {
   display: flex;
