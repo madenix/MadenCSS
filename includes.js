@@ -29,6 +29,7 @@ document.getElementById("leftMenu").innerHTML = `
     <ul class="m-1">
       <li><a href="index.html">Get Started</a></li>
       <li><a href="layout.html">Layout</a></li>
+      <li><a href="misc.html">Misc</a></li>
     </ul>
     <h3 class="m-1 mt-3">🧩COMPONENTS</h3>
     <ul class="m-1">
