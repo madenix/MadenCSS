@@ -66,6 +66,7 @@ button { cursor: pointer; }
 .row {
   display: flex;
   flex-wrap: wrap;
+  gap: var(--gutter,0);
 }
 
 /* Row Horizontal alignment */
@@ -95,11 +96,11 @@ button { cursor: pointer; }
 .col-items-ver-stretch { display: flex; align-items: stretch;      justify-content: center; }
 
 /* Row Gutter Spacing - Columnlar arası boşluk */
-.row-gutter-0 { gap: 0; }
-.row-gutter-1 { gap: 0.5rem; }   /* 8px */
-.row-gutter-2 { gap: 1rem; }     /* 16px */
-.row-gutter-3 { gap: 1.5rem; }   /* 24px */
-.row-gutter-4 { gap: 2rem; }     /* 32px */
+.row-gutter-0 { --gutter: 0; }
+.row-gutter-1 { --gutter: 0.5rem; }   /* 8px */
+.row-gutter-2 { --gutter: 1rem; }     /* 16px */
+.row-gutter-3 { --gutter: 1.5rem; }   /* 24px */
+.row-gutter-4 { --gutter: 2rem; }     /* 32px */
 
 /* Column */
 .res-col-1,
@@ -119,33 +120,36 @@ button { cursor: pointer; }
   max-width: 100%;
 }
 
-.col-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-.col-2  { flex: 0 0 16.6667%; max-width: 16.6667%; }
-.col-3  { flex: 0 0 25%;      max-width: 25%;      }
-.col-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-.col-5  { flex: 0 0 41.6667%; max-width: 41.6667%; }
-.col-6  { flex: 0 0 50%;      max-width: 50%;      }
-.col-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-.col-8  { flex: 0 0 66.6667%; max-width: 66.6667%; }
-.col-9  { flex: 0 0 75%;      max-width: 75%;      }
-.col-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-.col-11 { flex: 0 0 91.6667%; max-width: 91.6667%; }
-.col-12 { flex: 0 0 100%;     max-width: 100%;     }
+/* Columns (12 grid) */
+.col-1  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12); }
+.col-2  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 2 + var(--gutter)); }
+.col-3  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 3 + (2 * var(--gutter))); }
+.col-4  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 4 + (3 * var(--gutter))); }
+.col-5  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 5 + (4 * var(--gutter))); }
+.col-6  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 6 + (5 * var(--gutter))); }
+.col-7  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 7 + (6 * var(--gutter))); }
+.col-8  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 8 + (7 * var(--gutter))); }
+.col-9  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 9 + (8 * var(--gutter))); }
+.col-10 { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 10 + (9 * var(--gutter))); }
+.col-11 { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 11 + (10 * var(--gutter))); }
+.col-12 { flex: 0 0 100%; }
 
 /* Responsive 12-col grid (from 600px) */
 @media (min-width: 600px) {
-  .res-col-1  { flex: 0 0 8.3333%;  max-width: 8.3333%;  }
-  .res-col-2  { flex: 0 0 16.6667%; max-width: 16.6667%; }
-  .res-col-3  { flex: 0 0 25%;      max-width: 25%;      }
-  .res-col-4  { flex: 0 0 33.3333%; max-width: 33.3333%; }
-  .res-col-5  { flex: 0 0 41.6667%; max-width: 41.6667%; }
-  .res-col-6  { flex: 0 0 50%;      max-width: 50%;      }
-  .res-col-7  { flex: 0 0 58.3333%; max-width: 58.3333%; }
-  .res-col-8  { flex: 0 0 66.6667%; max-width: 66.6667%; }
-  .res-col-9  { flex: 0 0 75%;      max-width: 75%;      }
-  .res-col-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
-  .res-col-11 { flex: 0 0 91.6667%; max-width: 91.6667%; }
-  .res-col-12 { flex: 0 0 100%;     max-width: 100%;     }
+
+/* Columns (12 grid) */
+.res-col-1  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12); }
+.res-col-2  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 2 + var(--gutter)); }
+.res-col-3  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 3 + (2 * var(--gutter))); }
+.res-col-4  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 4 + (3 * var(--gutter))); }
+.res-col-5  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 5 + (4 * var(--gutter))); }
+.res-col-6  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 6 + (5 * var(--gutter))); }
+.res-col-7  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 7 + (6 * var(--gutter))); }
+.res-col-8  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 8 + (7 * var(--gutter))); }
+.res-col-9  { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 9 + (8 * var(--gutter))); }
+.res-col-10 { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 10 + (9 * var(--gutter))); }
+.res-col-11 { flex: 0 0 calc((100% - (11 * var(--gutter))) / 12 * 11 + (10 * var(--gutter))); }
+.res-col-12 { flex: 0 0 100%; }
 }
 
 /* Border width */
