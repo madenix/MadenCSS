@@ -46,8 +46,7 @@
 
 /* General Reset and styles */
 * {box-sizing: border-box;}
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd { margin: 0; padding: 0;}
-ul, ol {list-style: none;}
+body{ margin: 0; padding: 0;}
 a {text-decoration: none; color: inherit;}
 img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
 input, button, textarea, select { font: inherit; border: none; background: none; outline: none;}
