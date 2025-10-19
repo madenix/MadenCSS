@@ -4,3 +4,5 @@ A lightweight, fast, and modular CSS component library developed using pure vani
 You can find live documentation at:
 
 https://madenix.github.io/MadenCSS/
+
+For more information visit www.madenix.com
