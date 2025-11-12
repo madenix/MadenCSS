@@ -1,0 +1,26 @@
+:root {
+  /* ---------- Surfaces / Backgrounds ---------- */
+  --background: #121212;          /* Background / Udp elevation surface overlay */
+  --surface: #1e1e1e;             /* Surface / 1dp elevation overlay */
+
+  /* ---------- Primary & Secondary ---------- */
+  --primary: #bb86fc;             /* Primary color / Main action */
+  --secondary: #03dac6;           /* Secondary color / Floating action buttons, accents */
+
+  /* ---------- On Colors (Text/Icons on surfaces) ---------- */
+  --on-background: #ffffff;       /* Text/icons on background */
+  --on-surface: #e0e0e0;          /* Text/icons on surface */
+  --on-primary: #000000;          /* Text/icons on primary */
+  --on-secondary: #000000;        /* Text/icons on secondary */
+
+  /* ---------- Optional Feedback ---------- */
+  --success: #4caf50;
+  --warning: #ffb300;
+  --error: #cf6679;
+  --info: #2196f3;
+
+  /* ---------- Neutral / Gray (Opsiyonel) ---------- */
+  --gray-100: #1a1a1a;
+  --gray-500: #666666;
+  --gray-900: #f5f5f5;
+}
