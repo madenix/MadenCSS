@@ -103,3 +103,11 @@
 .py-3 { padding-top: 16px; padding-bottom: 16px; }
 .py-4 { padding-top: 24px; padding-bottom: 24px; }
 .py-5 { padding-top: 32px; padding-bottom: 32px; }
+
+/* Gap */
+.gap-0 { gap: 0; }
+.gap-1 { gap: 4px; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 16px; }
+.gap-4 { gap: 24px; }
+.gap-5 { gap: 32px; }
