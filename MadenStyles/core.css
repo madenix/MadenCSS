@@ -1,0 +1,82 @@
+/* General Reset and styles */
+* {box-sizing: border-box;}
+body{ margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+input, button, textarea, select { font: inherit; border: none; background: none; outline: none;}
+button { cursor: pointer; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin: 0 auto;
+  }
+
+  /* 12 kolon tanımları */
+  .col-1  { grid-column: span 1; }
+  .col-2  { grid-column: span 2; }
+  .col-3  { grid-column: span 3; }
+  .col-4  { grid-column: span 4; }
+  .col-5  { grid-column: span 5; }
+  .col-6  { grid-column: span 6; }
+  .col-7  { grid-column: span 7; }
+  .col-8  { grid-column: span 8; }
+  .col-9  { grid-column: span 9; }
+  .col-10 { grid-column: span 10; }
+  .col-11 { grid-column: span 11; }
+  .col-12 { grid-column: span 12; }
+
+  /* Mobil: tek sütun, tüm kolonlar tam genişlik kaplasın */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* tek sütun */
+    }
+    
+    .full-mobile .col-1,
+    .full-mobile .col-2,
+    .full-mobile .col-3,
+    .full-mobile .col-4,
+    .full-mobile .col-5,
+    .full-mobile .col-6,
+    .full-mobile .col-7,
+    .full-mobile .col-8,
+    .full-mobile .col-9,
+    .full-mobile .col-10,
+    .full-mobile .col-11,
+    .full-mobile .col-12 {
+      grid-column: 1 / -1;
+    }
+  }
+  
+.max-width-1600{max-width: 1600px;}
+.max-width-1200{max-width: 1200px;}
+.max-width-900{max-width: 900px;}
+  
+  /* ---------- Flex Alignment ---------- */
+.flex { display: flex; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.align-center { display: flex; align-items: center; }
+.justify-center { display: flex; justify-content: center; }
+.justify-between { display: flex; justify-content: space-between; }
+.justify-end { display: flex; justify-content: flex-end;}
+
+/* ---------- Grid Alignment ---------- */
+.grid-center {
+  display: grid;
+  justify-items: center; /* item’ları yatayda ortala */
+  align-items: center;   /* item’ları dikeyde ortala */
+}
+
+.grid-justify-center {
+  display: grid;
+  justify-content: center; /* grid satırlarını yatayda ortala */
+}
+
+.grid-align-center {
+  display: grid;
+  align-content: center; /* grid satırlarını dikeyde ortala */
+}
+
+/* Tek item üzerinde */
+.justify-self-center { justify-self: center; }
+.align-self-center { align-self: center; }
