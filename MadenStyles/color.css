@@ -1,6 +1,6 @@
 :root {
   /* ---------- Surfaces / Backgrounds ---------- */
-  --background: #121212;          /* Background / Udp elevation surface overlay */
+  --background: #121212;          /* Background / 0dp elevation surface overlay */
   --surface: #1e1e1e;             /* Surface / 1dp elevation overlay */
   --primary: #f0bb0c;             /* Primary color / Main action */
 
@@ -12,13 +12,13 @@
   /* ---------- Optional Feedback ---------- */
   --success: #4caf50;
   --warning: #ffb300;
-  --error: #cf6679;
+  --danger: #cf6679;
   --info: #2196f3;
 
   /* ---------- Neutral / Gray ---------- */
-  --gray-100: #1a1a1a;
-  --gray-500: #666666;
-  --gray-900: #f5f5f5;
+  --neutral-dark: #1a1a1a;
+  --neutral-mid: #666666;
+  --neutral-light: #f5f5f5;
 }
 
 /* Background colors */
@@ -29,12 +29,21 @@
 .warning{background-color: var(--warning);}
 .danger{background-color: var(--danger);}
 .info{background-color: var(--info);}
+.neutral-dark{background-color: var(--neutral-dark);}
+.neutral-mid{background-color: var(--neutral-mid);}
+.neutral-light{background-color: var(--neutral-light);}
 
-/* Text colors */
-.text-background{color: var(--background);}
-.text-surface{ color: var(--surface);}
+/* Text contrast*/
+.text-on-background{color: var(--on-background);}
+.text-on-surface{ color: var(--on-surface);}
+.text-on-primary{color: var(--on-primary);}
+
+/* Text theme colors */
 .text-primary{color: var(--primary);}
 .text-success{color: var(--success);}
 .text-warning{color: var(--warning);}
 .text-danger{color: var(--danger);}
 .text-info{color: var(--info);}
+.text-neutral-dark{color: var(--neutral-dark);}
+.text-neutral-mid{color: var(--neutral-mid);}
+.text-neutral-light{color: var(--neutral-light);}
