@@ -27,26 +27,12 @@ button { cursor: pointer; }
 .col-11 { grid-column: span 11; }
 .col-12 { grid-column: span 12; }
 
-/* Mobil: tüm gridler full-width, not-responsive olanlar hariç */
 @media (max-width: 599px) {
-  /* responsive grid container */
   .grid:not(.not-responsive) {
-    grid-template-columns: 1fr; /* tek sütun */
+    grid-template-columns: 1fr;
   }
-  
-  /* responsive grid içindeki tüm kolonlar full-width */
-  .grid:not(.not-responsive) .col-1,
-  .grid:not(.not-responsive) .col-2,
-  .grid:not(.not-responsive) .col-3,
-  .grid:not(.not-responsive) .col-4,
-  .grid:not(.not-responsive) .col-5,
-  .grid:not(.not-responsive) .col-6,
-  .grid:not(.not-responsive) .col-7,
-  .grid:not(.not-responsive) .col-8,
-  .grid:not(.not-responsive) .col-9,
-  .grid:not(.not-responsive) .col-10,
-  .grid:not(.not-responsive) .col-11,
-  .grid:not(.not-responsive) .col-12 {
+
+  .grid:not(.not-responsive) > [class^="col-"] {
     grid-column: 1 / -1;
   }
 }
