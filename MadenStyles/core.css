@@ -79,25 +79,25 @@ html:focus-within { scroll-behavior: smooth; }
 .max-width-450  { max-width: 450px; }
 
 /* Heights */
-.height-xsm { height: 10px; }
-.height-sm  { height: 30px; }
-.height-md  { height: 50px; }
-.height-lg  { height: 75px; }
-.height-xl  { height: 100px; }
-.height-2xl { height: 150px; }
-.height-3xl { height: 200px; }
+.height-xsm { height: 1px; }
+.height-sm  { height: 4px; }
+.height-md  { height: 8px; }
+.height-lg  { height: 16px; }
+.height-xl  { height: 32px; }
+.height-2xl { height: 64px; }
+.height-3xl { height: 128px; }
 .height-full { height: 100%; }
 .height-screen { height: 100vh; }
 .min-height-screen { min-height: 100vh; }
 
 /* Widths */
-.width-xsm { width: 10px; }
-.width-sm  { width: 30px; }
-.width-md  { width: 50px; }
-.width-lg  { width: 75px; }
-.width-xl  { width: 100px; }
-.width-2xl { width: 150px; }
-.width-3xl { width: 200px; }
+.width-xsm { width: 1px; }
+.width-sm  { width: 4px; }
+.width-md  { width: 8px; }
+.width-lg  { width: 16px; }
+.width-xl  { width: 32px; }
+.width-2xl { width: 64px; }
+.width-3xl { width: 128px; }
 .width-full { width: 100%; }
 .width-auto { width: auto; }
 
@@ -119,35 +119,23 @@ html:focus-within { scroll-behavior: smooth; }
    4. Flex Utilities
 ------------------------------------------ */
 .flex { display: flex; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-center { justify-content: center; align-items: center; }
 
 .justify-start { justify-content: flex-start; }
-.justify-center { display: flex; justify-content: center; }
-.justify-between { display: flex; justify-content: space-between; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 .justify-end { justify-content: flex-end; }
 
 .align-start { align-items: flex-start; }
 .align-baseline { align-items: baseline; }
-.align-center { display: flex; align-items: center; }
+.align-center { align-items: center; }
 
 /* -----------------------------------------
    5. Grid Alignment Utilities
 ------------------------------------------ */
-.grid-center {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-.grid-justify-center {
-  display: grid;
-  justify-content: center;
-}
-
-.grid-align-center {
-  display: grid;
-  align-content: center;
-}
+.grid-center {justify-items: center; align-items: center;}
+.grid-justify-center {justify-content: center;}
+.grid-align-center {align-content: center;}
 
 .justify-self-center { justify-self: center; }
 .align-self-center { align-self: center; }
@@ -221,3 +209,49 @@ html:focus-within { scroll-behavior: smooth; }
 .z-30 { z-index: 30; }
 .z-40 { z-index: 40; }
 .z-50 { z-index: 50; }
+
+/* -----------------------------------------
+   13. Border Utilities
+------------------------------------------ */
+.border-0 { border: none; }
+.border-1 { border-width: 1px;}
+.border-2 { border-width: 2px; }
+.border-4 { border-width: 4px; }
+.border-8 { border-width: 8px; }
+
+.border-full{ border-style: solid;}
+.border-t { border-top-style: solid; }
+.border-r { border-right-style: solid; }
+.border-b { border-bottom-style: solid; }
+.border-l { border-left-style: solid; }
+
+/* -----------------------------------------
+   14. Position Utilities
+------------------------------------------ */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+
+.top-0    { top: 0; }
+.right-0  { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+
+/* -----------------------------------------
+   15. Transition Utilities
+------------------------------------------ */
+.transition       { transition: .2s ease; }
+.transition-none  { transition: none; }
+.transition-fast  { transition: .1s ease; }
+.transition-slow  { transition: .4s ease; }
+
+/* -----------------------------------------
+   16. Cursor Utilities
+------------------------------------------ */
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-text    { cursor: text; }
+.cursor-move    { cursor: move; }
+.cursor-wait    { cursor: wait; }
+
