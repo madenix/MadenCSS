@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="dark" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="core.css">
   <link rel="stylesheet" href="color.css">
   <link rel="stylesheet" href="spacing.css">
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="core.css">
 </head>
 <body class="background text-on-background">
   <div class="grid max-width-1200 page-center">
@@ -35,7 +36,7 @@
       <div class="col-6 grid-center p-5">
         <p class="fs-xxl ">Get Started</p>
         <p class="fs-lg">Join today and unlock tools designed to accelerate your workflow from the very first minute. Try it free and experience the difference without any commitment.</p>
-        <div class="text-on-primary">
+        <div class="text-on-primary p-5">
           <a href="" class="primary p-2 m-4 radius-lg">JOIN</a><a href="" class="warning p-2 m-4 radius-lg">NEWS</a>
         </div>
       </div>
@@ -48,13 +49,20 @@
         </svg>
       </div>
     </div>
-    <div class="col-12 surface mt-2 p-2 flex-center">
-      <div style="width: 200px; border: 1px solid #ccc; padding: 10px;">
-        <p class="text-ellipsis">
-          This is a very long sentence that will not fit inside the container and will be truncated.
-        </p>
-      </div>
+    
+    <div class="col-6 m-2">
+      <div class="alert success p-4 radius-lg shadow-light">
+  Başarıyla kaydedildi!
+</div>
     </div>
+    
+     <div class="col-6 m-2">
+<div class="alert success">
+  İşlem başarıyla tamamlandı!
+  <span class="alert-close">×</span>
+</div>
+    </div>
+
   </div>
 </body>
 </html>
