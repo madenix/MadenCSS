@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="core.css">
   <link rel="stylesheet" href="color.css">
   <link rel="stylesheet" href="spacing.css">
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="typography.css">
-  <link rel="stylesheet" href="card.css">
-  <link rel="stylesheet" href="core.css">
 </head>
 <body class="background text-on-background">
   <div class="grid max-width-1200 page-center">
-    <div class="col-12 surface p-2 grid">
+    <div class="col-12 surface p-2 m-2">
+      <a href="#navbar" class="info p-2 radius-lg">Navbar</a>
+      <a href="#Hero" class="info p-2 radius-lg">Hero</a>
+      <a href="#alert" class="info p-2 radius-lg">Alerts</a>
+    </div>
+
+    <div id="navbar" class="col-12 surface p-2 grid">
       <div class="col-2 text-primary flex-center fs-xxl">MADENIX</div>
       <div class="col-10">
         <!-- Navigation Start -->
@@ -32,7 +37,9 @@
         <!-- Navigation End -->
       </div>
     </div>
-    <div class="col-12 surface mt-2 p-2 radius-lg shadow-strong grid grid-center">
+
+
+    <div id="hero" class="col-12 surface mt-2 p-2 radius-lg shadow-strong grid grid-center">
       <div class="col-6 grid-center p-5">
         <p class="fs-xxl ">Get Started</p>
         <p class="fs-lg">Join today and unlock tools designed to accelerate your workflow from the very first minute. Try it free and experience the difference without any commitment.</p>
@@ -50,17 +57,74 @@
       </div>
     </div>
     
-    <div class="col-6 m-2">
-      <div class="alert success p-4 radius-lg shadow-light">
-  Başarıyla kaydedildi!
-</div>
+    <div id="alert" class="col-12 surface mt-2 radius-lg grid">
+      <div class="col-6 m-2">
+        <div class="alert success radius-full">
+          Başarıyla kaydedildi!
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert warning radius-lg text-on-primary">
+          İşlem başarıyla tamamlandı!
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
     </div>
-    
-     <div class="col-6 m-2">
-<div class="alert success">
-  İşlem başarıyla tamamlandı!
-  <span class="alert-close">×</span>
-</div>
+
+    <div id="button" class="col-12 surface grid mt-2 p-3 gap-2 radius-lg">
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block primary text-dark text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block success text-dark text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block warning text-dark text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block danger text-dark text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block info text-dark text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block dark text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block mid text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block light text-dark text-center p-2 radius-lg">Close
+      </a>
+    </div>
+
+    <div class="col-12 surface grid mt-2 p-3 gap-2 radius-lg">
+      <a href="https://www.madenix.com" target="_blank"
+        class="width-1\/4 border-primary border-1 border-full text-light text-center p-2 radius-lg">
+        Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-success border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-warning border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-danger border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-info border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-dark border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-mid border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
+      <a href="https://www.madenix.com" target="_blank"
+        class="inline-block border-light border-1 border-full text-light text-center p-2 radius-lg">Close
+      </a>
     </div>
 
   </div>
