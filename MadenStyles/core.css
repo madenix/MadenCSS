@@ -200,16 +200,6 @@ html:focus-within { scroll-behavior: smooth; }
   text-overflow: ellipsis;
 }
 
-.text-center{text-align: center;}
-
-.text-contrast{
-  background: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  filter: invert(0) grayscale(1) contrast(20);
-}
-
 /* -----------------------------------------
    12. Z-Index Utilities
 ------------------------------------------ */
@@ -268,8 +258,10 @@ html:focus-within { scroll-behavior: smooth; }
 /* -----------------------------------------
    Alert Component – Base
 ------------------------------------------ */
+
+/* Varsayılan yapı — minimum stil.
+   Kullanıcı utility'lerle istediği gibi override edebilir. */
 .alert {
-  padding: 12px 16px;
   display: flex;
   align-items: center;
 }
@@ -281,6 +273,5 @@ html:focus-within { scroll-behavior: smooth; }
   transition: .2s;
 }
 
-.alert .alert-close:hover {
-  opacity: 1;
-}
+.alert .alert-close:hover {opacity: 1;}
+
