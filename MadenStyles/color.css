@@ -1,19 +1,34 @@
 :root {
   /* ---------- Surfaces / Backgrounds ---------- */
-  --background: #0b1220;          /* Background / 0dp elevation surface overlay */
-  --surface: #0f172a;             /* Surface / 1dp elevation overlay */
-  --primary: #f0bb0c;             /* Primary color / Main action */
+  --background: #0b1220;
+  --surface: #0f172a;
+  --primary: #f0bb0c;
 
   /* ---------- On Colors (Text/Icons on surfaces) ---------- */
-  --on-background: #ffffff;       /* Text/icons on background */
-  --on-surface: #e0e0e0;          /* Text/icons on surface */
-  --on-primary: #000000;          /* Text/icons on primary */
+  --on-background: #ffffff;
+  --on-surface: #e0e0e0;
+  --on-primary: #000000;
 
-  /* ---------- Optional Feedback ---------- */
-  --success: #4caf50;
-  --warning: #ffb300;
-  --danger: #cf6679;
-  --info: #2196f3;
+   /* ---------- Optional Feedback ---------- */
+  /* SUCCESS */
+  --success: #4caf50;             /* değişmedi */
+  --success-dark: #1b5e20;        /* daha koyu */
+  --success-light: #f1faf1;       /* daha açık */
+
+  /* WARNING */
+  --warning:       #ffc107;
+  --warning-light: #fff3cd;
+  --warning-dark:  #664d03;
+
+  /* DANGER */
+  --danger:       #dc3545;
+  --danger-light: #f8d7da;
+  --danger-dark:  #842029;
+
+  /* INFO */
+  --info:         #0dcaf0;
+  --info-light:   #cff4fc;
+  --info-dark:    #055160;
 
   /* ---------- Neutral / Gray ---------- */
   --dark: #1a1a1a;
@@ -30,10 +45,22 @@
   --on-surface: #1a1a1a;
   --on-primary: #ffffff;
 
-  --success: #2e7d32;
-  --warning: #ff9800;
-  --danger: #d32f2f;
-  --info: #1976d2;
+  /* ---------- Optional Feedback ---------- */
+  --success: #4caf50;
+  --success-dark: #2e7d32;
+  --success-light: #e8f5e9;
+  
+  --warning: #ffb300;
+  --warning-dark: #e65100;
+  --warning-light: #fff8e1;
+  
+  --danger: #cf6679;
+  --danger-dark: #b00020;
+  --danger-light: #fbe6e6;
+  
+  --info: #2196f3;
+  --info-dark: #0d47a1;
+  --info-light: #e3f2fd;
 
   --dark: #333333;
   --mid: #777777;
@@ -44,10 +71,24 @@
 .background{ background-color: var(--background);}
 .surface{ background-color: var(--surface);}
 .primary{background-color: var(--primary);}
+
+/* Feedback Backgrounds (Main, Dark, Light) */
 .success{background-color: var(--success);}
+.success-dark{background-color: var(--success-dark);}
+.success-light{background-color: var(--success-light);}
+
 .warning{background-color: var(--warning);}
+.warning-dark{background-color: var(--warning-dark);} /* Yeni Eklendi */
+.warning-light{background-color: var(--warning-light);} /* Yeni Eklendi */
+
 .danger{background-color: var(--danger);}
+.danger-dark{background-color: var(--danger-dark);} /* Yeni Eklendi */
+.danger-light{background-color: var(--danger-light);} /* Yeni Eklendi */
+
 .info{background-color: var(--info);}
+.info-dark{background-color: var(--info-dark);} /* Yeni Eklendi */
+.info-light{background-color: var(--info-light);} /* Yeni Eklendi */
+
 .dark{background-color: var(--dark);}
 .mid{background-color: var(--mid);}
 .light{background-color: var(--light);}
@@ -57,26 +98,50 @@
 .text-on-surface{ color: var(--on-surface);}
 .text-on-primary{color: var(--on-primary);}
 
-/* Text theme colors */
+/* Text theme colors (Main) */
 .text-primary{color: var(--primary);}
-.text-success{color: var(--success);}
-.text-warning{color: var(--warning);}
-.text-danger{color: var(--danger);}
-.text-info{color: var(--info);}
 .text-dark{color: var(--dark);}
 .text-mid{color: var(--mid);}
 .text-light{color: var(--light);}
 
+/* Text theme colors (Feedback: Main, Dark, Light) */
+.text-success{color: var(--success);}
+.text-success-dark{color: var(--success-dark);} /* Yeni Eklendi */
+.text-success-light{color: var(--success-light);} /* Yeni Eklendi */
+
+.text-warning{color: var(--warning);}
+.text-warning-dark{color: var(--warning-dark);} /* Yeni Eklendi */
+.text-warning-light{color: var(--warning-light);} /* Yeni Eklendi */
+
+.text-danger{color: var(--danger);}
+.text-danger-dark{color: var(--danger-dark);} /* Yeni Eklendi */
+.text-danger-light{color: var(--danger-light);} /* Yeni Eklendi */
+
+.text-info{color: var(--info);}
+.text-info-dark{color: var(--info-dark);} /* Yeni Eklendi */
+.text-info-light{color: var(--info-light);} /* Yeni Eklendi */
+
 /* Border colors */
 .border-primary{border-color: var(--primary);}
 .border-surface{border-color: var(--surface);}
+
+/* Feedback Border Colors */
+.border-success{border-color: var(--success);}
+.border-success-dark{border-color: var(--success-dark);} /* Yeni Eklendi */
+.border-success-light{border-color: var(--success-light);} /* Yeni Eklendi */
+
 .border-warning{border-color: var(--warning);}
+.border-warning-dark{border-color: var(--warning-dark);} /* Yeni Eklendi */
+.border-warning-light{border-color: var(--warning-light);} /* Yeni Eklendi */
+
 .border-danger{border-color: var(--danger);}
+.border-danger-dark{border-color: var(--danger-dark);} /* Yeni Eklendi */
+.border-danger-light{border-color: var(--danger-light);} /* Yeni Eklendi */
+
 .border-info{border-color: var(--info);}
+.border-info-dark{border-color: var(--info-dark);} /* Yeni Eklendi */
+.border-info-light{border-color: var(--info-light);} /* Yeni Eklendi */
+
 .border-dark{border-color: var(--dark);}
 .border-mid{border-color: var(--mid);}
 .border-light{border-color: var(--light);}
-
-
-
-
