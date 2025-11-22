@@ -120,6 +120,7 @@ html:focus-within { scroll-behavior: smooth; }
 ------------------------------------------ */
 .flex { display: flex; }
 .flex-center { justify-content: center; align-items: center; }
+.flex-wrap{flex-wrap: wrap;}
 
 .justify-start { justify-content: flex-start; }
 .justify-center { justify-content: center; }
@@ -200,6 +201,10 @@ html:focus-within { scroll-behavior: smooth; }
   text-overflow: ellipsis;
 }
 
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
 /* -----------------------------------------
    12. Z-Index Utilities
 ------------------------------------------ */
@@ -274,4 +279,3 @@ html:focus-within { scroll-behavior: smooth; }
 }
 
 .alert .alert-close:hover {opacity: 1;}
-
