@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html data-theme="dark" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,8 @@
       <a href="#navbar" class="info p-2 radius-lg">Navbar</a>
       <a href="#Hero" class="info p-2 radius-lg">Hero</a>
       <a href="#alert" class="info p-2 radius-lg">Alerts</a>
+      <a href="#button" class="info p-2 radius-lg">Buttons</a>
+      <a href="#card" class="info p-2 radius-lg">Cards</a>
     </div>
 
     <div id="navbar" class="col-12 surface p-2 grid">
@@ -59,28 +61,98 @@
     <div id="alert" class="col-12 surface mt-2 radius-lg grid">
        <div class="col-6 m-2">
         <div class="alert info radius-lg text-info-dark p-2">
-          İşlem başarıyla tamamlandı!
+            Information alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
         <div class="alert warning radius-lg text-warning-dark p-2">
-          İşlem başarıyla tamamlandı!
+            Warning alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
         <div class="alert danger radius-lg text-danger-dark p-2">
-          İşlem başarıyla tamamlandı!
-          <span class="alert-close fs-xl fw-bold">×</span>
+            Danger alert
+          <span class="alert-close fs-xl fw-bold ml-4">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
         <div class="alert success radius-lg text-success-dark p-2">
-          İşlem başarıyla tamamlandı!
+            Success alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+
+      <div class="col-6 m-2">
+        <div class="alert dark radius-lg text-light p-2">
+            Neutral dark alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+
+      <div class="col-6 m-2">
+        <div class="alert mid radius-lg text-dark p-2">
+            Neutral information alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+
+      <div class="col-6 m-2">
+        <div class="alert light radius-lg text-dark p-2">
+            Neutral light alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-info border-full radius-lg text-info p-2">
+            Bordered information alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-warnign border-full radius-lg text-warning p-2">
+            Bordered warning alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-danger border-full radius-lg text-danger p-2">
+            Bordered danger alert
+          <span class="alert-close fs-xl fw-bold ml-4">×</span>
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-success border-full radius-lg text-success p-2">
+            Bordered success alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-dark border-full radius-lg text-dark p-2">
+            Bordered dark alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-mid border-full radius-lg text-mid p-2">
+            Bordered mid alert
+          <span class="alert-close fs-xl fw-bold">×</span>
+        </div>
+      </div>
+      
+      <div class="col-6 m-2">
+        <div class="alert border-1 border-light border-full radius-lg text-light p-2">
+            Bordered light alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
@@ -91,13 +163,13 @@
         class="inline-block primary text-dark text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block success text-dark text-center p-2 radius-lg">Close
+        class="width-1/4 inline-block success text-dark text-center p-2 radius-lg">Close width-1/4
       </a>
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block warning text-dark text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block danger text-dark text-center p-2 radius-lg">Close
+        class="width-1/6 inline-block danger text-dark text-center p-2 radius-lg">Close width-1/6
       </a>
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block info text-dark text-center p-2 radius-lg">Close
@@ -118,13 +190,13 @@
         class="border-primary border-1 border-full text-light text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="width-1/4 inline-block border-success border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="width-1/4 inline-block border-success border-1 border-full text-light text-center p-2 radius-lg">Close width-1/4
       </a>
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block border-warning border-1 border-full text-light text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block border-danger border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="width-1/6 inline-block border-danger border-1 border-full text-light text-center p-2 radius-lg">Close width-1/6
       </a>
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block border-info border-1 border-full text-light text-center p-2 radius-lg">Close
@@ -138,6 +210,89 @@
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block border-light border-1 border-full text-light text-center p-2 radius-lg">Close
       </a>
+    </div>
+
+    <div id="card" class="col-12 surface mt-2 p-3 radius-lg gap-2 flex flex-wrap">
+      <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+      <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
+
+            <div class="width-1/4 radius-lg border-1 border-light border-full overflow-hidden">
+        <div><img src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
+        <div class="p-2">
+          <div class="fs-2xl fw-bold p-1">Card title</div>
+          <div class="p-1">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
+          <div class="p-1">Card Footer</div>
+        </div>
+      </div>
     </div>
 
   </div>
