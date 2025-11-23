@@ -11,9 +11,9 @@
 
    /* ---------- Optional Feedback ---------- */
   /* SUCCESS */
-  --success: #4caf50;             /* değişmedi */
-  --success-dark: #1b5e20;        /* daha koyu */
-  --success-light: #f1faf1;       /* daha açık */
+  --success: #4caf50;             
+  --success-dark: #1b5e20;      
+  --success-light: #f1faf1;      
 
   /* WARNING */
   --warning:       #ffc107;
@@ -36,7 +36,7 @@
   --light: #f5f5f5;
 }
 
-[data-theme="light"] {
+html[data-theme="light"] {
   --background: #ffffff;
   --surface: #f7f7f7;
   --primary: #0d6efd;
@@ -68,80 +68,76 @@
 }
 
 /* Background colors */
-.background{ background-color: var(--background);}
-.surface{ background-color: var(--surface);}
-.primary{background-color: var(--primary);}
+.bg-background{ background-color: var(--background);}
+.bg-surface{ background-color: var(--surface);}
+.bg-primary{background-color: var(--primary);}
 
-/* Feedback Backgrounds (Main, Dark, Light) */
-.success{background-color: var(--success);}
-.success-dark{background-color: var(--success-dark);}
-.success-light{background-color: var(--success-light);}
+.bg-success{background-color: var(--success);}
+.bg-success-dark{background-color: var(--success-dark);}
+.bg-success-light{background-color: var(--success-light);}
 
-.warning{background-color: var(--warning);}
-.warning-dark{background-color: var(--warning-dark);} /* Yeni Eklendi */
-.warning-light{background-color: var(--warning-light);} /* Yeni Eklendi */
+.bg-warning{background-color: var(--warning);}
+.bg-warning-dark{background-color: var(--warning-dark);} 
+.bg-warning-light{background-color: var(--warning-light);} 
 
-.danger{background-color: var(--danger);}
-.danger-dark{background-color: var(--danger-dark);} /* Yeni Eklendi */
-.danger-light{background-color: var(--danger-light);} /* Yeni Eklendi */
+.bg-danger{background-color: var(--danger);}
+.bg-danger-dark{background-color: var(--danger-dark);} 
+.bg-danger-light{background-color: var(--danger-light);} 
 
-.info{background-color: var(--info);}
-.info-dark{background-color: var(--info-dark);} /* Yeni Eklendi */
-.info-light{background-color: var(--info-light);} /* Yeni Eklendi */
+.bg-info{background-color: var(--info);}
+.bg-info-dark{background-color: var(--info-dark);}
+.bg-info-light{background-color: var(--info-light);} 
 
-.dark{background-color: var(--dark);}
-.mid{background-color: var(--mid);}
-.light{background-color: var(--light);}
+.bg-dark{background-color: var(--dark);}
+.bg-mid{background-color: var(--mid);}
+.bg-light{background-color: var(--light);}
 
-/* Text contrast*/
-.text-on-background{color: var(--on-background);}
-.text-on-surface{ color: var(--on-surface);}
-.text-on-primary{color: var(--on-primary);}
+/* Text Colors */
+.text-background { color: var(--background); }
+.text-surface    { color: var(--surface); }
+.text-primary    { color: var(--primary); }
 
-/* Text theme colors (Main) */
-.text-primary{color: var(--primary);}
-.text-dark{color: var(--dark);}
-.text-mid{color: var(--mid);}
-.text-light{color: var(--light);}
+.text-success       { color: var(--success); }
+.text-success-dark  { color: var(--success-dark); }
+.text-success-light { color: var(--success-light); }
 
-/* Text theme colors (Feedback: Main, Dark, Light) */
-.text-success{color: var(--success);}
-.text-success-dark{color: var(--success-dark);} /* Yeni Eklendi */
-.text-success-light{color: var(--success-light);} /* Yeni Eklendi */
+.text-warning       { color: var(--warning); }
+.text-warning-dark  { color: var(--warning-dark); }
+.text-warning-light { color: var(--warning-light); }
 
-.text-warning{color: var(--warning);}
-.text-warning-dark{color: var(--warning-dark);} /* Yeni Eklendi */
-.text-warning-light{color: var(--warning-light);} /* Yeni Eklendi */
+.text-danger       { color: var(--danger); }
+.text-danger-dark  { color: var(--danger-dark); }
+.text-danger-light { color: var(--danger-light); }
 
-.text-danger{color: var(--danger);}
-.text-danger-dark{color: var(--danger-dark);} /* Yeni Eklendi */
-.text-danger-light{color: var(--danger-light);} /* Yeni Eklendi */
+.text-info       { color: var(--info); }
+.text-info-dark  { color: var(--info-dark); }
+.text-info-light { color: var(--info-light); }
 
-.text-info{color: var(--info);}
-.text-info-dark{color: var(--info-dark);} /* Yeni Eklendi */
-.text-info-light{color: var(--info-light);} /* Yeni Eklendi */
+.text-dark  { color: var(--dark); }
+.text-mid   { color: var(--mid); }
+.text-light { color: var(--light); }
 
-/* Border colors */
-.border-primary{border-color: var(--primary);}
-.border-surface{border-color: var(--surface);}
+/* On-colors */
+.text-on-bg       { color: var(--on-background); }
+.text-on-surface  { color: var(--on-surface); }
+.text-on-primary  { color: var(--on-primary); }
 
-/* Feedback Border Colors */
-.border-success{border-color: var(--success);}
-.border-success-dark{border-color: var(--success-dark);} /* Yeni Eklendi */
-.border-success-light{border-color: var(--success-light);} /* Yeni Eklendi */
+/* Borders */
+.border-primary { border-color: var(--primary); }
+.border-success { border-color: var(--success); }
+.border-warning { border-color: var(--warning); }
+.border-danger  { border-color: var(--danger); }
+.border-info    { border-color: var(--info); }
+.border-dark    { border-color: var(--dark); }
+.border-mid     { border-color: var(--mid); }
+.border-light   { border-color: var(--light); }
 
-.border-warning{border-color: var(--warning);}
-.border-warning-dark{border-color: var(--warning-dark);} /* Yeni Eklendi */
-.border-warning-light{border-color: var(--warning-light);} /* Yeni Eklendi */
-
-.border-danger{border-color: var(--danger);}
-.border-danger-dark{border-color: var(--danger-dark);} /* Yeni Eklendi */
-.border-danger-light{border-color: var(--danger-light);} /* Yeni Eklendi */
-
-.border-info{border-color: var(--info);}
-.border-info-dark{border-color: var(--info-dark);} /* Yeni Eklendi */
-.border-info-light{border-color: var(--info-light);} /* Yeni Eklendi */
-
-.border-dark{border-color: var(--dark);}
-.border-mid{border-color: var(--mid);}
-.border-light{border-color: var(--light);}
+/* Accent Colors */
+.accent-primary { accent-color: var(--primary); }
+.accent-success { accent-color: var(--success); }
+.accent-warning { accent-color: var(--warning); }
+.accent-danger  { accent-color: var(--danger); }
+.accent-info    { accent-color: var(--info); }
+.accent-dark    { accent-color: var(--dark); }
+.accent-mid     { accent-color: var(--mid); }
+.accent-light   { accent-color: var(--light); }
