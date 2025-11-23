@@ -17,8 +17,16 @@ img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto
 input, button, textarea, select {
   font: inherit;
   border: none;
-  background: none;
   outline: none;
+  padding: 5px;
+}
+
+input::placeholder {
+  transition: .2s;
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
 
 button { cursor: pointer; }
@@ -261,11 +269,8 @@ html:focus-within { scroll-behavior: smooth; }
 .cursor-wait    { cursor: wait; }
 
 /* -----------------------------------------
-   Alert Component – Base
+   Alert Component Base
 ------------------------------------------ */
-
-/* Varsayılan yapı — minimum stil.
-   Kullanıcı utility'lerle istediği gibi override edebilir. */
 .alert {
   display: flex;
   align-items: center;
@@ -279,3 +284,16 @@ html:focus-within { scroll-behavior: smooth; }
 }
 
 .alert .alert-close:hover {opacity: 1;}
+
+/* -----------------------------------------
+   Collapsible Base
+------------------------------------------ */
+.collapsible:not([open]){
+  max-height: 50px;
+}
+
+.collapsible[open]{
+  overflow: hidden;
+  max-height: 100%;
+  transition: all 500ms;
+}
