@@ -1,8 +1,8 @@
 :root {
   /* ---------- Surfaces / Backgrounds ---------- */
   --background: #0b1220;
-  --surface: #0f172a;
-  --primary: #f0bb0c;
+  --surface:     #0f172a;  
+  --primary:     #f0bb0c;
 
   /* ---------- On Colors (Text/Icons on surfaces) ---------- */
   --on-background: #ffffff;
@@ -31,40 +31,47 @@
   --info-dark:    #055160;
 
   /* ---------- Neutral / Gray ---------- */
-  --dark: #1a1a1a;
+  --dark: #3a3a3a;
   --mid: #666666;
   --light: #f5f5f5;
 }
 
 html[data-theme="light"] {
+  /* ---------- Surfaces / Backgrounds ---------- */
   --background: #ffffff;
-  --surface: #f7f7f7;
-  --primary: #0d6efd;
+  --surface:   #f1f2f3;   
+  --primary:   #F0B90B; 
 
-  --on-background: #000000;
-  --on-surface: #1a1a1a;
-  --on-primary: #ffffff;
+  /* ---------- On Colors (Text/Icons on surfaces) ---------- */
+  --on-background: #141414;
+  --on-surface:    #1f2937; 
+  --on-primary:    #000000;
 
-  /* ---------- Optional Feedback ---------- */
-  --success: #4caf50;
-  --success-dark: #2e7d32;
-  --success-light: #e8f5e9;
-  
-  --warning: #ffb300;
-  --warning-dark: #e65100;
-  --warning-light: #fff8e1;
-  
-  --danger: #cf6679;
-  --danger-dark: #b00020;
-  --danger-light: #fbe6e6;
-  
-  --info: #2196f3;
-  --info-dark: #0d47a1;
-  --info-light: #e3f2fd;
+  /* ---------- Feedback Colors ---------- */
+  /* SUCCESS */
+  --success:       #22c55e; 
+  --success-dark:  #15803d;
+  --success-light: #dcfce7;
 
-  --dark: #333333;
-  --mid: #777777;
-  --light: #e0e0e0;
+  /* WARNING */
+  --warning:       #f59e0b;
+  --warning-dark:  #b45309;
+  --warning-light: #fef3c7;
+
+  /* DANGER */
+  --danger:        #ef4444;
+  --danger-dark:   #b91c1c;
+  --danger-light:  #fee2e2;
+
+  /* INFO */
+  --info:          #3b82f6;
+  --info-dark:     #1e40af;
+  --info-light:    #dbeafe;
+
+  /* ---------- Neutral / Gray ---------- */
+  --dark:  #1f2937;
+  --mid:   #6b7280;
+  --light: #e5e7eb;
 }
 
 /* Background colors */
@@ -118,7 +125,7 @@ html[data-theme="light"] {
 .text-light { color: var(--light); }
 
 /* On-colors */
-.text-on-bg       { color: var(--on-background); }
+.text-on-background { color: var(--on-background); }
 .text-on-surface  { color: var(--on-surface); }
 .text-on-primary  { color: var(--on-primary); }
 
