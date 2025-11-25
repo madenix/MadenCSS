@@ -19,6 +19,7 @@ input, button, textarea, select {
   border: none;
   outline: none;
   padding: 5px;
+  color: inherit;
 }
 
 input::placeholder {
@@ -250,6 +251,15 @@ html:focus-within { scroll-behavior: smooth; }
 .right-0  { right: 0; }
 .bottom-0 { bottom: 0; }
 .left-0   { left: 0; }
+
+/* 4 corner translate helper */
+.translate-top-right {top: 0; right: 0; transform: translate(50%, -50%);}
+.translate-top-left {top: 0; left: 0; transform: translate(-50%, -50%);}
+.translate-bottom-right {bottom: 0; right: 0; transform: translate(50%, 50%);}
+.translate-bottom-left {bottom: 0; left: 0;transform: translate(-50%, 50%);}
+.translate-center {top: 50%; left: 50%;transform: translate(-50%, -50%);}
+
+
 
 /* -----------------------------------------
    15. Transition Utilities
