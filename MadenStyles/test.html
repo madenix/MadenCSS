@@ -12,18 +12,20 @@
   <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="modal.css">
 </head>
-<body class="background text-on-background">
+<body class="bg-background text-on-background">
   <div class="grid max-width-1200 page-center">
-    <div class="col-12 surface p-2 m-2">
-      <a href="#navbar" class="info p-2 radius-lg">Navbar</a>
-      <a href="#Hero" class="info p-2 radius-lg">Hero</a>
-      <a href="#alert" class="info p-2 radius-lg">Alerts</a>
-      <a href="#button" class="info p-2 radius-lg">Buttons</a>
-      <a href="#card" class="info p-2 radius-lg">Cards</a>
-      <a href="#collapsible" class="info p-2 radius-lg">Collapsibles</a>
+    <div class="col-12 bg-surface p-3 m-2 radius-lg">
+      <a href="#navbar" class="bg-info p-2 radius-lg">Navbar</a>
+      <a href="#Hero" class="bg-info p-2 radius-lg">Hero</a>
+      <a href="#alert" class="bg-info p-2 radius-lg">Alerts</a>
+      <a href="#button" class="bg-info p-2 radius-lg">Buttons</a>
+      <a href="#card" class="bg-info p-2 radius-lg">Cards</a>
+      <a href="#collapsible" class="bg-info p-2 radius-lg">Collapsibles</a>
+      <a href="#modal" class="bg-info p-2 radius-lg">Modals</a>
+      <a href="#form" class="bg-info p-2 radius-lg">Forms</a>
     </div>
 
-    <div id="navbar" class="col-12 surface p-2 grid">
+    <div id="navbar" class="col-12 bg-surface p-2 grid radius-lg">
       <div class="col-2 text-primary flex-center fs-xxl">MADENIX</div>
       <div class="col-10">
         <!-- Navigation Start -->
@@ -42,12 +44,12 @@
       </div>
     </div>
 
-    <div id="hero" class="col-12 surface mt-2 p-2 radius-lg shadow-strong grid grid-center">
+    <div id="hero" class="col-12 bg-surface mt-2 p-2 radius-lg grid grid-center">
       <div class="col-6 grid-center p-5">
         <p class="fs-xxl ">Get Started</p>
         <p class="fs-lg">Join today and unlock tools designed to accelerate your workflow from the very first minute. Try it free and experience the difference without any commitment.</p>
         <div class="text-on-primary p-5">
-          <a href="" class="primary p-2 m-4 radius-lg">JOIN</a><a href="" class="warning p-2 m-4 radius-lg">NEWS</a>
+          <a href="" class="bg-primary p-2 m-4 radius-lg">JOIN</a><a href="" class="bg-warning p-2 m-4 radius-lg">NEWS</a>
         </div>
       </div>
       <div class="col-6">
@@ -60,51 +62,51 @@
       </div>
     </div>
     
-    <div id="alert" class="col-12 surface mt-2 radius-lg grid">
+    <div id="alert" class="col-12 bg-surface mt-2 radius-lg grid">
        <div class="col-6 m-2">
-        <div class="alert info radius-lg text-info-dark p-2">
+        <div class="alert bg-info radius-lg text-info-dark p-2">
             Information alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
-        <div class="alert warning radius-lg text-warning-dark p-2">
+        <div class="alert bg-warning radius-lg text-warning-dark p-2">
             Warning alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
-        <div class="alert danger radius-lg text-danger-dark p-2">
+        <div class="alert bg-danger radius-lg text-danger-dark p-2">
             Danger alert
           <span class="alert-close fs-xl fw-bold ml-4">×</span>
         </div>
       </div>
       
       <div class="col-6 m-2">
-        <div class="alert success radius-lg text-success-dark p-2">
+        <div class="alert bg-success radius-lg text-success-dark p-2">
             Success alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
 
       <div class="col-6 m-2">
-        <div class="alert dark radius-lg text-light p-2">
+        <div class="alert bg-dark radius-lg text-light p-2">
             Neutral dark alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
 
       <div class="col-6 m-2">
-        <div class="alert mid radius-lg text-dark p-2">
+        <div class="alert bg-mid radius-lg text-light p-2">
             Neutral information alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
       </div>
 
       <div class="col-6 m-2">
-        <div class="alert light radius-lg text-dark p-2">
+        <div class="alert bg-light radius-lg text-dark p-2">
             Neutral light alert
           <span class="alert-close fs-xl fw-bold">×</span>
         </div>
@@ -160,61 +162,61 @@
       </div>
     </div>
 
-    <div id="button" class="col-12 surface mt-2 p-3 gap-2 radius-lg flex gap-2">
+    <div id="button" class="col-12 bg-surface mt-2 p-3 gap-2 radius-lg flex gap-2">
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block primary text-dark text-center p-2 radius-lg">Close
+        class="inline-block bg-primary text-on-primary text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="width-1/4 inline-block success text-dark text-center p-2 radius-lg">Close width-1/4
+        class="width-1/4 inline-block bg-success text-success-dark text-center p-2 radius-lg">Close width-1/4
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block warning text-dark text-center p-2 radius-lg">Close
+        class="inline-block bg-warning text-warning-dark text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="width-1/6 inline-block danger text-dark text-center p-2 radius-lg">Close width-1/6
+        class="width-1/6 inline-block bg-danger text-danger-dark text-center p-2 radius-lg">Close width-1/6
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block info text-dark text-center p-2 radius-lg">Close
+        class="inline-block bg-info text-info-dark text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block dark text-light text-center p-2 radius-lg">Close
+        class="inline-block bg-dark text-light text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block mid text-light text-center p-2 radius-lg">Close
+        class="inline-block bg-mid text-light text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block light text-dark text-center p-2 radius-lg">Close
+        class="inline-block bg-light text-dark text-center p-2 radius-lg">Close
       </a>
     </div>
 
-    <div class="col-12 surface mt-2 p-3 radius-lg gap-2 flex">
+    <div class="col-12 bg-surface mt-2 p-3 radius-lg gap-2 flex">
       <a href="https://www.madenix.com" target="_blank"
-        class="border-primary border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="border-primary border-1 border-full text-primary text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="width-1/4 inline-block border-success border-1 border-full text-light text-center p-2 radius-lg">Close width-1/4
+        class="width-1/4 inline-block border-success border-1 border-full text-success text-center p-2 radius-lg">Close width-1/4
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block border-warning border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="inline-block border-warning border-1 border-full text-warning text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="width-1/6 inline-block border-danger border-1 border-full text-light text-center p-2 radius-lg">Close width-1/6
+        class="width-1/6 inline-block border-danger border-1 border-full text-danger text-center p-2 radius-lg">Close width-1/6
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block border-info border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="inline-block border-info border-1 border-full text-info text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block border-dark border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="inline-block border-dark border-1 border-full text-dark text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
-        class="inline-block border-mid border-1 border-full text-light text-center p-2 radius-lg">Close
+        class="inline-block border-mid border-1 border-full text-mid text-center p-2 radius-lg">Close
       </a>
       <a href="https://www.madenix.com" target="_blank"
         class="inline-block border-light border-1 border-full text-light text-center p-2 radius-lg">Close
       </a>
     </div>
 
-    <div id="card" class="col-12 surface mt-2 p-3 radius-lg gap-2 flex flex-wrap">
+    <div id="card" class="col-12 bg-surface mt-2 p-3 radius-lg gap-2 flex flex-wrap">
       <div class="radius-lg border-1 border-light border-full overflow-hidden flex">
         <div><img width="300" src="https://raw.githubusercontent.com/makinahmet/abmcss.github.io/main/images/car.jpeg"></div>
         <div class="p-2">
@@ -233,87 +235,87 @@
         </div>
       </div>
       
-      <div class="radius-lg border-1 border-success border-full overflow-hidden success width-full">
+      <div class="radius-lg border-1 border-success border-full overflow-hidden bg-success width-full">
         <div class="">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 success-dark">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-success-dark">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 success-dark radius-sm">Go somewhere</a></div>
+          <div class="p-2"><a href="" class="p-1 bg-success-dark radius-sm">Go somewhere</a></div>
         </div>
       </div>
 
-      <div class="radius-lg border-1 border-info border-full overflow-hidden info">
+      <div class="radius-lg border-1 border-info border-full overflow-hidden bg-info">
         <div class="">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 info-dark">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-info-dark">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 info-dark radius-sm">Go somewhere</a></div>
+          <div class="p-2"><a href="" class="p-1 bg-info-dark radius-sm">Go somewhere</a></div>
         </div>
       </div>
 
-      <div class="radius-lg border-1 border-warning border-full overflow-hidden warning">
+      <div class="radius-lg border-1 border-warning border-full overflow-hidden bg-warning">
         <div class="">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 warning-dark">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-warning-dark">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 warning-dark radius-sm">Go somewhere</a></div>
+          <div class="p-2"><a href="" class="p-1 bg-warning-dark radius-sm">Go somewhere</a></div>
         </div>
       </div>
       
-      <div class="radius-lg border-1 border-danger border-full overflow-hidden danger">
+      <div class="radius-lg border-1 border-danger border-full overflow-hidden bg-danger">
         <div class="">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 danger-dark">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-danger-dark">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 danger-dark radius-sm">Go somewhere</a></div>
+          <div class="p-2"><a href="" class="p-1 bg-danger-dark radius-sm">Go somewhere</a></div>
         </div>
       </div>
       
       <div class="radius-lg border-1 border-full overflow-hidden">
         <div class="">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 mid">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-mid">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 radius-sm mid text-light">Go somewhere</a></div>
+          <div class="p-2"><a href="" class="p-1 radius-sm bg-mid text-light">Go somewhere</a></div>
         </div>
       </div>
       
       <div class="radius-lg border-1 border-full overflow-hidden">
         <div class="text-center">
-          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 mid">Card title</div>
+          <div class="fs-2xl fw-bold p-1 border-1 border-b p-2 bg-mid">Card title</div>
           <div class="p-2">Some quick example text to build on the card title and make up the bulk of the card’s content.</div>
-          <div class="p-2"><a href="" class="p-1 radius-sm primary text-on-primary">Go somewhere</a></div>
-          <div class="fs-sm fw-thin p-1 border-1 p-2 mid">Card title</div>
+          <div class="p-2"><a href="" class="p-1 radius-sm bg-primary text-on-primary">Go somewhere</a></div>
+          <div class="fs-sm fw-thin p-1 border-1 p-2 bg-mid">Card title</div>
         </div>
       </div>
     </div><!-- Card End -->
 
     <div id="collapsible" class="col-12 mt-2 p-3 radius-lg gap-2 flex flex-wrap">
-      <details class="width-1/4 collapsible surface p-2 radius-lg">
+      <details class="width-1/4 collapsible bg-surface p-2 radius-lg">
           <summary class="border-1 border-b">Click Me!</summary>
           <div>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
       </details>
 
-      <details class="width-1/4 collapsible info radius-lg">
-          <summary class="border-1 border-b info-dark p-2">Click Me!</summary>
+      <details class="width-1/4 collapsible bg-info radius-lg">
+          <summary class="border-1 border-b bg-info-dark p-2">Click Me!</summary>
           <div class="info p-2 text-info-dark">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
       </details>
 
-      <details class="width-1/4 collapsible warning radius-lg">
-          <summary class="border-1 border-b warning-dark p-2">Click Me!</summary>
+      <details class="width-1/4 collapsible bg-warning radius-lg">
+          <summary class="border-1 border-b bg-warning-dark p-2">Click Me!</summary>
           <div class="warning p-2 text-warning-dark">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
       </details>
 
-      <details class="width-1/4 collapsible danger radius-lg">
-          <summary class="border-1 border-b danger-dark p-2">Click Me!</summary>
+      <details class="width-1/4 collapsible bg-danger radius-lg">
+          <summary class="border-1 border-b bg-danger-dark p-2">Click Me!</summary>
           <div class="danger p-2 text-danger-dark">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
       </details>
 
-      <details class="width-1/4 collapsible success radius-lg">
-          <summary class="border-1 border-b success-dark p-2">Click Me!</summary>
+      <details class="width-1/4 collapsible bg-success radius-lg">
+          <summary class="border-1 border-b bg-success-dark p-2">Click Me!</summary>
           <div class="success p-2 text-success-dark">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
@@ -322,11 +324,11 @@
 
     <div id="modal" class="col-12 mt-2 p-3 radius-lg gap-2 flex flex-wrap">
       <div>
-        <label class="primary text-on-primary p-2 radius-lg" for="exampleModal">Open Example Modal</label>
+        <label class="bg-primary text-on-primary p-2 radius-lg" for="exampleModal">Open Example Modal</label>
         <input type="checkbox" id="exampleModal" class="modalState">
         <div class="modal">
             <label for="exampleModal" class="modalBackground"></label>
-            <div class="modalInner p-2 radius-lg light">
+            <div class="modalInner p-2 radius-lg bg-light">
                 <div class="flex justify-between text-dark">
                     <div class="">MODAL TITLE</div>
                     <div class=""><label for="exampleModal">Close</label></div>
@@ -338,11 +340,11 @@
       </div> 
 
       <div>
-        <label class="primary text-on-primary p-2 radius-lg" for="modal1">Open Modal 1</label>
+        <label class="bg-primary text-on-primary p-2 radius-lg" for="modal1">Open Modal 1</label>
         <input type="checkbox" id="modal1" class="modalState">
         <div class="modal">
             <label for="modal1" class="modalBackground"></label>
-            <div class="modalInner p-2 radius-lg light text-dark">
+            <div class="modalInner p-2 radius-lg bg-light text-dark">
                 <div class="flex justify-between">
                     <div class="">MODAL TITLE</div>
                     <div class=""><label for="modal1">Close</label></div>
@@ -354,11 +356,11 @@
       </div> 
 
       <div>
-        <label class="primary text-on-primary p-2 radius-lg" for="modal2">Open Modal 2</label>
+        <label class="bg-primary text-on-primary p-2 radius-lg" for="modal2">Open Modal 2</label>
         <input type="checkbox" id="modal2" class="modalState">
         <div class="modal">
             <label for="modal2" class="modalBackground"></label>
-            <div class="modalInner p-2 radius-lg light text-dark">
+            <div class="modalInner p-2 radius-lg bg-light text-dark">
                 <div class="flex justify-between">
                     <div class="">MODAL TITLE</div>
                     <div class=""><label for="modal2">Close</label></div>
@@ -370,11 +372,11 @@
       </div> 
 
       <div>
-        <label class="primary text-on-primary p-2 radius-lg" for="modal3">Open Modal 3</label>
+        <label class="bg-primary text-on-primary p-2 radius-lg" for="modal3">Open Modal 3</label>
         <input type="checkbox" id="modal3" class="modalState">
         <div class="modal">
             <label for="modal3" class="modalBackground"></label>
-            <div class="modalInner p-2 radius-lg light text-dark">
+            <div class="modalInner p-2 radius-lg bg-light text-dark">
                 <div class="flex justify-between">
                     <div class="">MODAL TITLE</div>
                     <div class=""><label for="modal3">Close</label></div>
@@ -388,11 +390,11 @@
 
       <!-- Base modal -->
       <div>
-        <label class="primary text-on-primary p-2 radius-lg" for="baseModal">Base Modal</label>
+        <label class="bg-primary text-on-primary p-2 radius-lg" for="baseModal">Base Modal</label>
         <input type="checkbox" id="baseModal" class="modalState">
         <div class="modal">
             <label for="baseModal" class="modalBackground"></label>
-            <div class="modalInner p-2 radius-lg light text-dark">
+            <div class="modalInner p-2 radius-lg bg-light text-dark">
                 <div class="flex justify-between">
                     <div class="">This is the base modal</div>
                     <div class="fw-bold"><label for="baseModal">X</label></div>
@@ -400,11 +402,11 @@
                 <hr>
                 Click button to open nested modal.<br /><br />
                     <!-- nested modal -->
-                    <label class="primary text-on-primary p-2 radius-sm" for="nestedModal">Nested Modal</label>
+                    <label class="bg-primary text-on-primary p-2 radius-sm" for="nestedModal">Nested Modal</label>
                     <input type="checkbox" id="nestedModal" class="modalState">
                     <div class="modal">
                         <label for="nestedModal" class="modalBackground"></label>
-                        <div class="modalInner p-2 radius-lg light text-dark">
+                        <div class="modalInner p-2 radius-lg bg-light text-dark">
                             <div class="flex justify-between">
                                 <div class="">MODAL TITLE</div>
                                 <div class="fw-bold"><label for="nestedModal">X</label></div>
@@ -419,67 +421,207 @@
     </div><!-- Modal End -->
 
     <div id="form" class="col-12 mt-2 p-3 radius-lg gap-2 flex flex-wrap">
-      <form acition="#" class="surface radius-lg p-2">
+      <form acition="#" class="bg-surface radius-lg p-2">
         <div class="text-center">
-            <span class="text-primary">LOGIN FORM</span>
+            <span class="text-on-surface">LOGIN FORM</span>
         </div>
         <div class="mt-2">
-            <input type="text" class="background radius-sm text-light" placeholder="E-mail address">
+            <input type="text" class="bg-background radius-sm text-on-background" placeholder="E-mail address">
         </div>
         <div class="mt-2">
-            <input type="password" class="background" placeholder="Password">
+            <input type="password" class="bg-background radius-sm text-on-background" placeholder="Password">
         </div>
         <div class="mt-2">
-            <button type="submit" class="background p-1 radius-sm text-primary border-1 border-primary border-full">Log In</button>
+            <button type="submit" class="bg-primary radius-sm text-on-primary">Log In</button>
         </div>
       </form>
 
-      <form acition="#" class="surface radius-lg p-2">
+      <form acition="#" class="bg-surface text-on-surface radius-lg p-2">
           <div class="text-center">
-              <span class="text-primary">REGISTER</span>
+              <span class="">REGISTER</span>
           </div>
           <div class="flex mt-2">
-              <svg class="text-primary" fill="currentColor" width="32" height="32" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+              <svg class="" fill="currentColor" width="32" height="32" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.7505 9.02905C19.7652 9.443 20.1127 9.76663 20.5267 9.75189C20.9406 9.73715 21.2643 9.38962 21.2495 8.97567L19.7505 9.02905ZM16.214 5.00236V5.75236C16.2224 5.75236 16.2307 5.75222 16.2391 5.75194L16.214 5.00236ZM9.786 5.00236L9.76095 5.75194C9.7693 5.75222 9.77765 5.75236 9.786 5.75236V5.00236ZM4.75048 8.97567C4.73573 9.38962 5.05936 9.73715 5.47331 9.75189C5.88726 9.76663 6.23478 9.443 6.24952 9.02905L4.75048 8.97567ZM21.25 9.00236C21.25 8.58815 20.9142 8.25236 20.5 8.25236C20.0858 8.25236 19.75 8.58815 19.75 9.00236H21.25ZM20.5 15.0024L21.2495 15.029C21.2498 15.0202 21.25 15.0113 21.25 15.0024H20.5ZM16.214 19.0024L16.2391 18.2528C16.2307 18.2525 16.2224 18.2524 16.214 18.2524V19.0024ZM9.786 19.0024V18.2524C9.77765 18.2524 9.7693 18.2525 9.76095 18.2528L9.786 19.0024ZM5.5 15.0024H4.75C4.75 15.0113 4.75016 15.0202 4.75048 15.029L5.5 15.0024ZM6.25 9.00236C6.25 8.58815 5.91421 8.25236 5.5 8.25236C5.08579 8.25236 4.75 8.58815 4.75 9.00236H6.25ZM20.8783 9.64996C21.236 9.44103 21.3565 8.98172 21.1476 8.62406C20.9387 8.2664 20.4794 8.14583 20.1217 8.35476L20.8783 9.64996ZM15.236 12.0774L14.8577 11.4297L14.8515 11.4334L15.236 12.0774ZM10.764 12.0774L11.1486 11.4334L11.1423 11.4298L10.764 12.0774ZM5.8783 8.35476C5.52064 8.14583 5.06133 8.2664 4.8524 8.62406C4.64347 8.98172 4.76404 9.44103 5.1217 9.64996L5.8783 8.35476ZM21.2495 8.97567C21.1534 6.27536 18.8895 4.16252 16.1889 4.25278L16.2391 5.75194C18.1129 5.68931 19.6838 7.15537 19.7505 9.02905L21.2495 8.97567ZM16.214 4.25236H9.786V5.75236H16.214V4.25236ZM9.81105 4.25278C7.11054 4.16252 4.84663 6.27536 4.75048 8.97567L6.24952 9.02905C6.31625 7.15537 7.88712 5.68931 9.76095 5.75194L9.81105 4.25278ZM19.75 9.00236V15.0024H21.25V9.00236H19.75ZM19.7505 14.9757C19.6838 16.8494 18.1129 18.3154 16.2391 18.2528L16.1889 19.7519C18.8895 19.8422 21.1534 17.7294 21.2495 15.029L19.7505 14.9757ZM16.214 18.2524H9.786V19.7524H16.214V18.2524ZM9.76095 18.2528C7.88712 18.3154 6.31624 16.8494 6.24952 14.9757L4.75048 15.029C4.84663 17.7294 7.11054 19.8422 9.81105 19.7519L9.76095 18.2528ZM6.25 15.0024V9.00236H4.75V15.0024H6.25ZM20.1217 8.35476L14.8577 11.4298L15.6143 12.725L20.8783 9.64996L20.1217 8.35476ZM14.8515 11.4334C13.7111 12.1145 12.2889 12.1145 11.1485 11.4334L10.3795 12.7213C11.9935 13.6852 14.0065 13.6852 15.6205 12.7213L14.8515 11.4334ZM11.1423 11.4298L5.8783 8.35476L5.1217 9.64996L10.3857 12.725L11.1423 11.4298Z"/>
               </svg>
-              <input type="text" class="background" placeholder="E-mail address">
+              <input type="text" class="bg-background radius-sm" placeholder="E-mail address">
           </div>
           <div class="flex mt-2">
-              <svg class="text-primary" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <input type="password" class="background" placeholder="Create Password">
+              <input type="password" class="bg-background radius-sm" placeholder="Create Password">
           </div>
           <div class="flex mt-2">
-              <svg class="text-primary" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <input type="password" class="background" placeholder="Confirm Password">
+              <input type="password" class="bg-background radius-sm" placeholder="Confirm Password">
           </div>
           <div class="mt-3 fs-sm text-mid">
               Already have an account? <a href="#" class=""><b class="text-primary">Sign In</b></a>
           </div>
           <div class="mt-3">
-              <button type="submit" class="background p-1 radius-sm text-primary border-1 border-primary border-full">Register</button>
+              <button type="submit" class="bg-primary radius-sm text-on-primary">Register</button>
           </div>
       </form>
 
-      <form acition="#" class="surface radius-lg p-2">
-        <div class="text-center text-primary">FEEDBACK FORM</div>
+      <form acition="#" class="bg-surface radius-lg p-2 text-on-surface">
+        <div class="text-center">FEEDBACK FORM</div>
         <div class="flex mt-2">
-            <svg class="text-primary" fill="currentColor" width="32" height="32" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
+            <svg class="" fill="currentColor" width="32" height="32" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.7505 9.02905C19.7652 9.443 20.1127 9.76663 20.5267 9.75189C20.9406 9.73715 21.2643 9.38962 21.2495 8.97567L19.7505 9.02905ZM16.214 5.00236V5.75236C16.2224 5.75236 16.2307 5.75222 16.2391 5.75194L16.214 5.00236ZM9.786 5.00236L9.76095 5.75194C9.7693 5.75222 9.77765 5.75236 9.786 5.75236V5.00236ZM4.75048 8.97567C4.73573 9.38962 5.05936 9.73715 5.47331 9.75189C5.88726 9.76663 6.23478 9.443 6.24952 9.02905L4.75048 8.97567ZM21.25 9.00236C21.25 8.58815 20.9142 8.25236 20.5 8.25236C20.0858 8.25236 19.75 8.58815 19.75 9.00236H21.25ZM20.5 15.0024L21.2495 15.029C21.2498 15.0202 21.25 15.0113 21.25 15.0024H20.5ZM16.214 19.0024L16.2391 18.2528C16.2307 18.2525 16.2224 18.2524 16.214 18.2524V19.0024ZM9.786 19.0024V18.2524C9.77765 18.2524 9.7693 18.2525 9.76095 18.2528L9.786 19.0024ZM5.5 15.0024H4.75C4.75 15.0113 4.75016 15.0202 4.75048 15.029L5.5 15.0024ZM6.25 9.00236C6.25 8.58815 5.91421 8.25236 5.5 8.25236C5.08579 8.25236 4.75 8.58815 4.75 9.00236H6.25ZM20.8783 9.64996C21.236 9.44103 21.3565 8.98172 21.1476 8.62406C20.9387 8.2664 20.4794 8.14583 20.1217 8.35476L20.8783 9.64996ZM15.236 12.0774L14.8577 11.4297L14.8515 11.4334L15.236 12.0774ZM10.764 12.0774L11.1486 11.4334L11.1423 11.4298L10.764 12.0774ZM5.8783 8.35476C5.52064 8.14583 5.06133 8.2664 4.8524 8.62406C4.64347 8.98172 4.76404 9.44103 5.1217 9.64996L5.8783 8.35476ZM21.2495 8.97567C21.1534 6.27536 18.8895 4.16252 16.1889 4.25278L16.2391 5.75194C18.1129 5.68931 19.6838 7.15537 19.7505 9.02905L21.2495 8.97567ZM16.214 4.25236H9.786V5.75236H16.214V4.25236ZM9.81105 4.25278C7.11054 4.16252 4.84663 6.27536 4.75048 8.97567L6.24952 9.02905C6.31625 7.15537 7.88712 5.68931 9.76095 5.75194L9.81105 4.25278ZM19.75 9.00236V15.0024H21.25V9.00236H19.75ZM19.7505 14.9757C19.6838 16.8494 18.1129 18.3154 16.2391 18.2528L16.1889 19.7519C18.8895 19.8422 21.1534 17.7294 21.2495 15.029L19.7505 14.9757ZM16.214 18.2524H9.786V19.7524H16.214V18.2524ZM9.76095 18.2528C7.88712 18.3154 6.31624 16.8494 6.24952 14.9757L4.75048 15.029C4.84663 17.7294 7.11054 19.8422 9.81105 19.7519L9.76095 18.2528ZM6.25 15.0024V9.00236H4.75V15.0024H6.25ZM20.1217 8.35476L14.8577 11.4298L15.6143 12.725L20.8783 9.64996L20.1217 8.35476ZM14.8515 11.4334C13.7111 12.1145 12.2889 12.1145 11.1485 11.4334L10.3795 12.7213C11.9935 13.6852 14.0065 13.6852 15.6205 12.7213L14.8515 11.4334ZM11.1423 11.4298L5.8783 8.35476L5.1217 9.64996L10.3857 12.725L11.1423 11.4298Z"/>
             </svg>
-            <input type="text" class="background" placeholder="E-mail address">
+            <input type="text" class="bg-background radius-sm" placeholder="E-mail address">
         </div>
         <div class="mt-2">
-          <textarea class="background text-light p-3 radius-sm">asalşskjşl</textarea>
+          <textarea class="bg-background p-3 radius-sm" placeholder="Enter your feedback"></textarea>
         </div>
         <div class="mt-3">
-            <button type="submit" class="background p-1 radius-sm text-primary border-1 border-primary border-full">Send</button>
+            <button type="submit" class="bg-primary radius-sm text-on-primary">Send</button>
         </div>
       </form>
 
+      <form class="bg-surface radius-lg p-2">
+        <input type="checkbox" class="accent-primary" checked> Primary checkbox<br />
+        <input type="checkbox" class="accent-success" checked>  Success checkbox<br />
+        <input type="checkbox" class="accent-info" checked> Info checkbox<br />
+        <input type="checkbox" class="accent-warning" checked> Warning checkbox<br />
+        <input type="checkbox" class="accent-danger" checked> Danger checkbox<br />
+        <input type="checkbox" class="accent-dark" checked> Dark checkbox<br />
+        <input type="checkbox" class="accent-mid" checked> Mid checkbox<br />
+        <input type="checkbox" class="accent-light" checked> Light checkbox
+      </form>
+
+
+      <form class="bg-surface radius-lg p-2">
+        <input type="radio" class="accent-primary" checked> Primary radio<br />
+        <input type="radio" class="accent-success" checked>  Success radio<br />
+        <input type="radio" class="accent-info" checked> Info radio<br />
+        <input type="radio" class="accent-warning" checked> Warning radio<br />
+        <input type="radio" class="accent-danger" checked> Danger radio<br />
+        <input type="radio" class="accent-dark" checked> Dark radio<br />
+        <input type="radio" class="accent-mid" checked> Mid radio<br />
+        <input type="radio" class="accent-light" checked> Light radio
+      </form>
+
+      <form class="bg-surface radius-lg p-2">
+        <input type="range" class="accent-primary" checked> Primary range<br />
+        <input type="range" class="accent-success" checked>  Success range<br />
+        <input type="range" class="accent-info" checked> Info range<br />
+        <input type="range" class="accent-warning" checked> Warning range<br />
+        <input type="range" class="accent-danger" checked> Danger range<br />
+        <input type="range" class="accent-dark" checked> Dark range<br />
+        <input type="range" class="accent-mid" checked> Mid range<br />
+        <input type="range" class="accent-light" checked> Light range
+      </form>
+
+      <form class="bg-surface radius-lg p-2">
+        <progress value="30" max="100" class="accent-primary"></progress> Primary Progress<br />
+        <progress value="35" max="100" class="accent-success"></progress> Success Progress<br />
+        <progress value="40" max="100" class="accent-info"></progress> Info Progress<br />
+        <progress value="45" max="100" class="accent-warning"></progress> Warning Progress<br />
+        <progress value="50" max="100" class="accent-danger"></progress> Danger Progress<br />
+        <progress value="55" max="100" class="accent-dark"></progress> Dark Progress<br />
+        <progress value="60" max="100" class="accent-mid"></progress> Mid Progress<br />
+        <progress value="65" max="100" class="accent-light"></progress> Light Progress
+      </form>
+
+
+      <form class="bg-surface radius-lg p-2">
+        <select id="cars" name="cars" class="bg-surface text-on-surface radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-primary text-on-primary radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-success text-on-primary radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-info text-on-primary radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-danger text-on-primary radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-dark text-light radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-mid text-light radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br />
+        <select id="cars" name="cars" class="bg-light text-dark radius-sm m-2">
+          <option value="">--Please Select--</option>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+      </form>
+
+    </div><!-- Form End -->
+
+    <div id="badge" class="bg-surface col-12 mt-2 p-3 radius-lg gap-2 flex flex-wrap">
+      <div class="bg-primary text-on-primary p-2 radius-md relative mx-2">
+        Messages
+        <div class="bg-danger text-center px-2 py-1 radius-full absolute translate-top-right">8</div>
+      </div>
+
+      <div class="bg-primary text-on-primary p-2 radius-md relative mx-3">
+        Messages
+        <div class="bg-danger text-center px-2 py-1 radius-full absolute translate-top-left">5</div>
+      </div>
+      <div class="bg-primary text-on-primary p-2 radius-md relative mx-3">
+        Messages
+        <div class="bg-danger text-center px-2 py-1 radius-full absolute translate-bottom-left">23</div>
+      </div>
+      <div class="bg-primary text-on-primary p-2 radius-md relative mx-3">
+        Messages
+        <div class="bg-danger text-center px-2 py-1 radius-full absolute translate-bottom-right">12</div>
+      </div>
+      <div class="bg-primary text-on-primary p-2 radius-md mx-3">
+        <span>Messages</span>
+        <span class="bg-danger text-center px-2 py-1 radius-full">4</span>
+      </div>
+      <div class="bg-primary text-on-primary p-2 radius-md mx-3">
+        <span class="bg-danger text-center px-2 py-1 radius-full">3</span>
+        <span>Messages</span>
+      </div>
     </div>
 
   </div><!-- Page End -->
