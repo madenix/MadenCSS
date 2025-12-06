@@ -11,20 +11,11 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="typography.css">
   <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="offCanvas.css">
+  <link rel="stylesheet" href="sidebar.css">
 </head>
 <body class="bg-background text-on-background">
   <div class="grid max-width-1200 page-center">
-    <div class="col-12 bg-surface p-3 m-2 radius-lg">
-      <a href="#navbar" class="bg-info p-2 radius-lg">Navbar</a>
-      <a href="#Hero" class="bg-info p-2 radius-lg">Hero</a>
-      <a href="#alert" class="bg-info p-2 radius-lg">Alerts</a>
-      <a href="#button" class="bg-info p-2 radius-lg">Buttons</a>
-      <a href="#card" class="bg-info p-2 radius-lg">Cards</a>
-      <a href="#collapsible" class="bg-info p-2 radius-lg">Collapsibles</a>
-      <a href="#modal" class="bg-info p-2 radius-lg">Modals</a>
-      <a href="#form" class="bg-info p-2 radius-lg">Forms</a>
-    </div>
-
     <div id="navbar" class="col-12 bg-surface p-2 grid radius-lg">
       <div class="col-2 text-primary flex-center fs-xxl">MADENIX</div>
       <div class="col-10">
@@ -621,6 +612,44 @@
       <div class="bg-primary text-on-primary p-2 radius-md mx-3">
         <span class="bg-danger text-center px-2 py-1 radius-full">3</span>
         <span>Messages</span>
+      </div>
+    </div>
+    
+    <div id="offCanvas" class="bg-surface col-12 mt-2 p-3 radius-lg gap-2 flex flex-wrap">
+      <div>
+        <input type="checkbox" id="toggle-left" class="offcanvas-toggle">
+        <label for="toggle-left" class="offcanvas-trigger bg-primary p-2 radius-md text-on-primary">Left</label>
+        <label for="toggle-left" class="offcanvas-backdrop"></label>
+        <div class="offcanvas p-2 bg-surface" data-direction="left">
+          Sol Menü
+        </div>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="toggle-right" class="offcanvas-toggle">
+        <label for="toggle-right" class="offcanvas-trigger bg-primary p-2 radius-md text-on-primary">Right</label>
+        <label for="toggle-right" class="offcanvas-backdrop"></label>
+        <div class="offcanvas p-2 bg-surface" data-direction="right">
+          Sağ Menü
+        </div>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="toggle-top" class="offcanvas-toggle">
+        <label for="toggle-top" class="offcanvas-trigger bg-primary p-2 radius-md text-on-primary">Top</label>
+        <label for="toggle-top" class="offcanvas-backdrop"></label>
+        <div class="offcanvas p-2 bg-surface" data-direction="top">
+          Üst Panel
+        </div>
+      </div>
+      
+      <div>
+        <input type="checkbox" id="toggle-bottom" class="offcanvas-toggle">
+        <label for="toggle-bottom" class="offcanvas-trigger bg-primary p-2 radius-md text-on-primary">Bottom</label>
+        <label for="toggle-bottom" class="offcanvas-backdrop"></label>
+        <div class="offcanvas p-2 bg-surface" data-direction="bottom">
+          Alt Panel
+        </div>
       </div>
     </div>
 
