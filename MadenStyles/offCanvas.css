@@ -1,0 +1,91 @@
+/* Toggle gizli */
+.offcanvas-toggle { display:none; }
+
+/* Backdrop */
+.offcanvas-backdrop {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  opacity:0;
+  visibility:hidden;
+  transition:.3s;
+  z-index:1040;
+  cursor:pointer;
+}
+
+/* Panel – ortak */
+.offcanvas {
+  position:fixed;
+  z-index:1050;
+  display:flex;
+  flex-direction:column;
+  overflow:auto;
+  transition:transform .3s cubic-bezier(.32,.72,0,1);
+}
+
+/* LEFT */
+.offcanvas[data-direction="left"] {
+  top:0; bottom:0; left:0;
+  width:300px;
+  max-width:90vw;
+  transform:translateX(-100%);
+}
+.offcanvas-toggle:checked ~ .offcanvas[data-direction="left"] {
+  transform:translateX(0);
+}
+
+/* RIGHT */
+.offcanvas[data-direction="right"] {
+  top:0; bottom:0; right:0;
+  width:300px;
+  max-width:90vw;
+  transform:translateX(100%);
+}
+.offcanvas-toggle:checked ~ .offcanvas[data-direction="right"] {
+  transform:translateX(0);
+}
+
+/* TOP */
+.offcanvas[data-direction="top"] {
+  top:0; left:0; right:0;
+  height:300px;
+  max-height:90vh;
+  transform:translateY(-100%);
+}
+.offcanvas-toggle:checked ~ .offcanvas[data-direction="top"] {
+  transform:translateY(0);
+}
+
+/* BOTTOM */
+.offcanvas[data-direction="bottom"] {
+  bottom:0; left:0; right:0;
+  height:300px;
+  max-height:90vh;
+  transform:translateY(100%);
+}
+.offcanvas-toggle:checked ~ .offcanvas[data-direction="bottom"] {
+  transform:translateY(0);
+}
+
+/* Açık durumda backdrop görünür */
+.offcanvas-toggle:checked ~ .offcanvas-backdrop {
+  opacity:1;
+  visibility:visible;
+}
+
+/* Trigger – akışta */
+.offcanvas-trigger {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.offcanvas-trigger:hover { transform:scale(1.08); }
+
+.offcanvas-toggle:checked ~ .offcanvas-trigger {
+  opacity:0;
+  pointer-events:none;
+  transform:scale(.8);
+}
