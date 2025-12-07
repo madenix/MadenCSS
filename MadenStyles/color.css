@@ -11,7 +11,37 @@
 
    /* ---------- Optional Feedback ---------- */
   /* SUCCESS */
-  --success: #4caf50;             
+  --success: #4caf50;              
+
+  /* WARNING */
+  --warning:       #ffc107;
+
+  /* DANGER */
+  --danger:       #dc3545;
+
+  /* INFO */
+  --info:         #0dcaf0;
+
+  /* ---------- Neutral / Gray ---------- */
+  --dark: #3a3a3a;
+  --mid: #666666;
+  --light: #f5f5f5;
+}
+
+html[data-theme="dark"] {
+  /* ---------- Surfaces / Backgrounds ---------- */
+  --background: #0b1220;
+  --surface:     #0f172a;  
+  --primary:     #f0bb0c;
+
+  /* ---------- On Colors (Text/Icons on surfaces) ---------- */
+  --on-background: #ffffff;
+  --on-surface: #e0e0e0;
+  --on-primary: #000000;
+
+   /* ---------- Optional Feedback ---------- */
+  /* SUCCESS */
+  --success: #1b5e20;             
   --success-dark: #1b5e20;      
   --success-light: #f1faf1;      
 
@@ -128,6 +158,9 @@ html[data-theme="light"] {
 .text-on-background { color: var(--on-background); }
 .text-on-surface  { color: var(--on-surface); }
 .text-on-primary  { color: var(--on-primary); }
+
+/*inherit text*/
+.text-inherit{color: inherit;}
 
 /* Borders */
 .border-primary { border-color: var(--primary); }
