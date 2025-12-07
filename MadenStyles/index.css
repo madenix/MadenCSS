@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadenCSS Documentation</title>
+
+  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="spacing.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="typography.css">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body class="bg-background text-on-background">
+
+<div class="grid max-width-1200 page-center gap-4">
+
+  <div class="col-3">
+      <div class="p-2 bg-primary sidebar">
+          <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" hidden />
+          <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
+          <div class="sidebar-menu flex flex-col">
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#welcome">Introduction</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#installation">Installation</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#principles">Core Principles</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#colors">Colors</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#grid">Grid System</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#spacing">Spacing</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#typography">Typography</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#flex">Flex & Grid Utilities</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#display">Display / Border / Shadow / Radius</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#position">Position & Z-Index</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#components">Components</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#examples">Examples</a>
+              <a class="mx-4 my-2 text-on-primary fs-base fw-medium" href="#theme">Theme / Dark-Light</a>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-9 p-4">
+    <!--welcome section-->
+      <div id="welcome">
+
+        <h1 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">INTRODUCTION</h1>
+
+        <div class="p-5 mb-6 bg-primary radius shadow-light flex flex-col flex-center">
+          <p class="fs-lg text-on-primary text-center fw-bold">
+            🎨 MadenCSS is a modern, lightweight <span class="text-on-primary fw-black">CSS framework</span> designed with a <span class="text-on-primary fw-black">utility-first</span> approach.
+          </p>
+          <p class="fs-base text-on-primary text-center">
+            It allows you to create responsive interfaces quickly without writing custom CSS.
+          </p>
+        </div>
+        <div class="p-5 mb-6">
+          <p class="fs-lg fw-semibold text-on-surface text-center">Core features offered by MadenCSS:</p>
+          
+          <div class="grid gap-4 mt-2">
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+                <div class="flex flex-center">
+                  <svg class="width-xl height-xl text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm3 3h3v8H7V8zm5 0h3v8h-3V8zm5 0h3v8h-3V8z"/>
+                  </svg>
+                </div>
+                <p class="fs-lg fw-bold text-on-surface mt-2">12-Column Grid</p>
+                <p class="fs-sm text-on-surface opacity-7">Fully **responsive** layout.</p>
+            </div>
+
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+                <div class="flex flex-center">
+                    <svg class="width-xl height-xl text-info mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18V4a8 8 0 0 1 0 16z"/>
+                    </svg>
+                </div>
+                <p class="fs-lg fw-bold text-on-surface mt-2">Theme Support</p>
+                <p class="fs-sm text-on-surface opacity-7">Easy Dark / Light mode switching.</p>
+            </div>
+
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+              <div class="flex flex-center">
+                <svg class="width-xl height-xl text-success mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="0" y="4" width="5" height="16" rx="1"/>
+                    <rect x="19" y="4" width="5" height="16" rx="1"/>
+                    <path d="M7 12h10M7 12l2-2M7 12l2 2M17 12l-2-2M17 12l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="fs-lg fw-bold text-on-surface mt-2">Spacing</p>
+              <p class="fs-sm text-on-surface opacity-7">Comprehensive Margin, Padding, Gap utilities.</p>
+            </div>
+
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+              <div class="flex flex-center">
+                  <svg class="width-xl height-xl text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 4h14v3h-6v13h-2V7H5z"/>
+                      <rect x="3" y="22" width="18" height="2"/>
+                  </svg>
+              </div>
+              <p class="fs-lg fw-bold text-on-surface mt-2">Typography</p>
+              <p class="fs-sm text-on-surface opacity-7">Responsive font sizes and weights.</p>
+            </div>
+
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+                <div class="flex flex-center">
+                    <svg class="width-xl height-xl text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                      <rect x="0" y="4" width="5" height="16" rx="1"/>
+                      <rect x="9" y="4" width="5" height="5" rx="1"/>
+                      <rect x="9" y="15" width="5" height="5" rx="1"/>
+                      <rect x="18" y="4" width="5" height="16" rx="1"/>
+                    </svg>
+                </div>
+                <p class="fs-lg fw-bold text-on-surface mt-2">Layout Utilities</p>
+                <p class="fs-sm text-on-surface opacity-7">Flexbox and Grid alignment helpers.</p>
+            </div>
+
+            <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+                <div class="flex flex-center">
+                      <svg class="width-xl height-xl text-danger mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8-8-3.59-8-8z"/><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+                    </svg>
+                </div>
+                <p class="fs-lg fw-bold text-on-surface mt-2">Style Utilities</p>
+                <p class="fs-sm text-on-surface opacity-7">Border, Shadow, Radius, and Display classes.</p>
+            </div>
+              
+            <div class="col-12 flex flex-center">
+                <div class="col-4 p-4 bg-warning-light radius shadow-light text-center">
+                    <div class="flex flex-center">
+                        <svg class="width-xl height-xl text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 16H3V4h18v12zm-2-2V6H5v8h14zM3 18h18v2H3z"/>
+                        </svg>
+                    </div>
+                    <p class="fs-lg fw-bold text-warning-dark mt-2">Pre-Built Components</p>
+                    <p class="fs-sm text-warning-dark opacity-7">Modal, Navbar, Sidebar, Off-Canvas structures.</p>
+                </div>
+            </div>
+          </div>
+      </div>
+
+        <div class="p-4 mb-6 bg-warning-light radius shadow-light flex flex-center">
+          <p class="fs-base text-warning-dark text-center">
+            💡 Tip: Quickly access detailed documentation for each feature by clicking the corresponding link in the menu on the left.
+          </p>
+        </div>
+
+      </div>
+    <!--welcome section-->
+
+<!--installation section-->
+<div id="installation" class="mt-7">
+
+  <h2 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">INSTALLATION</h2>
+
+  <div class="p-5 bg-surface text-on-surface radius shadow-light mb-3">
+    <p class="fs-lg fw-semibold text-center">
+      Start using MadenCSS with a simple local setup or CDN option.
+    </p>
+    <p class="fs-base text-center opacity-9 mt-2">
+      All core utilities are included, making it easy to build responsive layouts instantly.
+    </p>
+  </div>
+
+  <!-- Local Setup -->
+  <div class="p-5 bg-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold text-on-surface mb-3 flex flex-center">
+      1. Local Setup (Recommended)
+    </h3>
+    <p class="fs-base text-on-surface mb-3 text-center">
+      Download the required CSS files and place them in your project.  
+      Then include them inside your <code>&lt;head&gt;</code> tag.
+    </p>
+
+    <pre class="p-3 bg-background radius text-on-background mt-4">
+&lt;!-- Link required CSS files --&gt;
+&lt;link rel="stylesheet" href="core.css"&gt;
+&lt;link rel="stylesheet" href="color.css"&gt;
+&lt;link rel="stylesheet" href="spacing.css"&gt;
+&lt;link rel="stylesheet" href="navbar.css"&gt;
+&lt;link rel="stylesheet" href="typography.css"&gt;
+&lt;link rel="stylesheet" href="sidebar.css"&gt;
+    </pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      Note: Import only the components you need. <span class="fw-bold">core.css</span> is required for grid and base utilities.
+    </p>
+  </div>
+
+  <!-- CDN -->
+  <div class="p-5 bg-surface text-on-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+      2. CDN Usage (Optional)
+    </h3>
+    <p class="fs-base mb-3 text-center">
+      If you prefer not to use local files, link the CDN version.
+    </p>
+
+    <pre class="p-3 bg-background radius text-on-background mt-4">
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/core.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/color.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/spacing.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/navbar.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/typography.css"&gt;
+&lt;link rel="stylesheet" href="https://cdn.madencss.com/[version]/sidebar.css"&gt;
+    </pre>
+  </div>
+
+  <!-- Basic Structure -->
+  <div class="p-5 bg-surface text-on-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+      3. Basic HTML Structure
+    </h3>
+    <p class="fs-base mb-3 text-center">
+      After linking the files, you can start building layouts using the MadenCSS grid system.
+    </p>
+
+    <pre class="p-3 bg-background radius text-on-background mt-4">
+&lt;body class="bg-background text-on-background"&gt;
+  &lt;div class="grid max-width-1200 page-center gap-4"&gt;
+    &lt;div class="col-3"&gt; &lt;!-- Sidebar --&gt; &lt;/div&gt;
+    &lt;div class="col-9"&gt; &lt;!-- Main Content --&gt; &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    </pre>
+  </div>
+
+</div>
+<!--installation section-->
+
+
+<!--core principles section-->
+<div id="principles" class="mt-7">
+
+    <h2 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">CORE PRINCIPLES</h2>
+
+    <p class="fs-lg text-on-surface mb-6 text-center">
+        MadenCSS is built on a few core concepts designed to maximize development speed, maintainability, and code predictability.
+    </p>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            1. Utility-First Approach
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS provides **single-purpose utility classes** (e.g., `p-4`, `flex`, `fw-bold`) that apply a single CSS rule. Instead of writing custom CSS, you build complex interfaces by **composing these classes directly in your HTML**.
+        </p>
+        <pre class="p-3 bg-background radius text-on-background mt-4 overflow-x-auto">
+&lt;!-- Traditional approach --&gt;
+&lt;div class="card"&gt;...&lt;/div&gt;
+
+&lt;!-- MadenCSS Utility-First --&gt;
+&lt;div class="p-5 bg-surface radius shadow-light flex flex-col flex-center"&gt;...&lt;/div&gt;
+        </pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Benefit:** Faster development, consistent design, and easier maintenance since styles are localized.
+        </p>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            2. Mobile-First & Responsive Design
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            All MadenCSS utilities are **mobile-first** by default. Base classes (e.g., `col-6`) apply to all screen sizes. You use responsive prefixes (`sm:`, `md:`, `lg:`) only when you need to change behavior at a specific breakpoint.
+        </p>
+        <pre class="p-3 bg-background radius text-on-background mt-4 overflow-x-auto">
+&lt;!-- col-12 is default (mobile). lg:col-4 is applied on large screens. --&gt;
+&lt;div class="grid"&gt;
+  &lt;div class="col-12 lg:col-4"&gt;...&lt;/div&gt;
+  &lt;div class="col-12 lg:col-8"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            MadenCSS uses a simple 12-column grid system built to adapt flawlessly across devices.
+        </p>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            3. Semantic Color System
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            Colors are named based on their **purpose**, not their hue (e.g., `primary`, `success`, `danger`). This allows easy theme switching (Dark/Light Mode) and consistent feedback. All colors also have **`on-`** variants (e.g., `bg-primary` paired with `text-on-primary`) to ensure text readability automatically.
+        </p>
+        <pre class="p-3 bg-background radius text-on-background mt-4 overflow-x-auto">
+&lt;button class="bg-primary text-on-primary"&gt;Main Action&lt;/button&gt;
+&lt;span class="bg-success-light text-success-dark"&gt;Order Shipped&lt;/span&gt;
+        </pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            This system ensures accessibility and supports dynamic theme changes seamlessly.
+        </p>
+    </div>
+
+</div><!--core principles content-->
+
+
+<div id="colors" class="mt-7">
+
+    <h2 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">COLOR SYSTEM</h2>
+
+    <p class="fs-lg text-on-surface mb-6 text-center">
+        MadenCSS uses a flexible, semantic color system that ensures accessibility and native support for <span class="fw-bold">Dark/Light Mode</span> switching.
+    </p>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold text-primary mb-5 flex flex-center">
+            1. Semantic Colors & Shades
+        </h3>
+
+        <p class="fs-base text-on-surface mb-4">
+            Colors are named after their intended use. Every semantic color provides base, <span class="fw-bold">-dark</span>, and <span class="fw-bold">-light</span> shades for flexibility.
+        </p>
+
+        <div class="grid gap-3 mb-5">
+            <div class="col-3 fs-sm fw-bold text-mid">COLOR</div>
+            <div class="col-3 fs-sm fw-bold text-mid text-center">BASE</div>
+            <div class="col-3 fs-sm fw-bold text-mid text-center">DARK</div>
+            <div class="col-3 fs-sm fw-bold text-mid text-center">LIGHT</div>
+
+            <div class="col-3 fs-lg fw-bold text-on-surface">Background</div>
+            <div class="col-3 p-3 radius bg-background text-on-background fw-medium text-center">.bg-background<br/>.text-on-background</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+
+            <div class="col-3 fs-lg fw-bold text-on-surface">Surface</div>
+            <div class="col-3 p-3 radius bg-surface text-on-surface fw-medium text-center shadow-normal">.bg-surface<br/>.text-on-surface</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+
+            <div class="col-3 fs-lg fw-bold text-on-surface">Primary</div>
+            <div class="col-3 p-3 radius bg-primary text-on-primary fw-medium text-center">.bg-primary<br/>.text-on-primary</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
+            
+            <div class="col-3 fs-lg fw-bold text-on-surface">Info</div>
+            <div class="col-3 p-3 radius bg-info text-inherit fw-medium text-center">.bg-info<br/>.text-inherit</div>
+            <div class="col-3 p-3 radius bg-info-dark text-info-light fw-medium text-center">.bg-info-dark<br/>.text-info-light</div>
+            <div class="col-3 p-3 radius bg-info-light text-info-dark fw-medium text-center">.bg-info-light<br/>.text-info-dark</div>
+
+            <div class="col-3 fs-lg fw-bold text-on-surface">Success</div>
+            <div class="col-3 p-3 radius bg-success text-inherit fw-medium text-center">.bg-success<br/>.text-inherit</div>
+            <div class="col-3 p-3 radius bg-success-dark text-success-light fw-medium text-center">.bg-success-dark<br/>.text-success-light</div>
+            <div class="col-3 p-3 radius bg-success-light text-success-dark fw-medium text-center">.bg-success-light<br/>.text-success-dark</div>
+
+            <div class="col-3 fs-lg fw-bold text-on-surface">Warning</div>
+            <div class="col-3 p-3 radius bg-warning text-inherit fw-medium text-center">.bg-warning<br/>.text-inherit</div>
+            <div class="col-3 p-3 radius bg-warning-dark text-warning-light fw-medium text-center">.bg-warning-dark<br/>.text-warning-light</div>
+            <div class="col-3 p-3 radius bg-warning-light text-warning-dark fw-medium text-center">.bg-warning-light<br/>.text-warning-dark</div>
+            
+            <div class="col-3 fs-lg fw-bold text-on-surface">Danger</div>
+            <div class="col-3 p-3 radius bg-danger text-inherit fw-medium text-center">.bg-danger<br/>.text-inherit</div>
+            <div class="col-3 p-3 radius bg-danger-dark text-danger-light fw-medium text-center">.bg-danger-dark<br/>.text-danger-light</div>
+            <div class="col-3 p-3 radius bg-danger-light text-danger-dark fw-medium text-center">.bg-danger-light<br/>.text-danger-dark</div>
+        </div>
+    </div>
+    
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold text-primary mb-3 flex flex-center">
+            2. Backgrounds, Surfaces, and Text
+        </h3>
+
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS provides `bg-` classes for background colors and `text-` classes for foreground colors.
+        </p>
+        
+        <div class="grid gap-3 mb-4">
+            <div class="col-6 p-3 bg-surface-light radius text-on-surface fw-medium text-center">.bg-surface-light</div>
+            <div class="col-6 p-3 bg-background radius text-on-background fw-medium text-center">.bg-background</div>
+            <div class="col-6 p-3 bg-surface radius text-on-surface fw-medium text-center">.bg-surface</div>
+            <div class="col-6 p-3 bg-primary radius text-on-primary fw-medium text-center">.text-on-primary</div>
+        </div>
+
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            Use the **`on-`** prefix (e.g., `text-on-primary`) to automatically get the correct, accessible text color for a specific background, which is crucial for theme switching.
+        </p>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold text-primary mb-3 flex flex-center">
+            3. Neutral & Gray Tones
+        </h3>
+
+        <p class="fs-base text-on-surface mb-3">
+            For general text, borders, and shadows, use the neutral gray scale:
+        </p>
+        
+        <div class="grid gap-3 mb-4">
+            <div class="col-4 p-3 radius text-light bg-dark fw-medium text-center">.text-dark</div>
+            <div class="col-4 p-3 radius text-on-surface bg-mid fw-medium text-center">.text-mid</div>
+            <div class="col-4 p-3 radius text-dark bg-light fw-medium text-center">.text-light</div>
+        </div>
+        
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            Classes: <span class="fw-bold">text-dark</span>, <span class="fw-bold">text-mid</span>, <span class="fw-bold">text-light</span>
+        </p>
+    </div>
+
+</div>
+
+
+    </div><!--main content-->
+  </div><!--page end-->
+  </body>
+</html>
