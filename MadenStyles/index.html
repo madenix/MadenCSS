@@ -295,105 +295,104 @@
 
 <div id="colors" class="mt-7">
 
-    <h2 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">COLOR SYSTEM</h2>
+    <h2 class="fs-xxl fw-black mb-8 text-on-background flex flex-center">COLORS</h2>
 
     <p class="fs-lg text-on-surface mb-6 text-center">
-        MadenCSS uses a flexible, semantic color system that ensures accessibility and native support for <span class="fw-bold">Dark/Light Mode</span> switching.
+        MadenCSS uses a **semantic color system** based on CSS variables, which enables seamless Dark and Light theme switching. All colors are defined by their **purpose** (`primary`, `success`, `danger`), ensuring consistent meaning across your application.
     </p>
 
     <div class="p-5 bg-surface radius shadow-light mb-3">
-        <h3 class="fs-xl fw-bold text-primary mb-5 flex flex-center">
-            1. Semantic Colors & Shades
+        <h3 class="fs-xl fw-bold mb-4 flex flex-center">
+            1. Semantic Color Palette
         </h3>
-
-        <p class="fs-base text-on-surface mb-4">
-            Colors are named after their intended use. Every semantic color provides base, <span class="fw-bold">-dark</span>, and <span class="fw-bold">-light</span> shades for flexibility.
+        <p class="fs-base text-on-surface mb-4 text-center">
+            Every semantic color comes with a corresponding **`on-`** color (e.g., `text-on-primary`) to guarantee accessible contrast for text placed on that background.
         </p>
 
-        <div class="grid gap-3 mb-5">
-            <div class="col-3 fs-sm fw-bold text-mid">COLOR</div>
-            <div class="col-3 fs-sm fw-bold text-mid text-center">BASE</div>
-            <div class="col-3 fs-sm fw-bold text-mid text-center">DARK</div>
-            <div class="col-3 fs-sm fw-bold text-mid text-center">LIGHT</div>
-
-            <div class="col-3 fs-lg fw-bold text-on-surface">Background</div>
-            <div class="col-3 p-3 radius bg-background text-on-background fw-medium text-center">.bg-background<br/>.text-on-background</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-
-            <div class="col-3 fs-lg fw-bold text-on-surface">Surface</div>
-            <div class="col-3 p-3 radius bg-surface text-on-surface fw-medium text-center shadow-normal">.bg-surface<br/>.text-on-surface</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-
-            <div class="col-3 fs-lg fw-bold text-on-surface">Primary</div>
-            <div class="col-3 p-3 radius bg-primary text-on-primary fw-medium text-center">.bg-primary<br/>.text-on-primary</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-            <div class="col-3 p-3 radius text-inherit fw-medium text-center">auto</div>
-            
-            <div class="col-3 fs-lg fw-bold text-on-surface">Info</div>
-            <div class="col-3 p-3 radius bg-info text-inherit fw-medium text-center">.bg-info<br/>.text-inherit</div>
-            <div class="col-3 p-3 radius bg-info-dark text-info-light fw-medium text-center">.bg-info-dark<br/>.text-info-light</div>
-            <div class="col-3 p-3 radius bg-info-light text-info-dark fw-medium text-center">.bg-info-light<br/>.text-info-dark</div>
-
-            <div class="col-3 fs-lg fw-bold text-on-surface">Success</div>
-            <div class="col-3 p-3 radius bg-success text-inherit fw-medium text-center">.bg-success<br/>.text-inherit</div>
-            <div class="col-3 p-3 radius bg-success-dark text-success-light fw-medium text-center">.bg-success-dark<br/>.text-success-light</div>
-            <div class="col-3 p-3 radius bg-success-light text-success-dark fw-medium text-center">.bg-success-light<br/>.text-success-dark</div>
-
-            <div class="col-3 fs-lg fw-bold text-on-surface">Warning</div>
-            <div class="col-3 p-3 radius bg-warning text-inherit fw-medium text-center">.bg-warning<br/>.text-inherit</div>
-            <div class="col-3 p-3 radius bg-warning-dark text-warning-light fw-medium text-center">.bg-warning-dark<br/>.text-warning-light</div>
-            <div class="col-3 p-3 radius bg-warning-light text-warning-dark fw-medium text-center">.bg-warning-light<br/>.text-warning-dark</div>
-            
-            <div class="col-3 fs-lg fw-bold text-on-surface">Danger</div>
-            <div class="col-3 p-3 radius bg-danger text-inherit fw-medium text-center">.bg-danger<br/>.text-inherit</div>
-            <div class="col-3 p-3 radius bg-danger-dark text-danger-light fw-medium text-center">.bg-danger-dark<br/>.text-danger-light</div>
-            <div class="col-3 p-3 radius bg-danger-light text-danger-dark fw-medium text-center">.bg-danger-light<br/>.text-danger-dark</div>
+        <div class="grid gap-4">
+            <div class="col-4 p-4 bg-primary text-on-primary radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Primary</p>
+                <p class="fs-sm opacity-7">Main brand color.</p>
+            </div>
+            <div class="col-4 p-4 bg-success text-on-success radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Success</p>
+                <p class="fs-sm opacity-7">Positive actions/feedback.</p>
+            </div>
+            <div class="col-4 p-4 bg-danger text-on-danger radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Danger</p>
+                <p class="fs-sm opacity-7">Critical actions/errors.</p>
+            </div>
+            <div class="col-4 p-4 bg-warning text-on-warning radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Warning</p>
+                <p class="fs-sm opacity-7">Cautions/alerts.</p>
+            </div>
+            <div class="col-4 p-4 bg-info text-on-info radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Info</p>
+                <p class="fs-sm opacity-7">Informational messages.</p>
+            </div>
+            <div class="col-4 p-4 bg-surface text-on-surface radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Surface</p>
+                <p class="fs-sm opacity-7">Component backgrounds.</p>
+            </div>
         </div>
     </div>
-    
-    <div class="p-5 bg-surface radius shadow-light mb-3">
-        <h3 class="fs-xl fw-bold text-primary mb-3 flex flex-center">
-            2. Backgrounds, Surfaces, and Text
-        </h3>
 
-        <p class="fs-base text-on-surface mb-3">
-            MadenCSS provides `bg-` classes for background colors and `text-` classes for foreground colors.
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            2. Color Utility Classes
+        </h3>
+        <p class="fs-base text-on-surface mb-3 text-center">
+            MadenCSS provides classes to apply colors to backgrounds (`bg-*`), text (`text-*`), and borders (`border-*`).
         </p>
-        
-        <div class="grid gap-3 mb-4">
-            <div class="col-6 p-3 bg-surface-light radius text-on-surface fw-medium text-center">.bg-surface-light</div>
-            <div class="col-6 p-3 bg-background radius text-on-background fw-medium text-center">.bg-background</div>
-            <div class="col-6 p-3 bg-surface radius text-on-surface fw-medium text-center">.bg-surface</div>
-            <div class="col-6 p-3 bg-primary radius text-on-primary fw-medium text-center">.text-on-primary</div>
-        </div>
+
+        <h4 class="fs-lg fw-semibold mt-4 mb-2">Example: Background & Text Colors</h4>
+        <pre class="p-3 bg-background radius text-on-background mt-2 overflow-x-auto">
+&lt;!-- Primary button example --&gt;
+&lt;button class="p-3 radius bg-primary text-on-primary fw-medium"&gt;
+    Primary Action
+&lt;/button&gt;
+
+&lt;!-- Success status message --&gt;
+&lt;div class="p-2 radius bg-success text-on-success"&gt;
+    Order successfully processed.
+&lt;/div&gt;
+        </pre>
+
+        <h4 class="fs-lg fw-semibold mt-4 mb-2">Example: Border Color</h4>
+        <pre class="p-3 bg-background radius text-on-background mt-2 overflow-x-auto">
+&lt;div class="p-4 border-2 border-full border-danger text-danger radius"&gt;
+    Warning: This field is required.
+&lt;/div&gt;
+        </pre>
 
         <p class="fs-sm text-on-surface opacity-7 mt-3">
-            Use the **`on-`** prefix (e.g., `text-on-primary`) to automatically get the correct, accessible text color for a specific background, which is crucial for theme switching.
+            **Note:** The border classes (`border-primary`, `border-danger`, etc.) are defined in `color.css`.
         </p>
     </div>
 
     <div class="p-5 bg-surface radius shadow-light mb-3">
-        <h3 class="fs-xl fw-bold text-primary mb-3 flex flex-center">
-            3. Neutral & Gray Tones
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            3. Neutral (Gray) Colors
         </h3>
-
-        <p class="fs-base text-on-surface mb-3">
-            For general text, borders, and shadows, use the neutral gray scale:
+        <p class="fs-base text-on-surface mb-3 text-center">
+            For neutral interface elements, three shades of gray are provided: `dark`, `mid`, and `light`.
         </p>
-        
-        <div class="grid gap-3 mb-4">
-            <div class="col-4 p-3 radius text-light bg-dark fw-medium text-center">.text-dark</div>
-            <div class="col-4 p-3 radius text-on-surface bg-mid fw-medium text-center">.text-mid</div>
-            <div class="col-4 p-3 radius text-dark bg-light fw-medium text-center">.text-light</div>
+
+        <div class="grid gap-4">
+            <div class="col-4 p-4 bg-dark text-on-dark radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Dark</p>
+                <p class="fs-sm opacity-7">Used for primary text/icons (Dark Theme).</p>
+            </div>
+            <div class="col-4 p-4 bg-mid text-on-mid radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Mid</p>
+                <p class="fs-sm opacity-7">Secondary text/borders.</p>
+            </div>
+            <div class="col-4 p-4 bg-light text-on-light radius shadow-light text-center">
+                <p class="fs-lg fw-bold">Light</p>
+                <p class="fs-sm opacity-7">Disabled elements/separators.</p>
+            </div>
         </div>
-        
-        <p class="fs-sm text-on-surface opacity-7 mt-3">
-            Classes: <span class="fw-bold">text-dark</span>, <span class="fw-bold">text-mid</span>, <span class="fw-bold">text-light</span>
-        </p>
     </div>
-
 </div>
 
 
