@@ -1,0 +1,189 @@
+:root{
+  --background:   #0b1220;
+  --on-background:#ffffff;
+
+  --surface:      #0f172a;
+  --on-surface:   #e0e0e0;  
+  
+  --primary:      #f0bb0c;
+  --on-primary:   #000000;
+
+  --success: #4caf50;
+  --on-success: #000;             
+
+  --warning:    #ffc107;
+  --on-warning: #000;
+
+  --danger:    #dc3545;
+  --on-danger: #000;    
+
+  --info:    #0dcaf0;
+  --on-info: #000;    
+
+  /* ---------- Neutral / Gray ---------- */
+  --dark: #3a3a3a;
+  --on-dark: #ffffff;
+  --mid: #666666;
+  --on-mid:   #fafafa;
+  --light: #f5f5f5;
+  --on-light: #111111;
+
+  --line-height: 1.5;
+
+  /* For the body and general content */
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* For code, pre, kbd and etc.*/
+  --font-family-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+  /*Width and heights*/
+  --max-width-xl: 1600px; 
+  --max-width-lg: 1200px; 
+  --max-width-md: 900px;  
+  --max-width-sm: 767px;  
+  --max-width-xs: 450px; 
+
+  --size-unit: 4px;
+  --size-xsm: 1px;
+  --size-sm: calc(var(--size-unit) * 1);
+  --size-md: calc(var(--size-unit) * 2);
+  --size-lg: calc(var(--size-unit) * 3);
+  --size-xl: calc(var(--size-unit) * 4);
+  --size-2xl: calc(var(--size-unit) * 5);
+  --size-3xl: calc(var(--size-unit) * 6);
+
+  /* Spacing */
+  --spacing-unit: 4px;
+  --spacing-0: 0;
+  --spacing-1: calc(var(--spacing-unit) * 1);   /* 4px  */
+  --spacing-2: calc(var(--spacing-unit) * 2);   /* 8px  */
+  --spacing-3: calc(var(--spacing-unit) * 4);   /* 16px */
+  --spacing-4: calc(var(--spacing-unit) * 6);   /* 24px */
+  --spacing-5: calc(var(--spacing-unit) * 8);   /* 32px */
+  --spacing-6: calc(var(--spacing-unit) * 10);  /* 40px */
+  --spacing-7: calc(var(--spacing-unit) * 12);  /* 48px */
+  --spacing-8: calc(var(--spacing-unit) * 16);  /* 64px */
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /*FONT SIZES*/
+  /* fs-sm: clamp(0.75rem, 0.9vw, 0.875rem) */
+  --fs-sm-min: 0.75rem;
+  --fs-sm-fluid: 0.9vw;
+  --fs-sm-max: 0.875rem;
+
+  /* fs-base: clamp(0.875rem, 1vw, 1rem) */
+  --fs-base-min: 0.875rem;
+  --fs-base-fluid: 1vw;
+  --fs-base-max: 1rem;
+
+  /* fs-lg: clamp(1rem, 1.2vw, 1.25rem) */
+  --fs-lg-min: 1rem;
+  --fs-lg-fluid: 1.2vw;
+  --fs-lg-max: 1.25rem;
+
+  /* fs-xl: clamp(1.25rem, 1.5vw, 1.5rem) */
+  --fs-xl-min: 1.25rem;
+  --fs-xl-fluid: 1.5vw;
+  --fs-xl-max: 1.5rem;
+
+  /* fs-xxl: clamp(1.5rem, 2vw, 2.25rem) */
+  --fs-xxl-min: 1.5rem;
+  --fs-xxl-fluid: 2vw;
+  --fs-xxl-max: 2.25rem;
+
+  /* fs-huge: clamp(2rem, 3vw, 3rem) */
+  --fs-huge-min: 2rem;
+  --fs-huge-fluid: 3vw;
+  --fs-huge-max: 3rem;
+
+  /* ---------- Radius / Border-Radius ---------- */
+  --radius-xsm: 2px;
+  --radius-sm:  4px;
+  --radius:     6px;  /* Base radius */
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px; /*pill shape*/
+
+  /* ---------- Border Widths (Anlamsal/Çizgisel) ---------- */
+  --border-thin: 1px;
+  --border-normal: 2px; 
+  --border-thick: 4px;  
+  --border-heavy: 8px; 
+
+  /* ---------- Box Shadows ---------- */
+  --shadow-light: 0 10px 30px rgba(0,0,0,.25);
+  --shadow-normal: 0 10px 30px rgba(0,0,0,.40);
+  --shadow-strong: 0 10px 30px rgba(0,0,0,.60);
+}
+
+html[data-theme="dark"] {
+  --background:   #0b1220;
+  --on-background:#ffffff;
+
+  --surface:      #0f172a;
+  --on-surface:   #e0e0e0;  
+  
+  --primary:      #f0bb0c;
+  --on-primary:   #000000;
+
+  --success: #4caf50;
+  --on-success: #000;             
+
+  --warning:    #ffc107;
+  --on-warning: #000;
+
+  --danger:    #dc3545;
+  --on-danger: #000;    
+
+  --info:    #0dcaf0;
+  --on-info: #000;    
+
+  /* ---------- Neutral / Gray ---------- */
+  --dark: #3a3a3a;
+  --on-dark: #ffffff;
+  --mid: #666666;
+  --on-mid:   #fafafa;
+  --light: #f5f5f5;
+  --on-light: #111111;
+}
+
+html[data-theme="light"] {
+  /* ---------- Surfaces / Backgrounds ---------- */
+  --background: #ffffff;
+  --on-background: #141414;
+
+  --surface:   #f1f2f3;   
+  --on-surface:    #1f2937; 
+  
+  --primary:   #F0B90B; 
+  --on-primary:    #000000;
+
+  --success: #D0E6DC;      
+  --on-success: #0A3622;  
+
+  --warning:       #FFF3CD;
+  --on-warning: #664D03;
+
+  --danger:       #F8D7DA;
+  --on-danger: #58151C;
+
+  --info:         #CFF4FC;
+  --on-info: #054A58;
+
+  /* ---------- Neutral / Gray ---------- */
+  --dark:  #1f2937;
+  --on-dark: #fff;
+  --mid:   #6b7280;
+  --on-mid: #f9fafb;
+  --light: #e5e7eb;
+  --on-light: #1f2937;
+}

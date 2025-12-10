@@ -1,0 +1,26 @@
+/* NAVBAR HAMBURGER STYLING **************************************************************************/
+.nav-toggle-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* On mobile devices  */
+@media (max-width: 599px) {
+  .nav-toggle-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    max-height: 500px; /* Adjust with the menu content.  */
+  }
+}

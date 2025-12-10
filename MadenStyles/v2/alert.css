@@ -1,0 +1,16 @@
+/* -----------------------------------------
+   Alert Component Base
+------------------------------------------ */
+.alert {
+  display: flex;
+  align-items: center;
+}
+
+.alert .alert-close {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: .7;
+  transition: .2s;
+}
+
+.alert .alert-close:hover {opacity: 1;}
