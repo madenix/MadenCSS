@@ -45,7 +45,10 @@ body {
    2. Layout - Grid System
 ------------------------------------------ */
 .page-center { margin: 0 auto; }
-.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); }
+.grid { 
+   display: grid; 
+   grid-template-columns: repeat(12, minmax(0, 1fr)); 
+}
 
 /* 12 Columns */
 .col-1  { grid-column: span 1; }
@@ -63,34 +66,81 @@ body {
 
 .grid > [class*="col-"] {min-width: 0;}
 
-.grid-center {justify-items: center; align-items: center;}
-.grid-justify-center {justify-content: center;}
-.grid-align-center {align-content: center;}
-
-.justify-self-center { justify-self: center; }
-.align-self-center { align-self: center; }
-
 /* Responsive Grid */
 @media (max-width: 599px) {
   .grid:not(.not-responsive) { grid-template-columns: 1fr; }
   .grid:not(.not-responsive) > [class^="col-"] {grid-column: 1 / -1;}
 }
 
+/* Gap (Grid için) */
+.grid-gap-0 { gap: var(--spacing-0); }
+.grid-gap-1 { gap: var(--spacing-1); }
+.grid-gap-2 { gap: var(--spacing-2); }
+.grid-gap-3 { gap: var(--spacing-3); }
+.grid-gap-4 { gap: var(--spacing-4); }
+.grid-gap-5 { gap: var(--spacing-5); }
+.grid-gap-6 { gap: var(--spacing-6); }
+.grid-gap-7 { gap: var(--spacing-7); }
+.grid-gap-8 { gap: var(--spacing-8); }
+
 /* -----------------------------------------
    3. Flex Utilities
 ------------------------------------------ */
+.flex-col-1  { flex: 0 0 8.333333%;  max-width: 8.333333%; }
+.flex-col-2  { flex: 0 0 16.666667%; max-width: 16.666667%; }
+.flex-col-3  { flex: 0 0 25%;        max-width: 25%; }
+.flex-col-4  { flex: 0 0 33.333333%; max-width: 33.333333%; }
+.flex-col-5  { flex: 0 0 41.666667%; max-width: 41.666667%; }
+.flex-col-6  { flex: 0 0 50%;        max-width: 50%; }
+.flex-col-7  { flex: 0 0 58.333333%; max-width: 58.333333%; }
+.flex-col-8  { flex: 0 0 66.666667%; max-width: 66.666667%; }
+.flex-col-9  { flex: 0 0 75%;        max-width: 75%; }
+.flex-col-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+.flex-col-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+.flex-col-12 { flex: 0 0 100%;       max-width: 100%; }
+
+@media (max-width: 599px) {
+  .flex:not(.not-responsive) > [class^="flex-col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
 .flex { display: flex; }
-.flex-center { justify-content: center; align-items: center; }
-.flex-wrap{flex-wrap: wrap;}
+.inline-flex { display: inline-flex; }
 
-.justify-start { justify-content: flex-start; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.justify-end { justify-content: flex-end; }
+/* Flex Direction */
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
 
-.align-start { align-items: flex-start; }
-.align-baseline { align-items: baseline; }
-.align-center { align-items: center; }
+/* Wrap */
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+/* Justify Content (Yatay Hizalama) */
+.flex-justify-start   { justify-content: flex-start; }
+.flex-justify-end     { justify-content: flex-end; }
+.flex-justify-center  { justify-content: center; }
+.flex-justify-between { justify-content: space-between; }
+.flex-justify-around  { justify-content: space-around; }
+
+/* Align Items (Dikey Hizalama) */
+.flex-align-start   { align-items: flex-start; }
+.flex-align-end     { align-items: flex-end; }
+.flex-align-center  { align-items: center; }
+.flex-align-stretch { align-items: stretch; }
+
+/* Flex Grow / Shrink */
+.flex-1 { flex: 1; }
+.flex-none { flex: none; }
+
+/* Özel Yardımcı: Tam Merkezleme */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* -----------------------------------------
    4. Display Utilities
@@ -440,17 +490,6 @@ body {
 .py-6 { padding-top: var(--spacing-6); padding-bottom: var(--spacing-6); }
 .py-7 { padding-top: var(--spacing-7); padding-bottom: var(--spacing-7); }
 .py-8 { padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); }
-
-/* Gap (Flexbox ve Grid için) */
-.gap-0 { gap: var(--spacing-0); }
-.gap-1 { gap: var(--spacing-1); }
-.gap-2 { gap: var(--spacing-2); }
-.gap-3 { gap: var(--spacing-3); }
-.gap-4 { gap: var(--spacing-4); }
-.gap-5 { gap: var(--spacing-5); }
-.gap-6 { gap: var(--spacing-6); }
-.gap-7 { gap: var(--spacing-7); }
-.gap-8 { gap: var(--spacing-8); }
 
 /* -----------------------------------------
    12. Radius and Border Utilities
