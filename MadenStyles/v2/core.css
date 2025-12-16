@@ -101,13 +101,12 @@ body {
 
 @media (max-width: 599px) {
   .flex:not(.not-responsive) > [class^="flex-col-"] {
-    flex: 0 0 100%;
+    flex: 0 0 100% !important;
     max-width: 100%;
   }
 }
 
-
-.flex { display: flex; }
+.flex { display: flex; flex-wrap: wrap !important;}
 .inline-flex { display: inline-flex; }
 
 /* Flex Direction */
@@ -245,6 +244,7 @@ body {
 .height-xl  { height: var(--size-xl, 32px); }
 .height-2xl { height: var(--size-2xl, 64px); }
 .height-3xl { height: var(--size-3xl, 128px); }
+.height-256 {height: 256px;}
 .height-full { height: 100%; }
 .height-screen { height: 100vh; }
 .min-height-screen { min-height: 100vh; }
