@@ -18,7 +18,7 @@
     <div class="p-2 bg-surface text-on-surface sidebar radius-lg">
         <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" hidden />
         <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
-        <div class="sidebar-menu flex flex-col">
+        <div class="sidebar-menu">
 
             <p class="mx-4 my-2 fs-lg fw-medium">🚀 Getting Started</p>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#introduction">Introduction</a>
@@ -40,8 +40,8 @@
             <a class="mx-4 my-2 fs-sm fw-normal" href="#sizing">Sizing</a>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#typography">Typography</a>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#borders">Borders, Radius, Shadow</a>
-            <a class="mx-4 my-2 fs-sm fw-normal" href="#display">Display, Visibility & Opacity</a>
-            <a class="mx-4 my-2 fs-sm fw-normal" href="#positioning">Positioning & Z-Index</a>
+            <a class="mx-4 my-2 fs-sm fw-normal" href="#display">Display & Opacity</a>
+            <a class="mx-4 my-2 fs-sm fw-normal" href="#positioning">Position</a>
             
             <p class="mx-4 my-2 fs-lg fw-medium">🧩 Components</p>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#alerts">Alerts</a>
@@ -1546,10 +1546,7 @@ function toggleTheme() {
 </div>
 <!-- sizing section -->
 
-
-<!-- ============================= -->
-<!-- Typography & Text Utilities -->
-<!-- ============================= -->
+<!-- Typography section -->
 <div id="typography" class="mt-7">
 
     <h2 class="fs-xl fw-black mb-2 text-on-background">✍️ Typography & Text Utilities</h2>
@@ -1662,51 +1659,678 @@ function toggleTheme() {
 
     <div class="grid grid-gap-4 bg-surface p-4 radius shadow-light mb-4">
         <div class="col-6">
-            <p class="text-left">.text-left</p>
-            <p class="text-center">.text-center</p>
-            <p class="text-right">.text-right</p>
+            <p class="text-left bg-background p-2 m-2">.text-left</p>
+            <p class="text-center bg-background p-2 m-2">.text-center</p>
+            <p class="text-right bg-background p-2 m-2">.text-right</p>
         </div>
         <div class="col-6">
-            <p class="text-uppercase">uppercase text</p>
-            <p class="text-lowercase">LOWERCASE TEXT</p>
-            <p class="text-capitalize">capitalize text</p>
+            <p class="text-uppercase bg-background p-2 m-2">uppercase text (.text-uppercase )</p>
+            <p class="text-lowercase bg-background p-2 m-2">LOWERCASE TEXT (.text-lowercase)</p>
+            <p class="text-capitalize bg-background p-2 m-2">capitalize text (.text-capitalize)</p>
         </div>
     </div>
 
 <pre class="bg-surface text-on-surface p-3 radius-md">
 <code>
-&lt;p class="text-center text-uppercase"&gt;Centered text&lt;/p&gt;
+&lt;p class=".text-left"&gt;.text-left&lt;/p&gt;
+&lt;p class="text-center"&gt;.text-center&lt;/p&gt;
+&lt;p class="text-right"&gt;.text-right&lt;/p&gt;
+&lt;p class="text-uppercase"&gt;.text-uppercase&lt;/p&gt;
+&lt;p class="text-lowercase"&gt;.text-lowercase&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;.text-capitalize&lt;/p&gt;
 </code>
 </pre>
 
-    <!-- ============================= -->
-    <!-- 5. Text Helpers -->
-    <!-- ============================= -->
-    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">5. Text Helpers</h3>
+<!-- ============================= -->
+<!-- 5. Text Helpers -->
+<!-- ============================= -->
+<h3 class="fs-xl fw-bold mb-3 text-primary mt-7">5. Text Helpers</h3>
 
-    <p class="fs-base text-on-surface mb-4">
-        Utility helpers for handling long or unpredictable text content.
+<p class="fs-base text-on-surface mb-5">
+    Text helpers are designed to solve two very common UI problems:
+    <strong>overflowing text</strong> and <strong>unbreakable long words</strong>.
+    These utilities keep layouts clean without writing custom CSS.
+</p>
+
+<!-- ============================= -->
+<!-- Truncate -->
+<!-- ============================= -->
+<h4 class="fs-lg fw-bold mb-2">5.1 <code class="bg-background radius p-1">.truncate</code></h4>
+
+<p class="fs-base text-on-surface mb-3">
+    The <strong>.truncate</strong> utility forces text to stay on a single line.
+    If the content is longer than the container, it is visually cut and replaced
+    with an ellipsis (<code>...</code>).
+</p>
+
+<p class="fs-base text-on-surface mb-3">
+    This is especially useful for:
+</p>
+
+<ul class="list-style-disc mx-6 my-3 fs-base text-on-surface">
+    <li>• Card titles</li>
+    <li>• Table cells</li>
+    <li>• Navigation labels</li>
+    <li>• User-generated content with unknown length</li>
+</ul>
+
+<div class="p-4 bg-surface radius shadow-light mb-3 width-2xl">
+    <p class="truncate">
+        This text will be cut with an ellipsis if it overflows
     </p>
+</div>
 
-    <div class="p-4 bg-surface radius shadow-light mb-4 width-3xl">
-        <p class="truncate">
-            This is a very long text that will not fit in a single line and will be truncated with an ellipsis.
-        </p>
-        <p class="break-word mt-3">
-            SupercalifragilisticexpialidociousSuperLongWordThatNeedsBreaking
-        </p>
-    </div>
+<pre class="bg-surface text-on-surface p-3 radius-md mb-6">
+<code>
+&lt;p class="truncate"&gt;
+  This text will be cut with an ellipsis if it overflows
+&lt;/p&gt;
+</code>
+</pre>
+
+<!-- ============================= -->
+<!-- Break Word -->
+<!-- ============================= -->
+<h4 class="fs-lg fw-bold mb-2">5.2 <code class="bg-background radius p-1">.break-word</code></h4>
+
+<p class="fs-base text-on-surface mb-3">
+    The <strong>.break-word</strong> utility allows extremely long words to break
+    and wrap onto the next line instead of overflowing their container.
+</p>
+
+<p class="fs-base text-on-surface mb-3">
+    This solves a common problem when dealing with:
+</p>
+
+<ul class="list-style-disc mx-6 my-3 fs-base text-on-surface">
+    <li>• Long URLs</li>
+    <li>• Hashes or tokens</li>
+    <li>• Usernames or IDs</li>
+    <li>• Technical strings</li>
+</ul>
+
+<div class="p-4 bg-surface radius shadow-light mb-3 width-2xl">
+    <p class="break-word">
+        VeryLongUnbreakableWordThatNeedsWrapping
+    </p>
+</div>
 
 <pre class="bg-surface text-on-surface p-3 radius-md">
 <code>
-&lt;p class="truncate"&gt;...&lt;/p&gt;
-&lt;p class="break-word"&gt;...&lt;/p&gt;
+&lt;p class="break-word"&gt;
+  VeryLongUnbreakableWordThatNeedsWrapping
+&lt;/p&gt;
 </code>
 </pre>
 
-</div>
-<!-- ============================= -->
 
+</div>
+<!-- Typography section -->
+
+<!-- Borders, Radius, Shadow section -->
+<div id="borders" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    🧱 Borders, Radius & Shadows
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS; kenarlıklar, köşe yuvarlama ve gölge efektleri için
+    <strong>anlamsal (semantic)</strong> ve <strong>utility-first</strong> sınıflar sunar.
+    Bu yapı sayesinde tutarlı ve ölçeklenebilir arayüzler oluşturabilirsiniz.
+  </p>
+
+  <!-- Radius -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Border Radius (Köşe Yuvarlama)
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Radius sınıfları, elemanların köşe yuvarlamasını hızlıca kontrol etmenizi sağlar.
+      Varsayılan değerler <code class="bg-background radius p-1">maden-config.css</code>
+      dosyasında tanımlıdır.
+    </p>
+
+    <div class="grid grid-gap-3 mb-4">
+      <div class="col-4 p-4 bg-background text-on-background radius-xsm text-center">
+        radius-xsm
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-sm text-center">
+        radius-sm
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius text-center">
+        radius
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-md text-center">
+        radius-md
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-lg text-center">
+        radius-lg
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-xl text-center">
+        radius-xl
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-2xl text-center">
+        radius-2xl
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background radius-full text-center">
+        radius-full
+      </div>
+    </div>
+
+    <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-xsm text-center&quot;&gt;
+  radius-xsm
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-sm text-center&quot;&gt;
+  radius-sm
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius text-center&quot;&gt;
+  radius
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-md text-center&quot;&gt;
+  radius-md
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-lg text-center&quot;&gt;
+  radius-lg
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-xl text-center&quot;&gt;
+  radius-xl
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-2xl text-center&quot;&gt;
+  radius-2xl
+&lt;/div&gt;
+&lt;div class=&quot;col-4 p-4 bg-background text-on-background radius-full text-center&quot;&gt;
+  radius-full
+&lt;/div&gt;</code>
+</pre>
+  </div>
+
+<!-- Borders -->
+<div class="p-5 bg-surface radius shadow-light mb-4">
+  <h3 class="fs-lg fw-bold mb-3 text-primary">
+    2. Borders (Kenarlıklar)
+  </h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    MadenCSS, kenarlık kalınlığı ve yönünü kontrol etmek için
+    <strong>atomic ve anlamsal utility sınıfları</strong> sunar.
+    Border kalınlıkları merkezi olarak
+    <code class="bg-background radius p-1">maden-config.css</code>
+    dosyasında tanımlıdır.
+  </p>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">
+    Border Kalınlıkları
+  </h4>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin text-center">
+      border-thin
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-normal text-center">
+      border-normal
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thick text-center">
+      border-thick
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-heavy text-center">
+      border-heavy
+    </div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full mb-4">
+<code>&lt;div class="border-full border-thick p-4"&gt;
+  Thick Border
+&lt;/div&gt;</code>
+  </pre>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">
+    Border Yönleri
+  </h4>
+
+  <p class="fs-base text-on-surface mb-3">
+    Kenarlıklar yalnızca belirli yönlerde uygulanabilir.
+    Bu sayede daha kontrollü ayırıcılar ve layout sınırları oluşturabilirsiniz.
+  </p>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-t border-normal text-center">
+      border-t
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-r border-normal text-center">
+      border-r
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-b border-normal text-center">
+      border-b
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-l border-normal text-center">
+      border-l
+    </div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full mb-4">
+<code>&lt;div class="border-b border-thin p-4"&gt;
+  Bottom Border Only
+&lt;/div&gt;</code>
+  </pre>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">
+    Border Kaldırma
+  </h4>
+
+  <p class="fs-base text-on-surface mb-3">
+    <code class="bg-background radius p-1">border-0</code> sınıfı,
+    eleman üzerindeki tüm kenarlıkları tamamen kaldırır.
+  </p>
+
+  <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="border-0 p-4"&gt;
+  No Border
+&lt;/div&gt;</code>
+  </pre>
+
+  <p class="fs-sm text-on-surface opacity-7 mt-3">
+    <strong>Not:</strong> Border kalınlık değerlerini değiştirmek için
+    utility sınıflar yerine doğrudan
+    <code class="bg-background radius p-1">--border-thin</code>,
+    <code class="bg-background radius p-1">--border-normal</code> gibi
+    CSS değişkenlerini güncellemeniz önerilir.
+  </p>
+
+</div>
+
+  <!-- Border colors -->
+
+<div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      3. Border renkleri
+    </h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    Border renkleri, MadenCSS'in anlamsal renk paletini temel alır.
+    Bu sınıflar, kenarlıkların rengini hızlı ve tutarlı bir şekilde
+    ayarlamanızı sağlar.
+  </p>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-primary text-center">
+      border-primary
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-success text-center">
+      border-success
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-warning text-center">
+      border-warning
+    </div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-danger text-center">
+      border-danger
+    </div>
+  </div>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-info text-center">
+      border-info
+    </div>
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-dark text-center">
+      border-dark
+    </div>
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-mid text-center">
+      border-mid
+    </div>
+  </div>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-12 p-3 bg-background text-on-background border-full border-thin border-light text-center">
+      border-light
+    </div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="border-full border-normal border-primary p-4"&gt;
+  Primary Colored Border
+&lt;/div&gt;</code>
+  </pre>
+
+  <p class="fs-sm text-on-surface opacity-7 mt-3">
+    <strong>💡</strong> Border renkleri, doğrudan tema renk değişkenlerine
+    (<code class="bg-background radius p-1">--primary</code>,
+    <code class="bg-background radius p-1">--success</code> vb.)
+    bağlıdır. Tema değiştirildiğinde kenarlık renkleri otomatik olarak güncellenir.
+  </p>
+</div>
+
+  <!-- Borders -->
+
+
+  <!-- Shadows -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      4. Shadows (Gölge Efektleri)
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Shadow sınıfları, yüzey hiyerarşisini ve derinlik algısını artırmak için kullanılır.
+      Gölge yoğunlukları merkezi olarak tanımlanmıştır.
+    </p>
+
+    <div class="grid grid-gap-3 mb-4">
+      <div class="col-4 p-4 bg-background text-on-background shadow-light radius text-center">
+        shadow-light
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background shadow-normal radius text-center">
+        shadow-normal
+      </div>
+      <div class="col-4 p-4 bg-background text-on-background shadow-strong radius text-center">
+        shadow-strong
+      </div>
+    </div>
+
+    <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="p-4 bg-surface shadow-normal radius"&gt;
+  Elevated Card
+&lt;/div&gt;</code>
+    </pre>
+  </div>
+
+  <div class="fs-base bg-info text-on-info p-3 mt-4 radius">
+    <strong>💡 İpucu:</strong>
+    Radius ve shadow değerlerini değiştirmek için utility sınıfları değil,
+    <code class="bg-background text-on-background radius p-1">maden-config.css</code>
+    içindeki CSS değişkenlerini güncellemeniz önerilir.
+  </div>
+
+</div>
+<!-- Borders, Radius, Shadow section -->
+
+<!--display & opacity section-->
+<div id="display" class="mt-7">
+  
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    👁️ Display & Opacity Utilities
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS provides simple and predictable utility classes to control
+    <span class="fw-bold">element visibility</span>,
+    <span class="fw-bold">layout behavior</span>, and
+    <span class="fw-bold">visual emphasis</span>.
+    These utilities allow you to show, hide, or subtly fade elements
+    without writing custom CSS.
+  </p>
+
+  <!-- Display utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Display Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Display utilities control how an element participates in the layout flow.
+      They are commonly used for toggling visibility, inline behavior,
+      or layout adjustments.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Block</p>
+        <p class="fs-sm opacity-75 mb-2">
+          The element takes the full width and starts on a new line.
+        </p>
+        <code class="fs-sm">.block</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Inline</p>
+        <p class="fs-sm opacity-75 mb-2">
+          The element flows inline with text and ignores width/height.
+        </p>
+        <code class="fs-sm">.inline</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Inline Block</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Inline behavior with width and height support.
+        </p>
+        <code class="fs-sm">.inline-block</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Hidden</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Completely removes the element from layout and visibility.
+        </p>
+        <code class="fs-sm">.hidden</code>
+      </div>
+
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;div class="block"&gt;Block element&lt;/div&gt;
+&lt;span class="inline"&gt;Inline text&lt;/span&gt;
+&lt;div class="inline-block"&gt;Inline block&lt;/div&gt;
+&lt;div class="hidden"&gt;This will not be visible&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Tip:</strong> Use <code class="bg-background radius p-1">.hidden</code>
+      for conditional visibility instead of removing elements from the DOM.
+    </p>
+  </div>
+
+  <!-- Opacity utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      2. Opacity Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Opacity utilities allow you to visually de-emphasize elements,
+      create disabled states, or layer content without affecting layout.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-25 text-center">
+        <p class="fw-bold">opacity-25</p>
+      </div>
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-50 text-center">
+        <p class="fw-bold">opacity-50</p>
+      </div>
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-75 text-center">
+        <p class="fw-bold">opacity-75</p>
+      </div>
+
+      <div class="col-6 p-4 bg-primary text-on-primary radius opacity-100 text-center">
+        <p class="fw-bold">opacity-100</p>
+      </div>
+
+      <div class="col-6 p-4 bg-primary text-on-primary radius opacity-0 text-center">
+        <p class="fw-bold">opacity-0</p>
+      </div>
+
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;button class="opacity-50"&gt;Disabled-like button&lt;/button&gt;
+&lt;p class="opacity-75"&gt;Secondary text&lt;/p&gt;
+&lt;div class="opacity-0"&gt;Invisible but still in layout&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Note:</strong> Unlike <code class="bg-background radius p-1">.hidden</code>,
+      opacity utilities do <strong>not</strong> remove elements from the layout.
+      The element remains interactive unless combined with other utilities.
+    </p>
+  </div>
+
+</div>
+<!--display & opacity section-->
+
+<!--positioning section-->
+<div id="positioning" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    📐 Positioning
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS provides positioning utilities that allow precise control over
+    <span class="fw-bold">element placement.</span>
+    These utilities are designed to be predictable, composable,
+    and easy to reason about when building complex layouts.
+  </p>
+
+  <!-- Position utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Position Utilities
+    </h3>
+
+    <pre class="bg-background text-on-background p-2"><code>
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+
+.top-0    { top: 0; }
+.right-0  { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+
+.translate-top-right {top: 0; right: 0; transform: translate(50%, -50%);}
+.translate-top-left {top: 0; left: 0; transform: translate(-50%, -50%);}
+.translate-bottom-right {bottom: 0; right: 0; transform: translate(50%, 50%);}
+.translate-bottom-left {bottom: 0; left: 0;transform: translate(-50%, 50%);}
+.translate-center {top: 50%; left: 50%;transform: translate(-50%, -50%);}
+    </code></pre>
+
+
+
+    <p class="fs-base text-on-surface mb-3">
+      Position utilities define how an element is positioned in the document flow.
+      They are commonly used for overlays, badges, tooltips, sticky headers,
+      and floating UI elements.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Relative</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Establishes a positioning context for absolutely positioned children.
+        </p>
+        <code class="fs-sm">.relative</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Absolute</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Removes the element from normal flow and positions it relative
+          to the nearest positioned ancestor.
+        </p>
+        <code class="fs-sm">.absolute</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Fixed</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Positions the element relative to the viewport.
+          Commonly used for modals and floating actions.
+        </p>
+        <code class="fs-sm">.fixed</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Sticky</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Switches between relative and fixed positioning
+          based on scroll position.
+        </p>
+        <code class="fs-sm">.sticky</code>
+      </div>
+
+    </div>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Tip:</strong> Absolute positioning requires a parent element
+      with <code class="bg-background radius p-1">.relative</code>
+      to ensure predictable placement.
+    </p>
+  </div>
+
+  <!-- Offset & translate utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      2. Offset & Translate Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Offset utilities control the distance from the edges of the containing block,
+      while translate helpers simplify common alignment patterns such as centering
+      or corner positioning.
+    </p>
+
+    <div class="bg-background radius shadow-light relative height-3xl">
+        <div class="absolute top-0 right-0 bg-primary text-on-primary p-1">TR</div>
+        <div class="absolute top-0 left-0 bg-primary text-on-primary p-1">TL</div>
+        <div class="absolute bottom-0 right-0 bg-primary text-on-primary p-1">BR</div>
+        <div class="absolute bottom-0 left-0 bg-primary text-on-primary p-1">BL</div>
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;div class=&quot;relative&quot;&gt;
+    &lt;div class=&quot;absolute top-0 right-0&quot;&gt;TR&lt;/div&gt;
+    &lt;div class=&quot;absolute top-0 left-0&quot;&gt;TL&lt;/div&gt;
+    &lt;div class=&quot;absolute bottom-0 right-0&quot;&gt;BR&lt;/div&gt;
+    &lt;div class=&quot;absolute bottom-0 left-0&quot;&gt;BL&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-base text-on-surface opacity-7 mt-6">
+      <strong>💡</strong> Translate utilities combine positioning and transform
+      to achieve pixel-perfect alignment without manual calculations.
+    </p>
+
+
+    <div class="bg-background radius shadow-light relative height-3xl mt-5">
+        <div class="absolute translate-top-right bg-primary text-on-primary p-1">TR</div>
+        <div class="absolute translate-top-left bg-primary text-on-primary p-1">TL</div>
+        <div class="absolute translate-bottom-right bg-primary text-on-primary p-1">BR</div>
+        <div class="absolute translate-bottom-left  bg-primary text-on-primary p-1">BL</div>
+        <div class="absolute translate-center bg-primary text-on-primary p-1">.translate-center</div>
+        <div class="absolute translate-top-center bg-primary text-on-primary p-1">.translate-top-center</div>
+        <div class="absolute translate-bottom-center bg-primary text-on-primary p-1">.translate-bottom-center</div>
+    </div>
+
+
+    <pre class="p-3 bg-background radius text-on-background width-full"><code>
+&lt;div class=&quot;relative height-3xl&quot;&gt;
+    &lt;div class=&quot;absolute translate-top-right&quot;&gt;TR&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-top-left&quot;&gt;TL&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-right&quot;&gt;BR&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-left&quot;&gt;BL&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-center&quot;&gt;.translate-center&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-top-center&quot;&gt;.translate-top-center&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-center&quot;&gt;.translate-bottom-center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+  </div>
+
+</div>
+<!--positioning section -->
 
 
     </div><!--main content-->
