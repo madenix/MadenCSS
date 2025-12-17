@@ -1,53 +1,56 @@
-/*MODAL*/
-.modalState {
-  display: none;
-}
+@layer base, components, utilities;
 
-.modalState:checked + .modal {
-  opacity: 1;
-  visibility: visible;
-}
+@layer components {
+  .modalState {
+    display: none;
+  }
 
-.modalState:checked + .modal .modalInner {
-  top: 0;
-}
+  .modalState:checked + .modal {
+    opacity: 1;
+    visibility: visible;
+  }
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: left;
-  background: rgba(0,0,0, .7);
-  transition: opacity .25s ease;
-  z-index: 9997;
-}
+  .modalState:checked + .modal .modalInner {
+    top: 0;
+  }
 
-.modalBackground {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  cursor: pointer;
-  z-index: 9998;
-}
+  .modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0,0,0, .7);
+    transition: opacity .25s ease;
+    z-index: 9997;
+  }
 
-.modalInner {
-  transition: top .25s ease;
-  position: absolute;
-  top: -20%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  overflow: auto;
-  height: fit-content;
-  width: fit-content;
-  min-width: 300px;
-  min-height: 100px;
-  z-index: 9999;
+  .modalBackground {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 9998;
+  }
+
+  .modalInner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    height: fit-content;
+    width: fit-content;
+    min-width: 300px;
+    min-height: 100px;
+    z-index: 9999;
+  }
 }
