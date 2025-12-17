@@ -1,16 +1,53 @@
-/* -----------------------------------------
-   Alert Component Base
------------------------------------------- */
-.alert {
-  display: flex;
-  align-items: center;
-}
+@layer base, components, utilities;
 
-.alert .alert-close {
-  margin-left: auto;
-  cursor: pointer;
-  opacity: .7;
-  transition: .2s;
-}
+@layer components {
+  .alert {
+    position: relative;
+    padding: var(--spacing-4) var(--spacing-5);
+    margin-bottom: var(--spacing-4);
+    border-radius: var(--radius-md);
+    border: var(--border-thin) solid transparent;
+    font-size: var(--fs-base);
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    transition: var(--transition);
+  }
 
-.alert .alert-close:hover {opacity: 1;}
+  /* Renk Varyasyonları - Config'deki değişkenleri kullanıyoruz */
+  .alert-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .alert-success {
+    background-color: var(--success);
+    color: var(--on-success);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .alert-danger {
+    background-color: var(--danger);
+    color: var(--on-danger);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .alert-warning {
+    background-color: var(--warning);
+    color: var(--on-warning);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Outline (Çerçeveli) Varyasyon */
+  .alert-outline {
+    background-color: transparent;
+    border-width: var(--border-normal);
+  }
+  
+  .alert-outline.alert-primary { color: var(--primary); border-color: var(--primary); }
+  .alert-outline.alert-success { color: var(--success); border-color: var(--success); }
+  .alert-outline.alert-danger  { color: var(--danger);  border-color: var(--danger); }
+  .alert-outline.alert-warning  { color: var(--warning);  border-color: var(--warning); }
+}
