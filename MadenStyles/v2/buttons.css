@@ -1,1 +1,83 @@
+@layer base, components, utilities;
 
+@layer components {
+  /* 1. Temel Buton Yapısı */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: var(--border-thin) solid transparent;
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--fs-base);
+    line-height: 1.5;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    cursor: pointer;
+    gap: var(--spacing-2); /* İkon desteği için */
+    text-decoration: none;
+  }
+
+  /* Buton etkileşimleri */
+  .btn:hover {
+    filter: brightness(0.9);
+  }
+
+  .btn:active {
+    filter: brightness(0.8);
+    transform: translateY(1px);
+  }
+
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /* 2. Renk Varyasyonları (Solid) */
+  .btn-primary { background-color: var(--primary); color: var(--on-primary); }
+  .btn-success { background-color: var(--success); color: var(--on-success); }
+  .btn-warning { background-color: var(--warning); color: var(--on-warning); }
+  .btn-danger  { background-color: var(--danger);  color: var(--on-danger); }
+  .btn-info    { background-color: var(--info);    color: var(--on-info); }
+  .btn-dark    { background-color: var(--dark);    color: var(--on-dark); }
+  .btn-light   { background-color: var(--light);   color: var(--on-light); }
+
+  /* 3. Outline (Çerçeveli) Butonlar */
+  .btn-outline {
+    background-color: transparent;
+    border-width: var(--border-normal);
+  }
+
+  .btn-outline-primary { border-color: var(--primary); color: var(--primary); }
+  .btn-outline-success { border-color: var(--success); color: var(--success); }
+  .btn-outline-danger  { border-color: var(--danger);  color: var(--danger); }
+  .btn-outline-warning { border-color: var(--warning); color: var(--warning); }
+  .btn-outline-info    { border-color: var(--info);    color: var(--info); }
+  .btn-outline-dark    { border-color: var(--dark);    color: var(--dark); }
+
+  .btn-outline:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* 4. Boyut Varyasyonları */
+  .btn-sm {
+    padding: var(--spacing-1) var(--spacing-3);
+    font-size: var(--fs-sm);
+  }
+
+  .btn-lg {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--fs-lg);
+  }
+
+  /* 5. Block Buton (Tam Genişlik) */
+  .btn-block {
+    display: flex;
+    width: 100%;
+  }
+}
