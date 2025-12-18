@@ -41,9 +41,11 @@
   --max-width-md: 900px;  
   --max-width-sm: 767px;  
   --max-width-xs: 450px; 
+  --max-width-2xs: 300px; 
 
+  /*For width and heights*/
   --size-unit: 32px;
-  --size-xsm: 15px;
+  --size-xsm: 1px;
   --size-sm: calc(var(--size-unit) * 1);
   --size-md: calc(var(--size-unit) * 2);
   --size-lg: calc(var(--size-unit) * 3);
