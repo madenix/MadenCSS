@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="alert.css">
   <link rel="stylesheet" href="buttons.css">
   <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="cards.css">
 </head>
 
 <body class="bg-background text-on-background">
@@ -521,7 +522,7 @@
 <!--core principles content-->
 
 <!--Utilities section-->
-<div class="text-center fs-xxl fw-bold mt-7 mb-4">UTILITIES</div>
+<div class="text-center fs-xxl fw-bold mt-7 mb-4">⚙️ UTILITIES</div>
 <!--Utilities section-->
 
 <!--config section-->
@@ -1452,11 +1453,12 @@ function toggleTheme() {
     </p>
 
     <div class="p-4 bg-surface radius shadow-light mb-4">
-        <div class="bg-primary text-on-primary p-2 mb-2 max-width-xs">.max-width-xs (450px)</div>
-        <div class="bg-primary text-on-primary p-2 mb-2 max-width-sm">.max-width-sm (767px)</div>
-        <div class="bg-primary text-on-primary p-2 mb-2 max-width-md">.max-width-md (900px)</div>
-        <div class="bg-primary text-on-primary p-2 mb-2 max-width-lg">.max-width-lg (1200px)</div>
-        <div class="bg-primary text-on-primary p-2 max-width-xl">.max-width-xl (1600px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-2xs">.max-width-2xs (300px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-xs">.max-width-xs (450px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-sm">.max-width-sm (767px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-md">.max-width-md (900px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-lg">.max-width-lg (1200px)</div>
+      <div class="bg-primary text-on-primary p-2 mb-2 max-width-xl">.max-width-xl (1600px)</div>
     </div>
 
 <pre class="bg-surface text-on-surface p-3 radius-md">
@@ -2216,6 +2218,10 @@ function toggleTheme() {
 </div>
 <!--positioning section -->
 
+<!--Utilities section-->
+<div class="text-center fs-xxl fw-bold mt-7 mb-4">🧩 COMPONENTS</div>
+<!--Utilities section-->
+
 <!--alerts section -->
 <section id="alerts" class="mb-8">
   <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">⚠️ Alerts</h2>
@@ -2283,12 +2289,12 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3">Basic Usage (Solid)</h3>
     <p class="mb-3 text-mid">Standard buttons using theme-defined semantic colors.</p>
     <div class="p-4 border border-light radius-md mb-3">
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-success">Success</button>
-      <button class="btn btn-danger">Danger</button>
-      <button class="btn btn-warning">Warning</button>
-      <button class="btn btn-dark">Dark</button>
-      <button class="btn btn-light">Light</button>
+      <button class="btn btn-primary m-2">Primary</button>
+      <button class="btn btn-success m-2">Success</button>
+      <button class="btn btn-danger m-2">Danger</button>
+      <button class="btn btn-warning m-2">Warning</button>
+      <button class="btn btn-dark m-2">Dark</button>
+      <button class="btn btn-light m-2">Light</button>
     </div>
     <pre class="bg-dark text-light p-4 radius-md"><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
 &lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
@@ -2302,12 +2308,12 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3">Outline Buttons</h3>
     <p class="mb-3 text-mid">Use <code>btn-outline</code> combined with <code>btn-outline-{color}</code> for a lighter visual style.</p>
     <div class="p-4 border border-light radius-md mb-3">
-      <button class="btn btn-outline btn-outline-primary">Primary</button>
-      <button class="btn btn-outline btn-outline-success">Success</button>
-      <button class="btn btn-outline btn-outline-danger">Danger</button>
-      <button class="btn btn-outline btn-outline-warning">Warning</button>
-      <button class="btn btn-outline btn-outline-dark">Dark</button>
-      <button class="btn btn-outline btn-outline-light">Light</button>
+      <button class="btn btn-outline btn-outline-primary m-2">Primary</button>
+      <button class="btn btn-outline btn-outline-success m-2">Success</button>
+      <button class="btn btn-outline btn-outline-danger m-2">Danger</button>
+      <button class="btn btn-outline btn-outline-warning m-2">Warning</button>
+      <button class="btn btn-outline btn-outline-dark m-2">Dark</button>
+      <button class="btn btn-outline btn-outline-light m-2">Light</button>
     </div>
     <pre class="bg-dark text-light p-4 radius-md"><code>
 &lt;button class="btn btn-outline btn-outline-primary"&gt;Primary&lt;/button&gt;
@@ -2323,9 +2329,9 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3">Sizes</h3>
     <p class="mb-3 text-mid">Different sizes for different contexts using <code>btn-sm</code> or <code>btn-lg</code>.</p>
     <div class="p-4 border border-light radius-md mb-3">
-      <button class="btn btn-primary btn-sm">Small</button>
-      <button class="btn btn-primary">Default</button>
-      <button class="btn btn-primary btn-lg">Large</button>
+      <button class="btn btn-primary btn-sm m-2">Small</button>
+      <button class="btn btn-primary m-2">Default</button>
+      <button class="btn btn-primary btn-lg m-2">Large</button>
     </div>
     <pre class="bg-dark text-light p-4 radius-md"><code>&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
 &lt;button class="btn btn-primary"&gt;Default&lt;/button&gt;
@@ -2336,10 +2342,10 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3 text-primary">MadenCSS Power: Instant Customization</h3>
     <p class="mb-3 text-mid">Since buttons are defined in the <code>components</code> layer, you can override any property using utility classes without writing custom CSS.</p>
     <div class="p-4 border border-light radius-md mb-3">
-      <button class="btn btn-success radius-full shadow-strong px-8 fw-bold">
+      <button class="btn btn-success radius-full shadow-strong px-8 fw-bold m-2">
         Fully Custom Button
       </button>
-      <button class="btn btn-outline btn-outline-primary radius-0 border-thick ml-2">
+      <button class="btn btn-outline btn-outline-primary radius-0 border-thick m-2">
         Square Thick Border
       </button>
     </div>
@@ -2350,10 +2356,335 @@ function toggleTheme() {
 </section>
 <!--buttons section -->
 
+<!-- cards section -->
+<div id="cards" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">🃏 Cards</h2>
+
+  <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">cards.css</code> must be included to use these components.
+  </div>
+
+  <p class="fs-lg text-on-surface mb-6">
+    Cards are flexible container components used to group related content such as text,
+    images, actions, or metadata. MadenCSS cards are designed to work seamlessly with
+    utility classes while providing a clean and consistent structure.
+  </p>
+
+  <!-- Basic Card -->
+  <div class="p-5 radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">1. Basic Card Structure</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      The base card consists of a <code class="bg-background radius p-1">.card</code> wrapper
+      and optional structural sections:
+      <code class="bg-background radius p-1">.card-header</code>,
+      <code class="bg-background radius p-1">.card-body</code>,
+      <code class="bg-background radius p-1">.card-footer</code>.
+    </p>
+
+    <div class="card card-shadow">
+      <div class="card-header fs-xl">Card Header</div>
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+      </div>
+      <div class="card-footer text-primary">Card Footer</div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow"&gt;
+  &lt;div class="card-header fs-xl"&gt;Card Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <!-- Card with Image -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">2. Card with Image</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Cards support full-width images using the
+      <code class="bg-background radius p-1">.card-img</code> utility.
+      Images automatically scale and maintain aspect ratio.
+    </p>
+
+    <div class="card card-shadow max-width-2xs">
+      <img src="https://picsum.photos/600/300" class="card-img" alt="Card image">
+      <div class="card-body">
+        Image based card content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow max-width-2xs"&gt;
+  &lt;img src="image.jpg" class="card-img" alt=""&gt;
+  &lt;div class="card-body"&gt;
+    Image based card content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
 
 
+  <div class="card card-shadow max-width-2xs">
+    <img src="https://picsum.photos/600/300" class="card-img" alt="Card image">
+    <div class="card-header fs-xl">Product name</div>
+    <div class="card-body">
+      Product information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+    </div>
+    <div class="card-footer flex flex-justify-between">
+      <span class="text-primary fs-xxl">$15</span>
+      <button class="btn btn-primary">Add To Chart</button>
+    </div>
+  </div>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+  <code>
+&lt;div class="card card-shadow max-width-2xs"&gt;
+  &lt;img src="https://picsum.photos/600/300" class="card-img" alt="Card image"&gt;
+  &lt;div class="card-header fs-xl"&gt;Product name&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    Product information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+  &lt;div class="card-footer flex flex-justify-between"&gt;
+    &lt;span class="text-primary fs-xxl"&gt;$15&lt;/span&gt;
+    &lt;button class="btn btn-primary"&gt;Add To Chart&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+
+  </div>
+
+  <!-- Card Variants -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">3. Card Variants & Effects</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Cards can be visually enhanced using modifier classes.
+      Shadow and border variations are optional and composable.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      <div class="col-4">
+        <div class="card card-shadow card-primary">
+          <div class="card-header">Primary Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-success">
+          <div class="card-header">Success Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-danger">
+          <div class="card-header">Danger Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-warning">
+          <div class="card-header">Warning Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-info">
+          <div class="card-header">Info Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow card-primary"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-success"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-danger"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-warning"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-info"&gt;...&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <!-- Flush Card -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">4. Flush (Borderless) Card</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Use <code class="bg-background radius p-1">.card-flush</code> to remove borders and shadows
+      for minimal or embedded layouts.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      <div class="col-4">
+        <div class="card card-flush bg-surface">
+          <div class="card-body">
+            Borderless card appearance.
+          </div>
+        </div>
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-flush"&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <p class="bg-info text-on-info p-2 radius-md">
+    💡 MadenCSS provide structure, utilities provide flexibility.
+    Combine cards freely with grid, flex, spacing and typography utilities.
+  </p>
+
+
+    <!-- Custom Card -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">5. Custom Cards – Power of MadenCSS</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      One of the strongest features of MadenCSS is its layered architecture.
+      Thanks to the <code class="bg-background radius p-1">@layer</code> system,
+      existing components can be safely extended or overridden
+      <strong>without breaking the core framework</strong>.
+    </p>
+
+    <p class="fs-base text-on-surface mb-3">
+      By combining the base <code class="bg-background radius p-1">.card</code> component
+      with utility classes, you can create fully custom card designs
+      while still relying on the original structure.
+      No additional CSS files or custom styles are required.
+    </p>
+
+    <p class="fs-base text-on-surface fw-bold mb-4">
+      This is the power of MadenCSS.
+    </p>
+
+    <!-- Custom Card Example -->
+    <div class="grid grid-gap-4 mb-4">
+      <div class="col-4">
+        <div class="card card-shadow card-info">
+          <div class="card-header flex flex-justify-between flex-align-center">
+            <span class="fw-bold">Custom Card</span>
+            <span class="fs-sm opacity-7">Pro</span>
+          </div>
+
+          <div class="card-body">
+            <p class="fs-base mb-2">
+              This card demonstrates how existing card styles
+              can be customized using utilities only.
+            </p>
+            <p class="fs-sm opacity-7">
+              Layout, spacing, alignment and visuals are all composed
+              without touching the core CSS.
+            </p>
+          </div>
+
+          <div class="card-footer flex flex-justify-between flex-align-center">
+            <span class="fw-bold text-info">$29 / month</span>
+            <a href="#" class="p-2 bg-info text-on-info radius">Select</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow card-info"&gt;
+
+  &lt;div class="card-header flex flex-justify-between flex-align-center"&gt;
+    &lt;span class="fw-bold"&gt;Custom Card&lt;/span&gt;
+    &lt;span class="fs-sm opacity-7"&gt;Pro&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;p class="fs-base mb-2"&gt;
+      This card demonstrates how existing card styles
+      can be customized using utilities only.
+    &lt;/p&gt;
+    &lt;p class="fs-sm opacity-7"&gt;
+      Layout, spacing, alignment and visuals are all composed
+      without touching the core CSS.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card-footer flex flex-justify-between flex-align-center"&gt;
+    &lt;span class="fw-bold text-info"&gt;$29 / month&lt;/span&gt;
+    &lt;a href="#" class="p-2 bg-info text-on-info radius"&gt;Select&lt;/a&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Principle:</strong>
+      Components define structure, utilities define behavior.
+      Override visually, not architecturally.
+    </p>
+  </div>
+
+
+
+
+</div>
+<!-- cards section -->
+
+<!--forms section -->
+<section id="forms" class="mb-8">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">📝 Forms</h2>
+
+    <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">forms.css</code> must be included to use this component.
+  </div>
+
+
+
+<input type="button"><br/><br/>
+<input type="checkbox"><br/><br/>
+<input type="color"><br/><br/>
+<input type="date"><br/><br/>
+<input type="datetime-local"><br/><br/>
+<input type="email"><br/><br/>
+<input type="file"><br/><br/>
+<input type="hidden"><br/><br/>
+<input type="image"><br/><br/>
+<input type="month"><br/><br/>
+<input type="number"><br/><br/>
+<input type="password"><br/><br/>
+<input type="radio"><br/><br/>
+<input type="range"><br/><br/>
+<input type="reset"><br/><br/>
+<input type="search"><br/><br/>
+<input type="submit"><br/><br/>
+<input type="tel"><br/><br/>
+<input type="text"><br/><br/>
+<input type="time"><br/><br/>
+<input type="url"><br/><br/>
+<input type="week"><br/><br/>
+
+
+
+
+</section>
+<!--forms section -->
+
+<!--modals section -->
 <section id="modals" class="mb-8">
-  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">Modals</h2>
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">🗔 Modals</h2>
   <p class="mb-4 text-mid">Dynamic dialogs powered by the "Checkbox Hack". These components require <strong>zero JavaScript</strong> to function.</p>
   
   <div class="bg-warning text-on-warning p-2 radius-md mb-4">
@@ -2448,6 +2779,8 @@ function toggleTheme() {
 &lt;/div&gt;</code></pre>
   </div>
 </section>
+<!--modals section -->
+
     </div><!--main content-->
   </div><!--page end-->
   </body>
