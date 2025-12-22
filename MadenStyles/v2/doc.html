@@ -67,134 +67,144 @@
 <!--intro section-->
 <div id="introduction" class="mt-5">
   <h1 class="text-center mb-3">INTRODUCTION</h1>
-  <div class="p-5 mb-6 bg-primary radius shadow-light flex flex-col flex-center">
+  <div class="p-5 mb-6 bg-primary radius-2xl shadow-light flex flex-col flex-center">
     <p class="fs-lg text-on-primary text-center fw-bold">
-      🎨 MadenCSS is a modern, lightweight <span class="text-on-primary fw-black">CSS framework</span> designed with a <span class="text-on-primary fw-black">utility-first</span> approach.
+      🎨 MadenCSS is a <u>native, token-driven CSS foundation</u> for building scalable design systems.
+      It helps teams start fast while enabling long-term maintainability and customization.
     </p>
   </div>
 
-  <div class="p-5 bg-surface text-on-surface radius shadow-light mb-4">
-    <h2 class="fw-medium text-on-surface mb-4 grid grid-gap-2">
-      <div class="col-2">✨  Utility-First</div> 
-      <div class="col-2">📱 Mobile-First </div> 
-      <div class="col-3">🔗 Low Dependency </div> 
-      <div class="col-3">🛠️ Maintained </div> 
-      <div class="col-2">✅ Tested</div> 
-    </h2>
+<div class="p-5 bg-surface text-on-surface radius shadow-light mb-4">
+  <h2 class="fw-medium mb-4 grid grid-gap-2">
+    <div class="col-2">🧱 Tokens</div>
+    <div class="col-2">🧩 Layers</div>
+    <div class="col-2">🌐 Native CSS</div>
+    <div class="col-3">♿ Accessible Defaults</div>
+    <div class="col-3">🔁 Predictable Overrides</div>
+  </h2>
 
-    <p class="fs-base text-on-surface mb-2">
-      MadenCSS is a modern CSS framework built upon the strict principles of **Utility-First** and **Mobile-First**. Our objective is to empower developers to build unique user interfaces rapidly, by ensuring **minimal dependency** and providing a **centralized configuration** (via CSS Variables). We strip away unnecessary complexity to leave you with a clean, high-performance styling layer.
+  <p class="fs-base mb-2">
+    MadenCSS is a <strong>native, token-driven CSS foundation</strong> built for teams that care about
+    <strong>long-term maintainability</strong>.
+    It does not try to replace CSS or abstract it away.
+    Instead, it formalizes design decisions using <strong>tokens, layers, and sensible defaults</strong>,
+    enabling consistent UI development across products while remaining
+    <strong>framework-agnostic</strong> and easy to extend.
+  </p>
+</div>
+
+
+<div class="p-2 mb-6 radius grid grid-gap-4">
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm3 3h3v8H7V8zm5 0h3v8h-3V8zm5 0h3v8h-3V8z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Predictable Layout System</p>
+    <p class="fs-sm opacity-7">
+      A responsive, constraint-based grid built for long-term consistency.
     </p>
   </div>
 
-  <div class="p-2 mb-6 radius grid grid-gap-4">
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-          <div class="flex flex-center">
-            <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm3 3h3v8H7V8zm5 0h3v8h-3V8zm5 0h3v8h-3V8z"/>
-            </svg>
-          </div>
-          <p class="fs-lg fw-bold text-on-surface mt-2">12-Column Grid</p>
-          <p class="fs-sm text-on-surface opacity-7">Fully **responsive** layout.</p>
-      </div>
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-        <div class="flex flex-center">
-            <svg class="width-md height-md text-info mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18V4a8 8 0 0 1 0 16z"/>
-            </svg>
-        </div>
-        <p class="fs-lg fw-bold text-on-surface mt-2">Theme Support</p>
-        <p class="fs-sm text-on-surface opacity-7">Easy Dark / Light mode switching.</p>
-      </div>
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-        <div class="flex flex-center">
-          <svg class="width-md height-md text-success mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <rect x="0" y="4" width="5" height="16" rx="1"/>
-              <rect x="19" y="4" width="5" height="16" rx="1"/>
-              <path d="M7 12h10M7 12l2-2M7 12l2 2M17 12l-2-2M17 12l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <p class="fs-lg fw-bold text-on-surface mt-2">Spacing</p>
-        <p class="fs-sm text-on-surface opacity-7">Comprehensive Margin, Padding, Gap utilities.</p>
-      </div>
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-        <div class="flex flex-center">
-            <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M5 4h14v3h-6v13h-2V7H5z"/>
-                <rect x="3" y="22" width="18" height="2"/>
-            </svg>
-        </div>
-        <p class="fs-lg fw-bold text-on-surface mt-2">Typography</p>
-        <p class="fs-sm text-on-surface opacity-7">Responsive font sizes and weights.</p>
-      </div>
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-          <div class="flex flex-center">
-              <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="0" y="4" width="5" height="16" rx="1"/>
-                <rect x="9" y="4" width="5" height="5" rx="1"/>
-                <rect x="9" y="15" width="5" height="5" rx="1"/>
-                <rect x="18" y="4" width="5" height="16" rx="1"/>
-              </svg>
-          </div>
-          <p class="fs-lg fw-bold text-on-surface mt-2">Layout Utilities</p>
-          <p class="fs-sm text-on-surface opacity-7">Flexbox and Grid alignment helpers.</p>
-      </div>
-
-      <div class="col-4 p-4 bg-surface radius shadow-light text-center">
-          <div class="flex flex-center">
-                <svg class="width-md height-md text-danger mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8-8-3.59-8-8z"/><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
-              </svg>
-          </div>
-          <p class="fs-lg fw-bold text-on-surface mt-2">Style Utilities</p>
-          <p class="fs-sm text-on-surface opacity-7">Border, Shadow, Radius, and Display classes.</p>
-      </div>
-        
-      <div class="col-12 flex flex-center">
-          <div class="col-4 p-4 bg-info radius shadow-light text-center">
-              <div class="flex flex-center">
-                  <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M21 16H3V4h18v12zm-2-2V6H5v8h14zM3 18h18v2H3z"/>
-                  </svg>
-              </div>
-              <p class="fs-lg fw-bold text-warning-dark mt-2">Pre-Built Components</p>
-              <p class="fs-sm text-warning-dark opacity-7">Modal, Navbar, Sidebar, Off-Canvas structures.</p>
-          </div>
-      </div>
-
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-info mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18V4a8 8 0 0 1 0 16z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Token-Based Theming</p>
+    <p class="fs-sm opacity-7">
+      Centralized design tokens enabling effortless theme customization.
+    </p>
   </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-success mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <rect x="0" y="4" width="5" height="16" rx="1"/> <rect x="19" y="4" width="5" height="16" rx="1"/> <path d="M7 12h10M7 12l2-2M7 12l2 2M17 12l-2-2M17 12l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Consistent Spacing Scale</p>
+    <p class="fs-sm opacity-7">
+      A unified spacing system across margin, padding, and layout gaps.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M5 4h14v3h-6v13h-2V7H5z"/> <rect x="3" y="22" width="18" height="2"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Fluid Typography System</p>
+    <p class="fs-sm opacity-7">
+      Responsive font sizes and weights driven by design decisions.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <rect x="0" y="4" width="5" height="16" rx="1"/> <rect x="9" y="4" width="5" height="5" rx="1"/> <rect x="9" y="15" width="5" height="5" rx="1"/> <rect x="18" y="4" width="5" height="16" rx="1"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Layout Primitives</p>
+    <p class="fs-sm opacity-7">
+      Flexbox and grid helpers designed as low-level building blocks.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-danger mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8-8-3.59-8-8z"/><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Visual Primitives</p>
+    <p class="fs-sm opacity-7">
+      Borders, radius, shadows, and display utilities as composable primitives.
+    </p>
+  </div>
+
+  <div class="col-12 flex flex-center">
+    <div class="col-4 p-4 bg-info radius shadow-light text-center">
+      <div class="flex flex-center">
+        <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M21 16H3V4h18v12zm-2-2V6H5v8h14zM3 18h18v2H3z"/> </svg>
+      </div>
+      <p class="fs-lg fw-bold mt-2">Reference Components</p>
+      <p class="fs-sm opacity-7">
+        Optional components demonstrating recommended structure and patterns.
+      </p>
+    </div>
+  </div>
+
+</div>
+
 </div>
 <!--intro section-->
 
-<!--installation section-->
+<!-- installation section -->
 <div id="installation" class="p-5 bg-surface radius shadow-light mb-3">
-    <h3 class="fs-xl fw-bold mb-3 flex flex-center">
-        Installation
-    </h3>
-    
-    <p class="fs-base text-on-surface mb-3">
-        MadenCSS can be added to your project in two simple ways: using the CDN or including the source files locally.
-        Choose whichever fits your workflow—no tooling or setup required.
-    </p>
+  <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+    Installation
+  </h3>
 
-    <h4 class="fs-lg fw-semibold mt-4 mb-2">1. CDN</h4>
-    <p class="fs-base text-on-surface mb-2">
-        The fastest way to get started. Add the stylesheet directly to your HTML:
-    </p>
-    <pre class="bg-background p-2 radius-lg"><code>&lt;link rel="stylesheet" href="https://cdn.madencss.com/maden.css"&gt;</code></pre>
+  <p class="fs-base text-on-surface mb-3">
+    MadenCSS is designed to be <strong>adopted, not installed</strong>.
+    You can include it directly in your project using a CDN for quick experiments,
+    or integrate the source files locally as a foundation for your own design system.
+  </p>
 
-    <h4 class="fs-lg fw-semibold mt-4 mb-2">2. Local Setup</h4>
-    <p class="fs-base text-on-surface mb-2">
-        Download the framework and copy the files into your project. Then link the CSS:
-    </p>
-    <pre class="bg-background p-2 radius-lg"><code>&lt;link rel="stylesheet" href="/css/maden.css"&gt;</code></pre>
+  <h4 class="fs-lg fw-semibold mt-4 mb-2">1. CDN (Quick Start)</h4>
+  <p class="fs-base text-on-surface mb-2">
+    Use the CDN to explore MadenCSS or prototype quickly.
+    This option requires no build tools and works with plain HTML.
+  </p>
+  <pre class="bg-background p-2 radius-lg">
+<code>&lt;link rel="stylesheet" href="https://cdn.madencss.com/maden.css"&gt;</code>
+  </pre>
+
+  <h4 class="fs-lg fw-semibold mt-4 mb-2">2. Local Integration</h4>
+  <p class="fs-base text-on-surface mb-2">
+    For long-term projects, download the source files and include them directly.
+    This approach allows you to customize tokens, extend components,
+    and evolve MadenCSS as part of your own design system.
+  </p>
+  <pre class="bg-background p-2 radius-lg">
+<code>&lt;link rel="stylesheet" href="/css/maden.css"&gt;</code>
+  </pre>
 </div>
-<!--installation section-->
+<!-- installation section -->
 
 <!--start section-->
 <div id="start" class="mt-1">
@@ -204,8 +214,8 @@
   </h2>
 
   <p class="fs-lg text-on-surface mb-6 text-center">
-    MadenCSS is a lightweight, utility-first CSS framework designed to maximize development speed,
-    maintainability and predictability.
+    MadenCSS provides a minimal CSS foundation that lets you build layouts and design systems
+without locking you into a framework.
   </p>
 
   <!-- Step 1 -->
@@ -423,7 +433,7 @@
             1. Utility-First & Component-Driven Speed
         </h3>
         <p class="fs-base text-on-surface mb-3">
-            MadenCSS operates primarily on a **Utility-First approach**, where you compose designs using single-purpose classes (e.g., <code class="bg-background radius p-1">p-4</code>, <code class="bg-background radius p-1">flex</code>). However, to maximize design speed, the framework also provides essential, **ready-made components** like Modals, Sidebars, and Navbars.
+            MadenCSS operates primarily on a **Utility-First approach**, where you compose designs using single-purpose classes (e.g., <code class="bg-background radius p-1">p-4</code>, <code class="bg-background radius p-1">flex</code>). However, to maximize design speed, the framework side also provides essential, **ready-made components** like Modals, Sidebars, and Navbars.
         </p>
         <p class="fs-base text-on-surface mb-3">
             This dual approach allows for ultimate flexibility through utilities while providing immediate solutions for common UI patterns. Crucially, these components are designed with **minimal (mostly zero) JavaScript dependency**, aligning with our commitment to simplicity. 
@@ -530,7 +540,7 @@
     <h2 class="fs-xl fw-black mb-2 text-on-background">⚙️ Customization (maden-config.css)</h2>
 
     <p class="fs-lg text-on-surface mb-6">
-        <span class="text-primary fw-bold">maden-config.css</span> is the core file that centrally defines all the fundamental building blocks of MadenCSS. Everything, from the color palette and spacing system to font sizes, borders, and shadows, is defined as **CSS Variables** within the <code class="bg-background radius p-1">:root</code> block. By editing this single file, you can instantly adapt the entire framework to your project's design language.
+        <span class="text-primary fw-bold">maden-config.css</span> is the core file that centrally defines all the fundamental building blocks of MadenCSS. Everything, from the color palette and spacing system to font sizes, borders, and shadows, is defined as **CSS Variables** within the <code class="bg-background radius p-1">:root</code> block. By editing this single file, you can instantly adapt the entire system to your project's design language.
     </p>
 
     <div class="p-5 bg-surface radius shadow-light mb-4">
@@ -608,7 +618,7 @@ html[data-theme="light"] {
 }
 </code></pre>
         <p class="fs-sm text-on-surface opacity-7 mt-3">
-            <span class="fw-bold">Scaling:</span> Changing the <code class="bg-background radius p-1">--spacing-unit</code> variable allows you to rescale all spacing and gap values across the entire framework from a single location.
+            <span class="fw-bold">Scaling:</span> Changing the <code class="bg-background radius p-1">--spacing-unit</code> variable allows you to rescale all spacing and gap values across the entire system from a single location.
         </p>
     </div>
     
@@ -672,7 +682,7 @@ html[data-theme="light"] {
   --shadow-strong: 0 10px 30px rgba(0,0,0,.60); <span class="text-info">/* Utility: shadow-strong */</span>
 </code></pre>
         <p class="fs-sm text-on-surface opacity-7 mt-3">
-            **Usage:** If you need all corner radii in your project to be softer/sharper, you can globally adjust these variables. For instance, increasing the value of <code class="bg-background radius p-1">--radius</code> will increase all default rounding across the framework.
+            **Usage:** If you need all corner radii in your project to be softer/sharper, you can globally adjust these variables. For instance, increasing the value of <code class="bg-background radius p-1">--radius</code> will increase all default rounding across the system.
         </p>
     </div>
 
@@ -814,7 +824,7 @@ html[data-theme="light"] {
         All color variables are defined in the <code class="bg-background radius p-1">maden-config.css</code> file within two main blocks:
     </p>
 
-    <ul class="mx-6 my-4 fs-base bg-surface p-4 radius-lg text-on-surface shadow-light">
+    <ul class="my-4 fs-base bg-surface p-4 radius-lg text-on-surface shadow-light">
         <li class="mb-2"><code class="bg-background radius p-1">:root</code> **Block:** Defines the color variables for the **Dark Mode** (the default theme of MadenCSS).</li>
         <li class="mb-2"><code class="bg-background radius p-1">html[data-theme="light"]</code> **Block:** Contains the **Light Mode** colors which override the Dark Mode variables when the <code class="bg-background radius p-1">data-theme</code> attribute is set to "light".</li>
     </ul>
@@ -1784,7 +1794,7 @@ function toggleTheme() {
 
   <div class="p-5 bg-surface radius shadow-light mb-4">
     <h3 class="fs-lg fw-bold mb-3 text-primary">
-      1. Border Radius
+      1. Radius
     </h3>
 
     <p class="fs-base text-on-surface mb-3">
@@ -1804,10 +1814,39 @@ function toggleTheme() {
     </div>
 
     <pre class="p-3 bg-background radius text-on-background width-full">
-<code>&lt;div class=&quot;radius-xsm&quot;&gt;radius-xsm&lt;/div&gt;
-&lt;div class=&quot;radius-md&quot;&gt;radius-md&lt;/div&gt;
-&lt;div class=&quot;radius-full&quot;&gt;radius-full&lt;/div&gt;</code>
+<code>&lt;div class=&quot;radius-xsm&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-md&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-full&quot;&gt;...&lt;/div&gt;</code>
 </pre>
+
+<p class="fs-base text-on-surface mb-3">
+  By default, radius utilities apply the selected radius value to all corners.
+  If a directional radius class is provided, the radius is applied only to the specified corner.
+</p>
+
+<div class="grid grid-gap-3 mb-4">
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tl text-center">
+    radius-md radius-tl
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tr text-center">
+    radius-md radius-tr
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-br text-center">
+    radius-md radius-br
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-bl text-center">
+    radius-md radius-bl
+  </div>
+</div>
+
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class=&quot;radius-lg radius-tl&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-tr&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-br&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-bl&quot;&gt;...&lt;/div&gt;</code>
+</pre>
+
   </div>
 
 <div class="p-5 bg-surface radius shadow-light mb-4">
@@ -2558,9 +2597,9 @@ function toggleTheme() {
 
     <p class="fs-base text-on-surface mb-3">
       One of the strongest features of MadenCSS is its layered architecture.
-      Thanks to the <code class="bg-background radius p-1">@layer</code> system,
+      Thanks to the <code class="bg-background radius p-1">@layer</code> design,
       existing components can be safely extended or overridden
-      <strong>without breaking the core framework</strong>.
+      <strong>without breaking the core system files.</strong>.
     </p>
 
     <p class="fs-base text-on-surface mb-3">
@@ -2647,35 +2686,343 @@ function toggleTheme() {
 <section id="forms" class="mb-8">
   <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">📝 Forms</h2>
 
-    <div class="bg-warning text-on-warning p-2 radius-md mb-4">
-      <code class="fw-bold">forms.css</code> must be included to use this component.
+  <p class="p-4">
+    By default forms are styled with in MadenCss base layer. Thanks to the @layer design, 
+    existing form appearence can be safely extended or overridden without breaking the core system files.
+  </p>
+
+  <p class="p-4">
+    Base layer default values can be found below.
+  </p>
+
+  <pre class="bg-dark text-light p-4 radius-md">
+  input, button, textarea, select {
+      background-color: var(--surface);
+      color: var(--on-surface);
+      padding: var(--spacing-2) var(--spacing-3);
+      width: 100%;
+      border: var(--border-thin) solid var(--mid);
+      border-radius: var(--radius);
+      transition: border-color var(--focus-transition), box-shadow var(--focus-transition);
+      font: inherit;
+   }
+
+   input:focus, button:focus, textarea:focus, select:focus {
+      background-color: var(--focus-background);
+      color: var(--on-focus);
+      border-color: var(--focus-border-color);
+      outline: var(--focus-border-thickness) solid var(--focus-border-color);
+      outline-offset: var(--focus-outline-offset);
+   }
+
+   input:disabled, textarea:disabled, select:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+   }
+  
+   input::placeholder {transition: .2s;}
+   input:focus::placeholder {opacity: 0;}
+   ::placeholder { opacity: 0.7; }
+  </pre>
+
+
+  <p class="p-4 bg-info text-on-info radius">
+    MadenCSS provides a robust base layer that facilitates the consistent design of standard form interfaces.
+  </p>
+
+  <form class="p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-4">
+    <div class="col-12 text-center fs-lg fw-black">LOG IN</div>
+
+    <div class="col-12">
+      <label class="">Email</label>
+      <input type="email" class="" placeholder="email@example.com">
+    </div>
+
+    <div class="col-12">
+      <label class="">Password</label>
+      <input type="password" class="" placeholder="••••••••">
+    </div>
+
+    <div class="col-12 flex flex-justify-between">
+      <div class="flex">
+        <div class="p-1"><input type="checkbox" name="rememberMe"></div>
+        <div class="p-1">Remember Me</div>
+      </div>
+      <div class="p-1 fw-bold"><a href="#">Forgot Password?</a></div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+
+    <div class="col-12 mt-3 text-center">
+      <a href="#" class="p-1">Don't have an account? <a class="p-1 text-primary fw-bold">Reigster Now!</a>
+    </div>
+  </form>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form class=&quot;p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-4&quot;&gt;
+  &lt;div class=&quot;col-12 text-center fs-lg fw-black&quot;&gt;LOG IN&lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;label class=&quot;&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;email@example.com&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;label class=&quot;&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-justify-between&quot;&gt;
+    &lt;div class=&quot;flex&quot;&gt;
+      &lt;div class=&quot;p-1&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;rememberMe&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;p-1&quot;&gt;Remember Me&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;p-1 fw-bold&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 mt-3 text-center&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;p-1&quot;&gt;Don&apos;t have an account? &lt;a class=&quot;p-1 text-primary fw-bold&quot;&gt;Reigster Now!&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+
+  <form action="" class="p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-5">
+    <div class="col-12 text-center fs-lg fw-black">REGISTER</div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">✉️</div>
+      <div class="flex-1 p-1"><input type="email" class="" placeholder="email@example.com"></div>
+    </div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">🔑</div>
+      <div class="flex-1 p-1"><input type="password" class="" placeholder="Password"></div>
+    </div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">🔑</div>
+      <div class="flex-1 p-1"><input type="password" class="" placeholder="Password Again"></div>
+    </div>
+
+    <div class="col-12 flex flex-justify-between">
+      <div class="flex">
+        <div class="p-1"><input type="checkbox" name="agreement" required></div>
+        <div class="p-1">I agree <u>Terms Of Use</u></div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form action=&quot;&quot; class=&quot;p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-5&quot;&gt;
+  &lt;div class=&quot;col-12 text-center fs-lg fw-black&quot;&gt;REGISTER&lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#9993;&#65039;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;email@example.com&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#128273;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;Password&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#128273;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;Password Again&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-justify-between&quot;&gt;
+    &lt;div class=&quot;flex&quot;&gt;
+      &lt;div class=&quot;p-1&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;agreement&quot; required&gt;&lt;/div&gt;
+      &lt;div class=&quot;p-1&quot;&gt;I agree &lt;u&gt;Terms Of Use&lt;/u&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Register&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;  
+</pre>
+
+
+  <p class="p-4 bg-info text-on-info radius-lg">
+  The following example demonstrates how a fully custom form layout can be created
+  using only MadenCSS utilities, without relying on predefined form components.
+  </p>
+
+<form class="p-5 bg-dark radius-3xl radius-tl radius-br text-light shadow-light grid grid-gap-2 max-width-xs mt-4">
+  <div class="col-12 text-center fs-lg fw-black">LOG IN</div>
+
+  <div class="col-12">
+    <input type="email" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="email@example.com">
   </div>
 
+  <div class="col-12">
+    <input type="password" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="••••••••">
+  </div>
+
+  <div class="col-12 flex flex-justify-between">
+    <div class="flex">
+      <div class="p-1"><input type="checkbox" name="rememberMe"></div>
+      <div class="p-1">Remember Me</div>
+    </div>
+    <div class="p-1 fw-bold"><a href="#">Forgot Password?</a></div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-outline btn-outline-primary">Submit</button>
+  </div>
+
+  <div class="col-12 mt-3 text-center">
+    Don't have an account? <a class="p-1 text-primary fw-bold">Register Now!</a>
+  </div>
+</form>
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form class="p-5 bg-dark radius-3xl radius-tl radius-br text-light shadow-light grid grid-gap-2 max-width-xs mt-4"&gt;
+  &lt;div class="col-12 text-center fs-lg fw-black"&gt;LOG IN&lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;input type="email" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="email@example.com"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;input type="password" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="••••••••"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12 flex flex-justify-between"&gt;
+    &lt;div class="flex"&gt;
+      &lt;div class="p-1"&gt;&lt;input type="checkbox" name="rememberMe"&gt;&lt;/div&gt;
+      &lt;div class="p-1"&gt;Remember Me&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="p-1 fw-bold"&gt;&lt;a href="#"&gt;Forgot Password?&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-outline btn-outline-primary"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12 mt-3 text-center"&gt;
+    Don't have an account? &lt;a class="p-1 text-primary fw-bold"&gt;Register Now!&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
 
 
-<input type="button"><br/><br/>
-<input type="checkbox"><br/><br/>
-<input type="color"><br/><br/>
-<input type="date"><br/><br/>
-<input type="datetime-local"><br/><br/>
-<input type="email"><br/><br/>
-<input type="file"><br/><br/>
-<input type="hidden"><br/><br/>
-<input type="image"><br/><br/>
-<input type="month"><br/><br/>
-<input type="number"><br/><br/>
-<input type="password"><br/><br/>
-<input type="radio"><br/><br/>
-<input type="range"><br/><br/>
-<input type="reset"><br/><br/>
-<input type="search"><br/><br/>
-<input type="submit"><br/><br/>
-<input type="tel"><br/><br/>
-<input type="text"><br/><br/>
-<input type="time"><br/><br/>
-<input type="url"><br/><br/>
-<input type="week"><br/><br/>
+    
+    <div class="col-12">
+      <label class="">Tel</label>
+      <input type="tel" class="" placeholder="Enter phone number">
+    </div>
 
+
+    <div class="col-12">
+      <label class="">Name</label>
+      <input type="text" class="" placeholder="Name">
+    </div>
+
+  <div class="form-group">
+    <label class="form-label">Search</label>
+    <input type="search" class="form-control" placeholder="Search...">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">URL</label>
+    <input type="url" class="form-control" placeholder="https://">
+  </div>
+
+  <!-- DATE & TIME -->
+  <div class="form-group">
+    <label class="form-label">Date</label>
+    <input type="date" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Datetime Local</label>
+    <input type="datetime-local" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Time</label>
+    <input type="time" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Month</label>
+    <input type="month" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Week</label>
+    <input type="week" class="form-control">
+  </div>
+
+  <!-- NUMBER -->
+  <div class="form-group">
+    <label class="form-label">Number</label>
+    <input type="number" class="form-control" placeholder="0">
+  </div>
+
+  <!-- FILE & COLOR -->
+  <div class="form-group">
+    <label class="form-label">File</label>
+    <input type="file" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Color</label>
+    <input type="color" class="height-md width-md radius">
+  </div>
+
+  <!-- RANGE -->
+  <div class="form-group">
+    <label class="form-label">Range</label>
+    <input type="range" class="width-full">
+  </div>
+
+  <!-- CHECKBOX & RADIO -->
+  <div class="form-group">
+    <label class="form-label">Checkbox</label>
+    <label class="flex align-center gap-2">
+      <input type="checkbox">
+      Accept terms
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Radio</label>
+    <label class="flex align-center gap-2">
+      <input type="radio" name="radio-demo"> Option A
+    </label>
+    <label class="flex align-center gap-2">
+      <input type="radio" name="radio-demo"> Option B
+    </label>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="flex gap-2 mt-4">
+    <input type="submit" class="btn bg-primary text-on-primary" value="Submit">
+    <input type="reset" class="btn bg-mid text-on-mid" value="Reset">
+    <input type="button" class="btn bg-dark text-on-dark" value="Button">
+  </div>
+
+  <!-- HIDDEN (for demo note only) -->
+  <input type="hidden" value="hidden-value">
+
+</form>
 
 
 
@@ -2780,6 +3127,68 @@ function toggleTheme() {
   </div>
 </section>
 <!--modals section -->
+
+<!--svg icon section -->
+<section id="icons" class="mb-8">
+  <div class="grid bg-surface text-on-surface p-3 shadow-light radius">
+    <!-- -->
+    <div class="col-2">Frame Home</div>
+    <div class="col-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+      </svg>
+    </div>
+    <div class="col-9">
+      <textarea>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+          <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+        </svg>
+      </textarea>
+    </div>
+    <!-- -->
+    <div class="col-2">Filled Home</div>
+    <div class="col-1">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+      </svg>
+    </div>
+    <div class="col-9">
+      <textarea>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+        </svg>
+      </textarea>
+    </div>
+    <!-- -->
+    <div class="col-2">Lock</div>
+    <div class="col-1">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="col-9">
+      <textarea>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </textarea>
+    </div>
+    <!-- -->
+    <div class="col-2">Envelope</div>
+    <div class="col-1 fs-xxl">
+      ✉
+    </div>
+    <div class="col-9">
+      <textarea>
+        <svg width="32" height="32" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.7505 9.02905C19.7652 9.443 20.1127 9.76663 20.5267 9.75189C20.9406 9.73715 21.2643 9.38962 21.2495 8.97567L19.7505 9.02905ZM16.214 5.00236V5.75236C16.2224 5.75236 16.2307 5.75222 16.2391 5.75194L16.214 5.00236ZM9.786 5.00236L9.76095 5.75194C9.7693 5.75222 9.77765 5.75236 9.786 5.75236V5.00236ZM4.75048 8.97567C4.73573 9.38962 5.05936 9.73715 5.47331 9.75189C5.88726 9.76663 6.23478 9.443 6.24952 9.02905L4.75048 8.97567ZM21.25 9.00236C21.25 8.58815 20.9142 8.25236 20.5 8.25236C20.0858 8.25236 19.75 8.58815 19.75 9.00236H21.25ZM20.5 15.0024L21.2495 15.029C21.2498 15.0202 21.25 15.0113 21.25 15.0024H20.5ZM16.214 19.0024L16.2391 18.2528C16.2307 18.2525 16.2224 18.2524 16.214 18.2524V19.0024ZM9.786 19.0024V18.2524C9.77765 18.2524 9.7693 18.2525 9.76095 18.2528L9.786 19.0024ZM5.5 15.0024H4.75C4.75 15.0113 4.75016 15.0202 4.75048 15.029L5.5 15.0024ZM6.25 9.00236C6.25 8.58815 5.91421 8.25236 5.5 8.25236C5.08579 8.25236 4.75 8.58815 4.75 9.00236H6.25ZM20.8783 9.64996C21.236 9.44103 21.3565 8.98172 21.1476 8.62406C20.9387 8.2664 20.4794 8.14583 20.1217 8.35476L20.8783 9.64996ZM15.236 12.0774L14.8577 11.4297L14.8515 11.4334L15.236 12.0774ZM10.764 12.0774L11.1486 11.4334L11.1423 11.4298L10.764 12.0774ZM5.8783 8.35476C5.52064 8.14583 5.06133 8.2664 4.8524 8.62406C4.64347 8.98172 4.76404 9.44103 5.1217 9.64996L5.8783 8.35476ZM21.2495 8.97567C21.1534 6.27536 18.8895 4.16252 16.1889 4.25278L16.2391 5.75194C18.1129 5.68931 19.6838 7.15537 19.7505 9.02905L21.2495 8.97567ZM16.214 4.25236H9.786V5.75236H16.214V4.25236ZM9.81105 4.25278C7.11054 4.16252 4.84663 6.27536 4.75048 8.97567L6.24952 9.02905C6.31625 7.15537 7.88712 5.68931 9.76095 5.75194L9.81105 4.25278ZM19.75 9.00236V15.0024H21.25V9.00236H19.75ZM19.7505 14.9757C19.6838 16.8494 18.1129 18.3154 16.2391 18.2528L16.1889 19.7519C18.8895 19.8422 21.1534 17.7294 21.2495 15.029L19.7505 14.9757ZM16.214 18.2524H9.786V19.7524H16.214V18.2524ZM9.76095 18.2528C7.88712 18.3154 6.31624 16.8494 6.24952 14.9757L4.75048 15.029C4.84663 17.7294 7.11054 19.8422 9.81105 19.7519L9.76095 18.2528ZM6.25 15.0024V9.00236H4.75V15.0024H6.25ZM20.1217 8.35476L14.8577 11.4298L15.6143 12.725L20.8783 9.64996L20.1217 8.35476ZM14.8515 11.4334C13.7111 12.1145 12.2889 12.1145 11.1485 11.4334L10.3795 12.7213C11.9935 13.6852 14.0065 13.6852 15.6205 12.7213L14.8515 11.4334ZM11.1423 11.4298L5.8783 8.35476L5.1217 9.64996L10.3857 12.725L11.1423 11.4298Z" fill="#000000"/>
+        </svg>
+      </textarea>
+    </div>
+    <!-- -->
+  </div>
+</section>
+<!--svg icon section -->
 
     </div><!--main content-->
   </div><!--page end-->
