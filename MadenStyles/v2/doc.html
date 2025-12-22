@@ -1808,8 +1808,11 @@ function toggleTheme() {
       <div class="col-4 p-4 bg-background text-on-background radius text-center">radius</div>
       <div class="col-4 p-4 bg-background text-on-background radius-md text-center">radius-md</div>
       <div class="col-4 p-4 bg-background text-on-background radius-lg text-center">radius-lg</div>
-      <div class="col-4 p-4 bg-background text-on-background radius-xl text-center">radius-xl</div>
-      <div class="col-4 p-4 bg-background text-on-background radius-2xl text-center">radius-2xl</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-xl text-center">radius-xl<br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-2xl text-center">radius-2xl<br/><br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-3xl text-center">radius-3xl</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-4xl text-center">radius-4xl<br/><br/><br/><br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-5xl text-center">radius-5xl<br/><br/><br/><br/><br/><br/></div>
       <div class="col-4 p-4 bg-background text-on-background radius-full text-center">radius-full</div>
     </div>
 
@@ -1821,21 +1824,24 @@ function toggleTheme() {
 
 <p class="fs-base text-on-surface mb-3">
   By default, radius utilities apply the selected radius value to all corners.
-  If a directional radius class is provided, the radius is applied only to the specified corner.
+  If a directional radius class is provided, the radius is applied only to the specified corner/corners.
 </p>
 
 <div class="grid grid-gap-3 mb-4">
   <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tl text-center">
-    radius-md radius-tl
+    radius-lg radius-tl
   </div>
   <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tr text-center">
-    radius-md radius-tr
+    radius-lg radius-tr
   </div>
   <div class="col-4 p-4 bg-background text-on-background radius-lg radius-br text-center">
-    radius-md radius-br
+    radius-lg radius-br
   </div>
   <div class="col-4 p-4 bg-background text-on-background radius-lg radius-bl text-center">
-    radius-md radius-bl
+    radius-lg radius-bl
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-2xl radius-tl radius-br text-center">
+    radius-2xl radius-tl radius-br
   </div>
 </div>
 
@@ -1893,7 +1899,7 @@ function toggleTheme() {
   <h4 class="fs-base fw-semibold mb-2 text-on-surface">Removing Borders</h4>
 
   <p class="fs-base text-on-surface mb-3">
-    The <code class="bg-background radius p-1">border-0</code> class completely removes all borders from an element.
+    The <code class="bg-background radius p-1">border-none</code> class completely removes all borders from an element.
   </p>
 
   <pre class="p-3 bg-background radius text-on-background width-full">
@@ -2684,15 +2690,17 @@ function toggleTheme() {
 
 <!--forms section -->
 <section id="forms" class="mb-8">
-  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">📝 Forms</h2>
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light">📝 Forms</h2>
 
-  <p class="p-4">
+  <p class="fs-lg fw-bold text-primary">1. Base layer forms</p> 
+
+  <p class="p-1">
     By default forms are styled with in MadenCss base layer. Thanks to the @layer design, 
     existing form appearence can be safely extended or overridden without breaking the core system files.
   </p>
 
   <p class="p-4">
-    Base layer default values can be found below.
+    👉Base layer default values can be found below.
   </p>
 
   <pre class="bg-dark text-light p-4 radius-md">
@@ -2857,8 +2865,9 @@ function toggleTheme() {
 &lt;/form&gt;  
 </pre>
 
+  <p class="fs-lg fw-bold text-primary">2. Custom forms</p> 
 
-  <p class="p-4 bg-info text-on-info radius-lg">
+  <p class="p-2 bg-info text-on-info radius-lg">
   The following example demonstrates how a fully custom form layout can be created
   using only MadenCSS utilities, without relying on predefined form components.
   </p>
@@ -2922,69 +2931,9 @@ function toggleTheme() {
 </pre>
 
 
-    
-    <div class="col-12">
-      <label class="">Tel</label>
-      <input type="tel" class="" placeholder="Enter phone number">
-    </div>
-
-
-    <div class="col-12">
-      <label class="">Name</label>
-      <input type="text" class="" placeholder="Name">
-    </div>
-
-  <div class="form-group">
-    <label class="form-label">Search</label>
-    <input type="search" class="form-control" placeholder="Search...">
-  </div>
-
-  <div class="form-group">
-    <label class="form-label">URL</label>
-    <input type="url" class="form-control" placeholder="https://">
-  </div>
-
-  <!-- DATE & TIME -->
-  <div class="form-group">
-    <label class="form-label">Date</label>
-    <input type="date" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label class="form-label">Datetime Local</label>
-    <input type="datetime-local" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label class="form-label">Time</label>
-    <input type="time" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label class="form-label">Month</label>
-    <input type="month" class="form-control">
-  </div>
-
-  <div class="form-group">
-    <label class="form-label">Week</label>
-    <input type="week" class="form-control">
-  </div>
-
-  <!-- NUMBER -->
-  <div class="form-group">
-    <label class="form-label">Number</label>
-    <input type="number" class="form-control" placeholder="0">
-  </div>
-
-  <!-- FILE & COLOR -->
-  <div class="form-group">
-    <label class="form-label">File</label>
-    <input type="file" class="form-control">
-  </div>
-
   <div class="form-group">
     <label class="form-label">Color</label>
-    <input type="color" class="height-md width-md radius">
+    <input type="color" class="width-sm height-sm border-none p-0">
   </div>
 
   <!-- RANGE -->
