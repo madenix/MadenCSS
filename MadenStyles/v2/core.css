@@ -17,7 +17,7 @@
    pre {overflow: auto;font-family: var(--font-family-mono);}
    fieldset{border: none;}
 
-   input, button, textarea, select {
+   input, button, textarea{
       background-color: var(--surface);
       color: var(--on-surface);
       padding: var(--spacing-1) var(--spacing-1);
@@ -28,7 +28,7 @@
       font: inherit;
    }
 
-   input:focus, button:focus, textarea:focus, select:focus {
+   input:focus, button:focus, textarea:focus {
       background-color: var(--focus-background);
       color: var(--on-focus);
       border-color: var(--focus-border-color);
@@ -36,7 +36,7 @@
       outline-offset: var(--focus-outline-offset);
    }
 
-   input:disabled, textarea:disabled, select:disabled {opacity: 0.6;cursor: not-allowed;}
+   input:disabled, textarea:disabled {opacity: 0.6;cursor: not-allowed;}
    input::placeholder {transition: .2s;}
    input:focus::placeholder {opacity: 0;}
    ::placeholder { opacity: 0.7; }
@@ -128,7 +128,9 @@
 
    /* Flex Direction */
    .flex-col { flex-direction: column; }
+   .flex-col-reverse {flex-direction: column-reverse;}
    .flex-row { flex-direction: row; }
+   .flex-row-reverse {flex-direction: row-reverse;}
 
    /* Wrap */
    .flex-wrap { flex-wrap: wrap; }
