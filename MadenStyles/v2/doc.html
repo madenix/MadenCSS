@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="buttons.css">
   <link rel="stylesheet" href="modal.css">
   <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body class="bg-background text-on-background">
@@ -52,9 +53,9 @@
             <a class="mx-4 my-2 fs-sm fw-normal" href="#forms">Forms</a>
             
             <hr class="mx-4 my-2 border-mid">
+            <a class="mx-4 my-2 fs-sm fw-normal" href="#navbar">Navbar</a>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#modals">Modal</a>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#offcanvas">Offcanvas</a>
-            <a class="mx-4 my-2 fs-sm fw-normal" href="#navbar">Navbar</a>
             <a class="mx-4 my-2 fs-sm fw-normal" href="#sidebar">Sidebar</a>
             <br /><br /><br />
         </div>
@@ -2333,7 +2334,7 @@ function toggleTheme() {
   <div class="mb-6 mt-3">
     <h3 class="fs-lg fw-semibold mb-3">Basic Usage (Solid)</h3>
     <p class="mb-3 text-mid">Standard buttons using theme-defined semantic colors.</p>
-    <div class="p-4 border border-light radius-md mb-3">
+    <div class="p-4 border border-light radius-md mb-3 flex">
       <button class="btn btn-primary m-2">Primary</button>
       <button class="btn btn-success m-2">Success</button>
       <button class="btn btn-danger m-2">Danger</button>
@@ -2620,9 +2621,7 @@ function toggleTheme() {
     </p>
 
     <!-- Custom Card Example -->
-    <div class="grid grid-gap-4 mb-4">
-      <div class="col-4">
-        <div class="card card-shadow card-info">
+        <div class="card card-shadow card-info max-width-2xs">
           <div class="card-header flex flex-justify-between flex-align-center">
             <span class="fw-bold">Custom Card</span>
             <span class="fs-sm opacity-7">Pro</span>
@@ -2644,8 +2643,6 @@ function toggleTheme() {
             <a href="#" class="p-2 bg-info text-on-info radius">Select</a>
           </div>
         </div>
-      </div>
-    </div>
 
 <pre class="bg-dark text-light p-4 radius-md">
 <code>&lt;div class="card card-shadow card-info"&gt;
@@ -2764,7 +2761,7 @@ function toggleTheme() {
     </div>
 
     <div class="col-12 mt-3 text-center">
-      <a href="#" class="p-1">Don't have an account? <a class="p-1 text-primary fw-bold">Reigster Now!</a>
+      Don't have an account? <a class="p-1 text-primary fw-bold">Register Now!</a>
     </div>
   </form>
 
@@ -2796,7 +2793,7 @@ function toggleTheme() {
   &lt;/div&gt;
 
   &lt;div class=&quot;col-12 mt-3 text-center&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;p-1&quot;&gt;Don&apos;t have an account? &lt;a class=&quot;p-1 text-primary fw-bold&quot;&gt;Reigster Now!&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;p-1&quot;&gt;Don&apos;t have an account? &lt;a class=&quot;p-1 text-primary fw-bold&quot;&gt;Register Now!&lt;/a&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
@@ -2931,56 +2928,421 @@ function toggleTheme() {
 </pre>
 
 
-  <div class="form-group">
-    <label class="form-label">Color</label>
-    <input type="color" class="width-sm height-sm border-none p-0">
+<p class="fs-lg fw-bold text-primary">3. Range, Checkbox, Radio Inputs (Accent Utilities)</p> 
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS styles native HTML form controls without breaking their default behavior.
+    <code>Range, Checkbox, Radio</code> elements are styled using <strong>accent utility classes</strong>,
+    which rely on the native <code>accent-color</code> CSS property.
+  </p>
+
+  <p class="fs-base text-on-surface mb-4">
+    This approach keeps range inputs fully native, accessible, and theme-aware,
+    while allowing quick visual customization through semantic color tokens.
+  </p>
+
+  <h3 class="fs-lg fw-bold mb-3 text-primary">How It Works</h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    Each <code>accent-*</code> utility maps directly to a design token:
+  </p>
+
+  <ul class="fs-base text-on-surface mb-4">
+    <li><code>accent-primary</code> → <code>--primary</code></li>
+    <li><code>accent-success</code> → <code>--success</code></li>
+    <li><code>accent-warning</code> → <code>--warning</code></li>
+    <li><code>accent-danger</code> → <code>--danger</code></li>
+    <li><code>accent-info</code> → <code>--info</code></li>
+    <li><code>accent-dark</code> → <code>--dark</code></li>
+    <li><code>accent-mid</code> → <code>--mid</code></li>
+    <li><code>accent-light</code> → <code>--light</code></li>
+  </ul>
+
+  <h3 class="fs-lg fw-bold mb-3 text-primary">Range Variants</h3>
+
+  <p class="fs-base text-on-surface mb-4">
+    All semantic colors defined in <code>maden-config.css</code> can be used
+    as accent colors for range inputs.
+  </p>
+  
+  <div class="">
+    <label class="">Primary range</label>
+    <input type="range" class="width-full accent-primary">
+    <label class="">Success range</label>
+    <input type="range" class="width-full accent-success">
+    <label class="">warning range</label>
+    <input type="range" class="width-full accent-warning">
+    <label class="">Danger range</label>
+    <input type="range" class="width-full accent-danger">
+    <label class="">Info range</label>
+    <input type="range" class="width-full accent-info">
+    <label class="">Dark range</label>
+    <input type="range" class="width-full accent-dark">
+    <label class="">Mid range</label>
+    <input type="range" class="width-full accent-mid">
+    <label class="">Light range</label>
+    <input type="range" class="width-full accent-light">
   </div>
 
-  <!-- RANGE -->
-  <div class="form-group">
-    <label class="form-label">Range</label>
-    <input type="range" class="width-full">
+  <pre class="bg-dark text-light p-4 radius-md"><code>
+&lt;label&gt;Primary range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-primary"&gt;
+
+&lt;label&gt;Success range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-success"&gt;
+
+&lt;label&gt;Warning range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-warning"&gt;
+
+&lt;label&gt;Danger range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-danger"&gt;
+
+&lt;label&gt;Info range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-info"&gt;
+
+&lt;label&gt;Dark range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-dark"&gt;
+
+&lt;label&gt;Mid range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-mid"&gt;
+
+&lt;label&gt;Light range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-light"&gt;
+</code></pre>
+
+   <h3 class="fs-lg fw-bold mb-3 text-primary">Checkbox Variants</h3>
+  <!-- CHECKBOX -->
+  <div class="flex">
+    <div><input type="checkbox" class="accent-primary" checked></div>
+    <span class="px-2">Primary checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-success" checked></div>
+    <span class="px-2">Success checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-warning" checked></div>
+    <span class="px-2">Warning checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-danger" checked></div>
+    <span class="px-2">Danger checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-info" checked></div>
+    <span class="px-2">Info checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-dark" checked></div>
+    <span class="px-2">Dark checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-mid" checked></div>
+    <span class="px-2">Mid checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-light" checked></div>
+    <span class="px-2">Light checkbox</span>
   </div>
 
-  <!-- CHECKBOX & RADIO -->
-  <div class="form-group">
-    <label class="form-label">Checkbox</label>
-    <label class="flex align-center gap-2">
-      <input type="checkbox">
-      Accept terms
-    </label>
+<pre class="bg-dark text-light p-2 radius-md">
+&lt;input type="checkbox" class="accent-primary" checked&gt;
+&lt;input type="checkbox" class="accent-success" checked&gt;
+&lt;input type="checkbox" class="accent-warning" checked&gt;
+&lt;input type="checkbox" class="accent-danger" checked&gt;
+&lt;input type="checkbox" class="accent-info" checked&gt;
+&lt;input type="checkbox" class="accent-dark" checked&gt;
+&lt;input type="checkbox" class="accent-mid" checked&gt;
+&lt;input type="checkbox" class="accent-light" checked&gt;</pre>
+
+ <h3 class="fs-lg fw-bold mb-3 text-primary">Radio button variants</h3>
+ <!-- RADIO -->
+  <div class="flex">
+    <div><input type="radio" class="accent-primary" checked></div>
+    <span class="px-2">Primary radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-success" checked></div>
+    <span class="px-2">Success radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-warning" checked></div>
+    <span class="px-2">Warning radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-danger" checked></div>
+    <span class="px-2">Danger radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-info" checked></div>
+    <span class="px-2">Info radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-dark" checked></div>
+    <span class="px-2">Dark radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-mid" checked></div>
+    <span class="px-2">Mid radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-light" checked></div>
+    <span class="px-2">Light radio</span>
   </div>
 
-  <div class="form-group">
-    <label class="form-label">Radio</label>
-    <label class="flex align-center gap-2">
-      <input type="radio" name="radio-demo"> Option A
-    </label>
-    <label class="flex align-center gap-2">
-      <input type="radio" name="radio-demo"> Option B
-    </label>
+<pre class="bg-dark text-light radius-md p-2">
+&lt;input type="radio" class="accent-primary" checked&gt;
+&lt;input type="radio" class="accent-success" checked&gt;
+&lt;input type="radio" class="accent-warning" checked&gt;
+&lt;input type="radio" class="accent-danger" checked&gt;
+&lt;input type="radio" class="accent-info" checked&gt;
+&lt;input type="radio" class="accent-dark" checked&gt;
+&lt;input type="radio" class="accent-mid" checked&gt;
+&lt;input type="radio" class="accent-light" checked&gt;
+</pre>
+
+  <div class="fs-base bg-info text-on-info p-3 radius">
+    <strong>Note:</strong>
+    Accent utilities rely on browser support for <code>accent-color</code>.
+    In unsupported browsers, the range input gracefully falls back
+    to the default native appearance.
   </div>
+  
+   <h3 class="fs-lg fw-bold mb-3 text-primary mt-4">4. ⬇️ Select (Dropdown) Inputs</h3>
+   
+  <p class="fs-lg text-on-surface">
+    MadenCSS styles native <code>&lt;select&gt;</code> elements using utility classes
+    instead of replacing them with custom JavaScript components.
+    This ensures accessibility, keyboard support, and predictable browser behavior.
+  </p>
+  
+  <div class="m-2"><select class="bg-background text-on-background radius-sm p-1">
+    <option>--Background select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-surface text-on-surface radius-sm p-1">
+    <option>--Surface select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-primary text-on-primary radius-sm p-1">
+    <option>--Primary select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-success text-on-success radius-sm p-1">
+    <option>--Success select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-warning text-on-warning radius-sm p-1">
+    <option>--Warning select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-danger text-on-danger radius-sm p-1">
+    <option>--Danger select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-info text-on-info radius-sm p-1">
+    <option>--Info select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-dark text-on-dark radius-sm p-1">
+    <option>--Dark select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-mid text-on-mid radius-sm p-1">
+    <option>--Mid select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-light text-on-light radius-sm p-1">
+    <option>--Light select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <pre class="bg-dark text-light p-2 radius-md">&lt;select class=&quot;bg-primary text-on-primary radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Primary select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-  <!-- ACTIONS -->
-  <div class="flex gap-2 mt-4">
-    <input type="submit" class="btn bg-primary text-on-primary" value="Submit">
-    <input type="reset" class="btn bg-mid text-on-mid" value="Reset">
-    <input type="button" class="btn bg-dark text-on-dark" value="Button">
-  </div>
+&lt;select class=&quot;bg-success text-on-success radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Success select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-  <!-- HIDDEN (for demo note only) -->
-  <input type="hidden" value="hidden-value">
+&lt;select class=&quot;bg-warning text-on-warning radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Warning select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-</form>
+&lt;select class=&quot;bg-danger text-on-danger radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Danger select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
+&lt;select class=&quot;bg-info text-on-info radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Info select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
+&lt;select class=&quot;bg-dark text-on-dark radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Dark select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
+&lt;select class=&quot;bg-mid text-on-mid radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Mid select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class=&quot;bg-light text-on-light radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Light select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</pre>
 </section>
 <!--forms section -->
 
+<!--navbar section -->
+<div id="navbar">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">🧭 Navbars</h2>
+  
+   <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">navbar.css</code> must be included to use this component.
+  </div>
+  
+  <p class="fs-base text-on-surface mb-3">
+  MadenCSS provides a lightweight, CSS-only approach for handling responsive navbars.
+  The toggle behavior is achieved using a hidden checkbox input combined with sibling selectors,
+  eliminating the need for JavaScript in basic navigation scenarios.
+</p>
+
+<p class="fs-base text-on-surface mb-3">
+  On small screens, the navigation toggle button becomes visible,
+  while the navigation menu is collapsed by default.
+  When the toggle is activated, the menu expands vertically
+  using a controlled <code class="bg-background radius p-1">max-height</code> transition.
+</p>
+  
+      <!-- Navigation Start -->
+        <nav class="p-2 bg-surface radius-md m-2">
+          <!-- Hamburger toggle (on mobile) -->
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+          <label for="nav-toggle" class="nav-toggle-btn">☰</label>
+          <!-- OVERLAY -->
+          <label for="nav-toggle" class="nav-overlay"></label>
+          <!-- Menu -->
+          <div class="nav-menu flex-center">
+            <a class="mx-4" href="#">Blog</a>
+            <a class="mx-4" href="#">Forum</a>
+            <a class="mx-4" href="#">White Paper</a>
+          </div>
+        </nav>
+      <!-- Navigation End -->
+      
+ <pre class="bg-dark text-light p-2 radius-md">
+&lt;!-- Navigation Start --&gt;
+&lt;nav class=&quot;p-2 bg-surface radius-md m-2&quot;&gt;
+  &lt;!-- Hamburger toggle (on mobile) --&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;nav-toggle&quot; class=&quot;nav-toggle&quot; hidden /&gt;
+
+  &lt;label for=&quot;nav-toggle&quot; class=&quot;nav-toggle-btn&quot;&gt;☰&lt;/label&gt;
+
+  &lt;!-- OVERLAY --&gt;
+  &lt;label for=&quot;nav-toggle&quot; class=&quot;nav-overlay&quot;&gt;&lt;/label&gt;
+
+  &lt;!-- Menu --&gt;
+  &lt;div class=&quot;nav-menu flex-center&quot;&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Forum&lt;/a&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;White Paper&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- Navigation End --&gt;
+</pre>
+
+<!-- Navigation Start -->
+<nav class="p-2 bg-surface radius-md m-2 flex">
+  <a href="#" class="fw-bold fs-xl p-2">LOGO</a>
+  <div class="flex flex-row-reverse flex-1">
+  <input type="checkbox" id="nav-toggle-2" class="nav-toggle" hidden />
+  <label for="nav-toggle-2" class="nav-toggle-btn p-2 fs-xl">☰</label>
+  <!-- OVERLAY -->
+  <label for="nav-toggle-2" class="nav-overlay"></label>
+  <!-- Menu -->
+  <div class="nav-menu flex-center flex-1">
+    <a class="mx-4" href="#">Blog</a>
+    <a class="mx-4" href="#">Forum</a>
+    <a class="mx-4" href="#">White Paper</a>
+  </div>
+  </div>
+</nav>
+<!-- Navigation End -->
+
+<pre class="bg-dark text-light p-2 radius-md">&lt;!-- Navigation Start --&gt;
+&lt;nav class=&quot;p-2 bg-surface radius-md m-2 flex&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;fw-bold fs-lg p-2&quot;&gt;LOGO&lt;/a&gt;
+
+  &lt;div class=&quot;flex flex-row-reverse flex-1 bg-info&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;nav-toggle-2&quot; class=&quot;nav-toggle&quot; hidden /&gt;
+
+    &lt;label for=&quot;nav-toggle-2&quot; class=&quot;nav-toggle-btn p-2 fs-xl&quot;&gt;☰&lt;/label&gt;
+
+    &lt;!-- OVERLAY --&gt;
+    &lt;label for=&quot;nav-toggle-2&quot; class=&quot;nav-overlay&quot;&gt;&lt;/label&gt;
+
+    &lt;!-- Menu --&gt;
+    &lt;div class=&quot;nav-menu flex-center flex-1&quot;&gt;
+      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Forum&lt;/a&gt;
+      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;White Paper&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- Navigation End --&gt;</pre>
+
+</div>
+<!--navbar section -->
+
 <!--modals section -->
 <section id="modals" class="mb-8">
-  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">🗔 Modals</h2>
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">📌 Modals</h2>
   <p class="mb-4 text-mid">Dynamic dialogs powered by the "Checkbox Hack". These components require <strong>zero JavaScript</strong> to function.</p>
   
   <div class="bg-warning text-on-warning p-2 radius-md mb-4">
@@ -2991,7 +3353,7 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3">Basic Usage</h3>
     <p class="mb-3 text-mid">A standard modal window. Ensure the <code>input</code> is placed directly before the <code>.modal</code> element.</p>
     
-    <div class="p-4 border-light border-full radius-md mb-3">
+    <div class="p-4 bg-surface text-on-surface radius-md mb-3">
       <label for="modal-demo" class="btn btn-primary">Open Basic Modal</label>
       <input type="checkbox" id="modal-demo" class="modalState" />
       <div class="modal">
@@ -3077,68 +3439,13 @@ function toggleTheme() {
 </section>
 <!--modals section -->
 
-<!--svg icon section -->
-<section id="icons" class="mb-8">
-  <div class="grid bg-surface text-on-surface p-3 shadow-light radius">
-    <!-- -->
-    <div class="col-2">Frame Home</div>
-    <div class="col-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
-      </svg>
-    </div>
-    <div class="col-9">
-      <textarea>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-          <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
-        </svg>
-      </textarea>
-    </div>
-    <!-- -->
-    <div class="col-2">Filled Home</div>
-    <div class="col-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-      </svg>
-    </div>
-    <div class="col-9">
-      <textarea>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-        </svg>
-      </textarea>
-    </div>
-    <!-- -->
-    <div class="col-2">Lock</div>
-    <div class="col-1">
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <div class="col-9">
-      <textarea>
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 14.5V16.5M7 10.0288C7.47142 10 8.05259 10 8.8 10H15.2C15.9474 10 16.5286 10 17 10.0288M7 10.0288C6.41168 10.0647 5.99429 10.1455 5.63803 10.327C5.07354 10.6146 4.6146 11.0735 4.32698 11.638C4 12.2798 4 13.1198 4 14.8V16.2C4 17.8802 4 18.7202 4.32698 19.362C4.6146 19.9265 5.07354 20.3854 5.63803 20.673C6.27976 21 7.11984 21 8.8 21H15.2C16.8802 21 17.7202 21 18.362 20.673C18.9265 20.3854 19.3854 19.9265 19.673 19.362C20 18.7202 20 17.8802 20 16.2V14.8C20 13.1198 20 12.2798 19.673 11.638C19.3854 11.0735 18.9265 10.6146 18.362 10.327C18.0057 10.1455 17.5883 10.0647 17 10.0288M7 10.0288V8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8V10.0288" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </textarea>
-    </div>
-    <!-- -->
-    <div class="col-2">Envelope</div>
-    <div class="col-1 fs-xxl">
-      ✉
-    </div>
-    <div class="col-9">
-      <textarea>
-        <svg width="32" height="32" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19.7505 9.02905C19.7652 9.443 20.1127 9.76663 20.5267 9.75189C20.9406 9.73715 21.2643 9.38962 21.2495 8.97567L19.7505 9.02905ZM16.214 5.00236V5.75236C16.2224 5.75236 16.2307 5.75222 16.2391 5.75194L16.214 5.00236ZM9.786 5.00236L9.76095 5.75194C9.7693 5.75222 9.77765 5.75236 9.786 5.75236V5.00236ZM4.75048 8.97567C4.73573 9.38962 5.05936 9.73715 5.47331 9.75189C5.88726 9.76663 6.23478 9.443 6.24952 9.02905L4.75048 8.97567ZM21.25 9.00236C21.25 8.58815 20.9142 8.25236 20.5 8.25236C20.0858 8.25236 19.75 8.58815 19.75 9.00236H21.25ZM20.5 15.0024L21.2495 15.029C21.2498 15.0202 21.25 15.0113 21.25 15.0024H20.5ZM16.214 19.0024L16.2391 18.2528C16.2307 18.2525 16.2224 18.2524 16.214 18.2524V19.0024ZM9.786 19.0024V18.2524C9.77765 18.2524 9.7693 18.2525 9.76095 18.2528L9.786 19.0024ZM5.5 15.0024H4.75C4.75 15.0113 4.75016 15.0202 4.75048 15.029L5.5 15.0024ZM6.25 9.00236C6.25 8.58815 5.91421 8.25236 5.5 8.25236C5.08579 8.25236 4.75 8.58815 4.75 9.00236H6.25ZM20.8783 9.64996C21.236 9.44103 21.3565 8.98172 21.1476 8.62406C20.9387 8.2664 20.4794 8.14583 20.1217 8.35476L20.8783 9.64996ZM15.236 12.0774L14.8577 11.4297L14.8515 11.4334L15.236 12.0774ZM10.764 12.0774L11.1486 11.4334L11.1423 11.4298L10.764 12.0774ZM5.8783 8.35476C5.52064 8.14583 5.06133 8.2664 4.8524 8.62406C4.64347 8.98172 4.76404 9.44103 5.1217 9.64996L5.8783 8.35476ZM21.2495 8.97567C21.1534 6.27536 18.8895 4.16252 16.1889 4.25278L16.2391 5.75194C18.1129 5.68931 19.6838 7.15537 19.7505 9.02905L21.2495 8.97567ZM16.214 4.25236H9.786V5.75236H16.214V4.25236ZM9.81105 4.25278C7.11054 4.16252 4.84663 6.27536 4.75048 8.97567L6.24952 9.02905C6.31625 7.15537 7.88712 5.68931 9.76095 5.75194L9.81105 4.25278ZM19.75 9.00236V15.0024H21.25V9.00236H19.75ZM19.7505 14.9757C19.6838 16.8494 18.1129 18.3154 16.2391 18.2528L16.1889 19.7519C18.8895 19.8422 21.1534 17.7294 21.2495 15.029L19.7505 14.9757ZM16.214 18.2524H9.786V19.7524H16.214V18.2524ZM9.76095 18.2528C7.88712 18.3154 6.31624 16.8494 6.24952 14.9757L4.75048 15.029C4.84663 17.7294 7.11054 19.8422 9.81105 19.7519L9.76095 18.2528ZM6.25 15.0024V9.00236H4.75V15.0024H6.25ZM20.1217 8.35476L14.8577 11.4298L15.6143 12.725L20.8783 9.64996L20.1217 8.35476ZM14.8515 11.4334C13.7111 12.1145 12.2889 12.1145 11.1485 11.4334L10.3795 12.7213C11.9935 13.6852 14.0065 13.6852 15.6205 12.7213L14.8515 11.4334ZM11.1423 11.4298L5.8783 8.35476L5.1217 9.64996L10.3857 12.725L11.1423 11.4298Z" fill="#000000"/>
-        </svg>
-      </textarea>
-    </div>
-    <!-- -->
-  </div>
+<!--offcanvas section -->
+<section id="offcanvas">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">☰ Offcanvas</h2>
+  
+  
 </section>
-<!--svg icon section -->
-
+<!--offcanvas section -->
     </div><!--main content-->
   </div><!--page end-->
   </body>
