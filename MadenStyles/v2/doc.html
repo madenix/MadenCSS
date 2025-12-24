@@ -3260,21 +3260,21 @@ function toggleTheme() {
   using a controlled <code class="bg-background radius p-1">max-height</code> transition.
 </p>
   
-      <!-- Navigation Start -->
-        <nav class="p-2 bg-surface radius-md m-2">
-          <!-- Hamburger toggle (on mobile) -->
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
-          <label for="nav-toggle" class="nav-toggle-btn">☰</label>
-          <!-- OVERLAY -->
-          <label for="nav-toggle" class="nav-overlay"></label>
-          <!-- Menu -->
-          <div class="nav-menu flex-center">
-            <a class="mx-4" href="#">Blog</a>
-            <a class="mx-4" href="#">Forum</a>
-            <a class="mx-4" href="#">White Paper</a>
-          </div>
-        </nav>
-      <!-- Navigation End -->
+  <!-- Navigation Start -->
+    <nav class="p-2 bg-surface radius-md m-2">
+      <!-- Hamburger toggle (on mobile) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+      <label for="nav-toggle" class="nav-toggle-btn">☰</label>
+      <!-- OVERLAY -->
+      <label for="nav-toggle" class="nav-overlay"></label>
+      <!-- Menu -->
+      <div class="nav-menu flex-center">
+        <a class="mx-4" href="#">Blog</a>
+        <a class="mx-4" href="#">Forum</a>
+        <a class="mx-4" href="#">White Paper</a>
+      </div>
+    </nav>
+  <!-- Navigation End -->
       
  <pre class="bg-dark text-light p-2 radius-md">
 &lt;!-- Navigation Start --&gt;
@@ -3298,44 +3298,45 @@ function toggleTheme() {
 </pre>
 
 <!-- Navigation Start -->
-<nav class="p-2 bg-surface radius-md m-2 flex">
-  <a href="#" class="fw-bold fs-xl p-2">LOGO</a>
-  <div class="flex flex-row-reverse flex-1">
+<div class="p-2 bg-surface radius-md m-2 flex flex-wrap flex-align-center">
   <input type="checkbox" id="nav-toggle-2" class="nav-toggle" hidden />
-  <label for="nav-toggle-2" class="nav-toggle-btn p-2 fs-xl">☰</label>
-  <!-- OVERLAY -->
+
+  <!-- Logo -->
+  <a href="#" class="fw-bold fs-xl p-2 flex-col-3">LOGO</a>
+  <!-- Toggle -->
+  <label for="nav-toggle-2" class="nav-toggle-btn fs-xl flex-col-9 text-right">☰</label>
+
+  <!-- Overlay -->
   <label for="nav-toggle-2" class="nav-overlay"></label>
   <!-- Menu -->
-  <div class="nav-menu flex-center flex-1">
-    <a class="mx-4" href="#">Blog</a>
+  <div class="nav-menu p-1">
+    <a class="mx-4 " href="#">Blog</a>
     <a class="mx-4" href="#">Forum</a>
     <a class="mx-4" href="#">White Paper</a>
   </div>
-  </div>
-</nav>
+</div>
 <!-- Navigation End -->
 
-<pre class="bg-dark text-light p-2 radius-md">&lt;!-- Navigation Start --&gt;
-&lt;nav class=&quot;p-2 bg-surface radius-md m-2 flex&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;fw-bold fs-lg p-2&quot;&gt;LOGO&lt;/a&gt;
+<pre class="bg-dark text-light p-2 radius-md">
+&lt;!-- Navigation Start --&gt;
+&lt;div class="p-2 bg-surface radius-md m-2 flex flex-wrap flex-align-center"&gt;
+  &lt;!-- Overlay --&gt;
+  &lt;label for="nav-toggle-2" class="nav-overlay"&gt;&lt;/label&gt;
+  &lt;input type="checkbox" id="nav-toggle-2" class="nav-toggle" hidden /&gt;
 
-  &lt;div class=&quot;flex flex-row-reverse flex-1 bg-info&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;nav-toggle-2&quot; class=&quot;nav-toggle&quot; hidden /&gt;
-
-    &lt;label for=&quot;nav-toggle-2&quot; class=&quot;nav-toggle-btn p-2 fs-xl&quot;&gt;☰&lt;/label&gt;
-
-    &lt;!-- OVERLAY --&gt;
-    &lt;label for=&quot;nav-toggle-2&quot; class=&quot;nav-overlay&quot;&gt;&lt;/label&gt;
-
-    &lt;!-- Menu --&gt;
-    &lt;div class=&quot;nav-menu flex-center flex-1&quot;&gt;
-      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;
-      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Forum&lt;/a&gt;
-      &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;White Paper&lt;/a&gt;
-    &lt;/div&gt;
+  &lt;!-- Logo --&gt;
+  &lt;a href="#" class="fw-bold fs-xl p-2 flex-col-3"&gt;LOGO&lt;/a&gt;
+  &lt;!-- Toggle --&gt;
+  &lt;label for="nav-toggle-2" class="nav-toggle-btn fs-xl flex-col-9 text-right"&gt;☰&lt;/label&gt;
+  &lt;!-- Menu --&gt;
+  &lt;div class="nav-menu"&gt;
+    &lt;a class="mx-4" href="#"&gt;Blog&lt;/a&gt;
+    &lt;a class="mx-4" href="#"&gt;Forum&lt;/a&gt;
+    &lt;a class="mx-4" href="#"&gt;White Paper&lt;/a&gt;
   &lt;/div&gt;
-&lt;/nav&gt;
-&lt;!-- Navigation End --&gt;</pre>
+&lt;/div&gt;
+&lt;!-- Navigation End --&gt;
+</pre>
 
 </div>
 <!--navbar section -->
@@ -3353,30 +3354,48 @@ function toggleTheme() {
     <h3 class="fs-lg fw-semibold mb-3">Basic Usage</h3>
     <p class="mb-3 text-mid">A standard modal window. Ensure the <code>input</code> is placed directly before the <code>.modal</code> element.</p>
     
+    <!--modal1 -->
     <div class="p-4 bg-surface text-on-surface radius-md mb-3">
-      <label for="modal-demo" class="btn btn-primary">Open Basic Modal</label>
+      <label for="modal-demo" class="btn btn-primary p-2">Open Basic Modal</label>
       <input type="checkbox" id="modal-demo" class="modalState" />
+      
       <div class="modal">
         <label for="modal-demo" class="modalBackground"></label>
-        <div class="modalInner bg-surface p-6 radius-lg shadow-strong">
-          <h4 class="fs-lg fw-bold mb-3">Hello, MadenCSS!</h4>
+        
+        <div class="modalInner bg-surface p-3 radius-lg shadow-strong">
+          <div class="flex flex-justify-between">
+            <span class="fs-xxl fw-bold mb-3">Hello, MadenCSS!</span>
+            <label for="modal-demo" class="fs-xl px-2 fw-bold">X</label>
+          </div>
           <p class="mb-4">This modal is controlled entirely via CSS using the <code>+</code> sibling selector.</p>
-          <div class="flex justify-end">
-            <label for="modal-demo" class="btn btn-dark">Close Modal</label>
+          
+          <div class="flex flex-justify-end">
+            <label for="modal-demo" class="btn btn-dark p-2">Close Modal</label>
           </div>
         </div>
       </div>
     </div>
 
-    <pre class="bg-dark text-light p-4 radius-md">&lt;label for="modal-demo" class="btn btn-primary"&gt;Open Basic Modal&lt;/label&gt;
-&lt;input type="checkbox" id="modal-demo" class="modalState" /&gt;
-&lt;div class="modal"&gt;
-  &lt;label for="modal-demo" class="modalBackground"&gt;&lt;/label&gt;
-  &lt;div class="modalInner bg-surface p-6 radius-lg shadow-strong"&gt;
-    &lt;h4 class="fs-lg fw-bold mb-3"&gt;Hello, MadenCSS!&lt;/h4&gt;
-    &lt;p class="mb-4"&gt;This modal is controlled entirely via CSS using the &lt;code&gt;+&lt;/code&gt; sibling selector.&lt;/p&gt;
-    &lt;div class="flex justify-end"&gt;
-      &lt;label for="modal-demo" class="btn btn-dark"&gt;Close Modal&lt;/label&gt;
+
+
+    <pre class="bg-dark text-light p-4 radius-md">&lt;!--Basic Modal --&gt;
+&lt;div class="p-4 bg-surface text-on-surface radius-md mb-3"&gt;
+  &lt;label for="modal-demo" class="btn btn-primary p-2"&gt;Open Basic Modal&lt;/label&gt;
+  &lt;input type="checkbox" id="modal-demo" class="modalState" /&gt;
+  
+  &lt;div class="modal"&gt;
+    &lt;label for="modal-demo" class="modalBackground"&gt;&lt;/label&gt;
+    
+    &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong"&gt;
+      &lt;div class="flex flex-justify-between"&gt;
+        &lt;span class="fs-xxl fw-bold mb-3"&gt;Hello, MadenCSS!&lt;/span&gt;
+        &lt;label for="modal-demo" class="fs-xl px-2 fw-bold" style="cursor: pointer;"&gt;X&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p class="mb-4"&gt;This modal is controlled entirely via CSS using the &lt;code&gt;+&lt;/code&gt; sibling selector.&lt;/p&gt;
+      
+      &lt;div class="flex flex-justify-end"&gt;
+        &lt;label for="modal-demo" class="btn btn-dark p-2"&gt;Close Modal&lt;/label&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -3387,52 +3406,58 @@ function toggleTheme() {
     <p class="mb-3 text-mid">To create nested modals, simply place a new <code>modalState</code> and <code>modal</code> pair inside the <code>modalInner</code> of the first one.</p>
     
     <div class="p-4 border border-light radius-md mb-3">
-      <label for="nested-1" class="btn btn-success">Open Level 1</label>
+      <label for="nested-1" class="btn btn-success p-2">Open Level 1</label>
       <input type="checkbox" id="nested-1" class="modalState" />
 
       <div class="modal">
         <label for="nested-1" class="modalBackground"></label>
-        <div class="modalInner bg-surface p-6 radius-lg shadow-strong">
-          <h4 class="fs-lg fw-bold mb-2">Level 1</h4>
+        <div class="modalInner bg-surface p-3 radius-lg shadow-strong">
+          <div class="flex flex-justify-between">
+            <span class="fs-xxl fw-bold">Level 1</span>
+            <label for="nested-1" class="fs-xl px-2 fw-bold">X</label>
+          </div>
           <p class="mb-4">Click below to open a second modal layer.</p>
           
-          <label for="nested-2" class="btn btn-primary">Open Level 2</label>
+          <label for="nested-2" class="btn btn-primary p-2">Open Level 2</label>
           <input type="checkbox" id="nested-2" class="modalState" />
           <div class="modal">
             <label for="nested-2" class="modalBackground"></label>
-            <div class="modalInner bg-surface p-6 radius-lg shadow-strong border border-primary">
-              <h4 class="fs-lg fw-bold text-primary mb-2">Level 2</h4>
+            <div class="modalInner bg-surface p-3 radius-lg shadow-strong border border-primary">
+              <h4 class="fs-xxl fw-bold text-primary mb-2">Level 2</h4>
               <p class="mb-4">Stacked perfectly using independent states!</p>
               <label for="nested-2" class="btn btn-danger btn-sm">Close</label>
             </div>
           </div>
-          
-          <label for="nested-1" class="btn btn-outline btn-outline-dark btn-sm ml-2">Close</label>
         </div>
       </div>
     </div>
 
-    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;label for="nested-1" class="btn btn-success"&gt;Open Level 1&lt;/label&gt;
-&lt;input type="checkbox" id="nested-1" class="modalState" /&gt;
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;!-- Nested Modals Layered System --&gt;
+&lt;div class="p-4 border border-light radius-md mb-3"&gt;
+  &lt;label for="nested-1" class="btn btn-success p-2"&gt;Open Level 1&lt;/label&gt;
+  &lt;input type="checkbox" id="nested-1" class="modalState" /&gt;
 
-&lt;div class="modal"&gt;
-  &lt;label for="nested-1" class="modalBackground"&gt;&lt;/label&gt;
-  &lt;div class="modalInner bg-surface p-6 radius-lg shadow-strong"&gt;
-    &lt;h4 class="fs-lg fw-bold mb-2"&gt;Level 1&lt;/h4&gt;
-    &lt;p class="mb-4"&gt;Click below to open a second modal layer.&lt;/p&gt;
-    
-    &lt;label for="nested-2" class="btn btn-primary"&gt;Open Level 2&lt;/label&gt;
-    &lt;input type="checkbox" id="nested-2" class="modalState" /&gt;
-    &lt;div class="modal"&gt;
-      &lt;label for="nested-2" class="modalBackground"&gt;&lt;/label&gt;
-      &lt;div class="modalInner bg-surface p-6 radius-lg shadow-strong border border-primary"&gt;
-        &lt;h4 class="fs-lg fw-bold text-primary mb-2"&gt;Level 2&lt;/h4&gt;
-        &lt;p class="mb-4"&gt;Stacked perfectly using independent states!&lt;/p&gt;
-        &lt;label for="nested-2" class="btn btn-danger btn-sm"&gt;Close&lt;/label&gt;
+  &lt;div class="modal"&gt;
+    &lt;label for="nested-1" class="modalBackground"&gt;&lt;/label&gt;
+    &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong"&gt;
+      &lt;div class="flex flex-justify-between"&gt;
+        &lt;span class="fs-xxl fw-bold"&gt;Level 1&lt;/span&gt;
+        &lt;label for="nested-1" class="fs-xl px-2 fw-bold" style="cursor: pointer;"&gt;X&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p class="mb-4"&gt;Click below to open a second modal layer.&lt;/p&gt;
+      
+      &lt;label for="nested-2" class="btn btn-primary p-2"&gt;Open Level 2&lt;/label&gt;
+      &lt;input type="checkbox" id="nested-2" class="modalState" /&gt;
+      
+      &lt;div class="modal"&gt;
+        &lt;label for="nested-2" class="modalBackground"&gt;&lt;/label&gt;
+        &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong border border-primary"&gt;
+          &lt;h4 class="fs-xxl fw-bold text-primary mb-2"&gt;Level 2&lt;/h4&gt;
+          &lt;p class="mb-4"&gt;Stacked perfectly using independent states!&lt;/p&gt;
+          &lt;label for="nested-2" class="btn btn-danger btn-sm"&gt;Close&lt;/label&gt;
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    
-    &lt;label for="nested-1" class="btn btn-outline btn-outline-dark btn-sm ml-2"&gt;Close&lt;/label&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
   </div>
