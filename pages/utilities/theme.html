@@ -1,0 +1,74 @@
+<!--theme section-->
+<section id="theme" class="mt-7">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">🌙 Theme Structure (Dark/Light Mode)</h2>
+    
+    <p class="fs-lg text-on-surface mb-6">
+        MadenCSS utilizes <span class="text-primary fw-bold">CSS Variables</span> and the HTML <code class="bg-background radius p-1">data-theme</code> attribute to enable fast and fluid switching between Dark and Light themes. This approach provides the flexibility to manage the theme with minimal JavaScript and easily supports native browser theme preferences.
+    </p>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Theme Mechanism</h3>
+    <p class="fs-base text-on-surface mb-3">
+        All color variables are defined in the <code class="bg-background radius p-1">maden-config.css</code> file within two main blocks:
+    </p>
+
+    <ul class="my-4 fs-base bg-surface p-4 radius-lg text-on-surface shadow-light">
+        <li class="mb-2"><code class="bg-background radius p-1">:root</code> **Block:** Defines the color variables for the **Dark Mode** (the default theme of MadenCSS).</li>
+        <li class="mb-2"><code class="bg-background radius p-1">html[data-theme="light"]</code> **Block:** Contains the **Light Mode** colors which override the Dark Mode variables when the <code class="bg-background radius p-1">data-theme</code> attribute is set to "light".</li>
+    </ul>
+
+    <p class="fs-base text-on-surface mb-4">
+        By simply toggling the attribute on the <code class="bg-background radius p-1">html</code> tag, you can instantaneously update the colors of the entire interface. No additional CSS files are needed for theme switching.
+    </p>
+    
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">2. HTML Structure</h3>
+    <p class="fs-base text-on-surface mb-3">
+        You can set the default theme of your page using the <code class="bg-background radius p-1">data-theme</code> attribute on the <code class="bg-background radius p-1">&lt;html&gt;</code> tag:
+    </p>
+
+    <div class="bg-surface p-2 radius-md shadow-light">
+    <h4 class="fs-lg fw-bold text-on-background">Dark Mode</h4>
+    <pre class="p-3 bg-background radius text-on-background width-full" rows="3">
+<code>
+&lt;html lang="en" data-theme="dark"&gt; 
+    &lt;body class="bg-background text-on-background"&gt;...&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+    
+    <div class="bg-surface p-2 radius-md shadow-light mt-5">
+    <h4 class="fs-lg fw-bold text-on-background">Light Mode</h4>
+    <pre class="p-3 bg-background radius text-on-background width-full" rows="3">
+<code>
+&lt;html lang="en" data-theme="light"&gt; 
+    &lt;body class="bg-background text-on-background"&gt;...&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">3. Theme Toggling (Optional JavaScript)</h3>
+    <p class="fs-base text-on-surface mb-3">
+        To switch the theme based on user interaction, we recommend using a minimal JavaScript snippet to toggle the <code class="bg-background radius p-1">data-theme</code> attribute between Dark and Light:
+    </p>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full" rows="13">
+<code>
+function toggleTheme() {
+    const htmlElement = document.documentElement;
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+
+    htmlElement.setAttribute('data-theme', newTheme);
+    
+    // Optional: Use localStorage to remember the user's preference
+    localStorage.setItem('theme', newTheme);
+}
+
+// &lt;button onclick="toggleTheme()"&gt;Toggle Theme&lt;/button&gt;
+</code></pre>
+
+    <div class="fs-base bg-info text-on-info p-3 mt-4 radius">
+        <span class="fw-bold">✨ Tip:</span> On page load, you can check the user's preference (from <code class="bg-background text-on-background radius p-1">localStorage</code> if available) 
+        or the browser's system preference (using the <code class="bg-background text-on-background radius p-1">prefers-color-scheme</code> media query) to set the initial theme.
+    </div>
+</section>
+<!--theme section-->
