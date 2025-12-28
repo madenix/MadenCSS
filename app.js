@@ -1,7 +1,7 @@
 const content = document.getElementById("content");
 
 function loadPage() {
-  const route = location.hash.slice(1) || "/getting-started/introduction";
+  const route = location.hash.slice(1) || "/getStart/introduction";
   const url = `/pages${route}.html`;
 
   fetch(url)
