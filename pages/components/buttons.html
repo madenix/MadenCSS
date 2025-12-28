@@ -1,264 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!--buttons section -->
+<section id="buttons" class="mb-8">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">▶️ Buttons</h2>
+  <p class="mb-4 text-mid">Standard button components for actions in forms, dialogs, and more. Highly flexible and utility-ready.</p>
+  
+  <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">buttons.css</code> must be included to use these components.
+  </div>
 
-<!-- Navbar -->
-<div id="navbar"></div>
-
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
-
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
+  <div class="mb-6 mt-3">
+    <h3 class="fs-lg fw-semibold mb-3">Basic Usage (Solid)</h3>
+    <p class="mb-3 text-mid">Standard buttons using theme-defined semantic colors.</p>
+    <div class="p-4 border border-light radius-md mb-3 flex">
+      <button class="btn btn-primary m-2">Primary</button>
+      <button class="btn btn-success m-2">Success</button>
+      <button class="btn btn-danger m-2">Danger</button>
+      <button class="btn btn-warning m-2">Warning</button>
+      <button class="btn btn-info m-2">Info</button>
+      <button class="btn btn-dark m-2">Dark</button>
+      <button class="btn btn-light m-2">Light</button>
     </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;Light&lt;/button&gt;</code></pre>
+  </div>
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-    <row class="row row-items-hor-center text-primary"><h2>BUTTONS</h2></row>
-
-  <section>
-    <span class="text-primary">📌 Introduction</span>
-    <p>Buttons are essential interactive elements in any user interface. MadenCSS buttons are designed to be flexible, accessible, and easy to style, allowing you to create a consistent look across your app or website.</p>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Basic Button Class: <code>.btn</code></span>
-    <p>The <code class="text-success">.btn</code> class provides foundational styles such as padding, font, background, border, and cursor behavior.</p>
-    <textarea><button class="btn">Basic Button</button></textarea>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Variants (Color and Style)</span>
-    <p>Use variant classes like <code>.btn-primary</code>, <code>.btn-danger</code>, and <code>.btn-surface</code> to change the button’s color based on context.</p>
-    <button class="btn btn-primary">Primary Button</button>
-    <button class="btn btn-danger">Danger Button</button>
-    <button class="btn btn-surface">Surface Button</button>
-    <button class="btn btn-success">Success Button</button>
-    <textarea rows="5" class="mt-1">
-<button class="btn btn-primary">Primary Button</button>
-<button class="btn btn-danger">Danger Button</button>
-<button class="btn btn-surface">Surface Button</button>
-<button class="btn btn-success">Success Button</button>      
-    </textarea>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Sizes</span>
-    <p class="my-2">Control button size using <code>.btn-sm</code> (small), <code>.btn-lg</code> (large), and <code>.btn-block</code> (full width).</p>
-    <button class="btn btn-primary btn-sm">Small</button>
-    <button class="btn btn-primary">Default</button>
-    <button class="btn btn-primary btn-lg">Large</button>
-    <button class="btn btn-primary btn-block my-2">Block Level</button>
-
-<textarea rows="5" class="mt-1">
-<button class="btn btn-primary btn-sm">Small</button>
-<button class="btn btn-primary">Default</button>
-<button class="btn btn-primary btn-lg">Large</button>
-<button class="btn btn-primary btn-block">Block Level</button>  
-</textarea>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Border Radius (Rounded Corners)</span>
-    <p>Add rounded corners with;</p>
-    <code class="mt-2 text-success">
-      .radius-sm  { border-radius: 2px; }<br/>
-      .radius     { border-radius: 4px; }      /* default */<br/>
-      .radius-md  { border-radius: 6px; }<br/>
-      .radius-lg  { border-radius: 8px; }<br/>
-      .radius-xl  { border-radius: 12px; }<br/>
-      .radius-2xl { border-radius: 16px; }<br/>
-      .radius-full { border-radius: 9999px; }  /* for pills, circles */<br/><br/>
-    </code>
-<button class="btn btn-primary radius-sm ">Small Radius</button>
-<button class="btn btn-primary radius-md">Medium Radius</button>
-<button class="btn btn-primary radius-xl">Extra Large Radius</button>
-<button class="btn btn-primary radius-full border">Pill Shape</button>
-
-<textarea rows="5" class="mt-2">
-<button class="btn btn-primary radius-sm ">Small Radius</button>
-<button class="btn btn-primary radius-md">Medium Radius</button>
-<button class="btn btn-primary radius-xl">Extra Large Radius</button>
-<button class="btn btn-primary radius-full border">Pill Shape</button>
-</textarea>
-
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Outlined Buttons</span>
-    <p>Use the <code>btn-outline-*</code> attribute to use outlined buttons.</p>
-    <button class="btn btn-outline-primary radius-lg">Primary</button>
-    <button class="btn btn-outline-success radius-lg">Success</button>
-    <button class="btn btn-outline-danger radius-lg">Danger</button>
-    <button class="btn btn-outline-surface radius-lg">Surface</button>
-
-<textarea rows="5" class="mt-2">
-<button class="btn btn-outline-primary radius-lg">Primary</button>
-<button class="btn btn-outline-success radius-lg">Success</button>
-<button class="btn btn-outline-danger radius-lg">Danger</button>
-<button class="btn btn-outline-surface radius-lg">Surface</button>
-</textarea>
-
-  </section>
-
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Disabled State</span>
-    <p>Use the <code>disabled</code> attribute to prevent interaction and visually indicate inactive buttons.</p>
-    <button class="btn btn-primary" disabled>Disabled Button</button>
-    <pre><code class="text-success">&lt;button class="btn btn-primary" disabled&gt;Disabled Button&lt;/button&gt;</code></pre>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Icon Buttons</span>
-    <p>MadenCSS allows you to include SVG icons inside your buttons with consistent sizing and color using the 
-    <code class="text-success">.btn-icon</code> utility classes.</p>
-<p>
-  To insert an icon inside a button, wrap the <code>&lt;svg&gt;</code> with the class <code>.btn-icon</code>.
-  The icon inherits the button text color and scales with font size.
-</p>
-<br>
-  <label>Example:</label><br>
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-lg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</button>
-
-
-<textarea rows="8" class="mt-2">
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-lg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</button>
-</textarea>
-<br><br>
-⚙️ Icon Size Variants
-<ul>
-  <li><code>.btn-icon-sm</code> – <small>0.75em × 0.75em</small></li>
-  <li><code>.btn-icon-md</code> – <small>1em × 1em (default)</small></li>
-  <li><code>.btn-icon-lg</code> – <small>1.5em × 1.5em</small></li>
-  <li><code>.btn-icon-xl</code> – <small>2em × 2em</small></li>
-</ul>
-
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-sm" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  btn-icon-sm
-</button>
-
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  btn-icon-md
-</button>
-
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-lg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  btn-icon-lg
-</button>
-
-<button class="btn btn-primary">
-  <svg class="btn-icon btn-icon-xl" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  btn-icon-xl
-</button>
-<br>
-<br>
-⚙️ Only icon buttons<br>
-<p>  For buttons that contain only an icon, always add <code>aria-label</code> for accessibility.Example:</p>
-<br>
-<button class="btn btn-primary" aria-label="Save"> 
-  <svg class="btn-icon btn-icon-lg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-</button>
-
-<textarea rows="6" class="mt-2">
-<button class="btn btn-primary" aria-label="Save"> 
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-</button>
-</textarea>
-<br><br>
-⚙️ Inherit Color Automatically<br>
-<p>
-  The icon color matches the text color of the button using <code>fill: currentColor;</code>. No additional styling needed.
-</p>
-
-<div class="btn background on-background m-3">
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</div>
-
-<div class="btn danger text-primary m-3">
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</div>
-
-<textarea rows="15">
-  <div class="btn background on-background m-3">
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</div>
-
-<div class="btn danger text-primary m-3">
-  <svg class="btn-icon btn-icon-md" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm0 2.5L19.5 8H17V5.5zM12 19a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM6 8V5h9v6H6V8z"/>
-  </svg>
-  Save
-</div>
-</textarea>
-
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Usage Tips &amp; Best Practices</span>
-    <ul>
-      <li>Use color variants consistently to indicate action types.</li>
-      <li>Avoid very small buttons for better usability on touch devices.</li>
-      <li>Ensure sufficient color contrast for accessibility.</li>
-      <li>Use <code>btn-block</code> for full-width buttons on small screens.</li>
-      <li>Include visible focus styles to support keyboard navigation.</li>
-    </ul>
-  </section>
-
-  <section class="mt-3">
-    <span class="text-primary">🔹 Summary</span>
-    <p>Combine the <code>.btn</code> base class with variant, size, radius, and state classes to create a wide range of buttons tailored to your app’s design and functional needs.</p>
-  </section>
-
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3">Outline Buttons</h3>
+    <p class="mb-3 text-mid">Use <code>btn-outline</code> combined with <code>btn-outline-{color}</code> for a lighter visual style.</p>
+    <div class="p-4 border border-light radius-md mb-3">
+      <button class="btn btn-outline btn-outline-primary m-2">Primary</button>
+      <button class="btn btn-outline btn-outline-success m-2">Success</button>
+      <button class="btn btn-outline btn-outline-danger m-2">Danger</button>
+      <button class="btn btn-outline btn-outline-warning m-2">Warning</button>
+      <button class="btn btn-outline btn-outline-info m-2">Info</button>
+      <button class="btn btn-outline btn-outline-dark m-2">Dark</button>
+      <button class="btn btn-outline btn-outline-light m-2">Light</button>
     </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>
+&lt;button class="btn btn-outline btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-info"&gt;Info&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-dark"&gt;Dark&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-light"&gt;Light&lt;/button&gt;
+    </code></pre>
+  </div>
 
-</div>
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3">Sizes</h3>
+    <p class="mb-3 text-mid">Different sizes for different contexts using <code>btn-sm</code> or <code>btn-lg</code>.</p>
+    <div class="p-4 border border-light radius-md mb-3">
+      <button class="btn btn-primary btn-sm m-2">Small</button>
+      <button class="btn btn-primary m-2">Default</button>
+      <button class="btn btn-primary btn-lg m-2">Large</button>
+    </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;</code></pre>
+  </div>
 
-<!-- Footer -->
-<div id="footer"></div>
-
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3 text-primary">MadenCSS Power: Instant Customization</h3>
+    <p class="mb-3 text-mid">Since buttons are defined in the <code>components</code> layer, you can override any property using utility classes without writing custom CSS.</p>
+    <div class="p-4 border border-light radius-md mb-3">
+      <button class="btn btn-success radius-full shadow-strong px-8 fw-bold m-2">
+        Fully Custom Button
+      </button>
+      <button class="btn btn-outline btn-outline-primary radius-0 border-thick m-2">
+        Square Thick Border
+      </button>
+    </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;!-- Override anything: radius-full, shadow-strong, px-8, radius-0, border-thick --&gt;
+&lt;button class="btn btn-success radius-full shadow-strong px-8"&gt;Custom&lt;/button&gt;
+&lt;button class="btn btn-outline btn-outline-primary radius-0 border-thick"&gt;Square&lt;/button&gt;</code></pre>
+  </div>
+</section>
+<!--buttons section -->
