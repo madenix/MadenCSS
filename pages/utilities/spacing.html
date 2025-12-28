@@ -1,103 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!-- spacing section -->
+<section id="spacing" class="mt-7">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">📐 Spacing (Margin & Padding)</h2>
 
-<!-- Navbar -->
-<div id="navbar"></div>
+    <p class="fs-lg text-on-surface mb-6">
+        Spacing utilities in MadenCSS are built on a consistent design scale powered by CSS variables.
+        Instead of arbitrary values, all margin and padding classes are derived from a single base unit
+        to ensure visual harmony across layouts.
+    </p>
 
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Spacing Scale</h3>
+    <p class="fs-base text-on-surface mb-4">
+        All spacing values are calculated from a base unit of <strong>4px</strong>.
+        This scale is defined in <code class="bg-background radius p-1">maden-config.css</code>
+        and can be customized globally.
+    </p>
 
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <ul class="list-style-disc mx-6 fs-base text-on-surface">
+            <li><strong>0</strong> → 0</li>
+            <li><strong>1</strong> → 4px</li>
+            <li><strong>2</strong> → 8px</li>
+            <li><strong>3</strong> → 16px</li>
+            <li><strong>4</strong> → 24px</li>
+            <li><strong>5</strong> → 32px</li>
+            <li><strong>6</strong> → 40px</li>
+            <li><strong>7</strong> → 48px</li>
+            <li><strong>8</strong> → 64px</li>
+        </ul>
     </div>
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-      <row class="row row-items-hor-center text-primary"><h2>SPACINGS (Margin And Padings)</h2></row>
+    <pre class="p-3 bg-surface radius text-on-surface width-full mb-6">
+<code>
+--spacing-unit: 4px;
+--spacing-3: calc(var(--spacing-unit) * 4); /* 16px */
+</code>
+    </pre>
 
-      <section class="mt-2">      
-        📌<span class="fw-bold text-primary">spacing.css</span> provides a simple and consistent utility class system for managing margin and padding in your project. 
-        The naming is concise and easy to learn — inspired by Tailwind-like utility patterns.
-      </section>
+    <h3 class="fs-xl fw-bold mb-3 text-primary">2. Margin Utilities</h3>
+    <p class="fs-base text-on-surface mb-4">
+        Margin utilities control the outer spacing of elements.
+        Classes follow a simple and predictable naming convention.
+    </p>
 
-      <section class="mt-2">
-        🧱 <span class="fw-bold text-primary fs-lg">Syntax Overview</span><br/>
-        Each class follows this structure:
-      </section>
-        <span class="text-success">m:</span>	margin<br />
-        <span class="text-success">p:</span>	padding<br />
-        <span class="text-success">t:</span>	top<br />
-        <span class="text-success">r:</span>	right<br />
-        <span class="text-success">b:</span>	bottom<br />
-        <span class="text-success">l:</span>	left<br />
-        <span class="text-success">x:</span>	left + right<br />
-        <span class="text-success">y:</span>	top + bottom<br />
-        <br />
-        Number	Spacing<br />
-        0:	0px<br />
-        1:	4px<br />
-        2:	8px<br />
-        3:	16px<br />
-        4:	24px<br />
-        5:	32px<br />
-        <br />
-        🔹 Margin Examples<br />
-        <div class="border mt-1 success">
-          <div class="m-3 border surface-light">16px margin on all sides (<span class="text-primary">m-3</span>)</div>
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="mb-3">
+            <code class="bg-background radius p-1">.m-*</code> — All sides
         </div>
-
-        <div class="border mt-3 success">
-          <div class="mt-2 border mb-4 surface-light">8px top, 24px bottom (<span class="text-primary">mt-2 mb-4</span>)</div>
+        <div class="mb-3">
+            <code class="bg-background radius p-1">.mt-*</code>,
+            <code class="bg-background radius p-1">.mr-*</code>,
+            <code class="bg-background radius p-1">.mb-*</code>,
+            <code class="bg-background radius p-1">.ml-*</code> — Single side
         </div>
-
-        <div class="border mt-3 success">
-          <div class="mx-5 border surface-light">32px left & right margin (<span class="text-primary">mx-5</span>)</div>
+        <div>
+            <code class="bg-background radius p-1">.mx-*</code> — Horizontal<br/>
+            <code class="bg-background radius p-1">.my-*</code> — Vertical
         </div>
-<br />
-<br />
-        🔹 Padding Examples<br />
-
-        <div class="border mt-3 success">
-          <div class="p-2 surface-light">8px padding on all sides (<span class="text-primary">p-2</span>)</div>
-        </div>
-
-        <div class="border mt-3 success">
-          <div class="pt-1 pb-3 surface-light">4px top, 16px bottom (<span class="text-primary">pt-1 pb-3</span>)</div>
-        </div>
-
-        <div class="border mt-3 success">
-          <div class="px-4 py-1 surface-light">24px horizontal, 4px vertical padding (<span class="text-primary">px-4 py-1</span>)</div>
-        </div>
-        
-        <br />
-        <br />
-        ✅ Tips<br />
-        <br />
-        Stick to consistent spacing. Avoid mixing too many levels of spacing in one layout (e.g., using .p-1, .p-4, .p-5 all at once).<br />
-<br />
-        Use these utilities instead of hardcoded px values to keep your design consistent and maintainable.<br />
-<br />
-        Want responsive spacing? You can extend the system with media query prefixes like sm:, md:, lg: as needed.<br />
-<br />
-
-
     </div>
 
-</div>
+    <pre class="p-3 bg-surface radius text-on-surface width-full mb-6">
+<code>
+&lt;div class="mt-4 mb-6"&gt;Spacing example&lt;/div&gt;
+&lt;div class="mx-3"&gt;Horizontal margin&lt;/div&gt;
+</code>
+    </pre>
 
-<!-- Footer -->
-<div id="footer"></div>
+    <h3 class="fs-xl fw-bold mb-3 text-primary">3. Padding Utilities</h3>
+    <p class="fs-base text-on-surface mb-4">
+        Padding utilities control the inner spacing of elements and use the same scale
+        as margin utilities.
+    </p>
 
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="mb-3">
+            <code class="bg-background radius p-1">.p-*</code> — All sides
+        </div>
+        <div class="mb-3">
+            <code class="bg-background radius p-1">.pt-*</code>,
+            <code class="bg-background radius p-1">.pr-*</code>,
+            <code class="bg-background radius p-1">.pb-*</code>,
+            <code class="bg-background radius p-1">.pl-*</code> — Single side
+        </div>
+        <div>
+            <code class="bg-background radius p-1">.px-*</code> — Horizontal<br/>
+            <code class="bg-background radius p-1">.py-*</code> — Vertical
+        </div>
+    </div>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full mb-6">
+<code>
+&lt;div class="p-5"&gt;Padded container&lt;/div&gt;
+&lt;button class="px-4 py-2"&gt;Button&lt;/button&gt;
+</code>
+    </pre>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">4. Real-World Example</h3>
+    <p class="fs-base text-on-surface mb-4">
+        A simple card layout demonstrating consistent spacing usage.
+    </p>
+
+    <div class="p-5 bg-surface radius shadow-light max-width-md page-center">
+        <h3 class="mb-3">Card Title</h3>
+        <p class="mb-4">
+            This card uses spacing utilities to maintain a clean and readable layout.
+        </p>
+        <button class="px-4 py-2 bg-primary text-on-primary radius">
+            Action
+        </button>
+    </div>
+
+<pre class="bg-surface text-on-surface p-2 radius-md shadow-light"><code>
+&lt;div class=&quot;p-5 bg-surface radius shadow-light max-width-md page-center&quot;&gt;
+    &lt;h3 class=&quot;mb-3&quot;&gt;Card Title&lt;/h3&gt;
+    &lt;p class=&quot;mb-4&quot;&gt;
+        This card uses spacing utilities to maintain a clean and readable layout.
+    &lt;/p&gt;
+    &lt;button class=&quot;px-4 py-2 bg-primary text-on-primary radius&quot;&gt;
+        Action
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+    
+</section>
+<!-- spacing section -->
