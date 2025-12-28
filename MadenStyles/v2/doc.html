@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="modal.css">
   <link rel="stylesheet" href="cards.css">
   <link rel="stylesheet" href="navbar.css">
-  <link rel="stylesheet" href="offcanvas.css">
+  <link rel="stylesheet" href="offCanvas.css">
 </head>
 
 <body class="bg-background text-on-background">
@@ -19,9 +19,10 @@
 <div class="grid max-width-lg page-center grid-gap-4">
 
 <div class="col-3">
-    <div class="p-2 bg-surface text-on-surface sidebar radius-lg">
+    <div class="p-2 bg-surface text-on-surface radius-lg sticky-sidebar">
         <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" hidden />
         <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
+        <label for="sidebar-toggle" class="sidebar-backdrop"></label>
         <div class="sidebar-menu">
 
             <p class="mx-4 my-2 fs-lg fw-medium">🚀 Getting Started</p>
@@ -67,7 +68,7 @@
   <div class="col-9 p-4">
 
 <!--intro section-->
-<div id="introduction" class="mt-5">
+<section id="introduction" class="mt-5">
   <h1 class="text-center mb-3">INTRODUCTION</h1>
   <div class="p-5 mb-6 bg-primary radius-2xl shadow-light flex flex-col flex-center">
     <p class="fs-lg text-on-primary text-center fw-bold">
@@ -172,11 +173,11 @@
 
 </div>
 
-</div>
+</section>
 <!--intro section-->
 
 <!-- installation section -->
-<div id="installation" class="p-5 bg-surface radius shadow-light mb-3">
+<section id="installation" class="p-5 bg-surface radius shadow-light mb-3">
   <h3 class="fs-xl fw-bold mb-3 flex flex-center">
     Installation
   </h3>
@@ -205,11 +206,11 @@
   <pre class="bg-background p-2 radius-lg">
 <code>&lt;link rel="stylesheet" href="/css/maden.css"&gt;</code>
   </pre>
-</div>
+</section>
 <!-- installation section -->
 
 <!--start section-->
-<div id="start" class="mt-1">
+<section id="start" class="mt-1">
 
   <h2 class="fs-xxl fw-black mb-2 text-on-background text-center">
     Get Started With MADENCSS
@@ -418,11 +419,11 @@ without locking you into a framework.
 </div>
 
 
-</div>
+</section>
 <!--start section-->
 
 <!--core principles section-->
-<div id="principles" class="mt-7">
+<section id="principles" class="mt-7">
 
     <h2 class="fs-xxl fw-black mb-2 text-on-background flex flex-center">CORE PRINCIPLES</h2>
 
@@ -530,15 +531,15 @@ without locking you into a framework.
         </p>
     </div>
 
-</div>
-<!--core principles content-->
+</section>
+<!--core principles section-->
 
 <!--Utilities section-->
-<div class="text-center fs-xxl fw-bold mt-7 mb-4">⚙️ UTILITIES</div>
+<section class="text-center fs-xxl fw-bold mt-7 mb-4">⚙️ UTILITIES</section>
 <!--Utilities section-->
 
 <!--config section-->
-<div id="config" class="mt-5">
+<section id="config" class="mt-5">
     <h2 class="fs-xl fw-black mb-2 text-on-background">⚙️ Customization (maden-config.css)</h2>
 
     <p class="fs-lg text-on-surface mb-6">
@@ -688,11 +689,11 @@ html[data-theme="light"] {
         </p>
     </div>
 
-</div>
+</section>
 <!--config section-->
 
 <!--colors section-->
-<div id="colors" class="mt-7">
+<section id="colors" class="mt-7">
     <h2 class="fs-xl fw-black mb-2 text-on-background">🎨 Color Utility Classes (bg-* and text-*)</h2>
     
     <p class="fs-lg text-on-surface mb-6">
@@ -810,11 +811,11 @@ html[data-theme="light"] {
         remember to add the corresponding high-contrast <code class="bg-background text-on-background radius p-1">text-on-*</code> class 
         (e.g., <code class="bg-background text-on-background radius p-1">text-on-primary</code>) to automatically ensure proper text color contrast.
     </div>
-</div>
+</section>
 <!--colors section-->
 
 <!--theme section-->
-<div id="theme" class="mt-7">
+<section id="theme" class="mt-7">
     <h2 class="fs-xl fw-black mb-2 text-on-background">🌙 Theme Structure (Dark/Light Mode)</h2>
     
     <p class="fs-lg text-on-surface mb-6">
@@ -885,11 +886,11 @@ function toggleTheme() {
         <span class="fw-bold">✨ Tip:</span> On page load, you can check the user's preference (from <code class="bg-background text-on-background radius p-1">localStorage</code> if available) 
         or the browser's system preference (using the <code class="bg-background text-on-background radius p-1">prefers-color-scheme</code> media query) to set the initial theme.
     </div>
-</div>
+</section>
 <!--theme section-->
 
 <!--grid layout section-->
-<div id="layout" class="mt-7">
+<section id="layout" class="mt-7">
     <h2 class="fs-xl fw-black mb-2 text-on-background">📏 Layout & Grid System</h2>
 
     <p class="fs-lg text-on-surface mb-6">
@@ -1075,11 +1076,11 @@ function toggleTheme() {
     &lt;div class="col-8"&gt;...&lt;/div&gt; 
 &lt;/div&gt;
 </code></pre>
-</div>
+</section>
 <!--grid layout section -->
 
 <!--flex system section-->
-<div id="flex" class="mt-7">
+<section id="flex" class="mt-7">
     <h2 class="fs-xl fw-black mb-2 text-on-background">🧩 Flexbox Utilities</h2>
 
     <p class="fs-lg text-on-surface mb-6">
@@ -1314,11 +1315,11 @@ function toggleTheme() {
 </code>
 </pre>
 
-</div>
+</section>
 <!--flex system section-->
 
 <!-- spacing section -->
-<div id="spacing" class="mt-7">
+<section id="spacing" class="mt-7">
     <h2 class="fs-xl fw-black mb-2 text-on-background">📐 Spacing (Margin & Padding)</h2>
 
     <p class="fs-lg text-on-surface mb-6">
@@ -1440,11 +1441,11 @@ function toggleTheme() {
 &lt;/div&gt;
 </code></pre>
     
-</div>
+</section>
 <!-- spacing section -->
 
 <!-- sizing section (width and height)-->
-<div id="sizing" class="mt-7">
+<section id="sizing" class="mt-7">
 
     <h2 class="fs-xl fw-black mb-2 text-on-background">📐 Width & Height Utilities</h2>
 
@@ -1558,11 +1559,11 @@ function toggleTheme() {
 </code>
 </pre>
 
-</div>
+</section>
 <!-- sizing section -->
 
 <!-- Typography section -->
-<div id="typography" class="mt-7">
+<section id="typography" class="mt-7">
 
     <h2 class="fs-xl fw-black mb-2 text-on-background">✍️ Typography & Text Utilities</h2>
 
@@ -1779,11 +1780,11 @@ function toggleTheme() {
 </pre>
 
 
-</div>
+</section>
 <!-- Typography section -->
 
 <!--border, shadow section-->
-<div id="borders" class="mt-7">
+<section id="borders" class="mt-7">
 
   <h2 class="fs-xl fw-black mb-2 text-on-background">
     🧱 Borders, Radius & Shadows
@@ -1974,11 +1975,11 @@ function toggleTheme() {
     <code class="bg-background text-on-background radius p-1">maden-config.css</code> instead of the utility classes.
   </div>
 
-</div>
+</section>
 <!--border, shadow section-->
 
 <!--display & opacity section-->
-<div id="display" class="mt-7">
+<section id="display" class="mt-7">
   
   <h2 class="fs-xl fw-black mb-2 text-on-background">
     👁️ Display & Opacity Utilities
@@ -2106,11 +2107,11 @@ function toggleTheme() {
     </p>
   </div>
 
-</div>
+</section>
 <!--display & opacity section-->
 
 <!--positioning section-->
-<div id="positioning" class="mt-7">
+<section id="positioning" class="mt-7">
 
   <h2 class="fs-xl fw-black mb-2 text-on-background">
     📐 Positioning
@@ -2262,11 +2263,11 @@ function toggleTheme() {
 
   </div>
 
-</div>
+</section>
 <!--positioning section -->
 
 <!--Utilities section-->
-<div class="text-center fs-xxl fw-bold mt-7 mb-4">🧩 COMPONENTS</div>
+<section class="text-center fs-xxl fw-bold mt-7 mb-4">🧩 COMPONENTS</section>
 <!--Utilities section-->
 
 <!--alerts section -->
@@ -2410,7 +2411,7 @@ function toggleTheme() {
 <!--buttons section -->
 
 <!-- cards section -->
-<div id="cards" class="mt-7">
+<section id="cards" class="mt-7">
 
   <h2 class="fs-xl fw-black mb-2 text-on-background">🃏 Cards</h2>
 
@@ -2689,7 +2690,7 @@ function toggleTheme() {
 
 
 
-</div>
+</section>
 <!-- cards section -->
 
 <!--forms section -->
@@ -3247,7 +3248,7 @@ function toggleTheme() {
 <!--forms section -->
 
 <!--navbar section -->
-<div id="navbar">
+<section id="navbar">
   <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">🧭 Navbars</h2>
   
    <div class="bg-warning text-on-warning p-2 radius-md mb-4">
@@ -3345,7 +3346,7 @@ function toggleTheme() {
 &lt;!-- Navigation End --&gt;
 </pre>
 
-</div>
+</section>
 <!--navbar section -->
 
 <!--modals section -->
@@ -3616,10 +3617,105 @@ function toggleTheme() {
 <!--offcanvas section-->
 
 <!--sidebar section-->
-<section id="sidebar">
-    <h2 class="fs-xl fw-bold mb-3 border-b border-light pb-2 text-primary">☰ Sidebar</h2>
+<section id="sidebar" class="my-8">
+  <h2 class="fs-xl fw-bold mb-3 border-b border-light pb-2 text-primary">☰ Sidebar</h2>
+  <p class="text-mid">Modern, mobile-responsive sidebar component powered by pure CSS. Features a "sticky" layout for desktop and an "overlay backdrop" for mobile devices.</p>
+
+  <div class="grid grid-gap-4 my-3">
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">Sticky Behavior</p>
+      <p class="fs-sm">Remains fixed at the top of the viewport on desktop screens even when content is scrolled.</p>
+    </div>
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">Smart Backdrop</p>
+      <p class="fs-sm">Automatically closes the menu when clicking anywhere outside the sidebar on mobile.</p>
+    </div>
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">No JavaScript</p>
+      <p class="fs-sm">Developed entirely using the Checkbox Hack technique for maximum performance.</p>
+    </div>
+  </div>
+
+  <div class="card bg-dark text-on-dark mb-6">
+    <div class="card-header border-light">Basic Implementation</div>
+    <div class="card-body">
+
+<div class="bg-surface p-2 max-width-2xs">
+  <input type="checkbox" id="sidebar-demo" class="sidebar-toggle" hidden />
+  
+  <label for="sidebar-demo" class="sidebar-toggle-btn">☰ Menu</label>
+  
+  <label for="sidebar-demo" class="sidebar-backdrop"></label>
+  
+  <div class="sidebar-menu">
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">📊</span> Dashboard</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">👤</span> Profile</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">📩</span> Messages</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">🔔</span> Notifications</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">⚙️</span> Settings</a>
+  </div>
+</div>
+
+      <pre class="fs-sm"><code>&lt;div class="bg-surface p-2 sticky-sidebar"&gt;
+  &lt;!-- Toggle Control --&gt;
+  &lt;input type="checkbox" id="sidebar-demo" class="sidebar-toggle" hidden /&gt;
+  
+  &lt;!-- Mobile Trigger --&gt;
+  &lt;label for="sidebar-demo" class="sidebar-toggle-btn"&gt;&#9776; Menu&lt;/label&gt;
+  
+  &lt;!-- Overlay (Mobile Only) --&gt;
+  &lt;label for="sidebar-demo" class="sidebar-backdrop"&gt;&lt;/label&gt;
+  
+  &lt;!-- Menu Content --&gt;
+  &lt;div class="sidebar-menu"&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;📊 Dashboard&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;👤 Profile&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;📩 Messages&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;🔔 Notifications&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;⚙️ Settings&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <p class="fs-sm">
+      <strong>Pro Tip:</strong> To prevent the menu from covering the entire screen on mobile, it is assigned a <code>max-height: 60vh</code>. Internal scrolling is automatically enabled for longer menus.
+    </p>
+  </div>
+
+  <div class="overflow-auto mt-6">
+    <table class="w-full text-left fs-sm">
+      <thead class="bg-dark text-on-dark">
+        <tr>
+          <th class="p-3">Class</th>
+          <th class="p-3">Description</th>
+        </tr>
+      </thead>
+      <tbody class="text-on-surface">
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sticky-sidebar</code></td>
+          <td class="p-3">Fixes the menu to the top using sticky positioning. If omitted, a static menu is rendered.</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sidebar-toggle-btn</code></td>
+          <td class="p-3">The button (Label) that toggles the menu on mobile. Automatically hidden on desktop.</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sidebar-backdrop</code></td>
+          <td class="p-3">A layer that darkens the background on mobile and closes the menu upon clicking.</td>
+        </tr>
+        <tr>
+          <td class="p-3"><code>.sidebar-menu</code></td>
+          <td class="p-3">The flexible vertical area containing navigation links and content.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 <!--sidebar section-->
+
+
     </div><!--main content-->
   </div><!--page end-->
   </body>
