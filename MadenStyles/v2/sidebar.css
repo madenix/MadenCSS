@@ -1,40 +1,75 @@
-.sidebar {
+@layer base, components, utilities;
+
+.sticky-sidebar {
     position: sticky;
     top: 0;
+    z-index: 2000;
 }
 
 .sidebar-toggle-btn {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .sidebar-menu {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow: auto;
     transition: max-height 0.3s ease;
     max-height: 100vh;
+    z-index: 1000;
 }
 
-/* On mobile devices  */
+.sidebar-backdrop{
+    opacity: 0;
+}
+
+/* Masaüstü ayarların aynı kalabilir, sadece mobil kısmına odaklanalım */
+
 @media (max-width: 599px) {
-    .sidebar {
+    .sticky-sidebar {
         position: fixed;
-        top: auto;
+        top: 0;
+        left: 0;
         width: 100%;
+    }
+
+    .sidebar-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 10; /* Menünün altında kalmalı */
+        pointer-events: none;
+    }
+
+    .sidebar-menu {
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 20; /* Backdrop'un üstünde olmalı */
+    }
+
+    /* Checkbox işaretlendiğinde olacaklar */
+    .sidebar-toggle:checked ~ .sidebar-backdrop {
+        opacity: 1; /* Görünür yap */
+        visibility: visible;
+        pointer-events: auto; /* Tıklanabilir yap */
+    }
+
+    .sidebar-toggle:checked ~ .sidebar-menu {
+        max-height: 60vh; /* Mobilde çok uzayıp ekranı aşmasın */
+        overflow-y: auto;
     }
 
     .sidebar-toggle-btn {
         display: block;
     }
-
-    .sidebar-menu {
-        max-height: 0;
-    }
-
-    .sidebar-toggle:checked ~ .sidebar-menu {
-        max-height: 500px; 
-    }
 }
-
