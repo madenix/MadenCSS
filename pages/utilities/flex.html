@@ -1,0 +1,238 @@
+<!--flex system section-->
+<section id="flex" class="mt-7">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">🧩 Flexbox Utilities</h2>
+
+    <p class="fs-lg text-on-surface mb-6">
+        MadenCSS provides a robust set of 12-column **Flex-based Grid** and alignment utilities. While the standard grid is ideal for page structures, Flex utilities excel at component-level layouts and complex alignments.
+    </p>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Flex Column System</h3>
+    <p class="fs-base text-on-surface mb-3">
+        Unlike the standard grid, <code class="bg-background radius p-1">.flex-col-*</code> classes allow for precise control within a flex container. These columns also feature automatic mobile stacking at **599px**.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <p class="fs-sm mb-2 opacity-7">Flex Container (.flex .flex-wrap)</p>
+        <div class="flex flex-wrap">
+            <div class="flex-col-8 m-1 p-2 bg-primary text-on-primary radius text-center fw-bold">.flex-col-8</div>
+            <div class="flex-col-4 m-1 p-2 bg-success text-on-success radius text-center fw-bold">.flex-col-4</div>
+        </div>
+        <div class="flex flex-wrap mt-2">
+            <div class="flex-col-3 p-2 m-1 bg-info text-on-info radius text-center fw-bold">.flex-col-3</div>
+            <div class="flex-col-9 p-2 m-1 bg-mid text-on-mid radius text-center fw-bold">.flex-col-9</div>
+        </div>
+    </div>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full mt-3">
+<code>
+&lt;!-- Using Flex Columns with Wrap and Gaps --&gt;
+&lt;div class="flex flex-wrap"&gt;
+    &lt;div class="flex-col-8"&gt; Main Content &lt;/div&gt;
+    &lt;div class="flex-col-4"&gt; Sidebar &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">2. Alignment & Centering</h3>
+    <p class="fs-base text-on-surface mb-4">
+        MadenCSS simplifies positioning with intuitive alignment classes for both axes.
+    </p>
+
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">The "Magic" Center</h4>
+    <p class="fs-base text-on-surface mb-3">
+        Use <code class="bg-background radius p-1">.flex-center</code> to perfectly align content both horizontally and vertically.
+    </p>
+
+    <div class="flex-center p-5 bg-mid radius mb-4">
+        <div class="bg-surface text-on-surface radius shadow-normal p-6">
+            Perfectly Centered
+        </div>
+    </div>
+
+<pre class="bg-surface text-on-surface p-2 radius-md">
+    <code>
+&lt;div class=&quot;flex-center p-5 bg-mid radius mb-4&quot;&gt;
+    &lt;div class=&quot;bg-surface text-on-surface radius shadow-normal p-6&quot;&gt;
+        Perfectly Centered
+    &lt;/div&gt;
+&lt;/div&gt;        
+    </code>
+</pre>
+
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">Justify</h4>
+    <p class="fs-sm mb-2 opacity-7">Justify Start (.flex-justify-start)</p>
+    <div class="flex flex-justify-start p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Justify</div>
+        <div class="bg-primary radius p-2 m-1">Content</div>
+        <div class="bg-primary radius p-2 m-1">Start</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Justify End (.flex-justify-end)</p>
+    <div class="flex flex-justify-end p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Justify</div>
+        <div class="bg-primary radius p-2 m-1">Content</div>
+        <div class="bg-primary radius p-2 m-1">End</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Justify Center (.flex-justify-center)</p>
+    <div class="flex flex-justify-center p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Justify</div>
+        <div class="bg-primary radius p-2 m-1">Content</div>
+        <div class="bg-primary radius p-2 m-1">Center</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Justify Between (.flex-justify-between)</p>
+    <div class="flex flex-justify-between p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Justify</div>
+        <div class="bg-primary radius p-2 m-1">Content</div>
+        <div class="bg-primary radius p-2 m-1">End</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Justify Around (.flex-justify-around)</p>
+    <div class="flex flex-justify-around p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Justify</div>
+        <div class="bg-primary radius p-2 m-1">Content</div>
+        <div class="bg-primary radius p-2 m-1">End</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Align Start (.flex-align-start)</p>
+    <div class="height-3xl flex flex-align-start p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Flex</div>
+        <div class="bg-primary radius p-2 m-1">Align</div>
+        <div class="bg-primary radius p-2 m-1">Start</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Align Center (.flex-align-center)</p>
+    <div class="height-3xl flex flex-align-center p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Flex</div>
+        <div class="bg-primary radius p-2 m-1">Align</div>
+        <div class="bg-primary radius p-2 m-1">Center</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Align End (.flex-align-end)</p>
+    <div class="height-3xl flex flex-align-end p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Flex</div>
+        <div class="bg-primary radius p-2 m-1">Align</div>
+        <div class="bg-primary radius p-2 m-1">End</div>
+    </div>
+
+    <p class="fs-sm mb-2 opacity-7">Align Stretch (.flex-align-stretch)</p>
+    <div class="height-3xl flex flex-align-stretch p-4 bg-surface radius border text-center mb-4">
+        <div class="bg-primary radius p-2 m-1">Flex</div>
+        <div class="bg-primary radius p-2 m-1">Align</div>
+        <div class="bg-primary radius p-2 m-1">Stretch</div>
+    </div>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">3. Dynamic Flex Behavior</h3>
+
+    <p class="fs-base text-on-surface mb-4">
+        Dynamic Flex utilities allow elements to grow, shrink, or remain fixed based on available space.
+        This makes Flex ideal for toolbars, navigation bars, cards, and component-level layouts.
+    </p>
+
+    <!-- 3.1 Flexible Growth -->
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">3.1 Flexible Growth (.flex-1)</h4>
+    <p class="fs-base text-on-surface mb-3">
+        Use <code class="bg-background radius p-1">.flex-1</code> to make an element fill all remaining
+        available space inside a flex container.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="flex flex-align-center p-2 bg-background radius">
+            <div class="p-2 bg-primary text-on-primary radius">Logo</div>
+            <div class="flex-1 p-2 bg-mid text-on-mid radius text-center fw-bold">
+                Flexible Content (.flex-1)
+            </div>
+            <div class="p-2 bg-success text-on-success radius">Button</div>
+        </div>
+    </div>
+
+    <pre class="bg-surface text-on-surface p-2 radius-md mb-5">
+    <code>
+    &lt;div class="flex"&gt;
+        &lt;div&gt;Logo&lt;/div&gt;
+        &lt;div class="flex-1"&gt;Flexible Content&lt;/div&gt;
+        &lt;div&gt;Button&lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+    </pre>
+
+    <!-- 3.2 Fixed Items -->
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">3.2 Fixed vs Flexible Items (.flex-none)</h4>
+    <p class="fs-base text-on-surface mb-3">
+        Elements marked with <code class="bg-background radius p-1">.flex-none</code> will never grow or shrink.
+        This is useful for icons, avatars, and fixed-size buttons.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="flex p-2 bg-background radius">
+            <div class="flex-none p-2 bg-primary text-on-primary radius">ICON</div>
+            <div class="flex-1 p-2 bg-mid text-on-mid radius">
+                This content grows to fill the remaining space
+            </div>
+        </div>
+    </div>
+
+    <pre class="bg-surface text-on-surface p-2 radius-md mb-5">
+    <code>
+    &lt;div class="flex"&gt;
+        &lt;div class="flex-none"&gt;ICON&lt;/div&gt;
+        &lt;div class="flex-1"&gt;Growing Content&lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+    </pre>
+
+    <!-- 3.3 Responsive Control -->
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">3.3 Responsive Control (.not-responsive)</h4>
+    <p class="fs-base text-on-surface mb-3">
+        By default, <code class="bg-background radius p-1">.flex-col-*</code> elements stack vertically on mobile.
+        Use <code class="bg-background radius p-1">.not-responsive</code> to prevent stacking.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="flex not-responsive bg-background p-2 radius">
+            <div class="flex-col-6 p-2 bg-primary text-on-primary radius text-center">
+                Stays Side-by-Side
+            </div>
+            <div class="flex-col-6 p-2 bg-success text-on-success radius text-center">
+                Even on Mobile
+            </div>
+        </div>
+    </div>
+
+    <pre class="bg-surface text-on-surface p-2 radius-md mb-5">
+    <code>
+    &lt;div class="flex not-responsive"&gt;
+        &lt;div class="flex-col-6"&gt;A&lt;/div&gt;
+        &lt;div class="flex-col-6"&gt;B&lt;/div&gt;
+    &lt;/div&gt;
+    </code>
+    </pre>
+
+    <!-- 3.4 Direction Control -->
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">3.4 Direction Control (.flex-col / .flex-row)</h4>
+    <p class="fs-base text-on-surface mb-3">
+        Control the flow direction of flex items using
+        <code class="bg-background radius p-1">.flex-col</code> or
+        <code class="bg-background radius p-1">.flex-row</code>.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <div class="flex flex-col bg-background p-3 radius">
+            <div class="p-2 bg-primary text-on-primary radius mb-1">Header</div>
+            <div class="p-2 bg-mid text-on-mid radius mb-1">Content</div>
+            <div class="p-2 bg-info text-on-info radius">Footer</div>
+        </div>
+    </div>
+
+<pre class="bg-surface text-on-surface p-2 radius-md">
+<code>
+&lt;div class="flex flex-col"&gt;
+    &lt;div&gt;Header&lt;/div&gt;
+    &lt;div&gt;Content&lt;/div&gt;
+    &lt;div&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+</section>
+<!--flex system section-->
