@@ -1,0 +1,131 @@
+<!--display & opacity section-->
+<section id="display" class="mt-7">
+  
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    👁️ Display & Opacity Utilities
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS provides simple and predictable utility classes to control
+    <span class="fw-bold">element visibility</span>,
+    <span class="fw-bold">layout behavior</span>, and
+    <span class="fw-bold">visual emphasis</span>.
+    These utilities allow you to show, hide, or subtly fade elements
+    without writing custom CSS.
+  </p>
+
+  <!-- Display utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Display Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Display utilities control how an element participates in the layout flow.
+      They are commonly used for toggling visibility, inline behavior,
+      or layout adjustments.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Block</p>
+        <p class="fs-sm opacity-75 mb-2">
+          The element takes the full width and starts on a new line.
+        </p>
+        <code class="fs-sm">.block</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Inline</p>
+        <p class="fs-sm opacity-75 mb-2">
+          The element flows inline with text and ignores width/height.
+        </p>
+        <code class="fs-sm">.inline</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Inline Block</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Inline behavior with width and height support.
+        </p>
+        <code class="fs-sm">.inline-block</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Hidden</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Completely removes the element from layout and visibility.
+        </p>
+        <code class="fs-sm">.hidden</code>
+      </div>
+
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;div class="block"&gt;Block element&lt;/div&gt;
+&lt;span class="inline"&gt;Inline text&lt;/span&gt;
+&lt;div class="inline-block"&gt;Inline block&lt;/div&gt;
+&lt;div class="hidden"&gt;This will not be visible&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Tip:</strong> Use <code class="bg-background radius p-1">.hidden</code>
+      for conditional visibility instead of removing elements from the DOM.
+    </p>
+  </div>
+
+  <!-- Opacity utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      2. Opacity Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Opacity utilities allow you to visually de-emphasize elements,
+      create disabled states, or layer content without affecting layout.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-25 text-center">
+        <p class="fw-bold">opacity-25</p>
+      </div>
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-50 text-center">
+        <p class="fw-bold">opacity-50</p>
+      </div>
+
+      <div class="col-4 p-4 bg-primary text-on-primary radius opacity-75 text-center">
+        <p class="fw-bold">opacity-75</p>
+      </div>
+
+      <div class="col-6 p-4 bg-primary text-on-primary radius opacity-100 text-center">
+        <p class="fw-bold">opacity-100</p>
+      </div>
+
+      <div class="col-6 p-4 bg-primary text-on-primary radius opacity-0 text-center">
+        <p class="fw-bold">opacity-0</p>
+      </div>
+
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;button class="opacity-50"&gt;Disabled-like button&lt;/button&gt;
+&lt;p class="opacity-75"&gt;Secondary text&lt;/p&gt;
+&lt;div class="opacity-0"&gt;Invisible but still in layout&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Note:</strong> Unlike <code class="bg-background radius p-1">.hidden</code>,
+      opacity utilities do <strong>not</strong> remove elements from the layout.
+      The element remains interactive unless combined with other utilities.
+    </p>
+  </div>
+
+</section>
+<!--display & opacity section-->
