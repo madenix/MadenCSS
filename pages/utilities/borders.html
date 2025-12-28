@@ -1,0 +1,194 @@
+<!--border, shadow section-->
+<section id="borders" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    🧱 Borders, Radius & Shadows
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS offers <strong>semantic</strong> and <strong>utility-first</strong> classes for borders, corner rounding (radius), and shadow effects. 
+    This structure allows you to create consistent and scalable user interfaces.
+  </p>
+
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Radius
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Radius classes allow you to quickly control the corner rounding of elements. 
+      Default values are defined in the <code class="bg-background radius p-1">maden-config.css</code> file.
+    </p>
+
+    <div class="grid grid-gap-3 mb-4">
+      <div class="col-4 p-4 bg-background text-on-background radius-xsm text-center">radius-xsm</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-sm text-center">radius-sm</div>
+      <div class="col-4 p-4 bg-background text-on-background radius text-center">radius</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-md text-center">radius-md</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-lg text-center">radius-lg</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-xl text-center">radius-xl<br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-2xl text-center">radius-2xl<br/><br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-3xl text-center">radius-3xl</div>
+      <div class="col-4 p-4 bg-background text-on-background radius-4xl text-center">radius-4xl<br/><br/><br/><br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-5xl text-center">radius-5xl<br/><br/><br/><br/><br/><br/></div>
+      <div class="col-4 p-4 bg-background text-on-background radius-full text-center">radius-full</div>
+    </div>
+
+    <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class=&quot;radius-xsm&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-md&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-full&quot;&gt;...&lt;/div&gt;</code>
+</pre>
+
+<p class="fs-base text-on-surface mb-3">
+  By default, radius utilities apply the selected radius value to all corners.
+  If a directional radius class is provided, the radius is applied only to the specified corner/corners.
+</p>
+
+<div class="grid grid-gap-3 mb-4">
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tl text-center">
+    radius-lg radius-tl
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-tr text-center">
+    radius-lg radius-tr
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-br text-center">
+    radius-lg radius-br
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-lg radius-bl text-center">
+    radius-lg radius-bl
+  </div>
+  <div class="col-4 p-4 bg-background text-on-background radius-2xl radius-tl radius-br text-center">
+    radius-2xl radius-tl radius-br
+  </div>
+</div>
+
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class=&quot;radius-lg radius-tl&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-tr&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-br&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;radius-lg radius-bl&quot;&gt;...&lt;/div&gt;</code>
+</pre>
+
+  </div>
+
+<div class="p-5 bg-surface radius shadow-light mb-4">
+  <h3 class="fs-lg fw-bold mb-3 text-primary">
+    2. Borders
+  </h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    MadenCSS provides <strong>atomic and semantic utility classes</strong> to control border thickness and direction. 
+    Border weights are centrally defined in the <code class="bg-background radius p-1">maden-config.css</code> file.
+  </p>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">Border Thicknesses</h4>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin text-center">border-thin</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-normal text-center">border-normal</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thick text-center">border-thick</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-heavy text-center">border-heavy</div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full mb-4">
+<code>&lt;div class="border-full border-thick p-4"&gt;Thick Border&lt;/div&gt;</code>
+  </pre>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">Border Directions</h4>
+
+  <p class="fs-base text-on-surface mb-3">
+    Borders can be applied to specific directions only. 
+    This allows you to create more controlled dividers and layout boundaries.
+  </p>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-t border-normal text-center">border-t</div>
+    <div class="col-3 p-3 bg-background text-on-background border-r border-normal text-center">border-r</div>
+    <div class="col-3 p-3 bg-background text-on-background border-b border-normal text-center">border-b</div>
+    <div class="col-3 p-3 bg-background text-on-background border-l border-normal text-center">border-l</div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full mb-4">
+<code>&lt;div class="border-b border-thin p-4"&gt;Bottom Border Only&lt;/div&gt;</code>
+  </pre>
+
+  <h4 class="fs-base fw-semibold mb-2 text-on-surface">Removing Borders</h4>
+
+  <p class="fs-base text-on-surface mb-3">
+    The <code class="bg-background radius p-1">border-none</code> class completely removes all borders from an element.
+  </p>
+
+  <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="border-0 p-4"&gt;No Border&lt;/div&gt;</code>
+  </pre>
+
+  <p class="fs-sm text-on-surface opacity-7 mt-3">
+    <strong>Note:</strong> To change border thickness values, it is recommended to update the CSS variables 
+    (<code class="bg-background radius p-1">--border-thin</code>, <code class="bg-background radius p-1">--border-normal</code>, etc.) directly.
+  </p>
+</div>
+
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+  <h3 class="fs-lg fw-bold mb-3 text-primary">
+    3. Border Colors
+  </h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    Border colors are based on MadenCSS's semantic color palette. 
+    These classes allow you to set border colors quickly and consistently.
+  </p>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-primary text-center">border-primary</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-success text-center">border-success</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-warning text-center">border-warning</div>
+    <div class="col-3 p-3 bg-background text-on-background border-full border-thin border-danger text-center">border-danger</div>
+  </div>
+
+  <div class="grid grid-gap-3 mb-4">
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-info text-center">border-info</div>
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-dark text-center">border-dark</div>
+    <div class="col-4 p-3 bg-background text-on-background border-full border-thin border-mid text-center">border-mid</div>
+  </div>
+
+  <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="border-full border-normal border-primary p-4"&gt;Primary Colored Border&lt;/div&gt;</code>
+  </pre>
+
+  <p class="fs-sm text-on-surface opacity-7 mt-3">
+    <strong>💡</strong> Border colors are directly linked to theme color variables 
+    (<code class="bg-background radius p-1">--primary</code>, <code class="bg-background radius p-1">--success</code>, etc.). 
+    Border colors update automatically when the theme is changed.
+  </p>
+</div>
+
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      4. Shadows
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Shadow classes are used to enhance surface hierarchy and perception of depth. 
+      Shadow intensities are centrally defined.
+    </p>
+
+    <div class="grid grid-gap-3 mb-4">
+      <div class="col-4 p-4 bg-background text-on-background shadow-light radius text-center">shadow-light</div>
+      <div class="col-4 p-4 bg-background text-on-background shadow-normal radius text-center">shadow-normal</div>
+      <div class="col-4 p-4 bg-background text-on-background shadow-strong radius text-center">shadow-strong</div>
+    </div>
+
+    <pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;div class="p-4 bg-surface shadow-normal radius"&gt;Elevated Card&lt;/div&gt;</code>
+    </pre>
+  </div>
+
+  <div class="fs-base bg-info text-on-info p-3 mt-4 radius">
+    <strong>💡 Tip:</strong> To change radius and shadow values, it is recommended to update the CSS variables in 
+    <code class="bg-background text-on-background radius p-1">maden-config.css</code> instead of the utility classes.
+  </div>
+
+</section>
+<!--border, shadow section-->
