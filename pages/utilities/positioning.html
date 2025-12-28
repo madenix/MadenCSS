@@ -1,0 +1,155 @@
+<!--positioning section-->
+<section id="positioning" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">
+    📐 Positioning
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS provides positioning utilities that allow precise control over
+    <span class="fw-bold">element placement.</span>
+    These utilities are designed to be predictable, composable,
+    and easy to reason about when building complex layouts.
+  </p>
+
+  <!-- Position utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      1. Position Utilities
+    </h3>
+
+    <pre class="bg-background text-on-background p-2"><code>
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+.sticky   { position: sticky; }
+
+.top-0    { top: 0; }
+.right-0  { right: 0; }
+.bottom-0 { bottom: 0; }
+.left-0   { left: 0; }
+
+.translate-top-right {top: 0; right: 0; transform: translate(50%, -50%);}
+.translate-top-left {top: 0; left: 0; transform: translate(-50%, -50%);}
+.translate-bottom-right {bottom: 0; right: 0; transform: translate(50%, 50%);}
+.translate-bottom-left {bottom: 0; left: 0;transform: translate(-50%, 50%);}
+.translate-center {top: 50%; left: 50%;transform: translate(-50%, -50%);}
+    </code></pre>
+
+
+
+    <p class="fs-base text-on-surface mb-3">
+      Position utilities define how an element is positioned in the document flow.
+      They are commonly used for overlays, badges, tooltips, sticky headers,
+      and floating UI elements.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Relative</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Establishes a positioning context for absolutely positioned children.
+        </p>
+        <code class="fs-sm">.relative</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Absolute</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Removes the element from normal flow and positions it relative
+          to the nearest positioned ancestor.
+        </p>
+        <code class="fs-sm">.absolute</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Fixed</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Positions the element relative to the viewport.
+          Commonly used for modals and floating actions.
+        </p>
+        <code class="fs-sm">.fixed</code>
+      </div>
+
+      <div class="col-6 p-4 bg-background radius shadow-light">
+        <p class="fw-bold mb-2">Sticky</p>
+        <p class="fs-sm opacity-75 mb-2">
+          Switches between relative and fixed positioning
+          based on scroll position.
+        </p>
+        <code class="fs-sm">.sticky</code>
+      </div>
+
+    </div>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Tip:</strong> Absolute positioning requires a parent element
+      with <code class="bg-background radius p-1">.relative</code>
+      to ensure predictable placement.
+    </p>
+  </div>
+
+  <!-- Offset & translate utilities -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">
+      2. Offset & Translate Utilities
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Offset utilities control the distance from the edges of the containing block,
+      while translate helpers simplify common alignment patterns such as centering
+      or corner positioning.
+    </p>
+
+    <div class="bg-background radius shadow-light relative height-3xl">
+        <div class="absolute top-0 right-0 bg-primary text-on-primary p-1">TR</div>
+        <div class="absolute top-0 left-0 bg-primary text-on-primary p-1">TL</div>
+        <div class="absolute bottom-0 right-0 bg-primary text-on-primary p-1">BR</div>
+        <div class="absolute bottom-0 left-0 bg-primary text-on-primary p-1">BL</div>
+    </div>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>
+&lt;div class=&quot;relative&quot;&gt;
+    &lt;div class=&quot;absolute top-0 right-0&quot;&gt;TR&lt;/div&gt;
+    &lt;div class=&quot;absolute top-0 left-0&quot;&gt;TL&lt;/div&gt;
+    &lt;div class=&quot;absolute bottom-0 right-0&quot;&gt;BR&lt;/div&gt;
+    &lt;div class=&quot;absolute bottom-0 left-0&quot;&gt;BL&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-base text-on-surface opacity-7 mt-6">
+      <strong>💡</strong> Translate utilities combine positioning and transform
+      to achieve pixel-perfect alignment without manual calculations.
+    </p>
+
+
+    <div class="bg-background radius shadow-light relative height-3xl mt-5">
+        <div class="absolute translate-top-right bg-primary text-on-primary p-1">TR</div>
+        <div class="absolute translate-top-left bg-primary text-on-primary p-1">TL</div>
+        <div class="absolute translate-bottom-right bg-primary text-on-primary p-1">BR</div>
+        <div class="absolute translate-bottom-left  bg-primary text-on-primary p-1">BL</div>
+        <div class="absolute translate-center bg-primary text-on-primary p-1">.translate-center</div>
+        <div class="absolute translate-top-center bg-primary text-on-primary p-1">.translate-top-center</div>
+        <div class="absolute translate-bottom-center bg-primary text-on-primary p-1">.translate-bottom-center</div>
+    </div>
+
+
+    <pre class="p-3 bg-background radius text-on-background width-full"><code>
+&lt;div class=&quot;relative height-3xl&quot;&gt;
+    &lt;div class=&quot;absolute translate-top-right&quot;&gt;TR&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-top-left&quot;&gt;TL&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-right&quot;&gt;BR&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-left&quot;&gt;BL&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-center&quot;&gt;.translate-center&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-top-center&quot;&gt;.translate-top-center&lt;/div&gt;
+    &lt;div class=&quot;absolute translate-bottom-center&quot;&gt;.translate-bottom-center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+  </div>
+
+</section>
+<!--positioning section -->
