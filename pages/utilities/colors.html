@@ -1,0 +1,121 @@
+<!--colors section-->
+<section id="colors" class="mt-7">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">🎨 Color Utility Classes (bg-* and text-*)</h2>
+    
+    <p class="fs-lg text-on-surface mb-6">
+        MadenCSS provides simple, atomic color classes designed to quickly style your interface's background and text color. 
+        All these classes use the CSS variables (<code class="bg-background radius p-1">--primary</code>, <code class="bg-background radius p-1">--surface</code>, etc.) that you defined in the <code class="bg-background radius p-1">maden-config.css</code> file.
+    </p>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Semantic Colors (Purpose-Driven)</h3>
+    <p class="fs-base text-on-surface mb-4">
+        These colors represent meaning within an interface (such as success, warning, or error). 
+        They can be used for both background (<code class="bg-background radius p-1">bg-*</code>) and text color (<code class="bg-background radius p-1">text-on-*</code>). 
+        Text colors are automatically designed to be high-contrast against their corresponding background.
+    </p>
+
+    <div class="grid grid-gap-4 mb-5">
+        
+        <div class="col-4 p-4 bg-primary text-on-primary radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Primary</p>
+            <p class="fs-sm opacity-7">Main accent, buttons, links.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-primary text-on-primary</code></p>
+        </div>
+
+        <div class="col-4 p-4 bg-success text-on-success radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Success</p>
+            <p class="fs-sm opacity-7">Successful operations, confirmations.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/>  <code class="fw-normal">bg-success text-on-success</code></p>
+        </div>
+
+        <div class="col-4 p-4 bg-danger text-on-danger radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Danger</p>
+            <p class="fs-sm opacity-7">Errors, critical actions.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/>  <code class="fw-normal">bg-danger text-on-danger</code></p>
+        </div>
+
+        <div class="col-4 p-4 bg-warning text-on-warning radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Warning</p>
+            <p class="fs-sm opacity-7">Important alerts, attention grabbing.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/>  <code class="fw-normal">bg-warning text-on-warning</code></p>
+        </div>
+        
+        <div class="col-4 p-4 bg-info text-on-info radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Info</p>
+            <p class="fs-sm opacity-7">Informational notes.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/>  <code class="fw-normal">bg-info text-on-info</code></p>
+        </div>
+
+    </div>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">2. Surface and Neutral Colors (Gray Tones & Surfaces)</h3>
+    <p class="fs-base text-on-surface mb-4">
+        These classes are used for the general layout of the page, backgrounds, cards, and grayscale elements.
+    </p>
+    
+    <div class="grid grid-gap-4 mb-5">
+        
+        <div class="col-6 p-4 bg-background text-on-background radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Background</p>
+            <p class="fs-sm opacity-7">The main page background.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-background text-on-background</code></p>
+        </div>
+
+        <div class="col-6 p-4 bg-surface text-on-surface radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Surface</p>
+            <p class="fs-sm opacity-7">Cards, panels, components.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-surface text-on-surface</code></p>
+        </div>
+
+        <div class="col-6 p-4 bg-mid text-on-mid radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Mid</p>
+            <p class="fs-sm opacity-7">Secondary text, dividing lines.</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-mid text-on-mid</code></p>
+        </div>
+
+        <div class="col-6 p-4 bg-light text-on-light radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Light</p>
+            <p class="fs-sm opacity-7">Light gray, form fields (in Light Theme).</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-light text-on-light</code></p>
+        </div>
+
+        <div class="col-6 p-4 bg-dark text-on-dark radius shadow-light text-center">
+            <p class="fs-lg fw-bold">Dark</p>
+            <p class="fs-sm opacity-7">Dark gray, form fields (in Dark Theme).</p>
+            <p class="fs-xs fw-medium mt-1">Classes:<br/> <code class="fw-normal">bg-dark text-on-dark</code></p>
+        </div>
+    </div>
+
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">3. Usage Examples</h3>
+    
+    <p class="fs-base text-on-surface mb-3">
+        Use the <code class="bg-background radius p-1">bg-*</code> utility class to set the background color, and the <code class="bg-background radius p-1">text-*</code> class to set the text color:
+    </p>
+
+    <pre class="p-3 bg-surface radius text-on-background width-full" rows="10">
+<code>
+&lt;!-- Set the background color to Primary --&gt;
+&lt;div class="p-4 bg-primary text-on-primary radius"&gt;
+    This is a box with the Primary color.
+&lt;/div&gt;
+
+&lt;!-- Set the text color to Danger --&gt;
+&lt;p class="fs-lg text-danger fw-bold"&gt;
+    Error! Please check the form.
+&lt;/p&gt;
+
+&lt;!-- Use the Surface color --&gt;
+&lt;div class="p-3 bg-surface text-on-surface radius shadow-light"&gt;
+    This is a Card or Panel surface.
+&lt;/div&gt;
+</code></pre>
+
+
+    <div class="fs-base bg-info text-on-info p-3 mt-4 radius">
+        <span class="fw-bold">💡 Note:</span> When using a <code class="bg-background text-on-background radius p-1">bg-*</code> class, 
+        remember to add the corresponding high-contrast <code class="bg-background text-on-background radius p-1">text-on-*</code> class 
+        (e.g., <code class="bg-background text-on-background radius p-1">text-on-primary</code>) to automatically ensure proper text color contrast.
+    </div>
+</section>
+<!--colors section-->
