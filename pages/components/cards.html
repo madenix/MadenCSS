@@ -1,0 +1,282 @@
+<!-- cards section -->
+<section id="cards" class="mt-7">
+
+  <h2 class="fs-xl fw-black mb-2 text-on-background">🃏 Cards</h2>
+
+  <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">cards.css</code> must be included to use these components.
+  </div>
+
+  <p class="fs-lg text-on-surface mb-6">
+    Cards are flexible container components used to group related content such as text,
+    images, actions, or metadata. MadenCSS cards are designed to work seamlessly with
+    utility classes while providing a clean and consistent structure.
+  </p>
+
+  <!-- Basic Card -->
+  <div class="p-5 radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">1. Basic Card Structure</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      The base card consists of a <code class="bg-background radius p-1">.card</code> wrapper
+      and optional structural sections:
+      <code class="bg-background radius p-1">.card-header</code>,
+      <code class="bg-background radius p-1">.card-body</code>,
+      <code class="bg-background radius p-1">.card-footer</code>.
+    </p>
+
+    <div class="card card-shadow">
+      <div class="card-header fs-xl">Card Header</div>
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+      </div>
+      <div class="card-footer text-primary">Card Footer</div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow"&gt;
+  &lt;div class="card-header fs-xl"&gt;Card Header&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+  &lt;div class="card-footer"&gt;Card Footer&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <!-- Card with Image -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">2. Card with Image</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Cards support full-width images using the
+      <code class="bg-background radius p-1">.card-img</code> utility.
+      Images automatically scale and maintain aspect ratio.
+    </p>
+
+    <div class="card card-shadow max-width-2xs">
+      <img src="https://picsum.photos/600/300" class="card-img" alt="Card image">
+      <div class="card-body">
+        Image based card content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow max-width-2xs"&gt;
+  &lt;img src="image.jpg" class="card-img" alt=""&gt;
+  &lt;div class="card-body"&gt;
+    Image based card content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+
+  <div class="card card-shadow max-width-2xs">
+    <img src="https://picsum.photos/600/300" class="card-img" alt="Card image">
+    <div class="card-header fs-xl">Product name</div>
+    <div class="card-body">
+      Product information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+    </div>
+    <div class="card-footer flex flex-justify-between">
+      <span class="text-primary fs-xxl">$15</span>
+      <button class="btn btn-primary">Add To Chart</button>
+    </div>
+  </div>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+  <code>
+&lt;div class="card card-shadow max-width-2xs"&gt;
+  &lt;img src="https://picsum.photos/600/300" class="card-img" alt="Card image"&gt;
+  &lt;div class="card-header fs-xl"&gt;Product name&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    Product information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin velit urna, volutpat sed eleifend eget, porttitor ut urna. 
+  &lt;/div&gt;
+  &lt;div class="card-footer flex flex-justify-between"&gt;
+    &lt;span class="text-primary fs-xxl"&gt;$15&lt;/span&gt;
+    &lt;button class="btn btn-primary"&gt;Add To Chart&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+
+
+  </div>
+
+  <!-- Card Variants -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">3. Card Variants & Effects</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Cards can be visually enhanced using modifier classes.
+      Shadow and border variations are optional and composable.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      <div class="col-4">
+        <div class="card card-shadow card-primary">
+          <div class="card-header">Primary Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-success">
+          <div class="card-header">Success Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-danger">
+          <div class="card-header">Danger Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-warning">
+          <div class="card-header">Warning Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="card card-shadow card-info">
+          <div class="card-header">Info Card</div>
+          <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow card-primary"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-success"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-danger"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-warning"&gt;...&lt;/div&gt;
+&lt;div class="card card-shadow card-info"&gt;...&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <!-- Flush Card -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">4. Flush (Borderless) Card</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Use <code class="bg-background radius p-1">.card-flush</code> to remove borders and shadows
+      for minimal or embedded layouts.
+    </p>
+
+    <div class="grid grid-gap-4 mb-4">
+      <div class="col-4">
+        <div class="card card-flush bg-surface">
+          <div class="card-body">
+            Borderless card appearance.
+          </div>
+        </div>
+      </div>
+    </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-flush"&gt;
+  &lt;div class="card-body"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+  </div>
+
+  <p class="bg-info text-on-info p-2 radius-md">
+    💡 MadenCSS provide structure, utilities provide flexibility.
+    Combine cards freely with grid, flex, spacing and typography utilities.
+  </p>
+
+
+    <!-- Custom Card -->
+  <div class="p-5 bg-surface radius shadow-light mb-4">
+    <h3 class="fs-lg fw-bold mb-3 text-primary">5. Custom Cards – Power of MadenCSS</h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      One of the strongest features of MadenCSS is its layered architecture.
+      Thanks to the <code class="bg-background radius p-1">@layer</code> design,
+      existing components can be safely extended or overridden
+      <strong>without breaking the core system files.</strong>.
+    </p>
+
+    <p class="fs-base text-on-surface mb-3">
+      By combining the base <code class="bg-background radius p-1">.card</code> component
+      with utility classes, you can create fully custom card designs
+      while still relying on the original structure.
+      No additional CSS files or custom styles are required.
+    </p>
+
+    <p class="fs-base text-on-surface fw-bold mb-4">
+      This is the power of MadenCSS.
+    </p>
+
+    <!-- Custom Card Example -->
+        <div class="card card-shadow card-info max-width-2xs">
+          <div class="card-header flex flex-justify-between flex-align-center">
+            <span class="fw-bold">Custom Card</span>
+            <span class="fs-sm opacity-7">Pro</span>
+          </div>
+
+          <div class="card-body">
+            <p class="fs-base mb-2">
+              This card demonstrates how existing card styles
+              can be customized using utilities only.
+            </p>
+            <p class="fs-sm opacity-7">
+              Layout, spacing, alignment and visuals are all composed
+              without touching the core CSS.
+            </p>
+          </div>
+
+          <div class="card-footer flex flex-justify-between flex-align-center">
+            <span class="fw-bold text-info">$29 / month</span>
+            <a href="#" class="p-2 bg-info text-on-info radius">Select</a>
+          </div>
+        </div>
+
+<pre class="bg-dark text-light p-4 radius-md">
+<code>&lt;div class="card card-shadow card-info"&gt;
+
+  &lt;div class="card-header flex flex-justify-between flex-align-center"&gt;
+    &lt;span class="fw-bold"&gt;Custom Card&lt;/span&gt;
+    &lt;span class="fs-sm opacity-7"&gt;Pro&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;p class="fs-base mb-2"&gt;
+      This card demonstrates how existing card styles
+      can be customized using utilities only.
+    &lt;/p&gt;
+    &lt;p class="fs-sm opacity-7"&gt;
+      Layout, spacing, alignment and visuals are all composed
+      without touching the core CSS.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card-footer flex flex-justify-between flex-align-center"&gt;
+    &lt;span class="fw-bold text-info"&gt;$29 / month&lt;/span&gt;
+    &lt;a href="#" class="p-2 bg-info text-on-info radius"&gt;Select&lt;/a&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code>
+</pre>
+
+    <p class="fs-sm text-on-surface opacity-7 mt-3">
+      <strong>Principle:</strong>
+      Components define structure, utilities define behavior.
+      Override visually, not architecturally.
+    </p>
+  </div>
+
+
+
+
+</section>
+<!-- cards section -->
