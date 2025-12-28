@@ -1,0 +1,189 @@
+<!--grid layout section-->
+<section id="layout" class="mt-7">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">📏 Layout & Grid System</h2>
+
+    <p class="fs-lg text-on-surface mb-6">
+        MadenCSS’s layout system combines **Layout Utilities** (such as centering and max-width control) with a fluid **12-Column Pure CSS Grid** to enable rapid prototyping and robust website structures.  
+        Instead of complex responsive class variants, the grid relies on a **single breakpoint** with an automatic stacking behavior.
+    </p>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Core Layout Utilities</h3>
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">Page Centering and Maximum Width</h4>
+    <p class="fs-base text-on-surface mb-3">
+        These utilities are used to horizontally center your content and prevent it from stretching too wide on large screens.
+    </p>
+
+    <div class="p-4 bg-mid text-on-mid radius text-center">
+        <div class="bg-primary text-on-primary p-2 radius max-width-md page-center">
+            Page centered using <code class="fw-bold">.max-width-md</code> and <code class="fw-bold">.page-center</code>
+        </div>
+        <p class="fs-sm mt-2 opacity-7">
+            All content is constrained within <code class="fw-bold">--max-width-lg</code> (default).
+        </p>
+    </div>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full mt-3">
+<code>
+&lt;!-- Values are sourced from maden-config.css --&gt;
+.max-width-lg { max-width: var(--max-width-lg); }
+.page-center  { margin-left: auto; margin-right: auto; }
+
+&lt;!-- Usage --&gt;
+&lt;div class="max-width-lg page-center"&gt;
+    Main page content goes here.
+&lt;/div&gt;
+</code></pre>
+    
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">2. 12-Column Grid System and Classes</h3>
+    <p class="fs-base text-on-surface mb-4">
+        By using the <code class="bg-background radius p-1">.grid</code> container, you create a layout divided into 12 equal columns.
+        Column widths are defined using <code class="radius p-1 text-primary">.col-*</code> classes.
+        For spacing (gaps), there are a total of 8 options available, ranging from <code class="text-primary">grid-gap-1</code> to 
+        <code class="text-primary">grid-gap-8</code>.
+    </p>
+
+    <h4 class="fs-lg fw-bold mt-4 text-on-background">Column Definitions (grid grid-gap-2)</h4>
+
+    <div>All column examples below are rendered inside a single .grid container to demonstrate real-world usage.</div>
+    
+    <div class="grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4 mt-2">
+        <div class="col-12 p-1 bg-mid text-on-mid radius fw-bold text-center">.col-12</div>
+
+        <div class="col-6 p-3 bg-primary text-on-primary radius text-center fw-bold">.col-6</div>
+        <div class="col-6 p-3 bg-success text-on-success radius text-center fw-bold">.col-6</div>
+
+        <div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold">.col-4</div>
+        <div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold">.col-4</div>
+        <div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold">.col-4</div>
+    </div>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full" rows="6">
+<code>
+&lt;div class="grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4"&gt;
+    &lt;div class="col-12 p-1 bg-mid text-on-mid radius fw-bold text-center"&gt;.col-12&lt;/div&gt;
+
+    &lt;div class="col-6 p-3 bg-primary text-on-primary radius text-center fw-bold"&gt;.col-6&lt;/div&gt;
+    &lt;div class="col-6 p-3 bg-success text-on-success radius text-center fw-bold"&gt;.col-6&lt;/div&gt;
+
+    &lt;div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold"&gt;.col-4&lt;/div&gt;
+    &lt;div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold"&gt;.col-4&lt;/div&gt;
+    &lt;div class="col-4 p-3 bg-info text-on-info radius text-center fw-bold"&gt;.col-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <h3>Page Layout Example: Sidebar Layout</h3>
+    <div class="grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4">
+        <div class="col-12 p-1 bg-mid text-on-mid radius fw-bold text-center">NAVBAR</div>
+        <div class="col-3 p-3 bg-primary text-on-primary radius text-center fw-bold">SIDEBAR</div>
+        <div class="col-9 p-3 bg-success text-on-success radius text-center fw-bold">CONTENT<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div>
+        <div class="col-12 p-3 bg-info text-on-info radius text-center fw-bold">Footer</div>
+    </div>
+
+    <div class="bg-surface text-on-surface p-2 shadow-light radius-md mb-2">
+<pre>
+<code>&lt;div class=&quot;grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4&quot;&gt;
+    &lt;div class=&quot;col-12 p-1 bg-mid text-on-mid radius fw-bold text-center&quot;&gt;
+        NAVBAR
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-3 p-3 bg-primary text-on-primary radius text-center fw-bold&quot;&gt;
+        SIDEBAR
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-9 p-3 bg-success text-on-success radius text-center fw-bold&quot;&gt;
+        CONTENT&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-12 p-3 bg-info text-on-info radius text-center fw-bold&quot;&gt;
+        Footer
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>        
+    </div>
+
+    <h3>Page Layout Example: Landing Page</h3>
+    <div class="grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4 mt-2">
+            <div class="col-12 p-1 bg-mid text-on-mid radius fw-bold text-center">NAVBAR</div>
+
+            <div class="col-6 p-3 bg-primary text-on-primary radius text-center fw-bold">CALL TO ACTION</div>
+            <div class="col-6 p-3 bg-success text-on-success radius text-center fw-bold">HERO ISLLUSTRATIO<br/><br/><br/><br/><br/><br/></div>
+
+            <div class="col-4 p-3 bg-primary text-on-primary radius text-center fw-bold">CARD<br/><br/><br/><br/></div>
+            <div class="col-4 p-3 bg-primary text-on-primary radius text-center fw-bold">CARD<br/><br/><br/><br/></div>
+            <div class="col-4 p-3 bg-primary text-on-primary radius text-center fw-bold">CARD<br/><br/><br/><br/></div>
+
+            <div class="col-12 p-3 bg-info text-on-info radius text-center fw-bold">Footer</div>
+    </div>
+
+<div class="bg-surface text-on-surface p-2 shadow-light radius-md mb-2">
+<pre><code>
+&lt;div class=&quot;grid grid-gap-2 p-4 bg-surface radius shadow-light mb-4 mt-2&quot;&gt;
+
+    &lt;div class=&quot;col-12 p-1 bg-mid text-on-mid radius fw-bold text-center&quot;&gt;
+        NAVBAR
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-6 p-3 bg-primary text-on-primary radius text-center fw-bold&quot;&gt;
+        CALL TO ACTION
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-6 p-3 bg-success text-on-success radius text-center fw-bold&quot;&gt;
+        HERO ISLLUSTRATIO&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-4 p-3 bg-primary text-on-primary radius text-center fw-bold&quot;&gt;
+        CARD&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-4 p-3 bg-primary text-on-primary radius text-center fw-bold&quot;&gt;
+        CARD&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-4 p-3 bg-primary text-on-primary radius text-center fw-bold&quot;&gt;
+        CARD&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;col-12 p-3 bg-info text-on-info radius text-center fw-bold&quot;&gt;
+        Footer
+    &lt;/div&gt;
+
+&lt;/div&gt;</code>
+</pre>
+</div>
+
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">3. Responsive Behavior (Breakpoint: 599px)</h3>
+    <p class="fs-base text-on-surface mb-4">
+        The grid system automatically applies an **auto-stacking** rule on all screens **599px and below**, ensuring mobile-friendly layouts by default.
+    </p>
+
+    <p>No breakpoint-specific column classes are required.</p>
+
+    <ul class="list-style-disc mx-6 my-1 fs-base text-on-surface">
+        <li class="mb-2">
+            <span class="fw-bold">Large Screens (&gt; 599px):</span>
+            Columns preserve their defined <code class="bg-background radius p-1">.col-*</code> widths.
+        </li>
+        <li class="mb-2">
+            <span class="fw-bold">Mobile Screens (≤ 599px):</span>
+            The grid switches to a single-column layout, and all columns expand to full width
+            (<code class="bg-background radius p-1">100%</code>).
+        </li>
+    </ul>
+
+    <h4 class="fs-lg fw-bold mt-5 text-on-background">Disabling Mobile Stacking (Opt-out)</h4>
+    <p class="fs-base text-on-surface mb-3">
+        If you want a grid to retain its 12-column structure even on mobile devices, add the
+        <code class="bg-background radius p-1">.not-responsive</code> class to the
+        <code class="bg-background radius p-1">.grid</code> container:
+    </p>
+
+    <pre class="p-3 bg-surface radius text-on-surface width-full mt-3" rows="4">
+<code>
+&lt;!-- This grid remains 4 / 8 columns even on mobile --&gt;
+&lt;div class="grid grid-gap-2 not-responsive"&gt;
+    &lt;div class="col-4"&gt;...&lt;/div&gt; 
+    &lt;div class="col-8"&gt;...&lt;/div&gt; 
+&lt;/div&gt;
+</code></pre>
+</section>
+<!--grid layout section -->
