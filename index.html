@@ -72,5 +72,19 @@
 </div> <!--page-->
   
 <script src="app.js"></script>
+
+ <!--close sidebar if click to links-->  
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const sidebarToggle = document.getElementById("sidebar-toggle");
+      const sidebarLinks = document.querySelectorAll(".sidebar-menu a");
+  
+      sidebarLinks.forEach(link => {
+          link.addEventListener("click", () => {
+              sidebarToggle.checked = false;
+          });
+      });
+  });
+</script>
 </body>
 </html>
