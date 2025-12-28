@@ -1,0 +1,98 @@
+<!--sidebar section-->
+<section id="sidebar" class="my-8">
+  <h2 class="fs-xl fw-bold mb-3 border-b border-light pb-2 text-primary">☰ Sidebar</h2>
+  <p class="text-mid">Modern, mobile-responsive sidebar component powered by pure CSS. Features a "sticky" layout for desktop and an "overlay backdrop" for mobile devices.</p>
+
+  <div class="grid grid-gap-4 my-3">
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">Sticky Behavior</p>
+      <p class="fs-sm">Remains fixed at the top of the viewport on desktop screens even when content is scrolled.</p>
+    </div>
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">Smart Backdrop</p>
+      <p class="fs-sm">Automatically closes the menu when clicking anywhere outside the sidebar on mobile.</p>
+    </div>
+    <div class="col-4 p-4 bg-surface radius-md border-thin border-light">
+      <p class="fw-bold text-primary mb-1">No JavaScript</p>
+      <p class="fs-sm">Developed entirely using the Checkbox Hack technique for maximum performance.</p>
+    </div>
+  </div>
+
+  <div class="card bg-dark text-on-dark mb-6">
+    <div class="card-header border-light">Basic Implementation</div>
+    <div class="card-body">
+
+<div class="bg-surface p-2 max-width-2xs">
+  <input type="checkbox" id="sidebar-demo" class="sidebar-toggle" hidden />
+  
+  <label for="sidebar-demo" class="sidebar-toggle-btn">☰ Menu</label>
+  
+  <label for="sidebar-demo" class="sidebar-backdrop"></label>
+  
+  <div class="sidebar-menu">
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">📊</span> Dashboard</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">👤</span> Profile</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">📩</span> Messages</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">🔔</span> Notifications</a>
+    <a class="mx-4 my-2 fs-sm fw-normal" href="#"><span class="">⚙️</span> Settings</a>
+  </div>
+</div>
+
+      <pre class="fs-sm"><code>&lt;div class="bg-surface p-2 sticky-sidebar"&gt;
+  &lt;!-- Toggle Control --&gt;
+  &lt;input type="checkbox" id="sidebar-demo" class="sidebar-toggle" hidden /&gt;
+  
+  &lt;!-- Mobile Trigger --&gt;
+  &lt;label for="sidebar-demo" class="sidebar-toggle-btn"&gt;&#9776; Menu&lt;/label&gt;
+  
+  &lt;!-- Overlay (Mobile Only) --&gt;
+  &lt;label for="sidebar-demo" class="sidebar-backdrop"&gt;&lt;/label&gt;
+  
+  &lt;!-- Menu Content --&gt;
+  &lt;div class="sidebar-menu"&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;📊 Dashboard&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;👤 Profile&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;📩 Messages&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;🔔 Notifications&lt;/a&gt;
+    &lt;a class="mx-4 my-2 fs-sm fw-normal" href="#"&gt;⚙️ Settings&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <p class="fs-sm">
+      <strong>Pro Tip:</strong> To prevent the menu from covering the entire screen on mobile, it is assigned a <code>max-height: 60vh</code>. Internal scrolling is automatically enabled for longer menus.
+    </p>
+  </div>
+
+  <div class="overflow-auto mt-6">
+    <table class="w-full text-left fs-sm">
+      <thead class="bg-dark text-on-dark">
+        <tr>
+          <th class="p-3">Class</th>
+          <th class="p-3">Description</th>
+        </tr>
+      </thead>
+      <tbody class="text-on-surface">
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sticky-sidebar</code></td>
+          <td class="p-3">Fixes the menu to the top using sticky positioning. If omitted, a static menu is rendered.</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sidebar-toggle-btn</code></td>
+          <td class="p-3">The button (Label) that toggles the menu on mobile. Automatically hidden on desktop.</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3"><code>.sidebar-backdrop</code></td>
+          <td class="p-3">A layer that darkens the background on mobile and closes the menu upon clicking.</td>
+        </tr>
+        <tr>
+          <td class="p-3"><code>.sidebar-menu</code></td>
+          <td class="p-3">The flexible vertical area containing navigation links and content.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!--sidebar section-->
