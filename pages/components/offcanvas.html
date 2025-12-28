@@ -1,0 +1,143 @@
+<!--offcanvas section-->
+<section id="offcanvas" class="mb-1">
+  <div class="mb-8">
+    <h2 class="fs-xl fw-bold mb-3 border-b border-light pb-2 text-primary">☰ Offcanvas</h2>
+    <p class="mb-4 text-on-surface">
+      The <strong>Offcanvas</strong> component allows you to build hidden sidebars for navigation, shopping carts, or settings that slide in from any edge of the screen. Built on the "Checkbox Hack" principle, it provides a <strong>pure CSS</strong> solution without requiring any JavaScript.
+    </p>
+  </div>
+
+  <div class="alert alert-info alert-outline mb-8">
+    <h3 class="fs-lg fw-bold mb-2 text-info">📁 File: offcanvas.css</h3>
+    <p class="fs-sm">
+      This component uses the <code>.offcanvas-toggle</code> (hidden checkbox) to manage state. The <code>.offcanvas-backdrop</code> provides a dimmed background that closes the panel when clicked.
+    </p>
+  </div>
+
+  <div class="mb-8">
+    <h3 class="fs-lg fw-bold mb-3 text-success">1. Left Direction (Default)</h3>
+    <p class="mb-3 fs-sm">The most common usage for mobile navigation menus.</p>
+    
+    <div class="p-5 bg-surface radius-lg border border-light mb-4">
+        <input type="checkbox" id="oc-demo-left" class="offcanvas-toggle">
+        <label for="oc-demo-left" class="btn btn-primary shadow-normal p-2">Open Left Panel</label>
+        
+        <label for="oc-demo-left" class="offcanvas-backdrop"></label>
+        
+        <div class="offcanvas bg-surface shadow-strong" data-direction="left">
+          <div class="p-4 flex flex-column">
+            <div class="flex flex-align-center flex-justify-between width-full border-b border-light pb-2 mb-2">
+              <span class="fw-bold fs-lg text-primary">MadenCSS</span>
+              <label for="oc-demo-left" class="btn btn-sm btn-primary">✕</label>
+            </div>
+            <p class="fs-sm">This panel slides from the left using <code>translateX(-100%)</code>.</p>
+          </div>
+        </div>
+    </div>
+
+<pre class="bg-dark text-on-dark p-4 radius-md overflow-auto"><code>&lt;div class="p-5 bg-surface radius-lg border border-light mb-4"&gt;
+    &lt;input type="checkbox" id="oc-demo-left" class="offcanvas-toggle"&gt;
+    &lt;label for="oc-demo-left" class="btn btn-primary shadow-normal p-2"&gt;Open Left Panel&lt;/label&gt;
+    
+    &lt;label for="oc-demo-left" class="offcanvas-backdrop"&gt;&lt;/label&gt;
+    
+    &lt;div class="offcanvas bg-surface shadow-strong" data-direction="left"&gt;
+      &lt;div class="p-4 flex flex-column"&gt;
+        &lt;div class="flex flex-align-center flex-justify-between width-full border-b border-light pb-2 mb-2"&gt;
+          &lt;span class="fw-bold fs-lg text-primary"&gt;MadenCSS&lt;/span&gt;
+          &lt;label for="oc-demo-left" class="btn btn-sm btn-primary"&gt;✕&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;p class="fs-sm"&gt;This panel slides from the left using &lt;code&gt;translateX(-100%)&lt;/code&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="mb-5">
+    <h3 class="fs-lg fw-bold mb-4 text-warning">2. Multiple Directions</h3>
+    <p class="mb-4 fs-sm italic">Use the <code>data-direction</code> attribute to change the sliding orientation.</p>
+
+    <div class="grid grid-gap-4">
+      <div class="p-4 border border-light radius-md bg-surface col-4">
+        <h4 class="fw-bold text-warning mb-2">Right Side</h4>
+        <div class="offcanvas-wrapper">
+          <input type="checkbox" id="oc-demo-right" class="offcanvas-toggle">
+          <label for="oc-demo-right" class="btn btn-outline-warning btn-sm w-full">Slide Right</label>
+          <label for="oc-demo-right" class="offcanvas-backdrop"></label>
+          <div class="offcanvas bg-surface shadow-strong" data-direction="right">
+            <div class="p-4">
+              <p class="p-2">Right-aligned content panel.</p>
+              <label for="oc-demo-right" class="btn btn-sm btn-danger mb-4">Close</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 border border-light radius-md bg-surface col-4">
+        <h4 class="fw-bold text-info mb-2">Top Side</h4>
+        <div class="offcanvas-wrapper">
+          <input type="checkbox" id="oc-demo-top" class="offcanvas-toggle">
+          <label for="oc-demo-top" class="btn btn-outline-info btn-sm w-full">Slide Top</label>
+          <label for="oc-demo-top" class="offcanvas-backdrop"></label>
+          <div class="offcanvas bg-surface shadow-strong" data-direction="top">
+            <div class="p-4 text-center">
+              <p class="fw-bold mb-2">System Notification</p>
+              <label for="oc-demo-top" class="btn btn-sm btn-info">Acknowledge</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 border border-light radius-md bg-surface col-4">
+        <h4 class="fw-bold text-danger mb-2">Bottom Side</h4>
+        <div class="offcanvas-wrapper">
+          <input type="checkbox" id="oc-demo-bottom" class="offcanvas-toggle">
+          <label for="oc-demo-bottom" class="btn btn-outline-danger btn-sm w-full">Slide Bottom</label>
+          <label for="oc-demo-bottom" class="offcanvas-backdrop"></label>
+          <div class="offcanvas bg-surface shadow-strong" data-direction="bottom">
+            <div class="p-4">
+              <p class="mb-4">Mobile-friendly action sheet.</p>
+              <label for="oc-demo-bottom" class="btn btn-dark p-2">Close Panel</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mt-8 overflow-auto border radius-md">
+    <table class="w-full text-left fs-sm">
+      <thead class="bg-dark text-on-dark">
+        <tr>
+          <th class="p-3">Direction</th>
+          <th class="p-3">Data Attribute</th>
+          <th class="p-3">Ideal Use Case</th>
+        </tr>
+      </thead>
+      <tbody class="text-on-surface">
+        <tr class="border-b border-light">
+          <td class="p-3 fw-medium">Left</td>
+          <td class="p-3"><code>data-direction="left"</code></td>
+          <td class="p-3 text-mid">Main navigation menus</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3 fw-medium">Right</td>
+          <td class="p-3"><code>data-direction="right"</code></td>
+          <td class="p-3 text-mid">Cart, User profiles</td>
+        </tr>
+        <tr class="border-b border-light">
+          <td class="p-3 fw-medium">Top</td>
+          <td class="p-3"><code>data-direction="top"</code></td>
+          <td class="p-3 text-mid">Alerts, Search bars</td>
+        </tr>
+        <tr>
+          <td class="p-3 fw-medium">Bottom</td>
+          <td class="p-3"><code>data-direction="bottom"</code></td>
+          <td class="p-3 text-mid">Mobile action sheets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!--offcanvas section-->
