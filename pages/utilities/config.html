@@ -1,0 +1,153 @@
+<!--config section-->
+<section id="config" class="mt-5">
+    <h2 class="fs-xl fw-black mb-2 text-on-background">⚙️ Customization (maden-config.css)</h2>
+
+    <p class="fs-lg text-on-surface mb-6">
+        <span class="text-primary fw-bold">maden-config.css</span> is the core file that centrally defines all the fundamental building blocks of MadenCSS. Everything, from the color palette and spacing system to font sizes, borders, and shadows, is defined as **CSS Variables** within the <code class="bg-background radius p-1">:root</code> block. By editing this single file, you can instantly adapt the entire system to your project's design language.
+    </p>
+
+    <div class="p-5 bg-surface radius shadow-light mb-4">
+        <h3 class="fs-lg fw-bold mb-3 text-primary">
+            1. Color Palette and Theming (Dark / Light Mode)
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            All color utility classes (e.g., <code class="bg-background radius p-1">bg-primary</code>, <code class="bg-background radius p-1">text-danger</code>) utilize these variables. For ensuring high contrast, the corresponding text color for each background is also defined using the <code class="bg-background radius p-1">--on-colorname</code> format.
+        </p>
+
+        <p class="fs-base text-on-surface mb-3 fw-bold">
+            Theme Support:
+        </p>
+        <p class="fs-sm text-on-surface mb-2">
+            The default values (`:root` block) hold the **Dark Theme** colors. Light theme colors are defined inside the <code class="bg-background radius p-1">html[data-theme="light"]</code> block, allowing for easy, zero-JavaScript theme switching.
+        </p>
+
+        <pre class="p-3 bg-background radius text-on-background width-full" rows="18">
+<code>
+:root{
+  <span class="text-success">/* Surfaces (Default: Dark Theme) */</span>
+  --background:   #0b1220;
+  --on-background:#ffffff;
+
+  --surface:      #0f172a;
+  --on-surface:   #e0e0e0;  
+  
+  <span class="text-success">/* Semantic Colors */</span>
+  --primary:      #f0bb0c; 
+  --on-primary:   #000000;
+
+  --success: #4caf50;
+  --on-success: #000;             
+  
+  --danger:    #dc3545;
+  --on-danger: #000;    
+  
+  <span class="text-danger">/* ... Other variables ... */</span>
+}
+
+<span class="text-success">/* Light Theme Configuration Example */</span>
+html[data-theme="light"] {
+  --background: #ffffff;
+  --on-background: #141414;
+  <span class="text-danger">/* ... Continued ... */</span>
+}
+</code></pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Customization:** To change the main accent color in the Dark theme, simply modify the <code class="bg-background radius p-1">--primary</code> variable within the <code class="bg-background radius p-1">:root</code> block.
+        </p>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-4">
+        <h3 class="fs-lg fw-bold mb-3 text-primary">
+            2. Spacing System and Max Widths
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS's entire spacing system is built on a <span class="text-primary fw-bold">4-pixel base unit</span>, defined by <code class="bg-background radius p-1">--spacing-unit</code>.
+        </p>
+        <p class="fs-base text-on-surface mb-3">
+            These variables determine the values for all margin, padding, and gap utility classes, such as <code class="bg-background radius p-1">m-1</code> (4px), <code class="bg-background radius p-1">p-3</code> (16px), and <code class="bg-background radius p-1">grid-gap-2</code> (8px).
+        </p>
+
+        <pre class="p-3 bg-background radius text-on-background width-full" rows="10">
+<code>
+:root{
+  <span class="text-success">/* Spacing (4px System) */</span>
+  --spacing-unit: 4px;
+  --spacing-1: calc(var(--spacing-unit) * 1);   <span class="text-info">/* 4px  -> Utility: p-1, m-1 */</span>
+  --spacing-3: calc(var(--spacing-unit) * 4);   <span class="text-info">/* 16px -> Utility: p-3, m-3 */</span>
+
+  <span class="text-success">/* Maximum Widths (Layout) */</span>
+  --max-width-lg: 1200px; <span class="text-info">/* Utility: max-width-lg, used with page-center. */</span>
+  --max-width-sm: 767px; 
+}
+</code></pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            <span class="fw-bold">Scaling:</span> Changing the <code class="bg-background radius p-1">--spacing-unit</code> variable allows you to rescale all spacing and gap values across the entire system from a single location.
+        </p>
+    </div>
+    
+    <div class="p-5 bg-surface radius shadow-light mb-4">
+        <h3 class="fs-lg fw-bold mb-3 text-primary">
+            3. Typography (Font Weights, Sizes, and Families)
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            Font weights (<code class="bg-background radius p-1">fw-thin</code> to <code class="bg-background radius p-1">fw-black</code>) and font families are defined here.
+        </p>
+        <p class="fs-base text-on-surface mb-3">
+            Font sizes (<code class="bg-background radius p-1">fs-sm</code> to <code class="bg-background radius p-1">fs-huge</code>) are defined using the modern **CSS <code class="bg-background radius p-1">clamp()</code>** function. This ensures that text scales fluidly and responsively based on the viewport size, providing superior readability across all devices.
+        </p>
+        <pre class="p-3 bg-background radius text-on-background width-full" rows="12">
+<code>
+  <span class="text-success">/* Font Weights */</span>
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900; <span class="text-info">/* Utility: fw-black */</span>
+  
+
+  <span class="text-success">/* Font Families */</span>
+  --font-family-base: system-ui, -apple-system, ... sans-serif;
+  --font-family-mono: 'SFMono-Regular', Consolas, ... monospace; <span class="text-info">/* For code blocks */</span>
+
+
+  <span class="text-success">/* .fs-sm    { font-size: clamp(var(--fs-sm-min), var(--fs-sm-fluid), var(--fs-sm-max)); } */</span>
+  <span class="text-success">/* Font Sizes (fs-xxl example) */</span>
+  --fs-xxl-min: 1.5rem;      
+  --fs-xxl-fluid: 2vw;       
+  --fs-xxl-max: 2.25rem;     <span class="text-info">/* Scales smoothly between these two limits based on viewport width. */</span>
+</code></pre>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-4">
+        <h3 class="fs-lg fw-bold mb-3 text-primary">
+            4. Borders, Radius, and Shadow Configuration
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS also provides semantic variables for customizing border styles, corner rounding, and box shadows.
+        </p>
+        
+        <pre class="p-3 bg-background radius text-on-background width-full" rows="18">
+<code>
+  <span class="text-success">/* ---------- Radius / Border-Radius ---------- */</span>
+  --radius-xsm: 2px;
+  --radius-sm:  4px;
+  --radius:     6px;  <span class="text-info">/* Utility: radius (Base) */</span>
+  --radius-lg:  12px;
+  --radius-full: 9999px; <span class="text-info">/* Utility: radius-full (Pill shape) */</span>
+
+  <span class="text-success">/* ---------- Border Widths ---------- */</span>
+  --border-thin: 1px;
+  --border-normal: 2px; 
+  --border-thick: 4px;  <span class="text-info">/* Utility: border-thick */</span>
+
+  <span class="text-success">/* ---------- Box Shadows ---------- */</span>
+  --shadow-light: 0 10px 30px rgba(0,0,0,.25); <span class="text-info">/* Utility: shadow-light */</span>
+  --shadow-normal: 0 10px 30px rgba(0,0,0,.40);
+  --shadow-strong: 0 10px 30px rgba(0,0,0,.60); <span class="text-info">/* Utility: shadow-strong */</span>
+</code></pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Usage:** If you need all corner radii in your project to be softer/sharper, you can globally adjust these variables. For instance, increasing the value of <code class="bg-background radius p-1">--radius</code> will increase all default rounding across the system.
+        </p>
+    </div>
+
+</section>
+<!--config section-->
