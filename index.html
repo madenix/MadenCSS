@@ -4,14 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MadenCSS Online Documentation</title>
-  <link rel="stylesheet" href="MadenStyles/v2/core.css" />
+  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="alert.css">
+  <link rel="stylesheet" href="buttons.css">
+  <link rel="stylesheet" href="modal.css">
+  <link rel="stylesheet" href="cards.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="offCanvas.css">
 </head>
 <body class="bg-background text-on-background">
   BODY
 
 <div class="grid max-width-lg page-center grid-gap-4">
-  PAGE
-</div>
+    <div class="col-3">
+      <!--sidebar-->
+      <div class="p-2 bg-surface text-on-surface radius-lg sticky-sidebar">
+          <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle" hidden />
+          <label for="sidebar-toggle" class="sidebar-toggle-btn">☰</label>
+          <label for="sidebar-toggle" class="sidebar-backdrop"></label>
+          <div class="sidebar-menu">
+  
+              <p class="mx-4 my-2 fs-lg fw-medium">🚀 Getting Started</p>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#introduction">Introduction</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#installation">Install</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#start">Quick Start</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#principles">Core Principles</a>
+  
+              <p class="mx-4 my-2 fs-lg fw-medium">⚙️ Utilities</p>
+              
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#config">Costumization</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#colors">Colors</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#theme">Theme</a>
+              
+              <hr class="mx-4 my-2 border-mid">
+              
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#layout">Grid Layout</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#flex">Flex system</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#spacing">Spacings</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#sizing">Sizing</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#typography">Typography</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#borders">Borders, Radius, Shadow</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#display">Display & Opacity</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#positioning">Position</a>
+              
+              <p class="mx-4 my-2 fs-lg fw-medium">🧩 Components</p>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#alerts">Alerts</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#buttons">Buttons</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#cards">Cards</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#forms">Forms</a>
+              
+              <hr class="mx-4 my-2 border-mid">
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#navbar">Navbar</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#modals">Modal</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#offcanvas">Offcanvas</a>
+              <a class="mx-4 my-2 fs-sm fw-normal" href="#sidebar">Sidebar</a>
+              <br /><br /><br />
+          </div>
+      </div>
+      <!--sidebar-->
+  </div>
+
+  <div class="col-9 p-4">
+    CONTENT
+  </div>
+  
+</div> <!--page-->
   
 <script src="app.js"></script>
 </body>
