@@ -1,0 +1,122 @@
+<!--modals section -->
+<section id="modals" class="mb-8">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">📌 Modals</h2>
+  <p class="mb-4 text-mid">Dynamic dialogs powered by the "Checkbox Hack". These components require <strong>zero JavaScript</strong> to function.</p>
+  
+  <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">modal.css</code> must be included to use this component.
+  </div>
+
+  <div class="mb-6 mt-3">
+    <h3 class="fs-lg fw-semibold mb-3">Basic Usage</h3>
+    <p class="mb-3 text-mid">A standard modal window. Ensure the <code>input</code> is placed directly before the <code>.modal</code> element.</p>
+    
+    <!--modal1 -->
+    <div class="p-4 bg-surface text-on-surface radius-md mb-3">
+      <label for="modal-demo" class="btn btn-primary p-2">Open Basic Modal</label>
+      <input type="checkbox" id="modal-demo" class="modalState" />
+      
+      <div class="modal">
+        <label for="modal-demo" class="modalBackground"></label>
+        
+        <div class="modalInner bg-surface p-3 radius-lg shadow-strong">
+          <div class="flex flex-justify-between">
+            <span class="fs-xxl fw-bold mb-3">Hello, MadenCSS!</span>
+            <label for="modal-demo" class="fs-xl px-2 fw-bold">X</label>
+          </div>
+          <p class="mb-4">This modal is controlled entirely via CSS using the <code>+</code> sibling selector.</p>
+          
+          <div class="flex flex-justify-end">
+            <label for="modal-demo" class="btn btn-dark p-2">Close Modal</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <pre class="bg-dark text-light p-4 radius-md">&lt;!--Basic Modal --&gt;
+&lt;div class="p-4 bg-surface text-on-surface radius-md mb-3"&gt;
+  &lt;label for="modal-demo" class="btn btn-primary p-2"&gt;Open Basic Modal&lt;/label&gt;
+  &lt;input type="checkbox" id="modal-demo" class="modalState" /&gt;
+  
+  &lt;div class="modal"&gt;
+    &lt;label for="modal-demo" class="modalBackground"&gt;&lt;/label&gt;
+    
+    &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong"&gt;
+      &lt;div class="flex flex-justify-between"&gt;
+        &lt;span class="fs-xxl fw-bold mb-3"&gt;Hello, MadenCSS!&lt;/span&gt;
+        &lt;label for="modal-demo" class="fs-xl px-2 fw-bold" style="cursor: pointer;"&gt;X&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p class="mb-4"&gt;This modal is controlled entirely via CSS using the &lt;code&gt;+&lt;/code&gt; sibling selector.&lt;/p&gt;
+      
+      &lt;div class="flex flex-justify-end"&gt;
+        &lt;label for="modal-demo" class="btn btn-dark p-2"&gt;Close Modal&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3">Nested Modals</h3>
+    <p class="mb-3 text-mid">To create nested modals, simply place a new <code>modalState</code> and <code>modal</code> pair inside the <code>modalInner</code> of the first one.</p>
+    
+    <div class="p-4 border border-light radius-md mb-3">
+      <label for="nested-1" class="btn btn-success p-2">Open Level 1</label>
+      <input type="checkbox" id="nested-1" class="modalState" />
+
+      <div class="modal">
+        <label for="nested-1" class="modalBackground"></label>
+        <div class="modalInner bg-surface p-3 radius-lg shadow-strong">
+          <div class="flex flex-justify-between">
+            <span class="fs-xxl fw-bold">Level 1</span>
+            <label for="nested-1" class="fs-xl px-2 fw-bold">X</label>
+          </div>
+          <p class="mb-4">Click below to open a second modal layer.</p>
+          
+          <label for="nested-2" class="btn btn-primary p-2">Open Level 2</label>
+          <input type="checkbox" id="nested-2" class="modalState" />
+          <div class="modal">
+            <label for="nested-2" class="modalBackground"></label>
+            <div class="modalInner bg-surface p-3 radius-lg shadow-strong border border-primary">
+              <h4 class="fs-xxl fw-bold text-primary mb-2">Level 2</h4>
+              <p class="mb-4">Stacked perfectly using independent states!</p>
+              <label for="nested-2" class="btn btn-danger btn-sm">Close</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;!-- Nested Modals Layered System --&gt;
+&lt;div class="p-4 border border-light radius-md mb-3"&gt;
+  &lt;label for="nested-1" class="btn btn-success p-2"&gt;Open Level 1&lt;/label&gt;
+  &lt;input type="checkbox" id="nested-1" class="modalState" /&gt;
+
+  &lt;div class="modal"&gt;
+    &lt;label for="nested-1" class="modalBackground"&gt;&lt;/label&gt;
+    &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong"&gt;
+      &lt;div class="flex flex-justify-between"&gt;
+        &lt;span class="fs-xxl fw-bold"&gt;Level 1&lt;/span&gt;
+        &lt;label for="nested-1" class="fs-xl px-2 fw-bold" style="cursor: pointer;"&gt;X&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;p class="mb-4"&gt;Click below to open a second modal layer.&lt;/p&gt;
+      
+      &lt;label for="nested-2" class="btn btn-primary p-2"&gt;Open Level 2&lt;/label&gt;
+      &lt;input type="checkbox" id="nested-2" class="modalState" /&gt;
+      
+      &lt;div class="modal"&gt;
+        &lt;label for="nested-2" class="modalBackground"&gt;&lt;/label&gt;
+        &lt;div class="modalInner bg-surface p-3 radius-lg shadow-strong border border-primary"&gt;
+          &lt;h4 class="fs-xxl fw-bold text-primary mb-2"&gt;Level 2&lt;/h4&gt;
+          &lt;p class="mb-4"&gt;Stacked perfectly using independent states!&lt;/p&gt;
+          &lt;label for="nested-2" class="btn btn-danger btn-sm"&gt;Close&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</section>
+<!--modals section -->
