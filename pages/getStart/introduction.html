@@ -1,182 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-  <div class="container">
-
-    <!-- Navbar -->
-    <div id="navbar"></div>
-
-    <!-- Grid Layout -->
-    <div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
-
-      <!-- Sidebar -->
-      <aside class="res-col-2 surface p-3">
-        <div id="leftMenu"></div>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="res-col-9 surface p-3 on-surface">
-        
-        <section>
-          <h2 class="text-primary">📦 .container</h2>
-          <p>
-            Centers the content within the page and limits its maximum width to 
-            <code>1600px</code> for better readability and alignment. The .container class uses margin: auto to center itself horizontally.
-          </p>
-        </section>
-
-        <section class="mt-3">
-          <h2 class="text-primary">📏 .row</h2>
-          <p>
-            Defines a horizontal flex container. Its child elements — typically columns — are arranged side by side using Flexbox.
-            The .row class uses flex-wrap: wrap to ensure that columns will wrap to the next line if they exceed the container width.
-          </p>
-        </section>
-
-        <section class="mt-3">
-          <h2 class="text-primary">🧱 .col Classes</h2>
-          <p>
-            This is a fixed 12-column layout system that does not respond to screen size. It is useful when you want columns to maintain a specific width, even on smaller screens.
-          </p>
-
-          <div class="row p-3 border on-primary mt-2 row-gutter-2">
-            <div class="col-1 success border">.col-1</div>
-            <div class="col-2 success border">.col-2</div>
-            <div class="col-3 success border">.col-3</div>
-            <div class="col-4 success border">.col-4</div>
-            <div class="col-5 success border">.col-5</div>
-            <div class="col-6 success border">.col-6</div>
-            <div class="col-7 success border">.col-7</div>
-            <div class="col-8 success border">.col-8</div>
-            <div class="col-9 success border">.col-9</div>
-            <div class="col-10 success border">.col-10</div>
-            <div class="col-11 success border">.col-11</div>
-            <div class="col-12 success border">.col-12</div>
-          </div>
-        </section>
-
-        <section class="mt-3">
-          <h2 class="text-primary">📱 .res-col-* Responsive Columns</h2>
-          <p>
-            
-            This responsive column system is ideal for mobile-friendly layouts. When the screen width is below <code>600px</code>, 
-            all <code>.res-col-*</code> classes will automatically expand to <strong>100%</strong> of their parent width.
-          </p>
-
-          <div class="row p-3 border mt-2 on-primary row-gutter-2">
-            <div class="res-col-1 success border">.res-col-1</div>
-            <div class="res-col-2 success border">.res-col-2</div>
-            <div class="res-col-3 success border">.res-col-3</div>
-            <div class="res-col-4 success border">.res-col-4</div>
-            <div class="res-col-5 success border">.res-col-5</div>
-            <div class="res-col-6 success border">.res-col-6</div>
-            <div class="res-col-7 success border">.res-col-7</div>
-            <div class="res-col-8 success border">.res-col-8</div>
-            <div class="res-col-9 success border">.res-col-9</div>
-            <div class="res-col-10 success border">.res-col-10</div>
-            <div class="res-col-11 success border">.res-col-11</div>
-            <div class="res-col-12 success border">.res-col-12</div>
-          </div>
-        </section>
-
-        <section class="mt-3">
-          <h2 class="text-primary">📱 .gutters</h2>
-          <p>
-            These utility classes control the spacing between columns inside a <code class="text-success">.row</code> using the CSS <code class="text-success">gap</code> property.  
-            The number in the class name determines the spacing size. This makes it easy to manage consistent spacing in your layout.
-            Row gutters apply spacing in both horizontal and vertical directions between columns.
-          </p>
-          <p>
-            📌 <b>Usage:</b><br />
-            Add one of the .row-gutter-* classes to a .row element.<br/>
-            <br/>
-            The number indicates the size of the horizontal and vertical spacing between columns (in rem units).<br/>
-            .row-gutter-0 { gap: 0; }<br/>
-            .row-gutter-1 { gap: 0.5rem; }   /* 8px */<br/>
-            .row-gutter-2 { gap: 1rem; }     /* 16px */<br/>
-            .row-gutter-3 { gap: 1.5rem; }   /* 24px */<br/>
-            .row-gutter-4 { gap: 2rem; }     /* 32px */<br/>
-          </p>
-          
-          <div class="row p-3 border mt-2 on-primary row-gutter-2">
-            <div class="res-col-3 success border">.row-gutter-2</div>
-            <div class="res-col-3 success border">.row-gutter-2</div>
-            <div class="res-col-3 success border">.row-gutter-2</div>
-            <div class="res-col-3 success border">.row-gutter-2</div>
-          </div>
-        </section>
-        <br/>
-        <textarea rows="7">
-<div class="row p-3 border mt-2 on-primary row-gutter-2">
-  <div class="res-col-3 success border">.row-gutter-2</div>
-  <div class="res-col-3 success border">.row-gutter-2</div>
-  <div class="res-col-3 success border">.row-gutter-2</div>
-  <div class="res-col-3 success border">.row-gutter-2</div>
-</div>
-        </textarea>
-        </section>
-
-        <section>
-          <h2 class="text-primary mt-3">🔄 .row Alignment Classes</h2>
-          <p>
-            These utility classes help control how the columns inside a <code class="text-success">.row</code> are aligned — both <b>horizontally</b> and <b>vertically</b> — using Flexbox.
-          </p>
-          <p><br/>
-              <b>Row Horizontal alignment</b><br/>
-              .row-items-hor-start   { justify-content: flex-start; }<br/>
-              .row-items-hor-center  { justify-content: center; }<br/>
-              .row-items-hor-end     { justify-content: flex-end; }<br/>
-              .row-items-hor-between { justify-content: space-between; }<br/>
-              .row-items-hor-around  { justify-content: space-around; }<br/>
-              <br/>
-              <b>Row Vertical alignment</b><br/>
-              .row-items-ver-start   { align-items: flex-start; }<br/>
-              .row-items-ver-center  { align-items: center; }<br/>
-              .row-items-ver-end     { align-items: flex-end; }<br/>
-              .row-items-ver-stretch { align-items: stretch; }<br/>
-          </p>
-          <br/>
-          **Below you can see a demonstration of centered column at main axis.
-          <div class="row border p-3 mt-1 row-items-hor-center">
-            <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis</div>    
-          </div>
-
-          <textarea rows="5" class="mt-1">
-<div class="row border p-3 mt-3 row-items-hor-center">
-  <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis</div>    
-</div>
-          </textarea>
-
-          <p class="mt-3">
-            **Below you can see a demonstration of centered column at vertical(cross) axis. 
-            Note that row has a certain amount of height. So you need to choose a horizontal alignment class too. 
-          </p>
-          <div class="row border p-3 mt-1 row-items-ver-center row-items-hor-center" style="height: 200px;">
-            <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis and aligned to center of vertical(cross) axis.</div>    
-          </div>
-
-          <textarea rows="5" class="mt-1">
-<div class="row border p-3 mt-3 row-items-ver-center row-items-hor-center" style="height: 200px;">
-  <div class="col-3 success border">Col-3 column aligned to center horizontal(main) axis and aligned to center of vertical(cross) axis.</div>    
-</div>
-          </textarea>
-        </section>
-      </main>
-
-    </div>
-
-    <!-- Footer -->
-    <div id="footer"></div>
-
+<!--intro section-->
+<section id="introduction" class="mt-5">
+  <h1 class="text-center mb-3">INTRODUCTION</h1>
+  <div class="p-5 mb-6 bg-primary radius-2xl shadow-light flex flex-col flex-center">
+    <p class="fs-lg text-on-primary text-center fw-bold">
+      🎨 MadenCSS is a <u>native, token-driven CSS foundation</u> for building scalable design systems.
+      It helps teams start fast while enabling long-term maintainability and customization.
+    </p>
   </div>
 
-  <!-- JS includes (navbar, sidebar, footer, etc.) -->
-  <script src="includes.js"></script>
-</body>
-</html>
+<div class="p-5 bg-surface text-on-surface radius shadow-light mb-4">
+  <span class="fw-medium mb-4 grid grid-gap-2">
+    <div class="col-2">🧱 Tokens</div>
+    <div class="col-2">🧩 Layers</div>
+    <div class="col-2">🌐 Native CSS</div>
+    <div class="col-3">♿ Accessible Defaults</div>
+    <div class="col-3">🔁 Predictable Overrides</div>
+  </span>
+
+  <p class="fs-base mb-2">
+    MadenCSS is a <strong>native, token-driven CSS foundation</strong> built for teams that care about
+    <strong>long-term maintainability</strong>.
+    It does not try to replace CSS or abstract it away.
+    Instead, it formalizes design decisions using <strong>tokens, layers, and sensible defaults</strong>,
+    enabling consistent UI development across products while remaining
+    <strong>framework-agnostic</strong> and easy to extend.
+  </p>
+</div>
+
+
+<div class="p-2 mb-6 radius grid grid-gap-4">
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm3 3h3v8H7V8zm5 0h3v8h-3V8zm5 0h3v8h-3V8z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Predictable Layout System</p>
+    <p class="fs-sm opacity-7">
+      A responsive, constraint-based grid built for long-term consistency.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-info mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm0 18V4a8 8 0 0 1 0 16z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Token-Based Theming</p>
+    <p class="fs-sm opacity-7">
+      Centralized design tokens enabling effortless theme customization.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-success mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <rect x="0" y="4" width="5" height="16" rx="1"/> <rect x="19" y="4" width="5" height="16" rx="1"/> <path d="M7 12h10M7 12l2-2M7 12l2 2M17 12l-2-2M17 12l-2 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Consistent Spacing Scale</p>
+    <p class="fs-sm opacity-7">
+      A unified spacing system across margin, padding, and layout gaps.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M5 4h14v3h-6v13h-2V7H5z"/> <rect x="3" y="22" width="18" height="2"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Fluid Typography System</p>
+    <p class="fs-sm opacity-7">
+      Responsive font sizes and weights driven by design decisions.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-primary mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <rect x="0" y="4" width="5" height="16" rx="1"/> <rect x="9" y="4" width="5" height="5" rx="1"/> <rect x="9" y="15" width="5" height="5" rx="1"/> <rect x="18" y="4" width="5" height="16" rx="1"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Layout Primitives</p>
+    <p class="fs-sm opacity-7">
+      Flexbox and grid helpers designed as low-level building blocks.
+    </p>
+  </div>
+
+  <div class="col-4 p-4 bg-surface radius shadow-light text-center">
+    <div class="flex flex-center">
+      <svg class="width-md height-md text-danger mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8-8-3.59-8-8z"/><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/> </svg>
+    </div>
+    <p class="fs-lg fw-bold mt-2">Visual Primitives</p>
+    <p class="fs-sm opacity-7">
+      Borders, radius, shadows, and display utilities as composable primitives.
+    </p>
+  </div>
+
+  <div class="col-12 flex flex-center">
+    <div class="col-4 p-4 bg-info radius shadow-light text-center">
+      <div class="flex flex-center">
+        <svg class="width-md height-md text-warning-dark mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"> <path d="M21 16H3V4h18v12zm-2-2V6H5v8h14zM3 18h18v2H3z"/> </svg>
+      </div>
+      <p class="fs-lg fw-bold mt-2">Reference Components</p>
+      <p class="fs-sm opacity-7">
+        Optional components demonstrating recommended structure and patterns.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+<!--intro section-->
