@@ -1,124 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!--navbar section -->
+<section id="navbar">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">🧭 Navbars</h2>
+  
+   <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">navbar.css</code> must be included to use this component.
+  </div>
+  
+  <p class="fs-base text-on-surface mb-3">
+  MadenCSS provides a lightweight, CSS-only approach for handling responsive navbars.
+  The toggle behavior is achieved using a hidden checkbox input combined with sibling selectors,
+  eliminating the need for JavaScript in basic navigation scenarios.
+</p>
 
-<!-- Navbar -->
-<div id="navbar"></div>
+<p class="fs-base text-on-surface mb-3">
+  On small screens, the navigation toggle button becomes visible,
+  while the navigation menu is collapsed by default.
+  When the toggle is activated, the menu expands vertically
+  using a controlled <code class="bg-background radius p-1">max-height</code> transition.
+</p>
+  
+  <!-- Navigation Start -->
+    <nav class="p-2 bg-surface radius-md m-2">
+      <!-- Hamburger toggle (on mobile) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
+      <label for="nav-toggle" class="nav-toggle-btn">☰</label>
+      <!-- OVERLAY -->
+      <label for="nav-toggle" class="nav-overlay"></label>
+      <!-- Menu -->
+      <div class="nav-menu flex-center">
+        <a class="mx-4" href="#">Blog</a>
+        <a class="mx-4" href="#">Forum</a>
+        <a class="mx-4" href="#">White Paper</a>
+      </div>
+    </nav>
+  <!-- Navigation End -->
+      
+ <pre class="bg-dark text-light p-2 radius-md">
+&lt;!-- Navigation Start --&gt;
+&lt;nav class=&quot;p-2 bg-surface radius-md m-2&quot;&gt;
+  &lt;!-- Hamburger toggle (on mobile) --&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;nav-toggle&quot; class=&quot;nav-toggle&quot; hidden /&gt;
 
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+  &lt;label for=&quot;nav-toggle&quot; class=&quot;nav-toggle-btn&quot;&gt;☰&lt;/label&gt;
 
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
-    </div>
+  &lt;!-- OVERLAY --&gt;
+  &lt;label for=&quot;nav-toggle&quot; class=&quot;nav-overlay&quot;&gt;&lt;/label&gt;
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-        <row class="row row-items-hor-center text-primary"><h2>NAVBARS</h2></row>
-        ℹ️ There are 2 types of Navbars for now. 
-        Ofcourse you can write your own navbar with our framework. 
-        Theese two ones are just ready for use and they have responsive behaviour.<br />
-          <br />
-        🔹<span class="text-primary">Standard Menu Navbar</span><br /><br />
+  &lt;!-- Menu --&gt;
+  &lt;div class=&quot;nav-menu flex-center&quot;&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Blog&lt;/a&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;Forum&lt;/a&gt;
+    &lt;a class=&quot;mx-4&quot; href=&quot;#&quot;&gt;White Paper&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!-- Navigation End --&gt;
+</pre>
 
-<div class="row surface row-items-hor-center row-gutter-1 p-1 border">
+<!-- Navigation Start -->
+<div class="p-2 bg-surface radius-md m-2 flex flex-wrap flex-align-center">
+  <input type="checkbox" id="nav-toggle-2" class="nav-toggle" hidden />
+
   <!-- Logo -->
-  <div class="res-col-2 col-items-hor-center">
-    <div class="fs-xxl text-primary row">
-      <img src="Logo.png" width="32">
-      <a href="index.html">Madenix</a>
-    </div>
-  </div>
+  <a href="#" class="fw-bold fs-xl p-2 flex-col-3">LOGO</a>
+  <!-- Toggle -->
+  <label for="nav-toggle-2" class="nav-toggle-btn fs-xl flex-col-9 text-right">☰</label>
+
+  <!-- Overlay -->
+  <label for="nav-toggle-2" class="nav-overlay"></label>
   <!-- Menu -->
-  <div class="res-col-9 col-items-hor-center fs-xl row-gutter-2">
-    <a class="link-primary" href="#">Blog</a>
-    <a class="link-primary" href="#">Forum</a>
-    <a class="link-primary" href="#">White Paper</a>
+  <div class="nav-menu p-1">
+    <a class="mx-4 " href="#">Blog</a>
+    <a class="mx-4" href="#">Forum</a>
+    <a class="mx-4" href="#">White Paper</a>
   </div>
 </div>
+<!-- Navigation End -->
 
-<textarea rows="16" class="mt-2">
-  <div class="row surface row-items-hor-center row-gutter-1 p-1">
-  <!-- Logo -->
-  <div class="res-col-2 col-items-hor-center">
-    <div class="fs-xxl text-primary row">
-      <img src="Logo.png" width="32">
-      <a href="index.html">Madenix</a>
-    </div>
-  </div>
-  <!-- Menu -->
-  <div class="res-col-9 col-items-hor-center fs-xl row-gutter-2">
-    <a class="link-primary" href="#">Blog</a>
-    <a class="link-primary" href="#">Forum</a>
-    <a class="link-primary" href="#">White Paper</a>
-  </div>
-</div>
-</textarea>
+<pre class="bg-dark text-light p-2 radius-md">
+&lt;!-- Navigation Start --&gt;
+&lt;div class="p-2 bg-surface radius-md m-2 flex flex-wrap flex-align-center"&gt;
+  &lt;!-- Overlay --&gt;
+  &lt;label for="nav-toggle-2" class="nav-overlay"&gt;&lt;/label&gt;
+  &lt;input type="checkbox" id="nav-toggle-2" class="nav-toggle" hidden /&gt;
 
+  &lt;!-- Logo --&gt;
+  &lt;a href="#" class="fw-bold fs-xl p-2 flex-col-3"&gt;LOGO&lt;/a&gt;
+  &lt;!-- Toggle --&gt;
+  &lt;label for="nav-toggle-2" class="nav-toggle-btn fs-xl flex-col-9 text-right"&gt;☰&lt;/label&gt;
+  &lt;!-- Menu --&gt;
+  &lt;div class="nav-menu"&gt;
+    &lt;a class="mx-4" href="#"&gt;Blog&lt;/a&gt;
+    &lt;a class="mx-4" href="#"&gt;Forum&lt;/a&gt;
+    &lt;a class="mx-4" href="#"&gt;White Paper&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Navigation End --&gt;
+</pre>
 
-          <br /><br /><br />
-        🔹<span class="text-primary">Hamburger Navbar</span><br /><br />
-
-<div class="row surface row-items-hor-center row-gutter-1 p-1 mt-1 border">
-  <!-- Logo -->
-  <div class="res-col-2 col-items-hor-center">
-    <div class="fs-xxl text-primary row">
-      <img src="Logo.png" width="32">
-      <a href="index.html">Madenix</a>
-    </div>
-  </div>
-
-    <!-- Hamburger toggle (mobilde) -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
-  <label for="nav-toggle" class="nav-toggle-btn fs-xl">☰</label>
-
-  <!-- Menu -->
-  <div class="res-col-9 nav-menu col-items-hor-center fs-xl row-gutter-2">
-    <a class="link-primary" href="#">Blog</a>
-    <a class="link-primary" href="#">Forum</a>
-    <a class="link-primary" href="#">White Paper</a>
-  </div>
-</div>
-
-<textarea rows="22" class="mt-2">
-  <div class="row surface row-items-hor-center row-gutter-1 p-1 mt-1 border">
-  <!-- Logo -->
-  <div class="res-col-2 col-items-hor-center">
-    <div class="fs-xxl text-primary row">
-      <img src="Logo.png" width="32">
-      <a href="index.html">Madenix</a>
-    </div>
-  </div>
-
-    <!-- Hamburger toggle (mobilde) -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden />
-  <label for="nav-toggle" class="nav-toggle-btn fs-xl">☰</label>
-
-  <!-- Menu -->
-  <div class="res-col-9 nav-menu col-items-hor-center fs-xl row-gutter-2">
-    <a class="link-primary" href="#">Blog</a>
-    <a class="link-primary" href="#">Forum</a>
-    <a class="link-primary" href="#">White Paper</a>
-  </div>
-</div>
-</textarea>
-
-    </div>
-
-</div>
-
-<!-- Footer -->
-<div id="footer"></div>
-
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+</section>
+<!--navbar section -->
