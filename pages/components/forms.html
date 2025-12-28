@@ -1,214 +1,553 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!--forms section -->
+<section id="forms" class="mb-8">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light">📝 Forms</h2>
 
-<!-- Navbar -->
-<div id="navbar"></div>
+  <p class="fs-lg fw-bold text-primary">1. Base layer forms</p> 
 
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+  <p class="p-1">
+    By default forms are styled with in MadenCss base layer. Thanks to the @layer design, 
+    existing form appearence can be safely extended or overridden without breaking the core system files.
+  </p>
 
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
+  <p class="p-4">
+    👉Base layer default values can be found below.
+  </p>
+
+  <pre class="bg-dark text-light p-4 radius-md">
+  input, button, textarea, select {
+      background-color: var(--surface);
+      color: var(--on-surface);
+      padding: var(--spacing-2) var(--spacing-3);
+      width: 100%;
+      border: var(--border-thin) solid var(--mid);
+      border-radius: var(--radius);
+      transition: border-color var(--focus-transition), box-shadow var(--focus-transition);
+      font: inherit;
+   }
+
+   input:focus, button:focus, textarea:focus, select:focus {
+      background-color: var(--focus-background);
+      color: var(--on-focus);
+      border-color: var(--focus-border-color);
+      outline: var(--focus-border-thickness) solid var(--focus-border-color);
+      outline-offset: var(--focus-outline-offset);
+   }
+
+   input:disabled, textarea:disabled, select:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+   }
+  
+   input::placeholder {transition: .2s;}
+   input:focus::placeholder {opacity: 0;}
+   ::placeholder { opacity: 0.7; }
+  </pre>
+
+
+  <p class="p-4 bg-info text-on-info radius">
+    MadenCSS provides a robust base layer that facilitates the consistent design of standard form interfaces.
+  </p>
+
+  <form class="p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-4">
+    <div class="col-12 text-center fs-lg fw-black">LOG IN</div>
+
+    <div class="col-12">
+      <label class="">Email</label>
+      <input type="email" class="" placeholder="email@example.com">
     </div>
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-      <row class="row row-items-hor-center text-primary"><h2>FORMS</h2></row>
-🧾This guide helps you build accessible, responsive, and aesthetically clean forms using MadenCSS form utilities. 
-It includes form layouts, input styles, focus/validation states, and helper messages.<br/>
-<br/>
-📦 <span class="text-primary">Basic Structure</span><br/>
-Wrap each input inside a <span class="text-success">.form-group</span> for consistent vertical spacing and layout:<br/>
-<br/>
-<textarea rows="6">
-<div class="form-group">
-  <label for="email">Email</label>
-  <input type="email" id="email" placeholder="you@example.com" required>
-</div>
-</textarea>
-<br/>
-<br/>
-<br/>
-🏷️ <span class="text-primary">Labels</span><br/>
-&lt;label&gt; elements are styled to appear above their related input.Use for attribute to link the label to the corresponding id of the input.<br/>
-<br/>
-<textarea>
-<label for="name">Your Name</label>
-</textarea>
-<br/>
-<br/>
-<br/>
-🔠 <span class="text-primary">Inputs, Textareas & Selects</span><br/><br/>
-<input type="text" placeholder="This is a text input"><br/>
-<textarea>
-<input type="text" placeholder="This is a text input">
-</textarea>
-<br/>
-<br/>
-<br/>
-<textarea placeholder="This is a textarea"></textarea>
-<textarea placeholder="This is a textarea">
-  &lt;textarea placeholder="This is a textarea"&gt;&lt;/textarea&gt;
-</textarea>
-<br/>
-<br/>
-<br/>
-  <select>
-    <option>Select an option</option>
+    <div class="col-12">
+      <label class="">Password</label>
+      <input type="password" class="" placeholder="••••••••">
+    </div>
+
+    <div class="col-12 flex flex-justify-between">
+      <div class="flex">
+        <div class="p-1"><input type="checkbox" name="rememberMe"></div>
+        <div class="p-1">Remember Me</div>
+      </div>
+      <div class="p-1 fw-bold"><a href="#">Forgot Password?</a></div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+
+    <div class="col-12 mt-3 text-center">
+      Don't have an account? <a class="p-1 text-primary fw-bold">Register Now!</a>
+    </div>
+  </form>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form class=&quot;p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-4&quot;&gt;
+  &lt;div class=&quot;col-12 text-center fs-lg fw-black&quot;&gt;LOG IN&lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;label class=&quot;&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;email@example.com&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;label class=&quot;&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&quot;&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-justify-between&quot;&gt;
+    &lt;div class=&quot;flex&quot;&gt;
+      &lt;div class=&quot;p-1&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;rememberMe&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;p-1&quot;&gt;Remember Me&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;p-1 fw-bold&quot;&gt;&lt;a href=&quot;#&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 mt-3 text-center&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;p-1&quot;&gt;Don&apos;t have an account? &lt;a class=&quot;p-1 text-primary fw-bold&quot;&gt;Register Now!&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+
+  <form action="" class="p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-5">
+    <div class="col-12 text-center fs-lg fw-black">REGISTER</div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">✉️</div>
+      <div class="flex-1 p-1"><input type="email" class="" placeholder="email@example.com"></div>
+    </div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">🔑</div>
+      <div class="flex-1 p-1"><input type="password" class="" placeholder="Password"></div>
+    </div>
+
+    <div class="col-12 flex flex-align-center">
+      <div class="fs-xl">🔑</div>
+      <div class="flex-1 p-1"><input type="password" class="" placeholder="Password Again"></div>
+    </div>
+
+    <div class="col-12 flex flex-justify-between">
+      <div class="flex">
+        <div class="p-1"><input type="checkbox" name="agreement" required></div>
+        <div class="p-1">I agree <u>Terms Of Use</u></div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </form>
+
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form action=&quot;&quot; class=&quot;p-5 bg-surface radius shadow-light grid grid-gap-2 max-width-xs mt-5&quot;&gt;
+  &lt;div class=&quot;col-12 text-center fs-lg fw-black&quot;&gt;REGISTER&lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#9993;&#65039;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;email@example.com&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#128273;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;Password&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-align-center&quot;&gt;
+    &lt;div class=&quot;fs-xl&quot;&gt;&#128273;&lt;/div&gt;
+    &lt;div class=&quot;flex-1 p-1&quot;&gt;&lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;Password Again&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12 flex flex-justify-between&quot;&gt;
+    &lt;div class=&quot;flex&quot;&gt;
+      &lt;div class=&quot;p-1&quot;&gt;&lt;input type=&quot;checkbox&quot; name=&quot;agreement&quot; required&gt;&lt;/div&gt;
+      &lt;div class=&quot;p-1&quot;&gt;I agree &lt;u&gt;Terms Of Use&lt;/u&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col-12&quot;&gt;
+    &lt;button class=&quot;btn btn-primary&quot;&gt;Register&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;  
+</pre>
+
+  <p class="fs-lg fw-bold text-primary">2. Custom forms</p> 
+
+  <p class="p-2 bg-info text-on-info radius-lg">
+  The following example demonstrates how a fully custom form layout can be created
+  using only MadenCSS utilities, without relying on predefined form components.
+  </p>
+
+<form class="p-5 bg-dark radius-3xl radius-tl radius-br text-light shadow-light grid grid-gap-2 max-width-xs mt-4">
+  <div class="col-12 text-center fs-lg fw-black">LOG IN</div>
+
+  <div class="col-12">
+    <input type="email" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="email@example.com">
+  </div>
+
+  <div class="col-12">
+    <input type="password" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="••••••••">
+  </div>
+
+  <div class="col-12 flex flex-justify-between">
+    <div class="flex">
+      <div class="p-1"><input type="checkbox" name="rememberMe"></div>
+      <div class="p-1">Remember Me</div>
+    </div>
+    <div class="p-1 fw-bold"><a href="#">Forgot Password?</a></div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-outline btn-outline-primary">Submit</button>
+  </div>
+
+  <div class="col-12 mt-3 text-center">
+    Don't have an account? <a class="p-1 text-primary fw-bold">Register Now!</a>
+  </div>
+</form>
+
+<pre class="bg-dark text-light p-4 radius-md">
+&lt;form class="p-5 bg-dark radius-3xl radius-tl radius-br text-light shadow-light grid grid-gap-2 max-width-xs mt-4"&gt;
+  &lt;div class="col-12 text-center fs-lg fw-black"&gt;LOG IN&lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;input type="email" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="email@example.com"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;input type="password" class="border-none radius-none bg-dark border-b border-thin border-mid" placeholder="••••••••"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12 flex flex-justify-between"&gt;
+    &lt;div class="flex"&gt;
+      &lt;div class="p-1"&gt;&lt;input type="checkbox" name="rememberMe"&gt;&lt;/div&gt;
+      &lt;div class="p-1"&gt;Remember Me&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="p-1 fw-bold"&gt;&lt;a href="#"&gt;Forgot Password?&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12"&gt;
+    &lt;button class="btn btn-outline btn-outline-primary"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-12 mt-3 text-center"&gt;
+    Don't have an account? &lt;a class="p-1 text-primary fw-bold"&gt;Register Now!&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+
+<p class="fs-lg fw-bold text-primary">3. Range, Checkbox, Radio Inputs (Accent Utilities)</p> 
+  <p class="fs-lg text-on-surface mb-6">
+    MadenCSS styles native HTML form controls without breaking their default behavior.
+    <code>Range, Checkbox, Radio</code> elements are styled using <strong>accent utility classes</strong>,
+    which rely on the native <code>accent-color</code> CSS property.
+  </p>
+
+  <p class="fs-base text-on-surface mb-4">
+    This approach keeps range inputs fully native, accessible, and theme-aware,
+    while allowing quick visual customization through semantic color tokens.
+  </p>
+
+  <h3 class="fs-lg fw-bold mb-3 text-primary">How It Works</h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    Each <code>accent-*</code> utility maps directly to a design token:
+  </p>
+
+  <ul class="fs-base text-on-surface mb-4">
+    <li><code>accent-primary</code> → <code>--primary</code></li>
+    <li><code>accent-success</code> → <code>--success</code></li>
+    <li><code>accent-warning</code> → <code>--warning</code></li>
+    <li><code>accent-danger</code> → <code>--danger</code></li>
+    <li><code>accent-info</code> → <code>--info</code></li>
+    <li><code>accent-dark</code> → <code>--dark</code></li>
+    <li><code>accent-mid</code> → <code>--mid</code></li>
+    <li><code>accent-light</code> → <code>--light</code></li>
+  </ul>
+
+  <h3 class="fs-lg fw-bold mb-3 text-primary">Range Variants</h3>
+
+  <p class="fs-base text-on-surface mb-4">
+    All semantic colors defined in <code>maden-config.css</code> can be used
+    as accent colors for range inputs.
+  </p>
+  
+  <div class="">
+    <label class="">Primary range</label>
+    <input type="range" class="width-full accent-primary">
+    <label class="">Success range</label>
+    <input type="range" class="width-full accent-success">
+    <label class="">warning range</label>
+    <input type="range" class="width-full accent-warning">
+    <label class="">Danger range</label>
+    <input type="range" class="width-full accent-danger">
+    <label class="">Info range</label>
+    <input type="range" class="width-full accent-info">
+    <label class="">Dark range</label>
+    <input type="range" class="width-full accent-dark">
+    <label class="">Mid range</label>
+    <input type="range" class="width-full accent-mid">
+    <label class="">Light range</label>
+    <input type="range" class="width-full accent-light">
+  </div>
+
+  <pre class="bg-dark text-light p-4 radius-md"><code>
+&lt;label&gt;Primary range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-primary"&gt;
+
+&lt;label&gt;Success range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-success"&gt;
+
+&lt;label&gt;Warning range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-warning"&gt;
+
+&lt;label&gt;Danger range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-danger"&gt;
+
+&lt;label&gt;Info range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-info"&gt;
+
+&lt;label&gt;Dark range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-dark"&gt;
+
+&lt;label&gt;Mid range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-mid"&gt;
+
+&lt;label&gt;Light range&lt;/label&gt;
+&lt;input type="range" class="width-full accent-light"&gt;
+</code></pre>
+
+   <h3 class="fs-lg fw-bold mb-3 text-primary">Checkbox Variants</h3>
+  <!-- CHECKBOX -->
+  <div class="flex">
+    <div><input type="checkbox" class="accent-primary" checked></div>
+    <span class="px-2">Primary checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-success" checked></div>
+    <span class="px-2">Success checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-warning" checked></div>
+    <span class="px-2">Warning checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-danger" checked></div>
+    <span class="px-2">Danger checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-info" checked></div>
+    <span class="px-2">Info checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-dark" checked></div>
+    <span class="px-2">Dark checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-mid" checked></div>
+    <span class="px-2">Mid checkbox</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="checkbox" class="accent-light" checked></div>
+    <span class="px-2">Light checkbox</span>
+  </div>
+
+<pre class="bg-dark text-light p-2 radius-md">
+&lt;input type="checkbox" class="accent-primary" checked&gt;
+&lt;input type="checkbox" class="accent-success" checked&gt;
+&lt;input type="checkbox" class="accent-warning" checked&gt;
+&lt;input type="checkbox" class="accent-danger" checked&gt;
+&lt;input type="checkbox" class="accent-info" checked&gt;
+&lt;input type="checkbox" class="accent-dark" checked&gt;
+&lt;input type="checkbox" class="accent-mid" checked&gt;
+&lt;input type="checkbox" class="accent-light" checked&gt;</pre>
+
+ <h3 class="fs-lg fw-bold mb-3 text-primary">Radio button variants</h3>
+ <!-- RADIO -->
+  <div class="flex">
+    <div><input type="radio" class="accent-primary" checked></div>
+    <span class="px-2">Primary radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-success" checked></div>
+    <span class="px-2">Success radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-warning" checked></div>
+    <span class="px-2">Warning radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-danger" checked></div>
+    <span class="px-2">Danger radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-info" checked></div>
+    <span class="px-2">Info radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-dark" checked></div>
+    <span class="px-2">Dark radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-mid" checked></div>
+    <span class="px-2">Mid radio</span>
+  </div>
+  
+  <div class="flex">
+    <div><input type="radio" class="accent-light" checked></div>
+    <span class="px-2">Light radio</span>
+  </div>
+
+<pre class="bg-dark text-light radius-md p-2">
+&lt;input type="radio" class="accent-primary" checked&gt;
+&lt;input type="radio" class="accent-success" checked&gt;
+&lt;input type="radio" class="accent-warning" checked&gt;
+&lt;input type="radio" class="accent-danger" checked&gt;
+&lt;input type="radio" class="accent-info" checked&gt;
+&lt;input type="radio" class="accent-dark" checked&gt;
+&lt;input type="radio" class="accent-mid" checked&gt;
+&lt;input type="radio" class="accent-light" checked&gt;
+</pre>
+
+  <div class="fs-base bg-info text-on-info p-3 radius">
+    <strong>Note:</strong>
+    Accent utilities rely on browser support for <code>accent-color</code>.
+    In unsupported browsers, the range input gracefully falls back
+    to the default native appearance.
+  </div>
+  
+   <h3 class="fs-lg fw-bold mb-3 text-primary mt-4">4. ⬇️ Select (Dropdown) Inputs</h3>
+   
+  <p class="fs-lg text-on-surface">
+    MadenCSS styles native <code>&lt;select&gt;</code> elements using utility classes
+    instead of replacing them with custom JavaScript components.
+    This ensures accessibility, keyboard support, and predictable browser behavior.
+  </p>
+  
+  <div class="m-2"><select class="bg-background text-on-background radius-sm p-1">
+    <option>--Background select--</option>
     <option>Option 1</option>
     <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-<textarea placeholder="This is a textarea" rows="7">
-  <select>
-    <option>Select an option</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-surface text-on-surface radius-sm p-1">
+    <option>--Surface select--</option>
     <option>Option 1</option>
     <option>Option 2</option>
-    <option>Option 3</option>
-  </select>
-</textarea>
-<br/>
-<br/>
-<br/>
-<br/>
-✅ Features:<br/>
-<br/>
-🔹Full-width by default<br/>
-🔹Rounded corners<br/>
-🔹Smooth transitions on focus<br/>
-🔹Theme-aware background and text colors<br/>
-<br/>
-✨ <span class="text-primary">Focus State</span><br/>
-When the input is focused:<br/>
-<br/>
-🔹 Border color changes to --primary<br/>
-<br/>
-🔹 Light box shadow appears for accessibility<br/>
-<br/>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-primary text-on-primary radius-sm p-1">
+    <option>--Primary select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-success text-on-success radius-sm p-1">
+    <option>--Success select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-warning text-on-warning radius-sm p-1">
+    <option>--Warning select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-danger text-on-danger radius-sm p-1">
+    <option>--Danger select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-info text-on-info radius-sm p-1">
+    <option>--Info select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-dark text-on-dark radius-sm p-1">
+    <option>--Dark select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-mid text-on-mid radius-sm p-1">
+    <option>--Mid select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <div class="m-2"><select class="bg-light text-on-light radius-sm p-1">
+    <option>--Light select--</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select></div>
+  
+  <pre class="bg-dark text-light p-2 radius-md">&lt;select class=&quot;bg-primary text-on-primary radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Primary select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-<span class="text-success">
-input:focus {<br/>
-  border-color: var(--primary);<br/>
-  box-shadow: 0 0 0 2px rgba(240, 187, 12, 0.3);<br/>
-}<br/>
-</span>
-<br/>
-<br/>
-❌ <span class="text-primary">Validation & Error Handling</span><br/>
-Inputs with :invalid or error feedback can use .form-error:<br/>
-<br/>
-<input type="email" required>
-<div class="form-error">Please enter a valid email.</div>
-<br/>
-<textarea rows="3">
-<input type="email" required>
-<div class="form-error">Please enter a valid email.</div>
-</textarea>
-<br/><br/>
-Invalid inputs automatically receive a red (--danger) border via:<br/>
-<span class="text-success">input:invalid {<br/>
-  border-color: var(--danger);<br/>
-}</span><br/>
-<br/>
-<br/>
-🛈 <span class="text-primary">Helper Text</span><br/>
-Use .form-help for small guidance below fields:<br/>
-<br/>
-<input type="text" placeholder="Please enter e-mail address">
-<div class="form-help">We'll never share your email.</div>
-<br/>
-<textarea rows="3">
-<input type="text" placeholder="Please enter e-mail address">
-<div class="form-help">We'll never share your email.</div>
-</textarea>
-<br/>
-<br/>
-<br/>
-<br/>
-🧪 <span class="text-primary">Example Form</span><br/>
-<br/>
+&lt;select class=&quot;bg-success text-on-success radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Success select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-<div class="row border p-3">
-  <div class="col res-col-12">
-        <form>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input id="username" type="text" placeholder="yourname">
-            <div class="form-help">Min 3 characters.</div>
-          </div>
+&lt;select class=&quot;bg-warning text-on-warning radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Warning select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Write your message..."></textarea>
-          </div>
+&lt;select class=&quot;bg-danger text-on-danger radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Danger select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-          <div class="form-group">
-            <label for="role">Role</label>
-            <select id="role">
-              <option>Admin</option>
-              <option>User</option>
-              <option>Guest</option>
-            </select>
-          </div>
+&lt;select class=&quot;bg-info text-on-info radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Info select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-          <button type="submit" class="primary">Submit</button>
-        </form>
-</div>
-</div>
-<br />
-<textarea rows="30">
-    <div class="col res-col-12">
-        <form>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input id="username" type="text" placeholder="yourname">
-            <div class="form-help">Min 3 characters.</div>
-          </div>
+&lt;select class=&quot;bg-dark text-on-dark radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Dark select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            &lt;textarea id="message" placeholder="Write your message..."&gt;&lt;/textarea&gt;
-          </div>
+&lt;select class=&quot;bg-mid text-on-mid radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Mid select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
 
-          <div class="form-group">
-            <label for="role">Role</label>
-            <select id="role">
-              <option>Admin</option>
-              <option>User</option>
-              <option>Guest</option>
-            </select>
-          </div>
-
-          <button type="submit" class="primary">Submit</button>
-        </form>
-</div>
-</textarea>
-<br/>
-<br/>
-💡 Notes<br/>
-All form controls are 100% width by default — use a grid or layout utility to control sizing.
-Works best when combined with spacing.css for margins/padding and typography.css for text scale.
-Use semantic HTML (&lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;) for accessibility and screen reader support.
-
-
-
-
-
-</div>
-
-<!-- Footer -->
-<div id="footer"></div>
-
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+&lt;select class=&quot;bg-light text-on-light radius-sm p-1&quot;&gt;
+  &lt;option&gt;--Light select--&lt;/option&gt;
+  &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;option&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;</pre>
+</section>
+<!--forms section -->
