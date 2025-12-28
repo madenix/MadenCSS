@@ -1,61 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!--alerts section -->
+<section id="alerts" class="mb-8">
+  <h2 class="fs-xl fw-bold mb-4 border-b border-light pb-2">⚠️ Alerts</h2>
+  <p class="mb-4 text-mid">Components used to display information, success, or error messages to the user.</p>
+  
+  <div class="bg-warning text-on-warning p-2 radius-md mb-4">
+      <code class="fw-bold">alert.css</code> must be included to use these components.
+  </div>
 
-<!-- Navbar -->
-<div id="navbar"></div>
-
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
-
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
+  <div class="mb-6 mt-3">
+    <h3 class="fs-lg fw-semibold mb-3">Basic Usage</h3>
+    <div class="p-4 border border-light radius-md mb-3">
+      <div class="alert alert-primary">This is a primary information alert.</div>
+      <div class="alert alert-success">Action completed successfully!</div>
+      <div class="alert alert-danger">An error occurred, please try again.</div>
+      <div class="alert alert-warning">Attention! This action cannot be undone.</div>
+      <div class="alert alert-info">Informational alert!</div>
     </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;div class="alert alert-primary"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-success"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;...&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;...&lt;/div&gt;</code></pre>
+  </div>
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-        <row class="row row-items-hor-center text-primary"><h2>ALERTS</h2></row>
-
-        🔹 There are 4 types of alerts.<br />
-        <br />
-        <div class="alert alert-success">✔ Success Alert</div>
-        <textarea rows="4">
-<div class="alert alert-success">✔ Success Alert</div>
-        </textarea>
-
-        <div class="alert alert-danger mt-2">✖ Danger or error alert.</div>
-        <textarea rows="4">
-<div class="alert alert-danger">✖ Danger or error alert.</div>
-        </textarea>
-
-
-        <div class="alert alert-primary mt-2">ℹ Info alert.</div>
-        <textarea rows="4">
-<div class="alert alert-primary">ℹ Info alert.</div>
-        </textarea>
-        
-        <div class="alert alert-surface mt-3">Normal alert like reminder.</div>
-    
-        <textarea rows="4" class="mt-1">
-<div class="alert alert-surface">Normal alert like reminder.</div>
-        </textarea>
-    
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3">Outline Alerts</h3>
+    <p class="mb-3 text-mid">Add the <code>alert-outline</code> class for alerts with a transparent background and colored borders.</p>
+    <div class="p-4 border border-light radius-md mb-3">
+      <div class="alert alert-outline alert-primary">Outline primary alert.</div>
+      <div class="alert alert-outline alert-success">Outline success message.</div>
+      <div class="alert alert-outline alert-warning">Outline warning message.</div>
+      <div class="alert alert-outline alert-danger">Outline danger message.</div>      
+      <div class="alert alert-outline alert-info">Outline info message.</div>
     </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;div class="alert alert-outline alert-primary"&gt;Outline primary alert.&lt;/div&gt;
+&lt;div class="alert alert-outline alert-success"&gt;Outline success message.&lt;/div&gt;
+&lt;div class="alert alert-outline alert-warning"&gt;Outline warning message.&lt;/div&gt;
+&lt;div class="alert alert-outline alert-danger"&gt;Outline danger message.&lt;/div&gt;</code></pre>
+  </div>
 
-</div>
-
-<!-- Footer -->
-<div id="footer"></div>
-
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+  <div class="mb-6">
+    <h3 class="fs-lg fw-semibold mb-3 text-primary">MadenCSS Power: Utility Customization</h3>
+    <p class="mb-3 text-mid">Thanks to the Cascade Layers (@layer) structure, you can instantly modify alert components with utility classes without writing any custom CSS.</p>
+    <div class="p-4 border border-light radius-md mb-3">
+      <div class="alert alert-warning shadow-strong radius-full px-8">
+        Customized Alert (Shadow, full radius, and wide horizontal padding)
+      </div>
+    </div>
+    <pre class="bg-dark text-light p-4 radius-md"><code>&lt;!-- shadow-strong, radius-full, and px-8 classes override the component styles instantly --&gt;
+&lt;div class="alert alert-warning shadow-strong radius-full px-8"&gt;
+  Customized Alert
+&lt;/div&gt;</code></pre>
+  </div>
+</section>
+<!--alerts section -->
