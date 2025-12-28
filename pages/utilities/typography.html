@@ -1,106 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MadenCSS Grid Demo</title>
-  <link rel="stylesheet" href="MadenStyles/main.css" />
-</head>
-<body class="background on-background">
-<div class="container">
+<!-- Typography section -->
+<section id="typography" class="mt-7">
 
-<!-- Navbar -->
-<div id="navbar"></div>
+    <h2 class="fs-xl fw-black mb-2 text-on-background">✍️ Typography & Text Utilities</h2>
 
-<!-- Main grid system -->
-<div class="row background on-background row-items-hor-center mt-1 row-gutter-1">
+    <p class="fs-lg text-on-surface mb-6">
+        MadenCSS typography system is built on modern CSS principles using
+        <strong>CSS Variables</strong> and <strong>clamp()</strong> to create fluid,
+        responsive text that adapts naturally across screen sizes — without breakpoints.
+    </p>
 
-    <!-- Left Menu -->
-    <div class="col res-col-2 surface p-3">
-    <div id="leftMenu"></div>
+    <!-- ============================= -->
+    <!-- 1. Font Sizes (Fluid with clamp) -->
+    <!-- ============================= -->
+    <h3 class="fs-xl fw-bold mb-3 text-primary">1. Fluid Font Sizes (clamp)</h3>
+
+    <p class="fs-base text-on-surface mb-4">
+        All font sizes in MadenCSS are defined using the
+        <code class="bg-background radius p-1">clamp(min, fluid, max)</code> function.
+        This allows text to scale smoothly between minimum and maximum sizes depending on
+        the viewport width.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <p class="fs-sm mb-2">.fs-sm — Small text for captions and meta information</p>
+        <p class="fs-base mb-2">.fs-base — Default body text</p>
+        <p class="fs-lg mb-2">.fs-lg — Emphasized paragraphs</p>
+        <p class="fs-xl mb-2">.fs-xl — Section headings</p>
+        <p class="fs-xxl mb-2">.fs-xxl — Page titles</p>
+        <p class="fs-huge">.fs-huge — Hero headlines</p>
     </div>
 
-    <!-- Content area -->
-    <div class="col res-col-9 surface p-3 on-surface">
-      <row class="row row-items-hor-center text-primary"><h2>TYPOGRAPHY</h2></row>
-      
-✍️ <span class="text-primary">typography.css</span> Usage Guide<br />
-<p>
-This file provides a utility-first set of classes for managing typography consistently across your project. Font weights, sizes, alignment, spacing, truncation — all covered.
+<pre class="bg-surface text-on-surface p-3 radius-md">
+<code>
+&lt;p class="fs-sm"&gt;Small text&lt;/p&gt;
+&lt;p class="fs-base"&gt;Base text&lt;/p&gt;
+&lt;p class="fs-lg"&gt;Large text&lt;/p&gt;
+&lt;h2 class="fs-xl"&gt;Section title&lt;/h2&gt;
+&lt;h1 class="fs-xxl"&gt;Page title&lt;/h1&gt;
+&lt;h1 class="fs-huge"&gt;Hero title&lt;/h1&gt;
+</code>
+</pre>
+
+    <!-- ============================= -->
+    <!-- 2. Understanding clamp() -->
+    <!-- ============================= -->
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">2. How clamp() Works</h3>
+
+    <p class="fs-base text-on-surface mb-4">
+        The <code class="bg-background radius p-1">clamp()</code> function defines a range
+        in which the font size can grow or shrink:
+    </p>
+
+    <ul class="list-style-disc mx-6 my-3 fs-base text-on-surface">
+        <li><strong>Minimum:</strong> Small screens never go below this size</li>
+        <li><strong>Fluid value:</strong> Scales based on viewport width</li>
+        <li><strong>Maximum:</strong> Large screens never exceed this size</li>
+    </ul>
+
+<pre class="bg-surface text-on-surface p-3 radius-md">
+<code>
+/* maden-config.css */
+/* fs-base: clamp(0.875rem, 1vw, 1rem) */
+--fs-base-min: 0.875rem;
+--fs-base-fluid: 1vw;
+--fs-base-max: 1rem;
+
+/* core.css */
+.fs-base {
+  .fs-base  { font-size: clamp(var(--fs-base-min), var(--fs-base-fluid), var(--fs-base-max)); }
+}
+</code>
+</pre>
+
+    <div class="bg-info text-on-info p-3 radius mt-3">
+        <strong>💡 Why this matters:</strong>
+        No media queries, no breakpoints, no typography jumps — just smooth,
+        readable scaling across all devices.
+    </div>
+
+    <!-- ============================= -->
+    <!-- 3. Font Weights -->
+    <!-- ============================= -->
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">3. Font Weight Utilities</h3>
+
+    <p class="fs-base text-on-surface mb-4">
+        Font weight utilities allow quick emphasis control without writing custom CSS.
+    </p>
+
+    <div class="p-4 bg-surface radius shadow-light mb-4">
+        <p class="fw-thin fs-lg">fw-thin (100)</p>
+        <p class="fw-light fs-lg">fw-light (200)</p>
+        <p class="fw-normal fs-lg">fw-normal (400)</p>
+        <p class="fw-medium fs-lg">fw-medium (500)</p>
+        <p class="fw-semibold fs-lg">fw-semibold (600)</p>
+        <p class="fw-bold fs-lg">fw-bold (700)</p>
+        <p class="fw-black fs-lg">fw-black (900)</p>
+    </div>
+
+<pre class="bg-surface text-on-surface p-3 radius-md">
+<code>
+&lt;p class="fw-semibold"&gt;Semibold text&lt;/p&gt;
+&lt;h2 class="fw-black"&gt;Strong headline&lt;/h2&gt;
+</code>
+</pre>
+
+    <!-- ============================= -->
+    <!-- 4. Text Alignment & Transform -->
+    <!-- ============================= -->
+    <h3 class="fs-xl fw-bold mb-3 text-primary mt-7">4. Text Alignment & Transform</h3>
+
+    <div class="grid grid-gap-4 bg-surface p-4 radius shadow-light mb-4">
+        <div class="col-6">
+            <p class="text-left bg-background p-2 m-2">.text-left</p>
+            <p class="text-center bg-background p-2 m-2">.text-center</p>
+            <p class="text-right bg-background p-2 m-2">.text-right</p>
+        </div>
+        <div class="col-6">
+            <p class="text-uppercase bg-background p-2 m-2">uppercase text (.text-uppercase )</p>
+            <p class="text-lowercase bg-background p-2 m-2">LOWERCASE TEXT (.text-lowercase)</p>
+            <p class="text-capitalize bg-background p-2 m-2">capitalize text (.text-capitalize)</p>
+        </div>
+    </div>
+
+<pre class="bg-surface text-on-surface p-3 radius-md">
+<code>
+&lt;p class=".text-left"&gt;.text-left&lt;/p&gt;
+&lt;p class="text-center"&gt;.text-center&lt;/p&gt;
+&lt;p class="text-right"&gt;.text-right&lt;/p&gt;
+&lt;p class="text-uppercase"&gt;.text-uppercase&lt;/p&gt;
+&lt;p class="text-lowercase"&gt;.text-lowercase&lt;/p&gt;
+&lt;p class="text-capitalize"&gt;.text-capitalize&lt;/p&gt;
+</code>
+</pre>
+
+<!-- ============================= -->
+<!-- 5. Text Helpers -->
+<!-- ============================= -->
+<h3 class="fs-xl fw-bold mb-3 text-primary mt-7">5. Text Helpers</h3>
+
+<p class="fs-base text-on-surface mb-5">
+    Text helpers are designed to solve two very common UI problems:
+    <strong>overflowing text</strong> and <strong>unbreakable long words</strong>.
+    These utilities keep layouts clean without writing custom CSS.
 </p>
-<br />
-🧱 Overview of Utility Classes<br />
-🔹 Font Weights<br />
-Use these to quickly apply standard weight values:<br />
-<br />
-<p class="fw-light">Light text (<span class="text-success">fw-light</span>)</p>
-<p class="fw-bold">Bold text (<span class="text-success">fw-bold</span>)</p>
-<p class="fw-black">Extra black (<span class="text-success">fw-black</span>)</p>
-<br />
-<br />
-.fw-thin:	100<br />
-.fw-light:	300<br />
-.fw-normal:	400<br />
-.fw-medium:	500<br />
-.fw-semibold:	600<br />
-.fw-bold:	700<br />
-.fw-black:	900<br />
-<br />
-🔹 Text Alignment<br />
-<p class="text-left success mt-1">Left aligned (<span class="text-primary">text-left</span>)</p>
-<p class="text-center success mt-1">Centered text (<span class="text-primary">text-center</span>)</p>
-<p class="text-right success mt-1">Right aligned (<span class="text-primary">text-right</span>)</p>
-<p class="text-justify success mt-1">Justified block (<span class="text-primary">text-justify</span>)</p>
-<br />
-🔹 Text Transform
-<p class="text-uppercase">uppercase (<span class="text-primary">text-uppercase</span>)</p>
-<p class="text-lowercase">LOWERCASE (<span class="text-primary">text-lowercase</span>)</p>
-<p class="text-capitalize">capitalize each word (<span class="text-primary">text-capitalize</span>)</p>
-<br />
-🔹 Font Sizes (Responsive with clamp())<br />
-Designed to scale across screen sizes.<br />
-<h1 class="fs-xl">(<span class="text-success">fs-xl</span>) Responsive x large Heading</h1>
-<p class="fs-base mt-1">(<span class="text-success">fs-base</span>) Base paragraph text</p>
-<br />
-.fs-sm:	12–14px<br />
-.fs-base:	14–16px<br />
-.fs-lg:	16–20px<br />
-.fs-xl:	20–24px<br />
-.fs-xxl:	24–36px<br />
-.fs-huge:	32–48px<br />
-<br />
-🔹 Truncation (<span class="text-primary">truncate</span>) <br />
-Use when you want to cut off text with ... if it overflows its container:
-<br />
-<div class="row">
-  <p class="truncate col col-2 success">Very long content that won’t fit.</p>
-</div>
-<br />
-🔹 Word Wrapping (<span class="text-primary">break-word</span>)<br />
-Break long words instead of overflowing:<br />
-<p class="break-word col-1 success">supercalifragilisticexpialidocious</p>
-<br />
-✅ Tips<br />
-Use typography utilities in combination with spacing and layout classes for clean, modular components.<br />
-<br />
-All sizes are responsive where possible (clamp()), no need for media queries in most cases.<br />
-<br />
-Extend this file as needed with your custom type scale or font families.<br />
-<br />
 
+<!-- ============================= -->
+<!-- Truncate -->
+<!-- ============================= -->
+<h4 class="fs-lg fw-bold mb-2">5.1 <code class="bg-background radius p-1">.truncate</code></h4>
 
+<p class="fs-base text-on-surface mb-3">
+    The <strong>.truncate</strong> utility forces text to stay on a single line.
+    If the content is longer than the container, it is visually cut and replaced
+    with an ellipsis (<code>...</code>).
+</p>
 
+<p class="fs-base text-on-surface mb-3">
+    This is especially useful for:
+</p>
 
+<ul class="list-style-disc mx-6 my-3 fs-base text-on-surface">
+    <li>• Card titles</li>
+    <li>• Table cells</li>
+    <li>• Navigation labels</li>
+    <li>• User-generated content with unknown length</li>
+</ul>
 
-
-    </div>
-
+<div class="p-4 bg-surface radius shadow-light mb-3 width-2xl">
+    <p class="truncate">
+        This text will be cut with an ellipsis if it overflows
+    </p>
 </div>
 
-<!-- Footer -->
-<div id="footer"></div>
+<pre class="bg-surface text-on-surface p-3 radius-md mb-6">
+<code>
+&lt;p class="truncate"&gt;
+  This text will be cut with an ellipsis if it overflows
+&lt;/p&gt;
+</code>
+</pre>
 
-<!-- Javascript file includes dynamic files (mavbar, left menu, footer etc.) -->
-<script src="includes.js"></script>
-</body>
-</html>
+<!-- ============================= -->
+<!-- Break Word -->
+<!-- ============================= -->
+<h4 class="fs-lg fw-bold mb-2">5.2 <code class="bg-background radius p-1">.break-word</code></h4>
+
+<p class="fs-base text-on-surface mb-3">
+    The <strong>.break-word</strong> utility allows extremely long words to break
+    and wrap onto the next line instead of overflowing their container.
+</p>
+
+<p class="fs-base text-on-surface mb-3">
+    This solves a common problem when dealing with:
+</p>
+
+<ul class="list-style-disc mx-6 my-3 fs-base text-on-surface">
+    <li>• Long URLs</li>
+    <li>• Hashes or tokens</li>
+    <li>• Usernames or IDs</li>
+    <li>• Technical strings</li>
+</ul>
+
+<div class="p-4 bg-surface radius shadow-light mb-3 width-2xl">
+    <p class="break-word">
+        VeryLongUnbreakableWordThatNeedsWrapping
+    </p>
+</div>
+
+<pre class="bg-surface text-on-surface p-3 radius-md">
+<code>
+&lt;p class="break-word"&gt;
+  VeryLongUnbreakableWordThatNeedsWrapping
+&lt;/p&gt;
+</code>
+</pre>
+
+
+</section>
+<!-- Typography section -->
