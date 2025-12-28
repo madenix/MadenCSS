@@ -1,0 +1,212 @@
+<!--start section-->
+<section id="start" class="mt-1">
+
+  <h2 class="fs-xxl fw-black mb-2 text-on-background text-center">
+    Get Started With MADENCSS
+  </h2>
+
+  <p class="fs-lg text-on-surface mb-6 text-center">
+    MadenCSS provides a minimal CSS foundation that lets you build layouts and design systems
+without locking you into a framework.
+  </p>
+
+  <!-- Step 1 -->
+  <div class="p-5 bg-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold mb-3 text-center">
+      1. Create a basic HTML file
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Make sure <code>&lt;meta name="viewport"&gt;</code> is included for proper mobile responsiveness.
+    </p>
+
+<pre class="p-3 bg-background radius text-on-background width-full"><code>&lt;!doctype html&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;MadenCss demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="p-5 bg-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold mb-3 text-center">
+      2. Include MadenCSS base files
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Include <strong>maden-config.css</strong> (configuration) and
+      <strong>core.css</strong> (utility layer) inside the <code>&lt;head&gt;</code>.
+    </p>
+
+<pre class="p-3 bg-background radius text-on-background width-full"><code>&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;MadenCss demo&lt;/title&gt;
+
+  &lt;!-- Link required CSS files --&gt;
+  &lt;link rel="stylesheet" href="maden-config.css"&gt;
+  &lt;link rel="stylesheet" href="core.css"&gt;
+&lt;/head&gt;
+</code></pre>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="p-5 bg-surface radius shadow-light mb-3">
+    <h3 class="fs-xl fw-bold mb-3 text-center">
+      3. Build your first layout
+    </h3>
+
+    <p class="fs-base text-on-surface mb-3">
+      Start by applying layout helper classes to the <strong>body</strong> element.
+    </p>
+
+    <p class="fs-base text-on-surface mb-3">
+      <span class="text-primary">bg-background</span>,
+      <span class="text-primary">text-on-background</span>,
+      <span class="text-primary">max-width-lg</span>,
+      <span class="text-primary">page-center</span>
+    </p>
+
+<pre class="p-3 bg-background radius text-on-background width-full"><code>&lt;body class="bg-background text-on-background max-width-lg page-center"&gt;
+</code></pre>
+
+    <p class="fs-base text-on-surface mb-3">
+      Now replace the content with a simple page layout using the
+      <span class="text-primary">12-column grid</span>.
+    </p>
+
+<pre class="p-3 bg-background radius text-on-surface width-full"><code>&lt;div class="grid p-4 grid-gap-2"&gt;
+
+  &lt;div class="col-12 bg-surface p-4 shadow-light radius-md"&gt;
+    NAVBAR
+  &lt;/div&gt;
+
+  &lt;div class="col-3 bg-surface p-4 shadow-light radius-md"&gt;
+    SIDEBAR
+  &lt;/div&gt;
+
+  &lt;div class="col-9 bg-surface p-4 shadow-light radius-md"&gt;
+    CONTENT
+  &lt;/div&gt;
+
+  &lt;div class="col-12 bg-surface p-4 shadow-light radius-md"&gt;
+    FOOTER
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+    <p class="fs-base text-on-surface mb-3">
+      Grid is used to define the page structure. Content alignment inside sections
+      can be handled with <span class="text-primary">flex utilities</span>.
+    </p>
+
+<pre class="p-3 bg-background radius text-on-background width-full"><code>&lt;div class="flex"&gt;
+  &lt;div class="flex-col-3"&gt;LOGO&lt;/div&gt;
+  &lt;div class="flex-col-9"&gt;
+    HOME | ABOUT | CONTACT
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <p class="fs-base bg-info text-on-info p-2 mt-2 radius-lg">
+      MadenCSS is utility-first and layout-driven. Components are optional,
+      not mandatory. You control the structure.
+    </p>
+
+  </div>
+
+
+<div class="p-5 bg-surface radius shadow-light mb-3">
+  <h3 class="fs-xl fw-bold mb-3 text-center">
+    4. Final Page Example
+  </h3>
+
+  <p class="fs-base text-on-surface mb-3">
+    Until now, we have built the page step by step by learning MadenCSS core concepts.
+    To make everything clearer, below is a <span class="text-primary">complete and final example</span>
+    that brings all these pieces together.
+  </p>
+
+  <p class="fs-base text-on-surface mb-3">
+    This example demonstrates a <span class="text-primary">real-world page layout</span> using
+    MadenCSS grid and flex utilities, including a navbar, sidebar, content area and footer.
+    You can use this layout as a starting point for your own projects.
+  </p>
+
+<pre class="p-3 bg-background radius text-on-background width-full">
+<code>&lt;!doctype html&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;MadenCss – Final Layout&lt;/title&gt;
+
+    &lt;!-- MadenCSS base files --&gt;
+    &lt;link rel="stylesheet" href="maden-config.css"&gt;
+    &lt;link rel="stylesheet" href="core.css"&gt;
+  &lt;/head&gt;
+
+  &lt;body class="bg-background text-on-background max-width-lg page-center"&gt;
+
+    &lt;!-- Page Layout --&gt;
+    &lt;div class="grid p-4 grid-gap-2"&gt;
+
+      &lt;!-- Navbar --&gt;
+      &lt;div class="col-12 bg-surface text-on-surface p-4 shadow-light radius-md"&gt;
+        &lt;div class="flex"&gt;
+          &lt;div class="flex-col-3 fw-bold"&gt;LOGO&lt;/div&gt;
+          &lt;div class="flex-col-9 text-center"&gt;
+            &lt;a href="" class="p-2"&gt;HOME&lt;/a&gt; |
+            &lt;a href="" class="p-2"&gt;ABOUT&lt;/a&gt; |
+            &lt;a href="" class="p-2"&gt;CONTACT&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Sidebar --&gt;
+      &lt;div class="col-3 bg-surface text-on-surface p-4 shadow-light radius-md"&gt;
+        SIDEBAR
+      &lt;/div&gt;
+
+      &lt;!-- Content --&gt;
+      &lt;div class="col-9 bg-surface text-on-surface p-4 shadow-light radius-md"&gt;
+        &lt;h2 class="mb-2"&gt;Content Area&lt;/h2&gt;
+        &lt;p&gt;
+          This is the main content area. Layout is handled by the grid system,
+          while internal alignment can use flex utilities.
+          &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Footer --&gt;
+      &lt;div class="col-12 bg-surface text-on-surface p-4 shadow-light radius-md text-center"&gt;
+        FOOTER
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Page Layout --&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+
+  <p class="fs-base text-on-surface mt-3">
+    As you can see, MadenCSS allows you to create clean and predictable layouts
+    without writing custom CSS. By combining <span class="text-primary">grid</span> and
+    <span class="text-primary">flex</span> utilities, you can build scalable page structures
+    with minimal effort.
+  </p>
+</div>
+
+
+</section>
+<!--start section-->
