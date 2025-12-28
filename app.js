@@ -2,7 +2,7 @@ const content = document.getElementById("content");
 
 function loadPage() {
   const route = location.hash.slice(1) || "/getStart/introduction";
-  const url = `/pages${route}.html`;
+  const url = `/MadenCSS/pages${route}.html`;
 
   fetch(url)
     .then(res => {
