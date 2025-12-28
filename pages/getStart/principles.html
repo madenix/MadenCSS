@@ -1,0 +1,111 @@
+<!--core principles section-->
+<section id="principles" class="mt-7">
+
+    <h2 class="fs-xxl fw-black mb-2 text-on-background flex flex-center">CORE PRINCIPLES</h2>
+
+    <p class="fs-lg text-on-surface mb-6 text-center">
+      MadenCSS is built on a few core concepts designed to maximize development speed, maintainability, code quality and predictability.
+    </p>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            1. Utility-First & Component-Driven Speed
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS operates primarily on a **Utility-First approach**, where you compose designs using single-purpose classes (e.g., <code class="bg-background radius p-1">p-4</code>, <code class="bg-background radius p-1">flex</code>). However, to maximize design speed, the framework side also provides essential, **ready-made components** like Modals, Sidebars, and Navbars.
+        </p>
+        <p class="fs-base text-on-surface mb-3">
+            This dual approach allows for ultimate flexibility through utilities while providing immediate solutions for common UI patterns. Crucially, these components are designed with **minimal (mostly zero) JavaScript dependency**, aligning with our commitment to simplicity. 
+        </p>
+        <pre class="p-3 bg-background radius text-on-background mt-4 overflow-x-auto">
+&lt;!-- Compose unique designs using utilities --&gt;
+&lt;div class="p-5 bg-surface radius shadow-light flex flex-col align-center"&gt;...&lt;/div&gt;
+
+&lt;!-- Speed up workflow with built-in, zero-JS components --&gt;
+&lt;label for="modal-state" class="btn bg-primary"&gt;Open Modal&lt;/label&gt;
+        </pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Principle:** Utility for customizability, Components for velocity.
+        </p>
+    </div>
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            2. Semantic and Atomic Naming & Mobile-First Grid
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS prioritizes **predictability and maintainability** through highly semantic class names. 
+            Every atomic utility class directly reflects the single CSS property it applies, ensuring developers know exactly what the code does just by reading the class list.
+            This establishes a natural <span class="text-primary">standard</span> for both coding and collaboration.
+        </p>
+        <pre class="p-3 bg-background radius text-on-background mt-4 overflow-x-auto">
+&lt;!-- Semantic Utility Examples --&gt;
+&lt;h1 class="fs-xxl fw-bold text-on-surface mb-4"&gt;...&lt;/h1&gt;
+
+&lt;!-- Mobile-First Grid Integration (using distinct classes) --&gt;
+&lt;div class="grid"&gt;
+  &lt;div class="col-4"&gt;Item 1&lt;/div&gt;
+  &lt;div class="col-3"&gt;Item 2&lt;/div&gt;
+  &lt;div class="col-5"&gt;Item 2&lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Principle:** Consistency across the entire codebase and unparalleled ease of theming.
+        </p>
+    </div>
+
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            3. Low Dependency
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+          MadenCSS keeps dependencies to a minimum, because relying on too many makes adoption harder and slows things down.
+          You can simply copy the source files into your project or use the CDN links—nothing more needed.
+        </p>
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            **Principle:** Simplicity and minimal dependency.
+        </p>
+    </div>    
+
+    <div class="p-5 bg-surface radius shadow-light mb-3">
+        <h3 class="fs-xl fw-bold mb-3 flex flex-center">
+            4. Optional Components
+        </h3>
+        <p class="fs-base text-on-surface mb-3">
+            MadenCSS allows you to include only the components you need. Nothing is forced or bundled unnecessarily.
+            If a component doesn’t serve your project, you can simply leave it out—keeping your codebase clean,
+            lightweight, and free from bloat.
+        </p>
+
+
+<pre class="p-3 bg-background radius text-on-background width-full" rows="10">
+<code>&lt;!doctype html&gt;
+&lt;html lang="en" data-theme="dark"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;MadenCss demo&lt;/title&gt;
+    <span class="text-primary">
+    &lt;!-- Link required CSS files --&gt;
+    &lt;link rel="stylesheet" href="maden-config.css"&gt;
+    &lt;link rel="stylesheet" href="core.css"&gt;
+
+    &lt;!-- Link only the components you need --&gt;
+    &lt;link rel="stylesheet" href="modal.css"&gt;
+    </span>
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+        <p class="fs-sm text-on-surface opacity-7 mt-3">
+            <strong>Principle:</strong> Selective usage over unnecessary bulk.
+        </p>
+    </div>
+
+</section>
+<!--core principles section-->
